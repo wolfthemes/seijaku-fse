@@ -1,95 +1,68 @@
-# Wolf Blank
+# Seijaku FSE
 
-A minimal **Full Site Editing (FSE)** WordPress boilerplate theme by [WolfThemes](https://wolfthemes.com).
+The **Full Site Editing (FSE)** child theme that powers the [wolfthemes.com](https://wolfthemes.com)
+redesign — a child of [Wolf Blank](https://github.com/wolfthemes/wolf-blank) by
+[WolfThemes](https://wolfthemes.com) (Constantin Saguin).
 
-Wolf Blank is a radical blank slate: a valid, activatable WordPress block theme that renders a
-clean white canvas with **zero WordPress default styling**. All design decisions (colors, fonts,
-spacing) are exposed as clearly-labeled placeholder tokens in `theme.json`, ready to be filled
-per project. It is the foundation for the wolfthemes.com redesign and future builds.
+Seijaku replaces the old Seijaku + Elementor site with a pure block theme: no page builders,
+no third-party JS. The design is **light, editorial, and minimal** — big negative space, bold
+typography (Lexend + Rethink Sans), and one strong electric-blue accent used sparingly.
+Reference energy: Linear, Stripe, Rauno.me.
 
-## When to use it
-- Starting a new WolfThemes FSE project from scratch.
-- You want full control over styling with no WP default noise to override.
-- You're working with Claude Code (see `CLAUDE.md`).
+## Requirements
+- WordPress 6.5+ and PHP 8.0+
+- Parent theme **wolf-blank** installed (handles theme supports + global.css enqueue)
+- Optional: the **wolf-store** plugin (provides the `wolf-store/theme-index` block used on the front page)
 
-## Install
-1. Copy this folder into `wp-content/themes/` (e.g. `wp-content/themes/wolf-blank`).
-2. In WP admin → **Appearance → Themes**, activate **Wolf Blank**.
-3. Requires WordPress 6.5+ and PHP 8.0+.
+## Install & activate
+1. Place both `wolf-blank` (parent) and `seijaku-fse` (this theme) in `wp-content/themes/`.
+2. In WP admin → **Appearance → Themes**, activate **Seijaku FSE**.
+3. After editing any `templates/` or `parts/` file, go to **Appearance → Editor → Templates**
+   and **Clear customizations** so the file versions load (FSE caches templates in the DB).
 
-> Add a `screenshot.png` (1200×900) to the theme root before shipping — it's intentionally omitted here.
+> Local dev runs in `wolf-store-docker` — site at `http://localhost:8080`.
 
-## Fill the design tokens
-Everything visual is driven by `theme.json`:
+## What's built
+| Piece | File | Status |
+|-------|------|--------|
+| Design tokens (light palette, fluid type incl. `display`, generous spacing) | `theme.json` | ✅ |
+| Header — wordmark left, nav + one CTA right | `parts/header.html` | ✅ |
+| Hero — full viewport (core/cover, no image), display heading, tagline, two CTAs | `templates/front-page.html` | ✅ |
+| Themes grid — `wolf-store/theme-index`, featured-first | `templates/front-page.html` | ✅ |
+| About — asymmetric columns, text + pull quote | `templates/front-page.html` | ✅ |
+| Footer — minimal 3 columns | `parts/footer.html` | ✅ |
+| Stats · Testimonials · Pricing | `<!-- WOLF-BLOCKS: ... -->` placeholders | ⏳ wolf-blocks plugin |
+
+Data-driven / repeatable sections (stats counter, testimonials, pricing) are **not** built into
+the theme — they belong to the planned **wolf-blocks** plugin and will inherit these tokens.
+
+## Design tokens
+Everything visual is driven by `theme.json` (strict JSON — **no comments**):
 
 | Token group | Location |
 |-------------|----------|
-| Colors (8 slots) | `settings.color.palette` |
-| Fonts (heading + body) | `settings.typography.fontFamilies` |
-| Fluid type scale (xs→3xl) | `settings.typography.fontSizes` |
-| Spacing scale (1→10) | `settings.spacing.spacingSizes` |
-| Layout widths | `settings.layout` (740 / 1200) |
-| Block & element styles | `styles` |
+| Colors (8 slots + `border`) | `settings.color.palette` |
+| Fonts (Lexend / Rethink Sans) | `settings.typography.fontFamilies` |
+| Fluid type scale (xs→3xl + `display`) | `settings.typography.fontSizes` |
+| Spacing scale (1→10 + `11`/`12` section clamps) | `settings.spacing.spacingSizes` |
+| Layout widths (720 / 1280) + root gutter | `settings.layout`, `styles.spacing.padding` |
+| Wolf contract vars (radius, border, button, shadow, transition) | `settings.custom.wolf` |
 
-Project-level CSS custom props (transition speed, radius, shadow, header height) live in
-`assets/css/global.css` **section 6**.
-
-> **Note:** `theme.json` is strict JSON — no comments allowed. Don't add `//` or `/* */`
-> inside it or WordPress will fail to parse the theme.
+The `--wolf-*` contract is aliased in `wolf-blank/assets/css/global.css` section 6 — set values
+here in `theme.json`, don't edit the parent's aliases. Spacing/layout primitives inherit from
+the parent; the child palette and font/size/spacing arrays **replace** the parent's arrays.
 
 ## Use with Claude Code
-Open the theme folder in Claude Code. `CLAUDE.md` is loaded automatically and contains the
-design direction, file map, token locations, and the step-by-step redesign workflow.
-
-## File structure
-```
-wolf-blank/
-├── style.css            # theme header only
-├── functions.php        # supports + asset enqueue (<60 lines)
-├── theme.json           # all design tokens (v3, valid JSON, no comments)
-├── index.php            # silence is golden
-├── CLAUDE.md            # context for Claude Code sessions
-├── README.md
-├── templates/
-│   ├── front-page.html  # hero · themes grid · stats · CTA
-│   ├── index.html       # blog listing
-│   ├── single.html      # single post + comments
-│   ├── page.html        # static page
-│   └── 404.html
-├── parts/
-│   ├── header.html      # logo · nav · CTA
-│   └── footer.html      # brand · nav · newsletter · bottom bar
-└── assets/
-    ├── css/global.css   # reset + utilities + design slots
-    └── js/              # empty (no jQuery, no third-party JS)
-```
+`CLAUDE.md` is loaded automatically and holds the design direction, token map, dev-environment
+notes, and front-page section plan. Read the parent `wolf-blank/CLAUDE.md` before touching shared
+files. The `frontend-design` and `ui-ux-pro-max` skills are installed for UI/visual work.
 
 ## Development & linting
-The theme ships with a full WordPress-compliant linting toolchain.
-
-**PHP — PHPCS with WordPress + WordPress VIP standards** (`.phpcs.xml.dist`):
 ```bash
-composer install      # one-time
-composer lint         # check (WordPress, WordPress-VIP-Go, WordPressVIPMinimum, PHPCompatibilityWP)
-composer lint:fix     # auto-fix
+composer install && composer lint      # PHP (WordPress + VIP standards)
+npm install && npm run lint            # JS / CSS / package.json
+npm run format                         # Prettier (WordPress config)
 ```
-
-**JS / CSS / package.json — `@wordpress/scripts`:**
-```bash
-npm install           # one-time
-npm run lint          # eslint + stylelint + pkg-json
-npm run format        # Prettier (WordPress config)
-npm run build         # compile assets/ (only once block JS/CSS is added)
-npm run start         # watch build
-```
-
-Config files: `.phpcs.xml.dist`, `.eslintrc.js`, `.stylelintrc.json`, `.prettierrc.js`,
-`.editorconfig`, plus matching `*ignore` files. `vendor/`, `node_modules/`, and `build/`
-are gitignored.
-
-## Plugin dependencies
-**None.** The theme is fully self-contained. The `wolf-store` plugin is optional — when present,
-wire its CPT into the front-page query loop (see `CLAUDE.md`).
 
 ## License & contact
 GNU GPL v2 or later. © [WolfThemes](https://wolfthemes.com) — Constantin Saguin.

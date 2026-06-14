@@ -20,3 +20,6 @@ build/
 
 # WordPress local
 wp-cli.local.yml
+
+# Claude Code local settings (personal; keep shared context in CLAUDE.md)
+.claude/settings.local.json
