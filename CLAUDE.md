@@ -47,3 +47,5 @@ n/a — this is a theme, no build step. Edit files directly, reload browser.
 ## Reuse note
 This child theme is specific to wolfthemes.com.
 For new client projects, create a new child theme from wolf-blank instead.
+
+Git remote: git@github.com:wolfthemes/seijaku-fse.git — this repo only.
