@@ -1,0 +1,93 @@
+// =============================================================
+//  Header / navigation
+//  Clean full-width bar: wordmark left, links right. Light skin,
+//  sticky, condenses on scroll (theme.js toggles .is-scrolled).
+// =============================================================
+
+@use 'tokens' as *;
+
+.wolf-header {
+	position: sticky;
+	inset-block-start: 0;
+	z-index: 100;
+	padding-block: var(--wolf-header-pad);
+	background: color-mix(in srgb, #{$c-base} 82%, transparent);
+	backdrop-filter: saturate(180%) blur(12px);
+	border-block-end: 1px solid transparent;
+	transition: padding-block var(--wolf-dur) var(--wolf-ease-out),
+		border-color var(--wolf-dur) var(--wolf-ease-out),
+		background-color var(--wolf-dur) var(--wolf-ease-out);
+
+	&.is-scrolled {
+		padding-block: var(--wolf-header-pad-scrolled);
+		border-block-end-color: $c-border;
+		background: color-mix(in srgb, #{$c-base} 92%, transparent);
+	}
+}
+
+.wolf-header__inner {
+	align-items: center;
+}
+
+// ---- Wordmark -----------------------------------------------
+.wolf-header .wp-block-site-title {
+	margin: 0;
+	font-family: $f-heading;
+	font-size: fs(md);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -0.03em;
+	line-height: 1;
+
+	a {
+		color: $c-ink;
+		text-decoration: none;
+		transition: color var(--wolf-dur-fast) var(--wolf-ease-out);
+
+		&:hover {
+			color: $c-primary;
+		}
+	}
+}
+
+// ---- Nav links ----------------------------------------------
+.wolf-nav {
+	gap: clamp(1.25rem, 2.5vw, 2.5rem);
+	font-size: fs(sm);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+
+	.wp-block-navigation-item__content {
+		position: relative;
+		color: $c-ink;
+		text-decoration: none;
+		padding-block-end: 3px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset-inline: 0;
+			inset-block-end: 0;
+			block-size: 1px;
+			background: $c-primary;
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform var(--wolf-dur-fast) var(--wolf-ease-out);
+		}
+	}
+
+	.wp-block-navigation-item:hover .wp-block-navigation-item__content,
+	.current-menu-item .wp-block-navigation-item__content {
+		color: $c-primary;
+
+		&::after {
+			transform: scaleX(1);
+		}
+	}
+}
+
+// Mobile overlay menu — keep it airy and on-brand.
+.wolf-header .wp-block-navigation__responsive-container.is-menu-open {
+	background: $c-base;
+}

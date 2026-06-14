@@ -1,7 +1,7 @@
 {
-	"name": "wolf-blank",
+	"name": "seijaku-fse",
 	"version": "1.0.0",
-	"description": "Minimal FSE boilerplate WordPress theme for WolfThemes projects.",
+	"description": "WolfThemes.com FSE redesign — child theme of wolf-blank.",
 	"author": "Constantin Saguin (WolfThemes)",
 	"license": "GPL-2.0-or-later",
 	"private": true,
@@ -15,26 +15,28 @@
 	"homepage": "https://wolfthemes.com",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/wolfthemes/wolf-blank.git"
+		"url": "git+https://github.com/wolfthemes/seijaku-fse.git"
 	},
 	"bugs": {
-		"url": "https://github.com/wolfthemes/wolf-blank/issues"
+		"url": "https://github.com/wolfthemes/seijaku-fse/issues"
 	},
 	"engines": {
 		"node": ">=20",
 		"npm": ">=10"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.0.0"
+		"@wordpress/scripts": "^30.0.0",
+		"browser-sync": "^3.0.0",
+		"browser-sync-webpack-plugin": "^2.3.0"
 	},
 	"scripts": {
 		"build": "wp-scripts build",
 		"start": "wp-scripts start",
-		"lint:js": "wp-scripts lint-js \"assets/js/**/*.js\" --no-error-on-unmatched-pattern",
-		"lint:css": "wp-scripts lint-style \"assets/css/**/*.css\"",
+		"lint:js": "wp-scripts lint-js \"src/scripts/**/*.js\" --no-error-on-unmatched-pattern",
+		"lint:css": "wp-scripts lint-style \"src/styles/**/*.scss\"",
 		"lint:md": "wp-scripts lint-md-docs",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
-		"format": "wp-scripts format \"assets/**/*.{js,css}\"",
+		"format": "wp-scripts format \"src/**/*.{js,scss}\"",
 		"lint": "npm run lint:js && npm run lint:css && npm run lint:pkg-json",
 		"packages-update": "wp-scripts packages-update"
 	}

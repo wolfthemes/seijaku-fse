@@ -1,31 +1,17 @@
-<!-- wp:group {"tagName":"header","className":"wolf-header","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|5","bottom":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
-<header class="wp-block-group alignfull wolf-header" style="padding-top:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--5)">
+<!-- wp:group {"tagName":"header","className":"wolf-header","align":"full","layout":{"type":"constrained"}} -->
+<header class="wp-block-group alignfull wolf-header">
 
-	<!-- wp:group {"align":"wide","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group alignwide">
+	<!-- wp:group {"align":"wide","className":"wolf-header__inner","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group alignwide wolf-header__inner">
 
-		<!-- wp:site-title {"level":0,"fontSize":"md","fontFamily":"heading","style":{"typography":{"fontWeight":"600","letterSpacing":"-0.02em"}}} /-->
+		<!-- wp:site-title {"level":0} /-->
 
-		<!-- wp:group {"className":"wolf-header__nav","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"}} -->
-		<div class="wp-block-group wolf-header__nav">
-
-			<!-- wp:navigation {"overlayMenu":"mobile","fontSize":"sm","style":{"spacing":{"blockGap":"var:preset|spacing|6"},"typography":{"letterSpacing":"0.01em"}},"layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"}} -->
-				<!-- wp:navigation-link {"label":"Themes","url":"/themes"} /-->
-				<!-- wp:navigation-link {"label":"About","url":"/about"} /-->
-				<!-- wp:navigation-link {"label":"Blog","url":"/blog"} /-->
-				<!-- wp:navigation-link {"label":"Contact","url":"/contact"} /-->
-			<!-- /wp:navigation -->
-
-			<!-- wp:buttons {"className":"wolf-header__cta"} -->
-			<div class="wp-block-buttons wolf-header__cta">
-				<!-- wp:button {"fontSize":"sm"} -->
-				<div class="wp-block-button has-custom-font-size has-sm-font-size"><a class="wp-block-button__link wp-element-button" href="/themes">Get Started</a></div>
-				<!-- /wp:button -->
-			</div>
-			<!-- /wp:buttons -->
-
-		</div>
-		<!-- /wp:group -->
+		<!-- wp:navigation {"overlayMenu":"mobile","className":"wolf-nav","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"}} -->
+			<!-- wp:navigation-link {"label":"Home","url":"/"} /-->
+			<!-- wp:navigation-link {"label":"Store","url":"/store"} /-->
+			<!-- wp:navigation-link {"label":"Services","url":"/services"} /-->
+			<!-- wp:navigation-link {"label":"Contact","url":"/contact"} /-->
+		<!-- /wp:navigation -->
 
 	</div>
 	<!-- /wp:group -->

@@ -1,0 +1,25 @@
+// =============================================================
+//  Seijaku FSE — design layer
+//  Compiled to build/main.css and enqueued *after* wolf-blank's
+//  global.css, so this file only adds the editorial design on top
+//  of the parent reset + theme.json tokens. No reset here.
+//  Order matters: tokens first (declares the custom properties and
+//  SCSS helpers every partial relies on), then foundations, then
+//  page sections in top-to-bottom order. Sections are added one at
+//  a time as each is designed and approved.
+// =============================================================
+
+// Foundations
+@use 'partials/tokens' as *;
+@use 'partials/typography';
+@use 'partials/layout';
+@use 'partials/buttons';
+@use 'partials/nav';
+@use 'partials/animations';
+@use 'partials/footer';
+
+// Page sections (front-page.html) — built incrementally
+@use 'partials/hero';
+// @use 'partials/grid';   — next
+// @use 'partials/stats';  — placeholder section
+// @use 'partials/about';  — next

@@ -1,0 +1,48 @@
+// =============================================================
+//  Typography (foundation)
+//  theme.json owns the heading recipe now: Lexend, 700, UPPERCASE,
+//  slightly negative tracking. Here we add the editorial extras —
+//  optical balance, body measure, and the accent link underline.
+// =============================================================
+
+@use 'tokens' as *;
+
+// Headings: let long titles wrap evenly, render numerals tabular.
+h1,
+h2,
+h3 {
+	text-wrap: balance;
+}
+
+// Body copy: nicer ragged edge.
+p {
+	text-wrap: pretty;
+}
+
+// ---- Content links ------------------------------------------
+// Animated underline that wipes in on hover. Scoped to body copy
+// inside <main> so it never touches buttons, nav, or the footer
+// (those own their own treatments).
+main p a:not(.wp-element-button) {
+	color: inherit;
+	text-decoration: none;
+	background-image: linear-gradient($c-primary, $c-primary);
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 1px;
+	padding-bottom: 0.08em;
+	transition: background-size var(--wolf-dur-fast) var(--wolf-ease-out),
+		color var(--wolf-dur-fast) var(--wolf-ease-out);
+
+	&:hover,
+	&:focus-visible {
+		color: $c-primary;
+		background-size: 100% 1px;
+	}
+}
+
+// ---- Selection ----------------------------------------------
+::selection {
+	background: $c-primary;
+	color: $c-base;
+}

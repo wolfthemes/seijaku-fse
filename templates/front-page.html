@@ -3,122 +3,76 @@
 <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
 
-	<!-- HERO — full viewport, typography only, no image -->
-	<!-- wp:cover {"overlayColor":"base","dimRatio":0,"minHeight":100,"minHeightUnit":"vh","contentPosition":"center center","isUserOverlayColor":true,"align":"full","className":"wolf-hero"} -->
-	<div class="wp-block-cover alignfull is-light has-custom-content-position is-position-center-center wolf-hero" style="min-height:100vh">
-		<span aria-hidden="true" class="wp-block-cover__background has-base-background-color has-background-dim-0 has-background-dim"></span>
-		<div class="wp-block-cover__inner-container">
+	<!-- HERO -->
+	<!-- wp:group {"tagName":"section","className":"wolf-hero","align":"full"} -->
+	<section class="wp-block-group alignfull wolf-hero">
 
-			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained","contentSize":"900px"}} -->
-			<div class="wp-block-group">
-
-				<!-- wp:paragraph {"align":"center","fontSize":"sm","textColor":"contrast-2","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}}} -->
-				<p class="has-text-align-center has-contrast-2-color has-text-color has-sm-font-size" style="text-transform:uppercase;letter-spacing:0.12em">WordPress themes since 2011</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"display"} -->
-				<h1 class="wp-block-heading has-text-align-center has-display-font-size">Premium themes, crafted for creators.</h1>
-				<!-- /wp:heading -->
-
-				<!-- wp:group {"layout":{"type":"constrained","contentSize":"620px"}} -->
-				<div class="wp-block-group">
-					<!-- wp:paragraph {"align":"center","fontSize":"md","textColor":"contrast-2"} -->
-					<p class="has-text-align-center has-contrast-2-color has-text-color has-md-font-size">Fast, beautiful, and built to last — WordPress themes for musicians, artists, and the brands they’re building.</p>
-					<!-- /wp:paragraph -->
-				</div>
-				<!-- /wp:group -->
-
-				<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|4","margin":{"top":"var:preset|spacing|3"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
-				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--3)">
-					<!-- wp:button {"fontSize":"base"} -->
-					<div class="wp-block-button has-custom-font-size has-base-font-size"><a class="wp-block-button__link wp-element-button" href="/themes">Browse themes</a></div>
-					<!-- /wp:button -->
-
-					<!-- wp:button {"className":"is-style-outline","textColor":"contrast","borderColor":"contrast","fontSize":"base","style":{"border":{"width":"1px"},"color":{"background":"transparent"}}} -->
-					<div class="wp-block-button is-style-outline has-custom-font-size has-base-font-size"><a class="wp-block-button__link has-contrast-color has-text-color has-background has-border-color has-contrast-border-color wp-element-button" href="/about" style="border-width:1px;background-color:transparent">Our story</a></div>
-					<!-- /wp:button -->
-				</div>
-				<!-- /wp:buttons -->
-
-			</div>
-			<!-- /wp:group -->
-
-		</div>
-	</div>
-	<!-- /wp:cover -->
-
-	<!-- THEMES GRID — wolf-store theme-index, featured first -->
-	<!-- wp:group {"className":"wolf-themes-section","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12"},"blockGap":"var:preset|spacing|7"},"border":{"top":{"color":"var:preset|color|border","width":"1px"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
-	<div class="wp-block-group alignfull wolf-themes-section" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px;padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)">
-
-		<!-- wp:paragraph {"fontSize":"sm","textColor":"contrast-2","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}}} -->
-		<p class="has-contrast-2-color has-text-color has-sm-font-size" style="text-transform:uppercase;letter-spacing:0.12em">Premium WordPress Themes</p>
+		<!-- wp:paragraph -->
+		<p>WordPress themes since 2011</p>
 		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":1} -->
+		<h1 class="wp-block-heading">Premium themes, crafted for creators.</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph -->
+		<p>Fast, beautiful, and built to last — WordPress themes for musicians, artists, and the brands they’re building.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons">
+			<!-- wp:button -->
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/themes">Browse themes</a></div>
+			<!-- /wp:button -->
+
+			<!-- wp:button -->
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/about">Our story</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+
+	</section>
+	<!-- /wp:group -->
+
+	<!-- THEMES GRID -->
+	<!-- wp:group {"tagName":"section","className":"wolf-grid","align":"full","layout":{"type":"constrained","contentSize":"1280px"}} -->
+	<section class="wp-block-group alignfull wolf-grid">
+
+		<!-- wp:heading {"level":2} -->
+		<h2 class="wp-block-heading">Premium WordPress themes</h2>
+		<!-- /wp:heading -->
 
 		<!-- wp:wolf-store/theme-index {"perPage":12,"pagination":"numbers","orderby":"featured","order":"DESC"} /-->
 
-	</div>
+	</section>
 	<!-- /wp:group -->
 
-	<!-- STATS BAND — built later as a reusable block -->
-	<!-- WOLF-BLOCKS: stats-counter block goes here -->
+	<!-- STATS — placeholder; built later via wolf-blocks -->
+	<!-- wp:group {"tagName":"section","className":"wolf-stats","align":"full","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull wolf-stats">
 
-	<!-- TESTIMONIALS — built later as a reusable block -->
-	<!-- WOLF-BLOCKS: testimonials block goes here -->
+		<!-- WOLF-BLOCKS: stats-counter block goes here ($2M · 14 years · 36k) -->
 
-	<!-- ABOUT — asymmetric, text left, pull quote right -->
-	<!-- wp:group {"className":"wolf-about","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12"}},"border":{"top":{"color":"var:preset|color|border","width":"1px"}}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignfull wolf-about" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px;padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)">
+	</section>
+	<!-- /wp:group -->
 
-		<!-- wp:columns {"verticalAlignment":"top","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->
-		<div class="wp-block-columns alignwide are-vertically-aligned-top">
+	<!-- ABOUT -->
+	<!-- wp:group {"tagName":"section","className":"wolf-about","align":"full","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull wolf-about">
 
-			<!-- wp:column {"verticalAlignment":"top","width":"56%"} -->
-			<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:56%">
+		<!-- wp:heading {"level":2} -->
+		<h2 class="wp-block-heading">Fourteen years of considered design.</h2>
+		<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"fontSize":"sm","textColor":"contrast-2","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"},"spacing":{"margin":{"bottom":"var:preset|spacing|5"}}}} -->
-				<p class="has-contrast-2-color has-text-color has-sm-font-size" style="margin-bottom:var(--wp--preset--spacing--5);text-transform:uppercase;letter-spacing:0.12em">About</p>
-				<!-- /wp:paragraph -->
+		<!-- wp:paragraph -->
+		<p>WolfThemes is the studio of Constantin Saguin — a Power Elite ThemeForest author who has spent fourteen years making WordPress themes that creative people actually want to use.</p>
+		<!-- /wp:paragraph -->
 
-				<!-- wp:heading {"level":2,"fontSize":"2xl","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
-				<h2 class="wp-block-heading has-2-xl-font-size" style="margin-bottom:var(--wp--preset--spacing--6)">Fourteen years of considered design.</h2>
-				<!-- /wp:heading -->
+		<!-- wp:paragraph -->
+		<p>Every theme starts with the work it has to carry: the music, the portfolio, the story. The design steps back so that work can step forward.</p>
+		<!-- /wp:paragraph -->
 
-				<!-- wp:paragraph {"fontSize":"md","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|5"}}}} -->
-				<p class="has-md-font-size" style="margin-bottom:var(--wp--preset--spacing--5)">WolfThemes is the studio of Constantin Saguin — a Power Elite ThemeForest author who has spent fourteen years making WordPress themes that creative people actually want to use.</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"textColor":"contrast-2"} -->
-				<p class="has-contrast-2-color has-text-color">Every theme starts with the work it has to carry: the music, the portfolio, the story. The design steps back so that work can step forward.</p>
-				<!-- /wp:paragraph -->
-
-			</div>
-			<!-- /wp:column -->
-
-			<!-- wp:column {"verticalAlignment":"top","width":"32%"} -->
-			<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:32%">
-
-				<!-- wp:group {"style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}},"spacing":{"padding":{"top":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
-				<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px;padding-top:var(--wp--preset--spacing--5)">
-
-					<!-- wp:paragraph {"fontSize":"xl","style":{"typography":{"fontWeight":"500","lineHeight":"1.25"},"spacing":{"margin":{"bottom":"var:preset|spacing|4"}}}} -->
-					<p class="has-xl-font-size" style="margin-bottom:var(--wp--preset--spacing--4);font-weight:500;line-height:1.25">“A theme should disappear. What’s left is the work.”</p>
-					<!-- /wp:paragraph -->
-
-					<!-- wp:paragraph {"fontSize":"sm","textColor":"contrast-2"} -->
-					<p class="has-contrast-2-color has-text-color has-sm-font-size">Constantin Saguin — Founder, WolfThemes</p>
-					<!-- /wp:paragraph -->
-
-				</div>
-				<!-- /wp:group -->
-
-			</div>
-			<!-- /wp:column -->
-
-		</div>
-		<!-- /wp:columns -->
-
-	</div>
+	</section>
 	<!-- /wp:group -->
 
 </main>

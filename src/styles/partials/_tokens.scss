@@ -1,0 +1,83 @@
+// =============================================================
+//  Tokens
+//  Bridges theme.json presets (--wp--preset--*) and the wolf
+//  contract (--wolf-*) into ergonomic SCSS helpers, and declares
+//  the handful of seijaku-only design custom properties that
+//  don't belong in theme.json (motion curves, reveal geometry).
+//  No raw colours or font names live here — only references.
+// =============================================================
+
+// ---- Breakpoints (WP + theme.json wideSize aligned) ---------
+$bp-sm: 600px;
+$bp-md: 782px; // WP mobile/tablet boundary
+$bp-lg: 1024px;
+$bp-xl: 1280px; // theme.json wideSize
+
+@mixin until($bp) {
+
+	@media (max-width: #{$bp - 0.02px}) {
+		@content;
+	}
+}
+
+@mixin from($bp) {
+
+	@media (min-width: $bp) {
+		@content;
+	}
+}
+
+// ---- Colour aliases (theme.json palette) --------------------
+$c-primary: var(--wp--preset--color--primary);
+$c-primary-light: var(--wp--preset--color--primary-light);
+$c-secondary: var(--wp--preset--color--secondary);
+$c-base: var(--wp--preset--color--base);
+$c-surface: var(--wp--preset--color--base-2);
+$c-ink: var(--wp--preset--color--contrast);
+$c-muted: var(--wp--preset--color--contrast-2);
+$c-border: var(--wp--preset--color--border);
+
+// ---- Type ---------------------------------------------------
+$f-heading: var(--wp--preset--font-family--heading);
+$f-body: var(--wp--preset--font-family--body);
+
+// ---- Spacing presets ----------------------------------------
+@function space($step) {
+
+	@return var(--wp--preset--spacing--#{$step});
+}
+
+// ---- Font-size presets --------------------------------------
+@function fs($slug) {
+
+	@return var(--wp--preset--font-size--#{$slug});
+}
+
+// ---- Seijaku design custom properties -----------------------
+:root {
+	// Motion — one expressive curve for reveals, one symmetric for UI.
+	--wolf-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+	--wolf-ease-emphasis: cubic-bezier(0.65, 0, 0.35, 1);
+	--wolf-dur-fast: 0.22s;
+	--wolf-dur: 0.5s;
+	--wolf-dur-slow: 0.85s;
+
+	// Reveal geometry
+	--wolf-reveal-y: 1.4rem;
+	--wolf-reveal-stagger: 80ms;
+
+	// Editorial hairline
+	--wolf-hairline: var(--wp--preset--color--border);
+
+	// Sticky header rhythm
+	--wolf-header-h: 4.5rem; // nominal collapsed height for scroll offsets
+	--wolf-header-pad: #{space(5)};
+	--wolf-header-pad-scrolled: #{space(4)};
+
+	// Radii (mirror theme.json custom.wolf, kept local for ergonomics)
+	--wolf-radius-lg: 8px;
+	--wolf-radius-pill: 999px;
+
+	// Tracking
+	--wolf-track-label: 0.14em;
+}

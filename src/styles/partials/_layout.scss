@@ -1,0 +1,28 @@
+// =============================================================
+//  Layout (foundation)
+//  Page-wide structural rules only. Per-section layout lives in
+//  each section's own partial.
+// =============================================================
+
+@use 'tokens' as *;
+
+// Smooth in-page anchor scrolling, offset for the sticky header.
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: calc(var(--wolf-header-h) + #{space(5)});
+}
+
+// Keep full-bleed sections / decorative overflow from spawning a
+// horizontal scrollbar or an edge gap on the right.
+body {
+	overflow-x: clip;
+}
+
+main.wp-block-group {
+	overflow-x: clip;
+}
+
+// Optional reading-measure utility for lead copy.
+.wolf-lead {
+	max-inline-size: 38ch;
+}

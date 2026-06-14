@@ -1,0 +1,76 @@
+// =============================================================
+//  Animations
+//  Scroll-reveal system. Elements only start hidden once theme.js
+//  has flagged the body with .wolf-anim-ready — so if JS fails or
+//  is disabled, nothing is ever invisible (progressive enhancement).
+//  Everything is opacity/transform only: cheap, GPU-friendly.
+//  Markup contract:
+//    .wolf-reveal         the element itself fades up when in view
+//    .wolf-reveal-group   its direct children fade up, staggered
+//    .is-inview           added by theme.js when the element enters
+// =============================================================
+
+@use 'tokens' as *;
+
+@mixin hidden {
+	opacity: 0;
+	transform: translateY(var(--wolf-reveal-y));
+}
+
+@mixin shown {
+	opacity: 1;
+	transform: none;
+}
+
+@mixin reveal-transition {
+	transition: opacity var(--wolf-dur-slow) var(--wolf-ease-out),
+		transform var(--wolf-dur-slow) var(--wolf-ease-out);
+}
+
+body.wolf-anim-ready {
+
+	.wolf-reveal {
+
+		@include hidden;
+		@include reveal-transition;
+		will-change: opacity, transform;
+
+		&.is-inview {
+
+			@include shown;
+		}
+	}
+
+	.wolf-reveal-group > * {
+
+		@include hidden;
+		@include reveal-transition;
+		will-change: opacity, transform;
+	}
+
+	.wolf-reveal-group.is-inview > * {
+
+		@include shown;
+	}
+
+	// Stagger the first eight children; anything beyond shares the last beat.
+	@for $i from 1 through 8 {
+		.wolf-reveal-group.is-inview > *:nth-child(#{$i}) {
+			transition-delay: calc(#{$i - 1} * var(--wolf-reveal-stagger));
+		}
+	}
+}
+
+// Respect the user's wishes — show everything, animate nothing.
+@media (prefers-reduced-motion: reduce) {
+
+	body.wolf-anim-ready {
+
+		.wolf-reveal,
+		.wolf-reveal-group > * {
+
+			@include shown;
+			transition: none;
+		}
+	}
+}

@@ -1,0 +1,151 @@
+// =============================================================
+//  Footer
+//  Dark anchor for the light site. Three-zone top (wordmark ·
+//  tagline · newsletter placeholder), a four-column link grid,
+//  and a base bar. All uppercase, balanced, tight tracking.
+// =============================================================
+
+@use 'tokens' as *;
+
+.wolf-footer {
+	// Local dark palette so children read cleanly on black.
+	--ft-bg: #0a0a0a;
+	--ft-fg: #fff;
+	--ft-muted: rgba(255, 255, 255, 0.55);
+	--ft-line: rgba(255, 255, 255, 0.12);
+
+	background: var(--ft-bg);
+	color: var(--ft-muted);
+	padding-block: space(10) space(7);
+}
+
+// ---- Top zone: wordmark · tagline · newsletter --------------
+.wolf-footer__top {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr);
+	gap: space(7);
+	align-items: start;
+
+	@include until($bp-lg) {
+		grid-template-columns: 1fr;
+		gap: space(6);
+	}
+}
+
+.wolf-footer__logo {
+	margin: 0;
+	font-family: $f-heading;
+	font-size: fs(xl);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -0.03em;
+	line-height: 0.95;
+
+	a {
+		color: var(--ft-fg);
+		text-decoration: none;
+	}
+}
+
+.wolf-footer__tagline {
+	margin: 0;
+	font-family: $f-heading;
+	font-size: fs(md);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+	line-height: 1.15;
+	color: var(--ft-fg);
+}
+
+// Newsletter region — placeholder until the wolf-blocks form ships.
+.wolf-footer__news {
+	min-block-size: space(8);
+
+	&:empty::before {
+		content: 'Newsletter — coming soon';
+		font-size: fs(sm);
+		text-transform: uppercase;
+		letter-spacing: var(--wolf-track-label);
+		color: var(--ft-muted);
+	}
+}
+
+// ---- Link columns -------------------------------------------
+.wolf-footer__nav {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: space(7);
+	margin-block-start: space(9);
+	padding-block-start: space(7);
+	border-block-start: 1px solid var(--ft-line);
+
+	@include until($bp-md) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: space(7) space(6);
+	}
+}
+
+.wolf-footer__head {
+	margin: 0 0 space(5);
+	font-size: fs(sm);
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	color: var(--ft-fg);
+}
+
+.wolf-footer__links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: space(3);
+
+	li {
+		margin: 0;
+	}
+
+	a {
+		color: var(--ft-muted);
+		font-size: fs(sm);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		text-decoration: none;
+		transition: color var(--wolf-dur-fast) var(--wolf-ease-out);
+
+		&:hover,
+		&:focus-visible {
+			color: var(--ft-fg);
+		}
+	}
+}
+
+// ---- Base bar -----------------------------------------------
+.wolf-footer__base {
+	align-items: center;
+	margin-block-start: space(9);
+	padding-block-start: space(6);
+	border-block-start: 1px solid var(--ft-line);
+
+	p {
+		margin: 0;
+		font-size: fs(xs);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: var(--wolf-track-label);
+		color: var(--ft-muted);
+	}
+
+	a {
+		color: var(--ft-muted);
+		text-decoration: none;
+		transition: color var(--wolf-dur-fast) var(--wolf-ease-out);
+
+		&:hover,
+		&:focus-visible {
+			color: var(--ft-fg);
+		}
+	}
+}

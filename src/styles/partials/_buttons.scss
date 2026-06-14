@@ -1,0 +1,72 @@
+// =============================================================
+//  Buttons
+//  theme.json sets the base fill/colour/padding. Here we add the
+//  motion: a subtle lift on the primary, a fill-from-edge wipe on
+//  the outline, and a consistent focus ring. Restraint over flash.
+// =============================================================
+
+@use 'tokens' as *;
+
+.wp-block-button__link {
+	position: relative;
+	transition: transform var(--wolf-dur-fast) var(--wolf-ease-out),
+		background-color var(--wolf-dur-fast) var(--wolf-ease-out),
+		color var(--wolf-dur-fast) var(--wolf-ease-out),
+		box-shadow var(--wolf-dur-fast) var(--wolf-ease-out);
+	will-change: transform;
+}
+
+// Primary — lifts a hair and casts the faintest accent shadow.
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 24px -12px color-mix(in srgb, #{$c-primary} 55%, transparent);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+}
+
+// Outline — fills with ink on hover.
+.is-style-outline .wp-block-button__link {
+	transition: color var(--wolf-dur-fast) var(--wolf-ease-out),
+		background-color var(--wolf-dur-fast) var(--wolf-ease-out),
+		border-color var(--wolf-dur-fast) var(--wolf-ease-out);
+
+	&:hover,
+	&:focus-visible {
+		background-color: $c-ink !important;
+		border-color: $c-ink !important;
+		color: $c-base !important;
+	}
+}
+
+// ---- Focus ring (keyboard only) -----------------------------
+.wp-block-button__link:focus-visible,
+a:focus-visible {
+	outline: 2px solid $c-primary;
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+// ---- Inline "text link with arrow" affordance ---------------
+// Opt-in via .wolf-arrow on a link; the arrow nudges on hover.
+.wolf-arrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	font-weight: 600;
+	color: $c-primary;
+	text-decoration: none;
+
+	&::after {
+		content: '\2192'; // →
+		transition: transform var(--wolf-dur-fast) var(--wolf-ease-out);
+	}
+
+	&:hover::after {
+		transform: translateX(0.35em);
+	}
+}
