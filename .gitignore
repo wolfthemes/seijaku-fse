@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build output
+build/
+
+# Linter caches
+.phpcs.cache
+*.log
+
+# WordPress local
+wp-cli.local.yml

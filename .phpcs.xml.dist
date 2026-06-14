@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<ruleset name="Wolf Blank">
+	<description>WordPress + VIP coding standards for the Wolf Blank theme.</description>
+
+	<!-- What to scan -->
+	<file>.</file>
+
+	<!-- Run on PHP files only -->
+	<arg name="extensions" value="php"/>
+
+	<!-- Show sniff codes, progress, colors; use parallelism -->
+	<arg name="colors"/>
+	<arg name="basepath" value="."/>
+	<arg name="parallel" value="8"/>
+	<arg name="cache" value=".phpcs.cache"/>
+	<arg value="sp"/>
+
+	<!-- Directories to ignore -->
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/build/*</exclude-pattern>
+
+	<!-- ============================================================
+	     Rulesets
+	     ============================================================ -->
+
+	<!-- Full WordPress standard: Core + Docs + Extra best practices -->
+	<rule ref="WordPress"/>
+
+	<!-- WordPress VIP coding standards (cloud / enterprise-grade).
+	     JS sniffs are excluded — JavaScript is linted via @wordpress/scripts
+	     (ESLint), and PHPCS scanning of JS is deprecated. -->
+	<rule ref="WordPress-VIP-Go">
+		<exclude name="WordPressVIPMinimum.JS"/>
+		<exclude name="WordPress.WP.EnqueuedResources"/>
+	</rule>
+	<rule ref="WordPressVIPMinimum">
+		<exclude name="WordPressVIPMinimum.JS"/>
+	</rule>
+
+	<!-- PHP cross-version compatibility, WP-aware -->
+	<rule ref="PHPCompatibilityWP"/>
+
+	<!-- ============================================================
+	     Project configuration
+	     ============================================================ -->
+
+	<!-- Target PHP 8.0+ for compatibility checks -->
+	<config name="testVersion" value="8.0-"/>
+
+	<!-- Minimum supported WordPress version (matches style.css) -->
+	<config name="minimum_wp_version" value="6.5"/>
+
+	<!-- Enforce the theme text domain -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="wolf-blank"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Enforce a global prefix on functions / hooks / globals -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="wolf_blank"/>
+				<element value="WolfBlank"/>
+				<element value="WOLF_BLANK"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Tabs for indentation (WordPress standard) -->
+	<arg name="tab-width" value="4"/>
+</ruleset>

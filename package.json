@@ -1,0 +1,41 @@
+{
+	"name": "wolf-blank",
+	"version": "1.0.0",
+	"description": "Minimal FSE boilerplate WordPress theme for WolfThemes projects.",
+	"author": "Constantin Saguin (WolfThemes)",
+	"license": "GPL-2.0-or-later",
+	"private": true,
+	"keywords": [
+		"wordpress",
+		"theme",
+		"fse",
+		"block-theme",
+		"wolfthemes"
+	],
+	"homepage": "https://wolfthemes.com",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/wolfthemes/wolf-blank.git"
+	},
+	"bugs": {
+		"url": "https://github.com/wolfthemes/wolf-blank/issues"
+	},
+	"engines": {
+		"node": ">=20",
+		"npm": ">=10"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.0.0"
+	},
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"lint:js": "wp-scripts lint-js \"assets/js/**/*.js\" --no-error-on-unmatched-pattern",
+		"lint:css": "wp-scripts lint-style \"assets/css/**/*.css\"",
+		"lint:md": "wp-scripts lint-md-docs",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"format": "wp-scripts format \"assets/**/*.{js,css}\"",
+		"lint": "npm run lint:js && npm run lint:css && npm run lint:pkg-json",
+		"packages-update": "wp-scripts packages-update"
+	}
+}
