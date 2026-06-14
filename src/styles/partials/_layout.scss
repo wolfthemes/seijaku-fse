@@ -12,12 +12,9 @@ html {
 	scroll-padding-top: calc(var(--wolf-header-h) + #{space(5)});
 }
 
-// Keep full-bleed sections / decorative overflow from spawning a
-// horizontal scrollbar or an edge gap on the right.
-body {
-	overflow-x: clip;
-}
-
+// Contain the hero's oversized decorative wordmark so it never
+// spawns a horizontal scrollbar. (Full-bleed alignment itself is
+// handled the WordPress way via root padding + wideSize.)
 main.wp-block-group {
 	overflow-x: clip;
 }

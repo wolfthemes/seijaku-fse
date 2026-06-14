@@ -51,12 +51,10 @@
 }
 
 // ---- Nav links ----------------------------------------------
+// Type (uppercase / size / weight / tracking) comes from theme.json
+// styles.blocks.core/navigation. Here we own layout + interaction.
 .wolf-nav {
 	gap: clamp(1.25rem, 2.5vw, 2.5rem);
-	font-size: fs(sm);
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
 
 	.wp-block-navigation-item__content {
 		position: relative;

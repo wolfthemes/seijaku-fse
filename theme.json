@@ -6,7 +6,7 @@
 		"useRootPaddingAwareAlignments": true,
 		"layout": {
 			"contentSize": "720px",
-			"wideSize": "1280px"
+			"wideSize": "1200px"
 		},
 		"color": {
 			"palette": [
@@ -104,8 +104,8 @@
 			"padding": {
 				"top": "0",
 				"bottom": "0",
-				"left": "clamp(1.5rem, 5vw, 6rem)",
-				"right": "clamp(1.5rem, 5vw, 6rem)"
+				"left": "10px",
+				"right": "10px"
 			}
 		},
 		"typography": {
@@ -150,6 +150,16 @@
 				},
 				":hover": {
 					"color": { "background": "var(--wp--preset--color--primary-light)" }
+				}
+			}
+		},
+		"blocks": {
+			"core/navigation": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--sm)",
+					"fontWeight": "600",
+					"textTransform": "uppercase",
+					"letterSpacing": "-0.01em"
 				}
 			}
 		}
