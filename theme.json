@@ -5,8 +5,8 @@
 		"appearanceTools": true,
 		"useRootPaddingAwareAlignments": true,
 		"layout": {
-			"contentSize": "720px",
-			"wideSize": "1200px"
+			"contentSize": "1000px",
+			"wideSize": "1600px"
 		},
 		"color": {
 			"palette": [
@@ -104,8 +104,8 @@
 			"padding": {
 				"top": "0",
 				"bottom": "0",
-				"left": "10px",
-				"right": "10px"
+				"left": "clamp(1.25rem, 4vw, 4rem)",
+				"right": "clamp(1.25rem, 4vw, 4rem)"
 			}
 		},
 		"typography": {
