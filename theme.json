@@ -104,8 +104,8 @@
 			"padding": {
 				"top": "0",
 				"bottom": "0",
-				"left": "clamp(1.25rem, 4vw, 4rem)",
-				"right": "clamp(1.25rem, 4vw, 4rem)"
+				"left": "clamp(1rem, 2.5vw, 2.5rem)",
+				"right": "clamp(1rem, 2.5vw, 2.5rem)"
 			}
 		},
 		"typography": {
@@ -156,7 +156,7 @@
 		"blocks": {
 			"core/navigation": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--sm)",
+					"fontSize": "var(--wp--preset--font-size--xs)",
 					"fontWeight": "600",
 					"textTransform": "uppercase",
 					"letterSpacing": "-0.01em"

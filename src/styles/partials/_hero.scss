@@ -56,7 +56,7 @@
 	> h1 {
 		max-inline-size: 18ch;
 		margin: 0;
-		font-size: fs(display);
+		font-size: clamp(2.75rem, 5.5vw, 4.5rem);
 		line-height: 0.98;
 		letter-spacing: -0.035em;
 		text-wrap: balance;
