@@ -1,0 +1,79 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "primary",       "color": "#0c10ff",          "name": "Primary" },
+				{ "slug": "primary-light", "color": "#4a4dff",          "name": "Primary Light" },
+				{ "slug": "secondary",     "color": "#0d0d0d",          "name": "Secondary" },
+				{ "slug": "accent",        "color": "#0c10ff",          "name": "Accent" },
+				{ "slug": "base",       "color": "#ffffff",          "name": "Base" },
+				{ "slug": "base-2",     "color": "#f5f5f5",          "name": "Surface" },
+				{ "slug": "contrast",   "color": "#0d0d0d",          "name": "Contrast" },
+				{ "slug": "contrast-2", "color": "#606060",          "name": "Muted" },
+				{ "slug": "border",     "color": "rgba(0,0,0,0.15)", "name": "Border" }
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"name": "Heading",
+					"slug": "heading",
+					"fontFamily": "Lexend, sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "400 700",
+							"src": [ "https://fonts.gstatic.com/s/lexend/v24/wlpwgwvFAVdoq2_nSKkaSKluiKzjgg.woff2" ]
+						}
+					]
+				},
+				{
+					"name": "Body",
+					"slug": "body",
+					"fontFamily": "Rethink Sans, sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Rethink Sans",
+							"fontStyle": "normal",
+							"fontWeight": "400 600",
+							"src": [ "https://fonts.gstatic.com/s/rethinksans/v4/AMOTz46as3KOnxFVgGYbAKh5-s66io.woff2" ]
+						}
+					]
+				}
+			]
+		},
+		"custom": {
+			"wolf": {
+				"radius-sm":        "2px",
+				"radius-md":        "4px",
+				"radius-lg":        "8px",
+				"radius-pill":      "999px",
+				"border-color":     "rgba(0, 0, 0, 0.15)",
+				"border-width":     "1px",
+				"btn-radius":       "4px",
+				"btn-padding-x":    "1.5rem",
+				"btn-padding-y":    "0.75rem",
+				"btn-font-weight":  "600",
+				"shadow-card":      "5px 5px 25px rgba(2, 2, 2, 0.33)",
+				"transition-speed": "0.2s",
+				"transition-ease":  "ease"
+			}
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontSize": "var(--wp--preset--font-size--base)"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			}
+		}
+	}
+}
