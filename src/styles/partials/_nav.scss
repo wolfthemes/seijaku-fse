@@ -23,6 +23,19 @@
 		border-block-end-color: $c-border;
 		background: color-mix(in srgb, #{$c-base} 92%, transparent);
 	}
+
+	&.wolf-header-overlay{
+		// --wp--preset--color--contrast:white;
+		background:none;
+		position:absolute;
+		backdrop-filter:none;
+	}
+}
+
+.admin-bar {
+	.wolf-header-overlay{
+		top: 32px;
+	}
 }
 
 .wolf-header__inner {

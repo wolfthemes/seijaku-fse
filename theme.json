@@ -51,6 +51,7 @@
 				}
 			],
 			"fontSizes": [
+				{ "slug": "xxs",     "name": "XXS",     "size": "0.6875rem","fluid": false },
 				{ "slug": "xs",      "name": "XS",      "size": "0.75rem",  "fluid": { "min": "0.75rem",  "max": "0.8125rem" } },
 				{ "slug": "sm",      "name": "SM",      "size": "0.875rem", "fluid": { "min": "0.875rem", "max": "0.9375rem" } },
 				{ "slug": "base",    "name": "Base",    "size": "1rem",     "fluid": { "min": "1rem",     "max": "1.125rem" } },
@@ -156,7 +157,8 @@
 		"blocks": {
 			"core/navigation": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xs)",
+					"fontFamily": "var(--wp--preset--font-family--body)",
+					"fontSize": "var(--wp--preset--font-size--xxs)",
 					"fontWeight": "600",
 					"textTransform": "uppercase",
 					"letterSpacing": "-0.01em"
