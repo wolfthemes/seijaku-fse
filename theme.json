@@ -81,23 +81,23 @@
 				{ "slug": "11", "name": "11 — Section", "size": "clamp(6rem, 10vw, 10rem)" },
 				{ "slug": "12", "name": "12 — Section XL", "size": "clamp(8rem, 14vw, 14rem)" }
 			]
-		}
-	},
-	"custom": {
-		"wolf": {
-			"radius-sm":        "2px",
-			"radius-md":        "4px",
-			"radius-lg":        "8px",
-			"radius-pill":      "999px",
-			"border-color":     "rgba(0, 0, 0, 0.10)",
-			"border-width":     "1px",
-			"btn-radius":       "4px",
-			"btn-padding-x":    "1.75rem",
-			"btn-padding-y":    "0.65rem",
-			"btn-font-weight":  "600",
-			"shadow-card":      "none",
-			"transition-speed": "0.25s",
-			"transition-ease":  "ease"
+		},
+		"custom": {
+			"wolf": {
+				"radius-sm":        "2px",
+				"radius-md":        "4px",
+				"radius-lg":        "8px",
+				"radius-pill":      "999px",
+				"border-color":     "rgba(0, 0, 0, 0.10)",
+				"border-width":     "1px",
+				"btn-radius":       "4px",
+				"btn-padding-x":    "1.75rem",
+				"btn-padding-y":    "0.65rem",
+				"btn-font-weight":  "600",
+				"shadow-card":      "none",
+				"transition-speed": "0.25s",
+				"transition-ease":  "ease"
+			}
 		}
 	},
 	"styles": {

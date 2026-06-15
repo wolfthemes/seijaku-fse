@@ -19,7 +19,8 @@
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"textAlign":"center","level":1,"className":"wolf-hero-dark__title"} -->
-			<h1 class="wp-block-heading has-text-align-center wolf-hero-dark__title">Launch-ready websites for people with something to say</h1>
+			<h1 class="wp-block-heading has-text-align-center wolf-hero-dark__title">A small studio making themes with the care of a craftsman and the discipline of an engineer.
+</h1>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","className":"wolf-hero-dark__text"} -->
