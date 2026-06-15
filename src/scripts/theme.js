@@ -77,6 +77,31 @@ function initHeader() {
 	window.addEventListener( 'scroll', onScroll, { passive: true } );
 }
 
+/**
+ * Curtain-roll hover effect for desktop nav items.
+ *
+ * Appends an aria-hidden clone of each label text so the CSS can
+ * translate both out/in simultaneously. Skipped under reduced motion
+ * (CSS falls back to a plain opacity fade in that case).
+ *
+ * @param {boolean} reduced Whether the user prefers reduced motion.
+ */
+function initNavCurtain( reduced ) {
+	if ( reduced ) {
+		return;
+	}
+
+	document
+		.querySelectorAll( '.wolf-nav .wp-block-navigation-item__label' )
+		.forEach( ( label ) => {
+			const clone = document.createElement( 'span' );
+			clone.className = 'wolf-nav-curtain';
+			clone.textContent = label.textContent;
+			clone.setAttribute( 'aria-hidden', 'true' );
+			label.closest( '.wp-block-navigation-item__content' ).appendChild( clone );
+		} );
+}
+
 function init() {
 	const reduced = window.matchMedia(
 		'(prefers-reduced-motion: reduce)'
@@ -87,6 +112,7 @@ function init() {
 
 	initReveals( reduced );
 	initHeader();
+	initNavCurtain( reduced );
 }
 
 if ( document.readyState === 'loading' ) {

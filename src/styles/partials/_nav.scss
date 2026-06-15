@@ -63,37 +63,69 @@
 	}
 }
 
-// ---- Nav links ----------------------------------------------
-// Type (uppercase / size / weight / tracking) comes from theme.json
-// styles.blocks.core/navigation. Here we own layout + interaction.
+// ---- Nav links — curtain roll hover -------------------------
+// theme.js appends a .wolf-nav-curtain span (aria-hidden) that
+// mirrors the label text and starts translated 100% below.
+// Both the label and curtain translate -100% on hover, so the
+// curtain rolls up into view while the original exits above.
 .wolf-nav {
 	gap: clamp(1.25rem, 2.5vw, 2.5rem);
 
 	.wp-block-navigation-item__content {
+		display: inline-flex;
+		overflow: hidden;
 		position: relative;
 		color: $c-ink;
 		text-decoration: none;
-		padding-block-end: 3px;
 
-		&::after {
-			content: '';
+		.wp-block-navigation-item__label {
+			display: block;
+			transition: transform 0.45s var(--wolf-ease-out);
+			will-change: transform;
+		}
+
+		// Clone injected by JS — sits one line-height below, invisible.
+		.wolf-nav-curtain {
 			position: absolute;
-			inset-inline: 0;
-			inset-block-end: 0;
-			block-size: 1px;
-			background: $c-primary;
-			transform: scaleX(0);
-			transform-origin: left;
-			transition: transform var(--wolf-dur-fast) var(--wolf-ease-out);
+			inset-block-start: 0;
+			inset-inline-start: 0;
+			display: block;
+			transform: translateY(100%);
+			white-space: nowrap;
+			pointer-events: none;
+			user-select: none;
+			transition: transform 0.45s var(--wolf-ease-out);
+			will-change: transform;
 		}
 	}
 
-	.wp-block-navigation-item:hover .wp-block-navigation-item__content,
-	.current-menu-item .wp-block-navigation-item__content {
-		color: $c-primary;
+	.wp-block-navigation-item:hover .wp-block-navigation-item__content {
+		.wp-block-navigation-item__label {
+			transform: translateY(-100%);
+		}
 
-		&::after {
-			transform: scaleX(1);
+		.wolf-nav-curtain {
+			transform: translateY(0);
+		}
+	}
+
+	// Reduced motion: skip the translate entirely, use a plain fade.
+	@media (prefers-reduced-motion: reduce) {
+		.wp-block-navigation-item__content {
+			.wp-block-navigation-item__label {
+				transition: opacity var(--wolf-dur-fast) var(--wolf-ease-out);
+			}
+
+			.wolf-nav-curtain {
+				display: none;
+			}
+		}
+
+		.wp-block-navigation-item:hover .wp-block-navigation-item__content {
+			.wp-block-navigation-item__label {
+				transform: none;
+				opacity: 0.55;
+			}
 		}
 	}
 }
