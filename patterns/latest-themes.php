@@ -5,7 +5,7 @@
  * Categories: featured, hero
  */
 ?>
-<!-- wp:group {"tagName":"section","className":"wolf-grid","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<!-- wp:group {"tagName":"section","className":"wolf-grid","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|11","bottom":"var:preset|spacing|11"}}},"layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 	<section class="wp-block-group alignfull wolf-grid">
 
 		<!-- wp:heading {"level":2} -->

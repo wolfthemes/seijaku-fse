@@ -7,6 +7,12 @@
 
 @use 'tokens' as *;
 
+.wp-element-button{
+	display: flex;
+    align-items: center;
+	justify-content: center;
+}
+
 .wp-block-button__link {
 	position: relative;
 	transition: transform var(--wolf-dur-fast) var(--wolf-ease-out),
@@ -48,7 +54,7 @@
 a:focus-visible {
 	outline: 2px solid $c-primary;
 	outline-offset: 3px;
-	border-radius: 2px;
+	border-radius: var(--wolf-btn-radius);
 }
 
 // ---- Inline "text link with arrow" affordance ---------------

@@ -9,7 +9,7 @@
 
 .wolf-footer {
 	// Local dark palette so children read cleanly on black.
-	--ft-bg: #0a0a0a;
+	--ft-bg: #0D0302;
 	--ft-fg: #fff;
 	--ft-muted: rgba(255, 255, 255, 0.55);
 	--ft-line: rgba(255, 255, 255, 0.12);
@@ -100,7 +100,7 @@
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	gap: space(3);
+	// gap: space(3);
 
 	li {
 		margin: 0;
