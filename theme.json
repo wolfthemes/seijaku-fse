@@ -16,7 +16,7 @@
 				{ "slug": "accent",        "color": "#0c10ff",          "name": "Accent" },
 				{ "slug": "base",          "color": "#FAF8F1",          "name": "Base" },
 				{ "slug": "base-2",        "color": "#EFE6D4",          "name": "Surface" },
-				{ "slug": "contrast",      "color": "#141414",          "name": "Contrast" },
+				{ "slug": "contrast",      "color": "#121212",          "name": "Contrast" },
 				{ "slug": "contrast-2",    "color": "#6b6b6b",          "name": "Muted" },
 				{ "slug": "border",        "color": "rgba(0,0,0,0.10)", "name": "Border" }
 			]
@@ -26,14 +26,13 @@
 				{
 					"name": "Heading",
 					"slug": "heading",
-					"fontFamily": "Lexend, sans-serif",
+					"fontFamily": "Manrope, sans-serif",
 					"fontFace": [
 						{
-							"fontFamily": "Lexend",
+							"fontFamily": "Manrope",
 							"fontStyle": "normal",
-							"fontWeight": "400 700",
-							"src": [ "https://fonts.gstatic.com/s/lexend/v24/wlpwgwvFAVdoq2_nSKkaSKluiKzjgg.woff2" ]
-						}
+							"fontWeight": "400 700"
+            }
 					]
 				},
 				{
@@ -44,9 +43,8 @@
 						{
 							"fontFamily": "Rethink Sans",
 							"fontStyle": "normal",
-							"fontWeight": "400 600",
-							"src": [ "https://fonts.gstatic.com/s/rethinksans/v4/AMOTz46as3KOnxFVgGYbAKh5-s66io.woff2" ]
-						}
+							"fontWeight": "400 600"
+            }
 					]
 				}
 			],
@@ -100,6 +98,11 @@
 			}
 		}
 	},
+	"templateParts": [
+		{ "name": "header", "title": "Header", "area": "header" },
+		{ "name": "footer", "title": "Footer", "area": "footer" },
+		{ "name": "header-overlay", "title": "Header Overlay", "area": "header" }
+	],
 	"styles": {
 		"spacing": {
 			"padding": {
@@ -139,7 +142,8 @@
 				"typography": {
 					"fontWeight": "600",
 					"fontSize": "var(--wp--preset--font-size--sm)",
-					"letterSpacing": "0.01em"
+					"letterSpacing": "0.01em",
+					"textTransform": "uppercase"
 				},
 				"spacing": {
 					"padding": {

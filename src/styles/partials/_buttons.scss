@@ -7,15 +7,7 @@
 
 @use 'tokens' as *;
 
-.wp-element-button{
-	display: flex;
-    align-items: center;
-	justify-content: center;
-}
-
 .wp-block-button__link {
-	position: relative;
-	border-radius: var(--wolf-btn-radius);
 	transition: transform var(--wolf-dur-fast) var(--wolf-ease-out),
 		background-color var(--wolf-dur-fast) var(--wolf-ease-out),
 		color var(--wolf-dur-fast) var(--wolf-ease-out),

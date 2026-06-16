@@ -1,12 +1,13 @@
 <?php
 /**
  * Title: Hero Dark
- * Slug: hero-dark
- * Categories: featured, hero
+ * Slug: seijaku-fse/hero-dark
+ * Categories: hero
  */
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero.jpg' ); ?>","dimRatio":70,"minHeight":820,"minHeightUnit":"px","align":"full","className":"wolf-hero-dark"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero.jpg' ); ?>","dimRatio":30,"minHeight":820,"minHeightUnit":"px","align":"full","className":"wolf-hero wolf-hero-dark"} -->
 <div class="wp-block-cover alignfull wolf-hero wolf-hero-dark" style="min-height:820px">
+	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim"></span>
 	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero.jpg' ); ?>" data-object-fit="cover"/>
 
 	<div class="wp-block-cover__inner-container">
@@ -19,8 +20,7 @@
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"textAlign":"center","level":1,"className":"wolf-hero-dark__title"} -->
-			<h1 class="wp-block-heading has-text-align-center wolf-hero-dark__title">A small studio making themes with the care of a craftsman and the discipline of an engineer.
-</h1>
+			<h1 class="wp-block-heading has-text-align-center wolf-hero-dark__title">A small studio making themes with the care of a craftsman and the discipline of an engineer.</h1>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","className":"wolf-hero-dark__text"} -->
