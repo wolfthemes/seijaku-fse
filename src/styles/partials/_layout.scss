@@ -31,3 +31,16 @@ main.wp-block-group {
 .wolf-section-pad {
     padding-block: var(--wp--preset--spacing--11);
 }
+
+.is-dark {
+	--wp--preset--color--contrast:$c-base;
+    background: $c-secondary;
+    color: $c-base;
+
+    // Headings and text inherit automatically via `color: inherit`
+    // already set on most components — but force it here too
+    // in case a component hardcodes its own ink color.
+    h1, h2, h3, h4, h5, h6, p {
+        color: inherit;
+    }
+}

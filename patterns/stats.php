@@ -6,7 +6,7 @@
  */
 ?>
 <!-- wp:group {"className":"wolf-stats-band"} -->
-<div class="wp-block-group wolf-stats-band">
+<div class="wp-block-group wolf-stats-band is-dark">
 
 	<!-- wp:wolf-blocks/stats-counter {"title":"in Sales","endNumber":2,"prefix":"$","suffix":"M+"} -->
 	<div class="wp-block-wolf-blocks-stats-counter wolf-blocks-stats-counter" data-start="0" data-end="2" data-duration="2000" data-thousands="true" data-separator="default"><div class="wolf-blocks-stats-counter__number"><span class="wolf-blocks-stats-counter__prefix">$</span><span class="wolf-blocks-stats-counter__value">2</span><span class="wolf-blocks-stats-counter__suffix">M+</span></div><p class="wolf-blocks-stats-counter__title">in Sales</p></div>

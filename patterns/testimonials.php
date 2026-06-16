@@ -12,23 +12,43 @@
 	<h2 class="wp-block-heading has-text-align-center">What our customers say</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:group {"className":"wolf-testimonials__grid"} -->
-	<div class="wp-block-group wolf-testimonials__grid">
+	<!-- wp:columns {"className":"wolf-testimonials__grid"} -->
+	<div class="wp-block-columns wolf-testimonials__grid">
 
-		<!-- wp:wolf-blocks/testimonial-card {"content":"The best WordPress themes I have ever purchased. Clean code, stunning design, and support that actually responds.","name":"Marcus R.","authorTitle":"Independent Musician"} -->
-		<figure class="wp-block-wolf-blocks-testimonial-card wolf-blocks-testimonial-card wolf-blocks-testimonial-card--img-left has-text-align-left"><blockquote class="wolf-blocks-testimonial-card__quote"><p>The best WordPress themes I have ever purchased. Clean code, stunning design, and support that actually responds.</p></blockquote><figcaption class="wolf-blocks-testimonial-card__author"><div class="wolf-blocks-testimonial-card__meta"><span class="wolf-blocks-testimonial-card__name">Marcus R.</span><span class="wolf-blocks-testimonial-card__title">Independent Musician</span></div></figcaption></figure>
-		<!-- /wp:wolf-blocks/testimonial-card -->
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:wolf-blocks/testimonial-card {"content":"Great theme can do a lot with, got plenty of features and is easy to configure. Support is great i had some problems as a wordpress newbie but support solved everything.","name":"kontakt952","authorTitle":"Gaintab"} -->
+			<figure class="wp-block-wolf-blocks-testimonial-card wolf-blocks-testimonial-card wolf-blocks-testimonial-card--img-left has-text-align-left"><blockquote class="wolf-blocks-testimonial-card__quote"><p>Great theme can do a lot with, got plenty of features and is easy to configure. Support is great i had some problems as a wordpress newbie but support solved everything.</p></blockquote><figcaption class="wolf-blocks-testimonial-card__author"><div class="wolf-blocks-testimonial-card__meta"><span class="wolf-blocks-testimonial-card__name">kontakt952</span><span class="wolf-blocks-testimonial-card__title">Gaintab</span></div></figcaption></figure>
+			<!-- /wp:wolf-blocks/testimonial-card -->
+		</div>
+		<!-- /wp:column -->
 
-		<!-- wp:wolf-blocks/testimonial-card {"content":"I have tried many theme shops. WolfThemes is in a different league — the attention to typography and spacing is exceptional.","name":"Sofia L.","authorTitle":"Creative Director"} -->
-		<figure class="wp-block-wolf-blocks-testimonial-card wolf-blocks-testimonial-card wolf-blocks-testimonial-card--img-left has-text-align-left"><blockquote class="wolf-blocks-testimonial-card__quote"><p>I have tried many theme shops. WolfThemes is in a different league — the attention to typography and spacing is exceptional.</p></blockquote><figcaption class="wolf-blocks-testimonial-card__author"><div class="wolf-blocks-testimonial-card__meta"><span class="wolf-blocks-testimonial-card__name">Sofia L.</span><span class="wolf-blocks-testimonial-card__title">Creative Director</span></div></figcaption></figure>
-		<!-- /wp:wolf-blocks/testimonial-card -->
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:wolf-blocks/testimonial-card {"content":"The overall look and usability of this theme is great, but the documentation and customer support is what sets it apart. Really helpful resources and great support!","name":"joergrappl","authorTitle":"Tune"} -->
+			<figure class="wp-block-wolf-blocks-testimonial-card wolf-blocks-testimonial-card wolf-blocks-testimonial-card--img-left has-text-align-left"><blockquote class="wolf-blocks-testimonial-card__quote"><p>The overall look and usability of this theme is great, but the documentation and customer support is what sets it apart. Really helpful resources and great support!</p></blockquote><figcaption class="wolf-blocks-testimonial-card__author"><div class="wolf-blocks-testimonial-card__meta"><span class="wolf-blocks-testimonial-card__name">joergrappl</span><span class="wolf-blocks-testimonial-card__title">Tune</span></div></figcaption></figure>
+			<!-- /wp:wolf-blocks/testimonial-card -->
+		</div>
+		<!-- /wp:column -->
 
-		<!-- wp:wolf-blocks/testimonial-card {"content":"Launched my band site in an afternoon. Zero bloat, genuinely fast, and it looks exactly like the demo — no surprises.","name":"Tomás V.","authorTitle":"Guitarist & Producer"} -->
-		<figure class="wp-block-wolf-blocks-testimonial-card wolf-blocks-testimonial-card wolf-blocks-testimonial-card--img-left has-text-align-left"><blockquote class="wolf-blocks-testimonial-card__quote"><p>Launched my band site in an afternoon. Zero bloat, genuinely fast, and it looks exactly like the demo — no surprises.</p></blockquote><figcaption class="wolf-blocks-testimonial-card__author"><div class="wolf-blocks-testimonial-card__meta"><span class="wolf-blocks-testimonial-card__name">Tomás V.</span><span class="wolf-blocks-testimonial-card__title">Guitarist &amp; Producer</span></div></figcaption></figure>
-		<!-- /wp:wolf-blocks/testimonial-card -->
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:wolf-blocks/testimonial-card {"content":"A solid theme for my media company website – I had a small issue and support was quick to fix it. It makes the addition of events simple and looks great out of the box, on all mobile devices and my PC.","name":"themuskrat33","authorTitle":"Swingster"} -->
+			<figure class="wp-block-wolf-blocks-testimonial-card wolf-blocks-testimonial-card wolf-blocks-testimonial-card--img-left has-text-align-left"><blockquote class="wolf-blocks-testimonial-card__quote"><p>A solid theme for my media company website – I had a small issue and support was quick to fix it. It makes the addition of events simple and looks great out of the box, on all mobile devices and my PC.</p></blockquote><figcaption class="wolf-blocks-testimonial-card__author"><div class="wolf-blocks-testimonial-card__meta"><span class="wolf-blocks-testimonial-card__name">themuskrat33</span><span class="wolf-blocks-testimonial-card__title">Swingster</span></div></figcaption></figure>
+			<!-- /wp:wolf-blocks/testimonial-card -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:wolf-blocks/testimonial-card {"content":"After 10 years of using the Speaker theme, now I had to migrate to the latest version. The support was really excellent and made it work again, response within 24hrs. Recommended!","name":"chrissa007","authorTitle":"Speaker"} -->
+			<figure class="wp-block-wolf-blocks-testimonial-card wolf-blocks-testimonial-card wolf-blocks-testimonial-card--img-left has-text-align-left"><blockquote class="wolf-blocks-testimonial-card__quote"><p>After 10 years of using the Speaker theme, now I had to migrate to the latest version. The support was really excellent and made it work again, response within 24hrs. Recommended!</p></blockquote><figcaption class="wolf-blocks-testimonial-card__author"><div class="wolf-blocks-testimonial-card__meta"><span class="wolf-blocks-testimonial-card__name">chrissa007</span><span class="wolf-blocks-testimonial-card__title">Speaker</span></div></figcaption></figure>
+			<!-- /wp:wolf-blocks/testimonial-card -->
+		</div>
+		<!-- /wp:column -->
 
 	</div>
-	<!-- /wp:group -->
+	<!-- /wp:columns -->
 
 </section>
 <!-- /wp:group -->
