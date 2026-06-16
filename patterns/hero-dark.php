@@ -5,9 +5,9 @@
  * Categories: hero
  */
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero.jpg' ); ?>","dimRatio":30,"minHeight":820,"minHeightUnit":"px","align":"full","className":"wolf-hero wolf-hero-dark"} -->
-<div class="wp-block-cover alignfull wolf-hero wolf-hero-dark" style="min-height:820px">
-	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim"></span>
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero.jpg' ); ?>","dimRatio":10,"minHeight":820,"minHeightUnit":"px","align":"full","className":"wolf-hero wolf-hero-dark has-texture"} -->
+<div class="wp-block-cover alignfull wolf-hero wolf-hero-dark has-texture" style="min-height:820px">
+	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-10 has-background-dim"></span>
 	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero.jpg' ); ?>" data-object-fit="cover"/>
 
 	<div class="wp-block-cover__inner-container">

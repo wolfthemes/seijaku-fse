@@ -12,7 +12,7 @@
 			"palette": [
 				{ "slug": "primary",       "color": "#bf862b",          "name": "Primary" },
 				{ "slug": "primary-light", "color": "#a39a80",          "name": "Primary Light" },
-				{ "slug": "secondary",     "color": "#111111",          "name": "Secondary" },
+				{ "slug": "secondary",     "color": "#211C16",          "name": "Secondary" },
 				{ "slug": "accent",        "color": "#0c10ff",          "name": "Accent" },
 				{ "slug": "base",          "color": "#FAF8F1",          "name": "Base" },
 				{ "slug": "base-2",        "color": "#EFE6D4",          "name": "Surface" },
@@ -162,7 +162,7 @@
 			"core/navigation": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--body)",
-					"fontSize": "var(--wp--preset--font-size--xxs)",
+					"fontSize": "var(--wp--preset--font-size--xs)",
 					"fontWeight": "600",
 					"textTransform": "uppercase",
 					"letterSpacing": "-0.01em"

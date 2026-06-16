@@ -29,11 +29,15 @@ main.wp-block-group {
 }
 
 .wolf-section-pad {
-    padding-block: var(--wp--preset--spacing--11);
+    padding-block: var(--wp--preset--spacing--8);
+}
+
+.wolf-section-title {
+    margin-bottom: 3rem;
 }
 
 .is-dark {
-	--wp--preset--color--contrast:$c-base;
+	--wp--preset--color--contrast:#{$c-base};
     background: $c-secondary;
     color: $c-base;
 
@@ -44,3 +48,26 @@ main.wp-block-group {
         color: inherit;
     }
 }
+
+.has-texture{
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background-image: url(/assets/images/texture.jpg);
+		background-repeat: repeat;
+		opacity: .2;
+		mix-blend-mode: overlay;
+		z-index: 2;
+	}
+
+	> * {
+		position: relative;
+		z-index: 3;
+	}
+}
+

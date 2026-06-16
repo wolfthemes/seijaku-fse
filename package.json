@@ -33,11 +33,15 @@
 		"build": "wp-scripts build",
 		"start": "wp-scripts start",
 		"lint:js": "wp-scripts lint-js \"src/scripts/**/*.js\" --no-error-on-unmatched-pattern",
+		"format:js": "wp-scripts lint-js --fix",
 		"lint:css": "wp-scripts lint-style \"src/styles/**/*.scss\"",
+		"format:css": "stylelint \"**/*.scss\" --fix",
 		"lint:md": "wp-scripts lint-md-docs",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"format": "wp-scripts format \"src/**/*.{js,scss}\"",
 		"lint": "npm run lint:js && npm run lint:css && npm run lint:pkg-json",
+		"lint:php": "./vendor/bin/phpcs --standard=phpcs.xml.dist -v",
+		"format:php": "./vendor/bin/phpcbf --standard=phpcs.xml.dist -v || true",
 		"packages-update": "wp-scripts packages-update"
 	}
 }
