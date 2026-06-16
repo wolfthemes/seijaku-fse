@@ -16,11 +16,11 @@
     text-transform: none; // breaks from the all-caps heading default — warmer, more personal
     font-size: fs(xl);
     line-height: 1.15;
-    margin-bottom: space(5);
+    margin-bottom: space(4);
 }
 
 .wolf-about__text {
-    font-size: fs(md);
+    // font-size: fs(md);
     line-height: 1.7;
     color: $c-muted;
     max-width: 42ch;

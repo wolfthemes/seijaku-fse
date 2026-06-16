@@ -71,8 +71,8 @@ $f-body: var(--wp--preset--font-family--body);
 
 	// Sticky header rhythm
 	--wolf-header-h: 4.5rem; // nominal collapsed height for scroll offsets
-	--wolf-header-pad: #{space(5)};
-	--wolf-header-pad-scrolled: #{space(4)};
+	--wolf-header-pad: #{space(4)};
+	--wolf-header-pad-scrolled: #{space(3)};
 
 	// Radii (mirror theme.json custom.wolf, kept local for ergonomics)
 	--wolf-radius-lg: 8px;
@@ -80,4 +80,11 @@ $f-body: var(--wp--preset--font-family--body);
 
 	// Tracking
 	--wolf-track-label: 0.14em;
+	--wolf-track-display: -0.02em;
+
+	// Line-heights
+	--wolf-lh-display: 0.92;
+
+	// Hero sub-text (base at reduced opacity for dark hero)
+	--wolf-hero-sub-color: color-mix(in srgb, var(--wp--preset--color--base) 60%, transparent);
 }

@@ -1,15 +1,17 @@
 // =============================================================
 //  Hero
-//  Flat markup (.wolf-hero > eyebrow / h1 / sub / buttons); all
-//  layout and rhythm live here. Full-bleed, vertically centred,
-//  editorial. One accent (electric blue), generous negative space.
+//  Full viewport height cover. Eyebrow + title + CTA anchored
+//  to the bottom-left, constrained to wide-size.
 // =============================================================
 
 @use 'tokens' as *;
 
-.wolf-hero{
-	padding-top: space(12);
-	padding-bottom: space(12);
+.wolf-hero {
+	padding: 0;
+}
+
+.wolf-hero-dark.wp-block-cover {
+	align-items: stretch;
 }
 
 .wolf-hero-dark {
@@ -17,19 +19,54 @@
 }
 
 .wolf-hero-dark .wp-block-cover__inner-container {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	z-index: 2;
 }
 
-.wolf-hero-dark__title {
-	// font-size: clamp(3rem, 8vw, 8rem);
-	font-size: fs(3-xl);
-	// line-height: 0.9;
-	text-transform: uppercase;
-	color: inherit;
+// ── Constrained wrapper ───────────────────────────────────────
+
+.wolf-hero-dark__inner.wp-block-group {
+	display: flex !important;
+	flex: 1;
+	flex-direction: column;
+	justify-content: flex-end;
+	max-width: var(--wp--style--global--wide-size);
+	margin-inline: auto;
+	width: 100%;
+	padding-block: space(8);
+	padding-inline: space(7);
+	box-sizing: border-box;
 }
 
-.wolf-hero-dark__eyebrow,
-.wolf-hero-dark__text {
-	color: inherit;
+// ── Bottom section: eyebrow → title → buttons ────────────────
+
+.wolf-hero-dark__bottom.wp-block-group {
+	align-items: flex-start;
+	gap: space(2) !important;
+}
+
+.wolf-hero-dark__bottom .wp-block-buttons {
+	margin-top: space(5);
+}
+
+.wolf-hero-dark__eyebrow {
+	font-size: fs(xs);
+	font-family: $f-body;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: var(--wolf-track-label);
+	color: $c-primary;
+	margin: 0;
+}
+
+.wolf-hero-dark__title {
+	font-size: fs(3-xl);
+	line-height: var(--wolf-lh-display);
+	text-transform: uppercase;
+	color: $c-base;
+	margin: 0;
+	max-width: 16ch;
+	letter-spacing: var(--wolf-track-display);
 }

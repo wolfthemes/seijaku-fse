@@ -7,19 +7,21 @@
 
 @use 'tokens' as *;
 
-.wp-block-button__link {
-	transition: transform var(--wolf-dur-fast) var(--wolf-ease-out),
-		background-color var(--wolf-dur-fast) var(--wolf-ease-out),
-		color var(--wolf-dur-fast) var(--wolf-ease-out),
-		box-shadow var(--wolf-dur-fast) var(--wolf-ease-out);
+.wp-element-button {
+    border: var(--wolf-border-width) solid $c-primary;
+	transition: transform var(--wolf-dur-slow) var(--wolf-ease-out),
+		background-color var(--wolf-dur-slow) var(--wolf-ease-out),
+		color var(--wolf-dur-slow) var(--wolf-ease-out),
+		box-shadow var(--wolf-dur-slow) var(--wolf-ease-out);
 	will-change: transform;
 }
 
 // Primary — lifts a hair and casts the faintest accent shadow.
-.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+.wp-element-button:not(.is-style-outline) {
 
 	&:hover {
-		transform: translateY(-2px);
+		border-color: color-mix(in srgb, #{$c-primary} 55%, transparent);
+		// transform: translateY(-2px);
 		box-shadow: 0 10px 24px -12px color-mix(in srgb, #{$c-primary} 55%, transparent);
 	}
 
@@ -29,10 +31,10 @@
 }
 
 // Outline — fills with ink on hover.
-.is-style-outline .wp-block-button__link {
-	transition: color var(--wolf-dur-fast) var(--wolf-ease-out),
-		background-color var(--wolf-dur-fast) var(--wolf-ease-out),
-		border-color var(--wolf-dur-fast) var(--wolf-ease-out);
+.wp-element-button.is-style-outline  {
+	transition: color var(--wolf-dur-slow) var(--wolf-ease-out),
+		background-color var(--wolf-dur-slow) var(--wolf-ease-out),
+		border-color var(--wolf-dur-slow) var(--wolf-ease-out);
 
 	&:hover,
 	&:focus-visible {
@@ -43,7 +45,7 @@
 }
 
 // ---- Focus ring (keyboard only) -----------------------------
-.wp-block-button__link:focus-visible,
+.wp-element-button:focus-visible,
 a:focus-visible {
 	outline: 2px solid $c-primary;
 	outline-offset: 3px;
