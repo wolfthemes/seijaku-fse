@@ -8,12 +8,12 @@
 @use 'tokens' as *;
 
 .wolf-hero{
-	padding-top: var(--wp--preset--spacing--12);
-	padding-bottom: var(--wp--preset--spacing--12);
+	padding-top: space(12);
+	padding-bottom: space(12);
 }
 
 .wolf-hero-dark {
-	color: #fff;
+	color: $c-base;
 }
 
 .wolf-hero-dark .wp-block-cover__inner-container {
@@ -23,7 +23,7 @@
 
 .wolf-hero-dark__title {
 	// font-size: clamp(3rem, 8vw, 8rem);
-	font-size: var(--wp--preset--font-size--3-xl);
+	font-size: fs(3-xl);
 	// line-height: 0.9;
 	text-transform: uppercase;
 	color: inherit;
