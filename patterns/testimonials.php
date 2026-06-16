@@ -5,8 +5,8 @@
  * Categories: testimonials
  */
 ?>
-<!-- wp:group {"tagName":"section","className":"wolf-testimonials","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|11","bottom":"var:preset|spacing|11"}}},"layout":{"type":"constrained"}} -->
-<section class="wp-block-group alignfull wolf-testimonials">
+<!-- wp:group {"tagName":"section","className":"wolf-testimonials wolf-section-pad","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|11","bottom":"var:preset|spacing|11"}}},"layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<section class="wp-block-group alignfull wolf-testimonials wolf-section-pad">
 
 	<!-- wp:heading {"textAlign":"center","level":2} -->
 	<h2 class="wp-block-heading has-text-align-center">What our customers say</h2>

@@ -23,3 +23,11 @@ main.wp-block-group {
 .wolf-lead {
 	max-inline-size: 38ch;
 }
+
+.wolf-blocks-marquee {
+	margin-block-start: 0;
+}
+
+.wolf-section-pad {
+    padding-block: var(--wp--preset--spacing--11);
+}

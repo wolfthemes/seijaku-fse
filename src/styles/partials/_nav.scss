@@ -29,6 +29,11 @@
 		background:none;
 		position:absolute;
 		backdrop-filter:none;
+
+		.wp-block-site-title a,
+		.wolf-nav .wp-block-navigation-item__content {
+			color: #fff;
+		}
 	}
 }
 
