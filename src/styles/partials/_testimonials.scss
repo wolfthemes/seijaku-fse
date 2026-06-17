@@ -3,7 +3,7 @@
 .wolf-testimonials__grid.wp-block-columns {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: space(6);
+	gap: space(5);
 
 	@include until($bp-lg) {
 		grid-template-columns: repeat(2, 1fr);
