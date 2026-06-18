@@ -27,7 +27,7 @@
 		<!-- wp:column {"layout":{"type":"default"}} -->
 		<div class="wp-block-column">
 
-			<!-- wp:wolf-blocks/pricing-table {"tagline":"Theme not included","title":"Speed Optimization","price":39,"buttonText":"Order Now","buttonUrl":"https://www.paypal.com/ncp/payment/TJB86HQUEAEX4","services":["Performance optimization","Browser caching setup","Minification of CSS \u0026 JS"]} -->
+			<!-- wp:wolf-blocks/pricing-table {"tagline":"Theme not included","title":"Speed Optimization","price":39,"buttonText":"Order Now","buttonUrl":"https://www.paypal.com/ncp/payment/TJB86HQUEAEX4","services":["Performance optimization","Browser caching setup","Minification of CSS and JS"]} -->
 			<div class="wp-block-wolf-blocks-pricing-table wolf-blocks-pricing-table">
 				<div class="wolf-blocks-pricing-table__header">
 					<p class="wolf-blocks-pricing-table__tagline">Theme not included</p>
@@ -41,11 +41,11 @@
 				<ul class="wolf-blocks-pricing-table__services">
 					<li>Performance optimization</li>
 					<li>Browser caching setup</li>
-					<li>Minification of CSS &amp; JS</li>
+					<li>Minification of CSS and JS</li>
 				</ul>
 
 				<div class="wolf-blocks-pricing-table__ctas">
-					<a href="https://www.paypal.com/ncp/payment/TJB86HQUEAEX4" class="wolf-blocks-pricing-table__btn wolf-blocks-pricing-table__btn--primary">Order Now</a>
+					<a href="https://www.paypal.com/ncp/payment/TJB86HQUEAEX4" class="wp-element-button wolf-blocks-pricing-table__btn wolf-blocks-pricing-table__btn--primary">Order Now</a>
 				</div>
 			</div>
 			<!-- /wp:wolf-blocks/pricing-table -->
@@ -73,7 +73,7 @@
 				</ul>
 
 				<div class="wolf-blocks-pricing-table__ctas">
-					<a href="https://www.paypal.com/ncp/payment/QRK8XZUPP7482" class="wolf-blocks-pricing-table__btn wolf-blocks-pricing-table__btn--primary">Order Now</a>
+					<a href="https://www.paypal.com/ncp/payment/QRK8XZUPP7482" class="wp-element-button wolf-blocks-pricing-table__btn wolf-blocks-pricing-table__btn--primary">Order Now</a>
 				</div>
 			</div>
 			<!-- /wp:wolf-blocks/pricing-table -->
@@ -104,7 +104,7 @@
 				</ul>
 
 				<div class="wolf-blocks-pricing-table__ctas">
-					<a href="https://www.paypal.com/ncp/payment/3FGUFHZU49H8Q" class="wolf-blocks-pricing-table__btn wolf-blocks-pricing-table__btn--primary">Order Now</a>
+					<a href="https://www.paypal.com/ncp/payment/3FGUFHZU49H8Q" class="wp-element-button wolf-blocks-pricing-table__btn wolf-blocks-pricing-table__btn--primary">Order Now</a>
 				</div>
 			</div>
 			<!-- /wp:wolf-blocks/pricing-table -->
