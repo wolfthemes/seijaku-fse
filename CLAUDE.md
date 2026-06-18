@@ -4,6 +4,13 @@
 FSE child theme of wolf-blank. Redesigns wolfthemes.com — the WolfThemes storefront.
 Author: Constantin Saguin (WolfThemes, Power Elite ThemeForest author, 14 years experience).
 
+## Knowledge base
+Main KB: `/mnt/c/Users/Constantin/wolfthemes-dev/wolf-claude-memory/`
+Read relevant wiki pages before starting work. Key pages:
+- `wiki/products/seijaku-fse/README.md` — this theme's current state
+- `wiki/projects/wolfthemes-redesign/README.md` — redesign progress
+- `wiki/concepts/` — architecture, CSS contract, brand rationale
+
 ## Parent theme
 wolf-blank at ../wolf-blank/ — read its CLAUDE.md before touching any shared files.
 
