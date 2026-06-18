@@ -41,6 +41,7 @@
 }
 
 @include until($bp-lg) {
+
     .wolf-about__pullquote {
         margin-top: space(6);
     }
