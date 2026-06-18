@@ -38,6 +38,7 @@
 		"format:css": "stylelint \"**/*.scss\" --fix",
 		"lint:md": "wp-scripts lint-md-docs",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"type-check": "echo \"No TypeScript sources to type-check.\"",
 		"format": "wp-scripts format \"src/**/*.{js,scss}\"",
 		"lint": "npm run lint:js && npm run lint:css && npm run lint:pkg-json",
 		"lint:php": "./vendor/bin/phpcs --standard=phpcs.xml.dist -v",
