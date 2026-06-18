@@ -1,0 +1,25 @@
+<?php
+/**
+ * Title: About Intro
+ * Slug: seijaku-fse/about-intro
+ * Categories: about, text
+ * Description: A minimal personal introduction for the About page.
+ */
+?>
+<!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"720px"}} -->
+<section class="wp-block-group alignfull wolf-section-pad">
+
+	<!-- wp:image {"width":"120px","height":"120px","scale":"cover","sizeSlug":"thumbnail","linkDestination":"none","align":"center","style":{"border":{"radius":"999px"}}} -->
+	<figure class="wp-block-image aligncenter size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/me.webp' ); ?>" alt="Portrait placeholder" style="border-radius:999px;object-fit:cover;width:120px;height:120px"/></figure>
+	<!-- /wp:image -->
+
+	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"display"} -->
+	<h1 class="wp-block-heading has-text-align-center has-display-font-size">Hi there,</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:paragraph {"align":"center","fontSize":"md"} -->
+	<p class="has-text-align-center has-md-font-size">I'm Constantin, the founder of WolfThemes. I design and build WordPress themes for creative people who need a site that looks sharp, works reliably, and stays easy to manage.</p>
+	<!-- /wp:paragraph -->
+
+</section>
+<!-- /wp:group -->
