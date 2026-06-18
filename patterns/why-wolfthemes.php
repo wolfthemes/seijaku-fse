@@ -18,7 +18,7 @@
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":2} -->
-			<h2 class="wp-block-heading">Themes shaped by real creative businesses.</h2>
+			<h2 class="wp-block-heading">Themes shaped by<br>real creative businesses.</h2>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:column -->

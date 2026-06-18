@@ -12,6 +12,10 @@
 	<h2 class="wp-block-heading has-text-align-center">Built for creative teams and independent makers.</h2>
 	<!-- /wp:heading -->
 
+	<!-- wp:spacer {"height":"var:preset|spacing|5"} -->
+	<div style="height:var(--wp--preset--spacing--5)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
 	<!-- wp:columns -->
 	<div class="wp-block-columns">
 
