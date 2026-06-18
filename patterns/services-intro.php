@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/services-intro
  * Categories: text, services
  * Description: A short centered introduction for the Services page.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"900px"}} -->
 <section class="wp-block-group alignfull wolf-section-pad">

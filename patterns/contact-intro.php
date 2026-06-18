@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/contact-intro
  * Categories: contact, text
  * Description: A minimal introduction for the Contact page.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"760px"}} -->
 <section class="wp-block-group alignfull wolf-section-pad">

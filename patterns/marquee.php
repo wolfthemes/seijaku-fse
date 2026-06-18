@@ -3,7 +3,10 @@
  * Title: Marquee
  * Slug: seijaku-fse/marquee
  * Categories: banner
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:wolf-blocks/marquee {"text":"WolfThemes · Premium WordPress Themes · ","direction":"left","animationDuration":30} -->
 <div class="wp-block-wolf-blocks-marquee wolf-blocks-marquee is-dark" style="--wolf-marquee-duration:30s">

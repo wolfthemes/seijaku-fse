@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/services-project-cta
  * Categories: call-to-action, services
  * Description: A dark centered call to action for project enquiries.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","align":"full","backgroundColor":"contrast","textColor":"base","className":"has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained","contentSize":"820px"}} -->
 <section class="wp-block-group alignfull has-texture has-base-color has-contrast-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">

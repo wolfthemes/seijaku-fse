@@ -3,7 +3,10 @@
  * Title: Music Themes
  * Slug: seijaku-fse/music-themes
  * Categories: query, portfolio
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","className":"wolf-grid wolf-section-pad","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-grid wolf-section-pad">

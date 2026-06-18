@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/services-hero
  * Categories: hero, services
  * Description: A dark hero section for the Services page.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-services.jpg' ); ?>","dimRatio":70,"overlayColor":"contrast","minHeight":72,"minHeightUnit":"vh","align":"full","className":"has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-cover alignfull has-texture" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--9);min-height:72vh">

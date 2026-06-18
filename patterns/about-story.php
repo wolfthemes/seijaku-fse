@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/about-story
  * Categories: about, columns
  * Description: A concise two-column story section for WolfThemes.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","align":"full","backgroundColor":"base-2","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-section-pad has-base-2-background-color has-background">

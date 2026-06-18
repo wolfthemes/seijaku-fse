@@ -3,7 +3,10 @@
  * Title: Music Themes Hero
  * Slug: seijaku-fse/music-themes-hero
  * Categories: hero
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>","dimRatio":10,"minHeight":100,"minHeightUnit":"vh","align":"full","className":"wolf-hero wolf-hero-dark has-texture"} -->
 <div class="wp-block-cover alignfull wolf-hero wolf-hero-dark has-texture" style="min-height:100vh">

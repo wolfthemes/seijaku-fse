@@ -3,7 +3,10 @@
  * Title: Stats
  * Slug: seijaku-fse/stats
  * Categories: numbers
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"className":"wolf-stats-band is-dark has-texture"} -->
 <div class="wp-block-group wolf-stats-band is-dark has-texture">

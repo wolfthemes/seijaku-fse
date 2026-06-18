@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/services-tweaks-faq
  * Categories: text, services
  * Description: A simple tweaks explanation paired with service FAQ details.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-section-pad">

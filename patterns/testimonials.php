@@ -3,7 +3,10 @@
  * Title: Testimonials
  * Slug: seijaku-fse/testimonials
  * Categories: testimonials
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","className":"wolf-testimonials wolf-section-pad","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|11","bottom":"var:preset|spacing|11"}}},"layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-testimonials wolf-section-pad">

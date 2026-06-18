@@ -56,6 +56,7 @@
 		<properties>
 			<property name="text_domain" type="array">
 				<element value="wolf-blank"/>
+				<element value="seijaku-fse"/>
 			</property>
 		</properties>
 	</rule>
@@ -67,6 +68,9 @@
 				<element value="wolf_blank"/>
 				<element value="WolfBlank"/>
 				<element value="WOLF_BLANK"/>
+				<element value="seijaku_fse"/>
+				<element value="SeijakuFSE"/>
+				<element value="SEIJAKU_FSE"/>
 			</property>
 		</properties>
 	</rule>

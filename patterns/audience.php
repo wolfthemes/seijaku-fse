@@ -3,7 +3,10 @@
  * Title: Audience
  * Slug: seijaku-fse/audience
  * Categories: columns, featured
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","className":"wolf-section-pad","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-section-pad is-dark has-texture">

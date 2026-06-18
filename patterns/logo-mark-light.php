@@ -3,7 +3,10 @@
  * Title: Logo Mark Light
  * Slug: seijaku-fse/logo-mark-light
  * Categories: header
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:html -->
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="wolf-logo-link" aria-label="WolfThemes">

@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/about-intro
  * Categories: about, text
  * Description: A minimal personal introduction for the About page.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"720px"}} -->
 <section class="wp-block-group alignfull wolf-section-pad">

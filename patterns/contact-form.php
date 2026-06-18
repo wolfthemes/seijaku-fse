@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/contact-form
  * Categories: contact, text
  * Description: A narrow placeholder section for a contact form shortcode.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","metadata":{"name":"Contact form"},"align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"760px"}} -->
 <section id="contact-form" class="wp-block-group alignfull wolf-section-pad">

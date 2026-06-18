@@ -3,7 +3,10 @@
  * Title: Sale Marquee
  * Slug: seijaku-fse/sale-marquee
  * Categories: banner, call-to-action
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:wolf-blocks/marquee {"text":"LAUNCH OFFER · 20% OFF STOREWIDE · LIMITED TIME ONLY · ","direction":"left","animationDuration":30} -->
 <div class="wp-block-wolf-blocks-marquee wolf-blocks-marquee is-dark" style="--wolf-marquee-duration:30s">

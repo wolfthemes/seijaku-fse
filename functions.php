@@ -2,7 +2,7 @@
 /**
  * Seijaku FSE — child theme bootstrap.
  *
- * wolf-blank (the parent) handles theme supports and ships the global.css
+ * Wolf Blank (the parent) handles theme supports and ships the global.css
  * reset/token layer. Here we load the compiled Seijaku design layer
  * (build/main.css) and the lightweight front-end script (build/theme.js),
  * both produced by `npm run build` from /src.
@@ -33,14 +33,14 @@ add_action( 'after_setup_theme', 'seijaku_fse_setup' );
 /**
  * Front-end assets — the compiled design layer + interactions.
  *
- * main.css is declared as a dependency-of-nothing but enqueued after the
+ * Main.css is declared as a dependency-of-nothing but enqueued after the
  * parent's `wolf-blank-global` handle, so the cascade lands on top. Versions
  * use filemtime in dev for cache-busting and fall back to the theme version.
  */
 function seijaku_fse_enqueue_assets() {
 	$css_path = get_theme_file_path( 'build/main.css' );
 
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap', array(), null );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap', array(), SEIJAKU_FSE_VERSION );
 
 	if ( file_exists( $css_path ) ) {
 		wp_enqueue_style(

@@ -3,7 +3,10 @@
  * Title: About
  * Slug: seijaku-fse/about
  * Categories: about
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","className":"wolf-about wolf-section-pad","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-about wolf-section-pad">

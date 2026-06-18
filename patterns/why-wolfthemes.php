@@ -3,7 +3,10 @@
  * Title: Why WolfThemes
  * Slug: seijaku-fse/why-wolfthemes
  * Categories: text, featured
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","className":"wolf-section-pad","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-section-pad">

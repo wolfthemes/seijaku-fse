@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/about-values
  * Categories: about, columns
  * Description: A simple values grid for the About page.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-section-pad">

@@ -4,7 +4,10 @@
  * Slug: seijaku-fse/contact-options
  * Categories: contact, columns
  * Description: Clear contact paths for services, questions, support, and general requests.
+ *
+ * @package SeijakuFSE
  */
+
 ?>
 <!-- wp:group {"tagName":"section","align":"full","backgroundColor":"base-2","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-section-pad has-base-2-background-color has-background">
