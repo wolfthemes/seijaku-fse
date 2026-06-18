@@ -17,8 +17,8 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:wolf-blocks/testimonial-card {"content":"Great theme can do a lot with, got plenty of features and is easy to configure. Support is great i had some problems as a wordpress newbie but support solved everything.","name":"kontakt952","authorTitle":"Gaintab"} -->
-			<figure class="wp-block-wolf-blocks-testimonial-card wolf-blocks-testimonial-card wolf-blocks-testimonial-card--img-left has-text-align-left"><blockquote class="wolf-blocks-testimonial-card__quote"><p>"Great theme can do a lot with, got plenty of features and is easy to configure. Support is great i had some problems as a wordpress newbie but support solved everything."</p></blockquote><figcaption class="wolf-blocks-testimonial-card__author"><div class="wolf-blocks-testimonial-card__meta"><span class="wolf-blocks-testimonial-card__name">kontakt952</span><span class="wolf-blocks-testimonial-card__title">Gaintab</span></div></figcaption></figure>
+			<!-- wp:wolf-blocks/testimonial-card {"content":"Great theme can do a lot with, got plenty of features and is easy to configure. Support is great i had some problems as a WordPress newbie but support solved everything.","name":"kontakt952","authorTitle":"Gaintab"} -->
+			<figure class="wp-block-wolf-blocks-testimonial-card wolf-blocks-testimonial-card wolf-blocks-testimonial-card--img-left has-text-align-left"><blockquote class="wolf-blocks-testimonial-card__quote"><p>"Great theme can do a lot with, got plenty of features and is easy to configure. Support is great i had some problems as a WordPress newbie but support solved everything."</p></blockquote><figcaption class="wolf-blocks-testimonial-card__author"><div class="wolf-blocks-testimonial-card__meta"><span class="wolf-blocks-testimonial-card__name">kontakt952</span><span class="wolf-blocks-testimonial-card__title">Gaintab</span></div></figcaption></figure>
 			<!-- /wp:wolf-blocks/testimonial-card -->
 		</div>
 		<!-- /wp:column -->

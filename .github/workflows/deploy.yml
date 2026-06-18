@@ -1,4 +1,4 @@
-name: Deploy wolf-store to SiteGround
+name: Deploy seijaku-fse to SiteGround
 
 on:
   push:
@@ -137,4 +137,4 @@ jobs:
             cd /home/customer/www/staging20.wolfthemes.com/public_html/wp-content/themes/seijaku-fse
             git pull origin stage
             rsync -a --delete /tmp/seijaku-fse-build/ build/
-            rm -rf /tmp/wolf-store-build
+            rm -rf /tmp/seijaku-fse-build

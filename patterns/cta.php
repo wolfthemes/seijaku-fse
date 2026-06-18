@@ -4,4 +4,3 @@
  * Slug: seijaku-fse/cta
  * Categories: text
  */
-?>

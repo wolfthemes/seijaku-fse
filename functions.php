@@ -40,7 +40,7 @@ add_action( 'after_setup_theme', 'seijaku_fse_setup' );
 function seijaku_fse_enqueue_assets() {
 	$css_path = get_theme_file_path( 'build/main.css' );
 
-	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap', array(), null);
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap', array(), null );
 
 	if ( file_exists( $css_path ) ) {
 		wp_enqueue_style(
