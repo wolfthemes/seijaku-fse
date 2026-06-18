@@ -23,18 +23,42 @@ Reference energy: Linear, Stripe, Rauno.me.
 > Local dev runs in `wolf-store-docker` — site at `http://localhost:8080`.
 
 ## What's built
-| Piece | File | Status |
-|-------|------|--------|
-| Design tokens (light palette, fluid type incl. `display`, generous spacing) | `theme.json` | ✅ |
-| Header — wordmark left, nav + one CTA right | `parts/header.html` | ✅ |
-| Hero — full viewport (core/cover, no image), display heading, tagline, two CTAs | `templates/front-page.html` | ✅ |
-| Themes grid — `wolf-store/theme-index`, featured-first | `templates/front-page.html` | ✅ |
-| About — asymmetric columns, text + pull quote | `templates/front-page.html` | ✅ |
-| Footer — minimal 3 columns | `parts/footer.html` | ✅ |
-| Stats · Testimonials · Pricing | `<!-- WOLF-BLOCKS: ... -->` placeholders | ⏳ wolf-blocks plugin |
 
-Data-driven / repeatable sections (stats counter, testimonials, pricing) are **not** built into
-the theme — they belong to the planned **wolf-blocks** plugin and will inherit these tokens.
+### Templates
+| Template | File | Notes |
+|----------|------|-------|
+| Front page | `templates/front-page.html` | Hero · themes grid · about · placeholders for stats + testimonials |
+| Page (default) | `templates/page.html` | Constrained layout |
+| Page (full-width) | `templates/page-fullwidth.html` | No content width constraint |
+| About | `templates/about.html` | Intro · story · values · CTA sections via patterns |
+| Services | `templates/services.html` | Hero · intro · how it works · process · pricing · FAQ · CTA |
+| Contact | `templates/contact.html` | Intro · form · options sections via patterns |
+| Music themes | `templates/music-themes.html` | Landing page for the music niche |
+| Theme archive | `templates/archive-wolf_theme.html` | `wolf-store/theme-index` grid |
+| Single theme | `templates/single-wolf_theme.html` | Individual theme product page |
+
+### Template parts
+| Part | File | Notes |
+|------|------|-------|
+| Header | `parts/header.html` | Wordmark left, nav + CTA right |
+| Header (overlay) | `parts/header-overlay.html` | Transparent over hero, used on front-page + music-themes |
+| Footer | `parts/footer.html` | Minimal 3-column layout |
+
+### Patterns (PHP)
+Reusable section patterns registered in `patterns/` — consumed by templates above.
+
+| Category | Patterns |
+|----------|---------|
+| Hero | `hero.php`, `music-themes-hero.php`, `services-hero.php` |
+| About | `about-intro.php`, `about-story.php`, `about-values.php`, `about-cta.php`, `about.php` |
+| Services | `services-intro.php`, `services-how-it-works.php`, `services-process.php`, `services-pricing.php`, `services-tweaks-faq.php`, `services-project-cta.php` |
+| Contact | `contact-intro.php`, `contact-form.php`, `contact-options.php` |
+| Social proof | `testimonials.php`, `stats.php`, `why-wolfthemes.php`, `audience.php` |
+| Global | `cta.php`, `marquee.php`, `sale-marquee.php`, `latest-themes.php` |
+| Brand | `logo-mark-dark.php`, `logo-mark-light.php` |
+
+Data-driven / repeatable sections (stats counter, testimonials, pricing) are currently implemented
+as static patterns and will later be superseded by the **wolf-blocks** plugin.
 
 ## Design tokens
 Everything visual is driven by `theme.json` (strict JSON — **no comments**):
@@ -52,17 +76,28 @@ The `--wolf-*` contract is aliased in `wolf-blank/assets/css/global.css` section
 here in `theme.json`, don't edit the parent's aliases. Spacing/layout primitives inherit from
 the parent; the child palette and font/size/spacing arrays **replace** the parent's arrays.
 
+## Build & linting
+Assets live in `src/` (JS + SCSS), compiled to `build/` via `@wordpress/scripts` / webpack.
+
+```bash
+npm install && npm run build        # production build
+npm run start                       # watch mode
+
+npm run lint                        # JS + CSS + package.json
+npm run lint:php                    # PHP (WordPress + VIP standards)
+npm run format                      # Prettier (WordPress config)
+```
+
+### CI / deploy
+GitHub Actions (`.github/workflows/deploy.yml`) runs on every push to `master` or `stage`:
+1. Lint JS, CSS, PHP (PHP lint on `master` only)
+2. Build assets
+3. Deploy to SiteGround via SSH rsync
+
 ## Use with Claude Code
 `CLAUDE.md` is loaded automatically and holds the design direction, token map, dev-environment
 notes, and front-page section plan. Read the parent `wolf-blank/CLAUDE.md` before touching shared
 files. The `frontend-design` and `ui-ux-pro-max` skills are installed for UI/visual work.
-
-## Development & linting
-```bash
-composer install && composer lint      # PHP (WordPress + VIP standards)
-npm install && npm run lint            # JS / CSS / package.json
-npm run format                         # Prettier (WordPress config)
-```
 
 ## License & contact
 GNU GPL v2 or later. © [WolfThemes](https://wolfthemes.com) — Constantin Saguin.
