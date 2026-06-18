@@ -90,7 +90,7 @@
 				"border-width":     "1px",
 				"btn-radius":       "4px",
 				"btn-padding-x":    "1.75rem",
-				"btn-padding-y":    "0.65rem",
+				"btn-padding-y":    "0.3rem",
 				"btn-font-weight":  "600",
 				"shadow-card":      "none",
 				"transition-speed": "0.25s",
