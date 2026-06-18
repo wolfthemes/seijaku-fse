@@ -19,11 +19,11 @@
 			<div class="wp-block-group wolf-hero-dark__bottom">
 
 				<!-- wp:paragraph {"className":"wolf-hero-dark__eyebrow"} -->
-				<p class="wolf-hero-dark__eyebrow">WordPress themes since 2011</p>
+				<p class="wolf-hero-dark__eyebrow">Designed by an independent studio. Trusted by 35,000+ customers since 2011.</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:heading {"level":1,"className":"wolf-hero-dark__title"} -->
-				<h1 class="wp-block-heading wolf-hero-dark__title">A small studio making themes with the care of a craftsman and the discipline of an engineer.</h1>
+				<h1 class="wp-block-heading wolf-hero-dark__title">WordPress Themes Built For Creative Businesses</h1>
 				<!-- /wp:heading -->
 
 				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->

@@ -12,7 +12,7 @@
 	<h2 class="wp-block-heading">Latest themes</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:wolf-store/theme-index {"perPage":12,"pagination":"none","orderby":"featured","order":"DESC"} /-->
+	<!-- wp:wolf-store/theme-index {"perPage":9,"pagination":"none","orderby":"featured","order":"DESC"} /-->
 
 </section>
 <!-- /wp:group -->
