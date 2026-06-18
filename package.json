@@ -41,8 +41,8 @@
 		"type-check": "echo \"No TypeScript sources to type-check.\"",
 		"format": "wp-scripts format \"src/**/*.{js,scss}\"",
 		"lint": "npm run lint:js && npm run lint:css && npm run lint:pkg-json",
-		"lint:php": "./vendor/bin/phpcs --standard=phpcs.xml.dist -v",
-		"format:php": "./vendor/bin/phpcbf --standard=phpcs.xml.dist -v || true",
+		"lint:php": "./vendor/bin/phpcs --standard=./.phpcs.xml.dist -v",
+		"format:php": "./vendor/bin/phpcbf --standard=./.phpcs.xml.dist -v || true",
 		"packages-update": "wp-scripts packages-update"
 	}
 }
