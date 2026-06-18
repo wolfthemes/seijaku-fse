@@ -31,33 +31,53 @@
 		<!-- wp:column {"width":"60%"} -->
 		<div class="wp-block-column" style="flex-basis:60%">
 			<!-- wp:details -->
-			<details class="wp-block-details"><summary>What do you need to get started?</summary><!-- wp:paragraph -->
-			<p>Temporary WordPress admin access, hosting or FTP access when needed, the theme files, and any content or preferences required for the selected service.</p>
-			<!-- /wp:paragraph --></details>
+			<details class="wp-block-details">
+				<summary>What do you need to get started?</summary>
+
+				<!-- wp:paragraph -->
+				<p>Temporary WordPress admin access, hosting or FTP access when needed, the theme files, and any content or preferences required for the selected service.</p>
+				<!-- /wp:paragraph -->
+			</details>
 			<!-- /wp:details -->
 
 			<!-- wp:details -->
-			<details class="wp-block-details"><summary>How long does it take?</summary><!-- wp:paragraph -->
-			<p>Most installation services are completed quickly once all required access details are provided. Custom setup work depends on the project scope.</p>
-			<!-- /wp:paragraph --></details>
+			<details class="wp-block-details">
+				<summary>How long does it take?</summary>
+
+				<!-- wp:paragraph -->
+				<p>Most installation services are completed quickly once all required access details are provided. Custom setup work depends on the project scope.</p>
+				<!-- /wp:paragraph -->
+			</details>
 			<!-- /wp:details -->
 
 			<!-- wp:details -->
-			<details class="wp-block-details"><summary>How can I pay?</summary><!-- wp:paragraph -->
-			<p>Payment details are provided during the order or project discussion process.</p>
-			<!-- /wp:paragraph --></details>
+			<details class="wp-block-details">
+				<summary>How can I pay?</summary>
+
+				<!-- wp:paragraph -->
+				<p>Payment details are provided during the order or project discussion process.</p>
+				<!-- /wp:paragraph -->
+			</details>
 			<!-- /wp:details -->
 
 			<!-- wp:details -->
-			<details class="wp-block-details"><summary>Are there any server requirements?</summary><!-- wp:paragraph -->
-			<p>Your hosting should meet the current WordPress requirements and allow the theme and required plugins to be installed and updated normally.</p>
-			<!-- /wp:paragraph --></details>
+			<details class="wp-block-details">
+				<summary>Are there any server requirements?</summary>
+
+				<!-- wp:paragraph -->
+				<p>Your hosting should meet the current WordPress requirements and allow the theme and required plugins to be installed and updated normally.</p>
+				<!-- /wp:paragraph -->
+			</details>
 			<!-- /wp:details -->
 
 			<!-- wp:details -->
-			<details class="wp-block-details"><summary>Are there any restrictions?</summary><!-- wp:paragraph -->
-			<p>Services cover WordPress theme setup and related configuration. Custom plugin development, advanced third-party integrations, and unrelated server work may require a separate estimate.</p>
-			<!-- /wp:paragraph --></details>
+			<details class="wp-block-details">
+				<summary>Are there any restrictions?</summary>
+
+				<!-- wp:paragraph -->
+				<p>Services cover WordPress theme setup and related configuration. Custom plugin development, advanced third-party integrations, and unrelated server work may require a separate estimate.</p>
+				<!-- /wp:paragraph -->
+			</details>
 			<!-- /wp:details -->
 		</div>
 		<!-- /wp:column -->
