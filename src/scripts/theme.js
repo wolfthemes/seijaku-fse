@@ -98,7 +98,9 @@ function initNavCurtain( reduced ) {
 			clone.className = 'wolf-nav-curtain';
 			clone.textContent = label.textContent;
 			clone.setAttribute( 'aria-hidden', 'true' );
-			label.closest( '.wp-block-navigation-item__content' ).appendChild( clone );
+			label
+				.closest( '.wp-block-navigation-item__content' )
+				.appendChild( clone );
 		} );
 }
 
