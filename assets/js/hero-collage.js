@@ -14,6 +14,7 @@
 	function init() {
 		const stage  = document.querySelector( '.wolf-hero-collage__stage' );
 		const thumbs = document.querySelectorAll( '.wolf-hero-collage__thumb' );
+		const textLines = document.querySelectorAll( '.wolf-hero-collage__text-line' );
 
 		if ( ! stage || ! thumbs.length ) {
 			return;
@@ -29,24 +30,32 @@
 
 		// ── 1. Page-load stagger ─────────────────────────────────────────
 		if ( reduced ) {
-			gsap.set( thumbs, { opacity: 1 } );
+			gsap.set( [ ...thumbs, ...textLines ], { opacity: 1 } );
 			initScrollParallax();
 			return;
 		}
 
 		gsap.set( thumbs, { opacity: 0, y: 48, scale: 0.96 } );
+		gsap.set( textLines, { opacity: 0, y: 22 } );
 
-		gsap.to( thumbs, {
-			opacity: 1,
-			y: 0,
-			scale: 1,
-			duration: 0.85,
-			ease: 'power3.out',
-			stagger: 0.14,
-			delay: 0.2,
-			clearProps: 'scale,y', // reset inline transform so ScrollTrigger starts clean
-			onComplete: initScrollParallax,
-		} );
+		gsap.timeline( { delay: 0.2, onComplete: initScrollParallax } )
+			.to( textLines, {
+				opacity: 1,
+				y: 0,
+				duration: 0.72,
+				ease: 'power3.out',
+				stagger: 0.16,
+				clearProps: 'y',
+			} )
+			.to( thumbs, {
+				opacity: 1,
+				y: 0,
+				scale: 1,
+				duration: 0.85,
+				ease: 'power3.out',
+				stagger: 0.14,
+				clearProps: 'scale,y', // reset inline transform so ScrollTrigger starts clean
+			}, '-=0.18' );
 
 		// ── 2. Scroll parallax (ScrollTrigger) ──────────────────────────
 		// Initialised only after entrance ends to avoid a snap-to-scroll-position jump.

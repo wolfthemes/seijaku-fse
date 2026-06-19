@@ -17,16 +17,19 @@
 		<!-- wp:group {"className":"wolf-hero-collage__content","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group wolf-hero-collage__content">
 
-			<!-- wp:paragraph {"align":"center","className":"wolf-hero-dark__eyebrow"} -->
-			<p class="has-text-align-center wolf-hero-dark__eyebrow">Designed by an independent studio. Trusted by 35,000+ customers since 2011.</p>
+			<!-- wp:paragraph {"align":"center","className":"wolf-hero-dark__eyebrow wolf-hero-collage__text-line"} -->
+			<p class="has-text-align-center wolf-hero-dark__eyebrow wolf-hero-collage__text-line">Designed by an independent studio. Trusted by 35,000+ customers since 2011.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"textAlign":"center","level":1,"className":"wolf-hero-dark__title"} -->
-			<h1 class="wp-block-heading has-text-align-center wolf-hero-dark__title">WordPress Themes Built For Creative Businesses</h1>
+			<h1 class="wp-block-heading has-text-align-center wolf-hero-dark__title">
+				<span class="wolf-hero-collage__text-line">WordPress Themes Built</span>
+				<span class="wolf-hero-collage__text-line">For Creative Businesses</span>
+			</h1>
 			<!-- /wp:heading -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-buttons">
+			<div class="wp-block-buttons wolf-hero-collage__text-line">
 				<!-- wp:button -->
 				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Browse themes</a></div>
 				<!-- /wp:button -->
