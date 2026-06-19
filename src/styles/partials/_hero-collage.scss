@@ -1,41 +1,53 @@
-// Make group-based full-height heroes behave like wp:cover:
-// the group itself becomes a flex column so inner columns
-// can stretch to fill the height and vertical alignment works.
+@use 'tokens' as *;
+
 .wolf-hero-collage {
-	display: flex;
-	flex-direction: column;
+	position: relative;
+	display: grid;
+	min-height: 100vh;
+	overflow: hidden;
+	isolation: isolate;
 
 	.wolf-hero-collage__inner {
-		flex: 1;
-		// Columns block adds a max-width by default — remove it so the hero goes edge-to-edge.
+		position: relative;
+		z-index: 1;
+		display: grid;
+		min-height: inherit;
+		place-items: center;
 		max-width: none !important;
 		margin-inline: 0 !important;
+		padding: space(10) space(7);
 	}
 
-	// ── Stage (right column) ──────────────────────────────────────────
-	.wolf-hero-collage__stage {
+	.wolf-hero-collage__content {
 		position: relative;
-		// Reserve enough vertical room for the overlapping collage
-		min-height: 520px;
+		z-index: 3;
+		width: min(760px, 100%);
+		margin-inline: auto;
+		text-align: center;
+		text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
 
-		@media (min-width: 1024px) {
-			min-height: 640px;
+		.wp-block-buttons {
+			justify-content: center;
 		}
 	}
 
-	// Container that holds all absolutely-placed thumbs
+	.wolf-hero-collage__stage {
+		position: absolute;
+		inset: calc(var(--wolf-header-h) + #{space(5)}) 0 0;
+		z-index: 1;
+	}
+
 	.wolf-hero-collage__thumbs {
 		position: absolute;
 		inset: 0;
 	}
 
-	// ── Shared thumb rules ────────────────────────────────────────────
 	.wolf-hero-collage__thumb {
 		position: absolute;
-		max-width: 450px;
+		width: clamp(#{space(9)}, 23vw, 28rem);
 		margin: 0;
 		overflow: hidden;
-		border-radius: 6px;
+		border-radius: var(--wolf-radius-lg);
 		box-shadow: 0 8px 40px rgba(0, 0, 0, 0.28);
 		will-change: transform, opacity;
 
@@ -47,45 +59,110 @@
 		}
 	}
 
-	// ── Individual thumb positions (collage layout) ───────────────────
-	// Intentional overlapping cascade, slight rotations for depth.
 	.wolf-hero-collage__thumb--1 {
-		top: 0;
-		left: 0;
-		width: 60%;
+		top: 2%;
+		left: 6%;
 		transform: rotate(-2.5deg);
 		z-index: 2;
 	}
 
 	.wolf-hero-collage__thumb--2 {
-		top: -4%;
-		right: 0;
-		width: 50%;
+		top: 0;
+		right: 14%;
+		width: clamp(#{space(10)}, 20vw, 24rem);
 		transform: rotate(1.8deg);
 		z-index: 1;
 	}
 
 	.wolf-hero-collage__thumb--3 {
-		top: 28%;
-		left: 18%;
-		width: 55%;
+		top: 24%;
+		right: -4%;
+		width: clamp(#{space(10)}, 21vw, 25rem);
 		transform: rotate(-1.2deg);
 		z-index: 3;
 	}
 
 	.wolf-hero-collage__thumb--4 {
-		bottom: 2%;
-		left: 2%;
-		width: 42%;
+		right: 8%;
+		bottom: 6%;
+		width: clamp(#{space(9)}, 18vw, 22rem);
 		transform: rotate(2deg);
 		z-index: 2;
 	}
 
 	.wolf-hero-collage__thumb--5 {
 		bottom: 0;
-		right: 2%;
-		width: 48%;
+		left: 28%;
+		width: clamp(#{space(10)}, 21vw, 25rem);
 		transform: rotate(-1.5deg);
 		z-index: 2;
+	}
+
+	.wolf-hero-collage__thumb--6 {
+		top: 27%;
+		left: -3%;
+		width: clamp(#{space(9)}, 20vw, 24rem);
+		transform: rotate(1.6deg);
+		z-index: 2;
+	}
+
+	.wolf-hero-collage__thumb--7 {
+		bottom: 12%;
+		left: 3%;
+		width: clamp(#{space(9)}, 22vw, 26rem);
+		transform: rotate(-1deg);
+		z-index: 1;
+	}
+
+	.wolf-hero-collage__thumb--8 {
+		top: 42%;
+		right: 24%;
+		width: clamp(#{space(9)}, 17vw, 21rem);
+		transform: rotate(1deg);
+		z-index: 1;
+	}
+
+	@include until($bp-lg) {
+
+		.wolf-hero-collage__inner {
+			padding-inline: space(6);
+		}
+
+		.wolf-hero-collage__thumb {
+			width: clamp(#{space(8)}, 36vw, 16rem);
+		}
+
+		.wolf-hero-collage__thumb--2,
+		.wolf-hero-collage__thumb--8 {
+			display: none;
+		}
+
+		.wolf-hero-collage__thumb--3 {
+			right: -18%;
+		}
+
+		.wolf-hero-collage__thumb--5 {
+			left: 38%;
+		}
+	}
+
+	@include until($bp-sm) {
+
+		.wolf-hero-collage__inner {
+			padding-block: calc(#{space(9)} + #{space(4)});
+		}
+
+		.wolf-hero-collage__thumb--1 {
+			left: -12%;
+		}
+
+		.wolf-hero-collage__thumb--4,
+		.wolf-hero-collage__thumb--6 {
+			display: none;
+		}
+
+		.wolf-hero-collage__thumb--7 {
+			left: -16%;
+		}
 	}
 }

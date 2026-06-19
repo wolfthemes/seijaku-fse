@@ -25,7 +25,7 @@
 
 		// Depth multipliers per thumb (scroll + mouse parallax).
 		// Higher = more movement.
-		const depths = [ 0.18, 0.10, 0.25, 0.14, 0.20 ];
+		const depths = [ 0.18, 0.10, 0.25, 0.14, 0.20, 0.16, 0.12, 0.09 ];
 
 		// ── 1. Page-load stagger ─────────────────────────────────────────
 		if ( reduced ) {
