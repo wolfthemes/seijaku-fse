@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Latest Themes
- * Slug: seijaku-fse/latest-themes
+ * Slug: seijaku-fse/home-latest-themes
  * Categories: query, portfolio
  *
  * @package SeijakuFSE

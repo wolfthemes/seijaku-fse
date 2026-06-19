@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: About
- * Slug: seijaku-fse/about
+ * Slug: seijaku-fse/home-about
  * Categories: about
  *
  * @package SeijakuFSE

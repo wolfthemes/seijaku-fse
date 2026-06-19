@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Why WolfThemes
- * Slug: seijaku-fse/why-wolfthemes
+ * Slug: seijaku-fse/home-why-wolfthemes
  * Categories: text, featured
  *
  * @package SeijakuFSE

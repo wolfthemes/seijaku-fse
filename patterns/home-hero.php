@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Hero
- * Slug: seijaku-fse/hero
+ * Slug: seijaku-fse/home-hero
  * Categories: hero
  *
  * @package SeijakuFSE

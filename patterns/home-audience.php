@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Audience
- * Slug: seijaku-fse/audience
+ * Slug: seijaku-fse/home-audience
  * Categories: columns, featured
  *
  * @package SeijakuFSE
