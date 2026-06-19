@@ -32,6 +32,7 @@
 
 	.wolf-hero-collage__text-line {
 		display: block;
+		opacity: 0;
 		text-shadow: 0 2px 28px color-mix(in srgb, #{$c-secondary} 70%, transparent);
 	}
 
@@ -51,6 +52,7 @@
 		width: clamp(#{space(9)}, 23vw, 28rem);
 		margin: 0;
 		overflow: hidden;
+		opacity: 0;
 		border-radius: var(--wolf-radius-lg);
 		box-shadow: 0 8px 40px rgba(0, 0, 0, 0.28);
 		will-change: transform, opacity;
@@ -167,6 +169,17 @@
 
 		.wolf-hero-collage__thumb--7 {
 			left: -16%;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.wolf-hero-collage {
+
+		.wolf-hero-collage__text-line,
+		.wolf-hero-collage__thumb {
+			opacity: 1;
 		}
 	}
 }
