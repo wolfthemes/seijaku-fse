@@ -70,32 +70,5 @@ function seijaku_fse_enqueue_assets() {
 			true
 		);
 	}
-
-	// GSAP + ScrollTrigger (CDN) — only loaded when the hero-collage is present.
-	wp_register_script(
-		'gsap',
-		'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js',
-		array(),
-		'3.12.7',
-		true
-	);
-	wp_register_script(
-		'gsap-scroll-trigger',
-		'https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js',
-		array( 'gsap' ),
-		'3.12.7',
-		true
-	);
-
-	$hero_collage_js = get_theme_file_path( 'assets/js/hero-collage.js' );
-	if ( file_exists( $hero_collage_js ) ) {
-		wp_enqueue_script(
-			'seijaku-hero-collage',
-			get_theme_file_uri( 'assets/js/hero-collage.js' ),
-			array( 'gsap', 'gsap-scroll-trigger' ),
-			(string) filemtime( $hero_collage_js ),
-			true
-		);
-	}
 }
 add_action( 'wp_enqueue_scripts', 'seijaku_fse_enqueue_assets' );

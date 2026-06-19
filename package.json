@@ -24,6 +24,10 @@
 		"node": ">=20",
 		"npm": ">=10"
 	},
+	"dependencies": {
+		"auto-bind": "^5.0.1",
+		"gsap": "^3.15.0"
+	},
 	"devDependencies": {
 		"@wordpress/scripts": "^30.0.0",
 		"browser-sync": "^3.0.0",
