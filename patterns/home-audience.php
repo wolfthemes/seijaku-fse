@@ -19,47 +19,11 @@
 	<div style="height:var(--wp--preset--spacing--5)" aria-hidden="true" class="wp-block-spacer"></div>
 	<!-- /wp:spacer -->
 
-	<!-- wp:columns -->
-	<div class="wp-block-columns">
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-			<!-- wp:heading {"level":3} -->
-			<h3 class="wp-block-heading">Musicians and labels</h3>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph -->
-			<p>Publish releases, tours, media, and merchandise with layouts made for music-focused sites.</p>
-			<!-- /wp:paragraph -->
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-			<!-- wp:heading {"level":3} -->
-			<h3 class="wp-block-heading">Studios and agencies</h3>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph -->
-			<p>Present work, services, case studies, and announcements with polished editorial sections.</p>
-			<!-- /wp:paragraph -->
-		</div>
-		<!-- /wp:column -->
-
-		<!-- wp:column -->
-		<div class="wp-block-column">
-			<!-- wp:heading {"level":3} -->
-			<h3 class="wp-block-heading">Shops and creators</h3>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph -->
-			<p>Launch a flexible brand site that can support products, updates, and long-term content.</p>
-			<!-- /wp:paragraph -->
-		</div>
-		<!-- /wp:column -->
-
-	</div>
-	<!-- /wp:columns -->
+	<!-- wp:wolf-blocks/feature-grid {"columns":3} -->
+		<!-- wp:wolf-blocks/feature-grid-item {"icon":"starFilled","title":"Musicians and labels","description":"Publish releases, tours, media, and merchandise with layouts made for music-focused sites."} /-->
+		<!-- wp:wolf-blocks/feature-grid-item {"icon":"layout","title":"Studios and agencies","description":"Present work, services, case studies, and announcements with polished editorial sections."} /-->
+		<!-- wp:wolf-blocks/feature-grid-item {"icon":"tag","title":"Shops and creators","description":"Launch a flexible brand site that can support products, updates, and long-term content."} /-->
+	<!-- /wp:wolf-blocks/feature-grid -->
 
 </section>
 <!-- /wp:group -->

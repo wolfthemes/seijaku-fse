@@ -8,9 +8,9 @@
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>","dimRatio":55,"minHeight":440,"minHeightUnit":"px","align":"full","className":"wolf-music-cta is-dark has-texture"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>","dimRatio":60,"minHeight":440,"minHeightUnit":"px","align":"full","className":"wolf-music-cta is-dark has-texture"} -->
 <div class="wp-block-cover alignfull wolf-music-cta is-dark has-texture" style="min-height:440px">
-	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-50 has-background-dim"></span>
+	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span>
 	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>" data-object-fit="cover"/>
 
 	<div class="wp-block-cover__inner-container">
