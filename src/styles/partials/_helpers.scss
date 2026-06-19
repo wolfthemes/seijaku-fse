@@ -6,6 +6,7 @@
 	--wp--preset--color--contrast:#{$c-base};
     background: $c-secondary;
     color: $c-base;
+    fill: $c-base;
 
     // Headings and text inherit automatically via `color: inherit`
     // already set on most components — but force it here too
@@ -43,7 +44,7 @@
 		background-repeat: repeat;
 		opacity: .8;
 		mix-blend-mode: exclusion;
-		z-index: 2;
+		z-index: 1;
 	}
 
 	> * {

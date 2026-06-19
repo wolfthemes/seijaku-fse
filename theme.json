@@ -12,7 +12,7 @@
 			"palette": [
 				{ "slug": "primary",       "color": "#B0533A",          "name": "Primary" },
 				{ "slug": "primary-light", "color": "#a39a80",          "name": "Primary Light" },
-				{ "slug": "secondary",     "color": "#211C16",          "name": "Secondary" },
+				{ "slug": "secondary",     "color": "#14110e",          "name": "Secondary" },
 				{ "slug": "accent",        "color": "#D3A043",          "name": "Accent" },
 				{ "slug": "base",          "color": "#FAF8F1",          "name": "Base" },
 				{ "slug": "base-2",        "color": "#EFE6D4",          "name": "Surface" },

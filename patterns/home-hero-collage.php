@@ -8,8 +8,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","align":"full","className":"wolf-hero wolf-hero-collage is-dark","style":{"dimensions":{"minHeight":"100vh"}},"layout":{"type":"default"}} -->
-<section class="wp-block-group alignfull wolf-hero wolf-hero-collage is-dark" style="min-height:100vh">
+<!-- wp:group {"tagName":"section","align":"full","className":"wolf-hero wolf-hero-collage is-dark has-texture","style":{"dimensions":{"minHeight":"100vh"}},"layout":{"type":"default"}} -->
+<section class="wp-block-group alignfull wolf-hero wolf-hero-collage is-dark has-texture" style="min-height:100vh">
 
 	<!-- wp:group {"className":"wolf-hero-collage__inner","layout":{"type":"default"}} -->
 	<div class="wp-block-group wolf-hero-collage__inner">
@@ -18,7 +18,7 @@
 		<div class="wp-block-group wolf-hero-collage__content">
 
 			<!-- wp:paragraph {"align":"center","className":"wolf-hero-dark__eyebrow wolf-hero-collage__text-line"} -->
-			<p class="has-text-align-center wolf-hero-dark__eyebrow wolf-hero-collage__text-line">Designed by an independent studio. Trusted by 35,000+ customers since 2011.</p>
+			<p class="has-text-align-center wolf-hero-dark__eyebrow wolf-hero-collage__text-line">Designed by an independent studio. Trusted by 36,000+ customers since 2011.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"textAlign":"center","level":1,"className":"wolf-hero-dark__title"} -->
