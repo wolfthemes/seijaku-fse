@@ -12,6 +12,7 @@
 // Foundations
 @use 'partials/tokens' as *;
 @use 'partials/typography';
+@use 'partials/helpers';
 @use 'partials/layout';
 @use 'partials/buttons';
 @use 'partials/nav';
@@ -20,6 +21,7 @@
 
 // Page sections (front-page.html) — built incrementally
 @use 'partials/hero';
+@use 'partials/hero-collage';
 @use 'partials/about';
 @use 'partials/marquee';
 @use 'partials/stats';

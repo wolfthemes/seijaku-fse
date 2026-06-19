@@ -1,0 +1,54 @@
+@use 'tokens' as *;
+
+// Dark section.
+// Used for hero, footer, CTA sections.
+.is-dark {
+	--wp--preset--color--contrast:#{$c-base};
+    background: $c-secondary;
+    color: $c-base;
+
+    // Headings and text inherit automatically via `color: inherit`
+    // already set on most components — but force it here too
+    // in case a component hardcodes its own ink color.
+    h1, h2, h3, h4, h5, h6, p {
+        color: inherit;
+    }
+}
+
+// Alternate light section.
+// Used to create rhythm between sections.
+.is-surface {
+	background: $c-surface;
+}
+
+// Accent section.
+// Use sparingly for announcements, promotions,
+// launch offers or highlighted content.
+.is-accent {
+	background: $c-accent;
+	color: $c-base;
+}
+
+// Add grungy sibtle overlay to a background
+.has-texture{
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background-image: url(/assets/images/texture.jpg);
+		background-repeat: repeat;
+		opacity: .8;
+		mix-blend-mode: exclusion;
+		z-index: 2;
+	}
+
+	> * {
+		position: relative;
+		z-index: 3;
+	}
+}
+
