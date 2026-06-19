@@ -31,6 +31,25 @@ function seijaku_fse_setup() {
 add_action( 'after_setup_theme', 'seijaku_fse_setup' );
 
 /**
+ * Build the Google Fonts CSS2 URL from a simple family → variants map.
+ * Add or remove entries here to trial different typefaces.
+ */
+function seijaku_fse_google_fonts_url() {
+	$fonts = array(
+		'Lexend'       => 'wght@100..900',
+		'Urbanist'     => 'wght@100..900',
+		'Rethink+Sans' => 'ital,wght@0,400..800;1,400..800',
+	);
+
+	$families = array();
+	foreach ( $fonts as $family => $variants ) {
+		$families[] = 'family=' . $family . ':' . $variants;
+	}
+
+	return 'https://fonts.googleapis.com/css2?' . implode( '&', $families ) . '&display=swap';
+}
+
+/**
  * Front-end assets — the compiled design layer + interactions.
  *
  * Main.css is declared as a dependency-of-nothing but enqueued after the
@@ -40,7 +59,7 @@ add_action( 'after_setup_theme', 'seijaku_fse_setup' );
 function seijaku_fse_enqueue_assets() {
 	$css_path = get_theme_file_path( 'build/main.css' );
 
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap', array(), SEIJAKU_FSE_VERSION );
+	wp_enqueue_style( 'google-fonts', seijaku_fse_google_fonts_url(), array(), null ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 
 	if ( file_exists( $css_path ) ) {
 		wp_enqueue_style(

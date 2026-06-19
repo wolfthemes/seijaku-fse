@@ -11,7 +11,7 @@
 		"color": {
 			"palette": [
 				{ "slug": "primary",       "color": "#B0533A",          "name": "Primary" },
-				{ "slug": "primary-light", "color": "#a39a80",          "name": "Primary Light" },
+				{ "slug": "primary-light", "color": "#fff3db",          "name": "Primary Light" },
 				{ "slug": "secondary",     "color": "#14110e",          "name": "Secondary" },
 				{ "slug": "accent",        "color": "#D3A043",          "name": "Accent" },
 				{ "slug": "base",          "color": "#FAF8F1",          "name": "Base" },
@@ -26,7 +26,7 @@
 				{
 					"name": "Heading",
 					"slug": "heading",
-					"fontFamily": "Manrope, sans-serif",
+					"fontFamily": "Urbanist, sans-serif",
 					"fontFace": [
 						{
 							"fontFamily": "Manrope",
