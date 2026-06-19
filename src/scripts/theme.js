@@ -4,6 +4,7 @@
 
 import autoBind from 'auto-bind';
 import HeroCollage from './modules/HeroCollage';
+import SmoothScroll from './modules/SmoothScroll';
 
 class SeijakuFse {
 	constructor() {
@@ -17,10 +18,17 @@ class SeijakuFse {
 
 		document.body.classList.add( 'wolf-anim-ready' );
 
+		this.initSmoothScroll();
 		this.initReveals();
 		this.initHeader();
 		this.initNavCurtain();
 		this.initHeroCollage();
+	}
+
+	initSmoothScroll() {
+		this.smoothScroll = new SmoothScroll( {
+			reduced: this.reduced,
+		} );
 	}
 
 	initReveals() {

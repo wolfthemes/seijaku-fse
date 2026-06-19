@@ -6,10 +6,14 @@
 
 @use 'tokens' as *;
 
-// Smooth in-page anchor scrolling, offset for the sticky header.
+// Smooth in-page anchor scrolling, offset for the sticky header. Lenis adds
+// .lenis to <html>; native smooth scrolling stays as the no-JS fallback only.
 html {
-	scroll-behavior: smooth;
 	scroll-padding-top: calc(var(--wolf-header-h) + #{space(5)});
+}
+
+html:not(.lenis) {
+	scroll-behavior: smooth;
 }
 
 // Contain the hero's oversized decorative wordmark so it never
@@ -26,15 +30,14 @@ main.wp-block-group {
 
 .wolf-blocks-marquee,
 .wolf-music-cta,
-.wolf-blocks-mailchimp-form{
+.wolf-blocks-mailchimp-form {
 	margin-block-start: 0;
 }
 
 .wolf-section-pad {
-    padding-block: space(8);
+	padding-block: space(8);
 }
 
 .wolf-section-title {
-    margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
-
