@@ -24,7 +24,8 @@ main.wp-block-group {
 	max-inline-size: 38ch;
 }
 
-.wolf-blocks-marquee {
+.wolf-blocks-marquee,
+.wolf-music-cta {
 	margin-block-start: 0;
 }
 
@@ -63,6 +64,18 @@ main.wp-block-group {
 .is-accent {
 	background: $c-accent;
 	color: $c-base;
+}
+
+// Make group-based full-height heroes behave like wp:cover:
+// the group itself becomes a flex column so inner columns
+// can stretch to fill the height and vertical alignment works.
+.wolf-hero-collage {
+	display: flex;
+	flex-direction: column;
+
+	.wolf-hero-collage__inner {
+		flex: 1;
+	}
 }
 
 // Add grungy sibtle overlay to a background

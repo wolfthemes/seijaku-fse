@@ -15,7 +15,7 @@
 	<h2 class="wp-block-heading">Music themes</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:wolf-store/theme-index {"perPage":9,"theme_cat":"music", "pagination":"none","orderby":"featured","order":"DESC"} /-->
+	<!-- wp:wolf-store/theme-index {"perPage":12,"theme_cat":"music", "pagination":"none","orderby":"featured","order":"DESC"} /-->
 
 </section>
 <!-- /wp:group -->
