@@ -9,16 +9,16 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","align":"full","backgroundColor":"base-2","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
-<section class="wp-block-group alignfull wolf-section-pad has-base-2-background-color has-background">
+<!-- wp:group {"tagName":"section","align":"full","backgroundColor":"base-2","className":"wolf-about-story","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<section class="wp-block-group alignfull wolf-about-story has-base-2-background-color has-background">
 
-	<!-- wp:columns -->
+	<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|8"}}}} -->
 	<div class="wp-block-columns">
 
 		<!-- wp:column {"width":"42%"} -->
 		<div class="wp-block-column" style="flex-basis:42%">
-			<!-- wp:heading {"level":2} -->
-			<h2 class="wp-block-heading">A small studio for serious creative websites.</h2>
+			<!-- wp:heading {"level":2,"className":"wolf-about-story__heading"} -->
+			<h2 class="wp-block-heading wolf-about-story__heading">A small studio for serious creative websites.</h2>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:column -->

@@ -8,14 +8,14 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","align":"full","className":"wolf-hero wolf-hero-collage is-dark has-texture","style":{"dimensions":{"minHeight":"100vh"}},"layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<!-- wp:group {"tagName":"section","align":"full","className":"wolf-hero wolf-hero-collage is-dark has-texture","style":{"dimensions":{"minHeight":"100vh"}},"layout":{"type":"default"}} -->
 <section class="wp-block-group alignfull wolf-hero wolf-hero-collage is-dark has-texture" style="min-height:100vh">
 
 	<!-- wp:columns {"verticalAlignment":"center","className":"wolf-hero-collage__inner"} -->
 	<div class="wp-block-columns are-vertically-aligned-center wolf-hero-collage__inner">
 
-		<!-- wp:column {"verticalAlignment":"bottom","className":"wolf-hero-collage__content","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|10"}}}} -->
-		<div class="wp-block-column is-vertically-aligned-bottom wolf-hero-collage__content" style="padding-bottom:var(--wp--preset--spacing--10)">
+		<!-- wp:column {"verticalAlignment":"bottom","className":"wolf-hero-collage__content","style":{"spacing":{"padding":{"top":"var:preset|spacing|11","bottom":"var:preset|spacing|11","left":"var:preset|spacing|10","right":"var:preset|spacing|9"}}}} -->
+		<div class="wp-block-column is-vertically-aligned-bottom wolf-hero-collage__content" style="padding-top:var(--wp--preset--spacing--11);padding-bottom:var(--wp--preset--spacing--11);padding-left:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--9)">
 
 			<!-- wp:paragraph {"className":"wolf-hero-dark__eyebrow"} -->
 			<p class="wolf-hero-dark__eyebrow">Designed by an independent studio. Trusted by 35,000+ customers since 2011.</p>
@@ -36,8 +36,8 @@
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"verticalAlignment":"center","className":"wolf-hero-collage__stage"} -->
-		<div class="wp-block-column is-vertically-aligned-center wolf-hero-collage__stage">
+		<!-- wp:column {"verticalAlignment":"center","className":"wolf-hero-collage__stage","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","right":"0px"}}}} -->
+		<div class="wp-block-column is-vertically-aligned-center wolf-hero-collage__stage" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10);padding-right:0px">
 
 			<!-- wp:group {"className":"wolf-hero-collage__thumbs","layout":{"type":"default"}} -->
 			<div class="wp-block-group wolf-hero-collage__thumbs">

@@ -1,8 +1,51 @@
 @use 'tokens' as *;
 
-.wolf-about {
-    background: $c-base;
+// ─── Story section ────────────────────────────────────────────────────────────
+
+.wolf-about-story {
+    padding-top: space(10);
+    padding-bottom: space(10);
+
+    &__heading {
+        font-size: fs(2xl);
+        line-height: 1.15;
+        text-transform: none;
+        font-weight: 700;
+    }
+
+    p {
+        color: $c-muted;
+        line-height: 1.7;
+
+        & + p {
+            margin-top: space(4);
+        }
+    }
 }
+
+// ─── Values section ───────────────────────────────────────────────────────────
+
+.wolf-about-values {
+    padding-top: space(9);
+    padding-bottom: space(9);
+    border-top: 1px solid var(--wp--preset--color--border);
+
+    &__label {
+        font-size: fs(xs);
+        font-weight: 600;
+        letter-spacing: var(--wolf-track-label);
+        text-transform: uppercase;
+        margin-bottom: space(2);
+    }
+
+    p {
+        font-size: fs(sm);
+        color: $c-muted;
+        line-height: 1.65;
+    }
+}
+
+// ─── Legacy classes (home-about section) ─────────────────────────────────────
 
 .wolf-about__eyebrow {
     font-size: fs(xs);
@@ -10,23 +53,6 @@
     letter-spacing: var(--wolf-track-label);
     color: $c-primary;
     margin-bottom: space(3);
-}
-
-.wolf-about__title {
-    text-transform: none; // breaks from the all-caps heading default — warmer, more personal
-    font-size: fs(xl);
-    line-height: 1.15;
-    margin-bottom: space(4);
-}
-
-.wolf-about__text {
-    line-height: 1.7;
-    color: $c-muted;
-    max-width: 42ch;
-
-    & + & {
-        margin-top: space(4);
-    }
 }
 
 .wolf-about__pullquote p {
@@ -40,6 +66,16 @@
 }
 
 @include until($bp-lg) {
+
+    .wolf-about-story {
+        padding-top: space(8);
+        padding-bottom: space(8);
+    }
+
+    .wolf-about-values {
+        padding-top: space(7);
+        padding-bottom: space(7);
+    }
 
     .wolf-about__pullquote {
         margin-top: space(6);
