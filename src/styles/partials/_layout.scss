@@ -36,6 +36,8 @@ main.wp-block-group {
     margin-bottom: 3rem;
 }
 
+// Dark section.
+// Used for hero, footer, CTA sections.
 .is-dark {
 	--wp--preset--color--contrast:#{$c-base};
     background: $c-secondary;
@@ -49,6 +51,21 @@ main.wp-block-group {
     }
 }
 
+// Alternate light section.
+// Used to create rhythm between sections.
+.is-surface {
+	background: $c-surface;
+}
+
+// Accent section.
+// Use sparingly for announcements, promotions,
+// launch offers or highlighted content.
+.is-accent {
+	background: $c-accent;
+	color: $c-base;
+}
+
+// Add grungy sibtle overlay to a background
 .has-texture{
 	position: relative;
 	overflow: hidden;

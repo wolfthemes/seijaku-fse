@@ -27,14 +27,45 @@ $bp-xl: 1280px; // theme.json wideSize
 	}
 }
 
-// ---- Colour aliases (theme.json palette) --------------------
+// -----------------------------------------------------------------------------
+// Colour aliases (theme.json palette)
+// -----------------------------------------------------------------------------
+
+// Primary brand colour.
+// Main CTAs, buttons, active states, important links.
 $c-primary: var(--wp--preset--color--primary);
+
+// Lighter variation of the primary colour.
+// Hover states, subtle highlights, secondary CTA variations.
 $c-primary-light: var(--wp--preset--color--primary-light);
+
+// Secondary brand colour.
+// Large dark surfaces: hero, footer, dark sections, overlays.
 $c-secondary: var(--wp--preset--color--secondary);
+
+// Accent colour.
+// Small attention grabbers only: badges, icons, highlights,
+// decorative elements, underlines, status indicators.
+// Avoid using for large backgrounds.
+$c-accent: var(--wp--preset--color--accent);
+
+// Main site background.
+// Default page background colour.
 $c-base: var(--wp--preset--color--base);
+
+// Alternative surface background.
+// Cards, testimonials, FAQ sections, alternating page sections.
 $c-surface: var(--wp--preset--color--base-2);
+
+// Primary text colour.
+// Headings, body copy, icons.
 $c-ink: var(--wp--preset--color--contrast);
+
+// Secondary text colour.
+// Metadata, captions, supporting content.
 $c-muted: var(--wp--preset--color--contrast-2);
+
+// Borders, dividers and input outlines.
 $c-border: var(--wp--preset--color--border);
 
 // ---- Type ---------------------------------------------------
