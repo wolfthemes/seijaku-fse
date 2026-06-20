@@ -24,8 +24,8 @@
 			<p>For installation, setup, optimization, and custom website help.</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:buttons -->
-			<div class="wp-block-buttons">
+			<!-- wp:buttons {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
+			<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--6)">
 				<!-- wp:button -->
 				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/services">View services</a></div>
 				<!-- /wp:button -->
@@ -43,8 +43,8 @@
 			<p>Ask about theme features, compatibility, licensing, or choosing the right theme.</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:buttons -->
-			<div class="wp-block-buttons">
+			<!-- wp:buttons {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
+			<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--6)">
 				<!-- wp:button -->
 				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contact-form">Ask a question</a></div>
 				<!-- /wp:button -->
@@ -68,8 +68,8 @@
 			<p>For help with an existing WolfThemes product, include your theme name and purchase details.</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:buttons -->
-			<div class="wp-block-buttons">
+			<!-- wp:buttons {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
+			<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--6)">
 				<!-- wp:button -->
 				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contact-form">Request support</a></div>
 				<!-- /wp:button -->
@@ -87,8 +87,8 @@
 			<p>For partnerships, account questions, or anything that does not fit the other categories.</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:buttons -->
-			<div class="wp-block-buttons">
+			<!-- wp:buttons {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
+			<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--6)">
 				<!-- wp:button -->
 				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contact-form">Send message</a></div>
 				<!-- /wp:button -->
