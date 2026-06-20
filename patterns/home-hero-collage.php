@@ -23,8 +23,8 @@
 
 			<!-- wp:heading {"textAlign":"center","level":1,"className":"wolf-hero-dark__title"} -->
 			<h1 class="wp-block-heading has-text-align-center wolf-hero-dark__title">
-				<span class="wolf-hero-collage__text-line">WordPress Themes Built</span>
-				<span class="wolf-hero-collage__text-line">For Creative Businesses</span>
+				<span class="wolf-hero-collage__text-line">WordPress Themes</span>
+				<span class="wolf-hero-collage__text-line">For Creators</span>
 			</h1>
 			<!-- /wp:heading -->
 

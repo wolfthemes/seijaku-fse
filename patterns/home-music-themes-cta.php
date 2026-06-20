@@ -25,11 +25,11 @@
 				<div class="wp-block-column is-vertically-aligned-center">
 
 					<!-- wp:heading {"level":2} -->
-					<h2 class="wp-block-heading">Need a theme for musicians?</h2>
+					<h2 class="wp-block-heading">Music WordPress Themes</h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>Browse Our Themes Tailored for Musicians</p>
+					<p>Explore 20+ themes for bands, labels, festivals and music businesses.</p>
 					<!-- /wp:paragraph -->
 
 				</div>
