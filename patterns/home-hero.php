@@ -8,41 +8,30 @@
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero.jpg' ); ?>","dimRatio":10,"minHeight":100,"minHeightUnit":"vh","align":"full","className":"wolf-hero wolf-hero-dark has-texture"} -->
-<div class="wp-block-cover alignfull wolf-hero wolf-hero-dark has-texture" style="min-height:100vh">
-	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-10 has-background-dim"></span>
-	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero.jpg' ); ?>" data-object-fit="cover"/>
+<!-- wp:group {"align":"full","className":"wolf-hero","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull wolf-hero">
 
-	<div class="wp-block-cover__inner-container">
+	<!-- wp:group {"className":"wolf-hero__inner","layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group wolf-hero__inner">
 
-		<!-- wp:group {"className":"wolf-hero-dark__inner"} -->
-		<div class="wp-block-group wolf-hero-dark__inner">
+		<!-- wp:paragraph {"className":"wolf-hero__eyebrow"} -->
+		<p class="wolf-hero__eyebrow">One-man studio · 35K sales · 4.5/5</p>
+		<!-- /wp:paragraph -->
 
-			<!-- wp:group {"className":"wolf-hero-dark__bottom","layout":{"type":"flex","orientation":"vertical"}} -->
-			<div class="wp-block-group wolf-hero-dark__bottom">
+		<!-- wp:heading {"level":1,"className":"wolf-hero__title"} -->
+		<h1 class="wp-block-heading wolf-hero__title">WordPress Themes for Creative People</h1>
+		<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"wolf-hero-dark__eyebrow"} -->
-				<p class="wolf-hero-dark__eyebrow">Designed by an independent studio. Trusted by 35,000+ customers since 2011.</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:heading {"level":1,"className":"wolf-hero-dark__title"} -->
-				<h1 class="wp-block-heading wolf-hero-dark__title">WordPress Themes Built For Creative Businesses</h1>
-				<!-- /wp:heading -->
-
-				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
-				<div class="wp-block-buttons">
-					<!-- wp:button -->
-					<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Browse themes</a></div>
-					<!-- /wp:button -->
-				</div>
-				<!-- /wp:buttons -->
-
-			</div>
-			<!-- /wp:group -->
-
+		<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-buttons wolf-hero__actions wolf-btn-lg">
+			<!-- wp:button -->
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Choose a Theme</a></div>
+			<!-- /wp:button -->
 		</div>
-		<!-- /wp:group -->
+		<!-- /wp:buttons -->
 
 	</div>
+	<!-- /wp:group -->
+
 </div>
-<!-- /wp:cover -->
+<!-- /wp:group -->

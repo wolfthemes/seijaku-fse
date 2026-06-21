@@ -1,72 +1,53 @@
 // =============================================================
 //  Hero
-//  Full viewport height cover. Eyebrow + title + CTA anchored
-//  to the bottom-left, constrained to wide-size.
+//  Clean light section — eyebrow + title + CTA, centered,
+//  constrained to wide-size with generous vertical breathing
+//  room. No cover image, no forced min-height.
 // =============================================================
 
 @use 'tokens' as *;
 
+// Fills the space below the header and centres its content, leaving
+// the top edge of the themes grid peeking ~half a card above the fold.
 .wolf-hero {
-	padding: 0;
-}
-
-.wolf-hero-dark.wp-block-cover {
-	align-items: stretch;
-}
-
-.wolf-hero-dark {
-	color: $c-base;
-}
-
-.wolf-hero-dark .wp-block-cover__inner-container {
 	display: flex;
 	flex-direction: column;
-	position: relative;
-	z-index: 2;
+	justify-content: center;
+	min-height: calc(100svh - var(--wolf-header-h) - #{space(12)});
+	padding-block: 0 space(8);
+	background: $c-base;
+	color: $c-ink;
+	text-align: center;
 }
 
-// ── Constrained wrapper ───────────────────────────────────────
+// ── Constrained wrapper: eyebrow → title → buttons ───────────
 
-.wolf-hero-dark__inner.wp-block-group {
-	display: flex !important;
-	flex: 1;
-	flex-direction: column;
-	justify-content: flex-end;
-	max-width: var(--wp--style--global--wide-size);
-	margin-inline: auto;
-	width: 100%;
-	padding-block: space(8);
-	padding-inline: space(7);
-	box-sizing: border-box;
-}
-
-// ── Bottom section: eyebrow → title → buttons ────────────────
-
-.wolf-hero-dark__bottom.wp-block-group {
-	align-items: flex-start;
+.wolf-hero__inner.wp-block-group {
+	align-items: center;
 	gap: space(2) !important;
 }
 
-.wolf-hero-dark__bottom .wp-block-buttons {
-	margin-top: space(5);
-}
-
-.wolf-hero-dark__eyebrow {
-	font-size: fs(xs);
+.wolf-hero__eyebrow {
+	margin: 0;
 	font-family: $f-body;
+	font-size: fs(xs);
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: var(--wolf-track-label);
-	color: $c-primary;
-	margin: 0 0 space(4);
+	color: $c-muted;
 }
 
-.wolf-hero-dark__title {
-	font-size: fs("hero");
+// Scoped under the flex inner so it beats WP's
+// `.is-layout-flex > * { margin: 0 }` support style.
+.wolf-hero__inner .wolf-hero__title {
+	margin: 0 auto space(4);
+	max-width: 18ch;
+	font-size: fs("display");
 	line-height: var(--wolf-lh-display);
-	color: $c-base;
-	margin: 0 0 space(5);
-	// max-width: 16ch;
-    margin-bottom: space(8);
 	letter-spacing: var(--wolf-track-display);
+	color: $c-ink;
+}
+
+.wolf-hero__actions {
+	margin-top: space(4);
 }
