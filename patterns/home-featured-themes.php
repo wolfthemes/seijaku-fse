@@ -8,12 +8,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","className":"wolf-grid wolf-section-pad--big is-surface","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
-<section class="wp-block-group alignfull wolf-grid wolf-section-pad--big is-surface">
-
-	<!-- wp:heading -->
-	<h2 class="wp-block-heading">Featured themes</h2>
-	<!-- /wp:heading -->
+<!-- wp:group {"tagName":"section","className":"wolf-grid","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<section class="wp-block-group alignfull wolf-grid">
 
 	<!-- wp:wolf-store/theme-index {"perPage":9,"pagination":"none","orderby":"featured","order":"DESC"} /-->
 

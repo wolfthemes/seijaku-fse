@@ -40,7 +40,7 @@
 // Scoped under the flex inner so it beats WP's
 // `.is-layout-flex > * { margin: 0 }` support style.
 .wolf-hero__inner .wolf-hero__title {
-	margin: 0 auto space(4);
+	margin: 0 auto space(5);
 	max-width: 18ch;
 	font-size: fs("display");
 	line-height: var(--wolf-lh-display);

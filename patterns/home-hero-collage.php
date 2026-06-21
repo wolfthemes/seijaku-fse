@@ -8,8 +8,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","align":"full","className":"wolf-hero wolf-hero-collage is-dark has-texture","style":{"dimensions":{"minHeight":"100vh"}},"layout":{"type":"default"}} -->
-<section class="wp-block-group alignfull wolf-hero wolf-hero-collage is-dark has-texture" style="min-height:100vh">
+<!-- wp:group {"tagName":"section","align":"full","className":"wolf-hero wolf-hero-collage is-dark has-texture","style":{"dimensions":{"minHeight":"80vh"}},"layout":{"type":"default"}} -->
+<section class="wp-block-group alignfull wolf-hero wolf-hero-collage is-dark has-texture" style="min-height:80vh">
 
 	<!-- wp:group {"className":"wolf-hero-collage__inner","layout":{"type":"default"}} -->
 	<div class="wp-block-group wolf-hero-collage__inner">
