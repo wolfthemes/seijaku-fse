@@ -15,7 +15,7 @@
 	<div class="wp-block-group wolf-hero__inner">
 
 		<!-- wp:paragraph {"className":"wolf-hero__eyebrow"} -->
-		<p class="wolf-hero__eyebrow">One-man studio · 35K sales · 4.5/5</p>
+		<p class="wolf-hero__eyebrow">One-man studio · since 2011</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":1,"className":"wolf-hero__title"} -->

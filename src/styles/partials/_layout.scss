@@ -40,6 +40,10 @@ main.wp-block-group {
 	padding-block: space(10);
 }
 
+.wolf-grid{
+	padding-block-end: space(10);
+}
+
 // Reading-measure constraint for paragraph readability (~70ch).
 // WP has no native equivalent for this; .wolf-lead (38ch) targets lead copy.
 // Use .wolf-measure on a paragraph or wrapper for long-form body text.

@@ -8,8 +8,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","className":"wolf-about wolf-section-pad","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
-<section class="wp-block-group alignfull wolf-about wolf-section-pad">
+<!-- wp:group {"tagName":"section","className":"wolf-about wolf-section-pad--big is-dark has-texture","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<section class="wp-block-group alignfull wolf-about wolf-section-pad--big is-dark has-texture">
 
 	<!-- wp:columns {"verticalAlignment":"center"} -->
 	<div class="wp-block-columns are-vertically-aligned-center">
