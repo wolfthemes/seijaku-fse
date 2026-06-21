@@ -77,16 +77,23 @@ export default class HeroCollage {
 		this.thumbs.forEach( ( thumb, i ) => {
 			const travel = this.depths[ i ] * 260;
 
-			gsap.to( thumb, {
-				y: -travel,
-				ease: 'none',
-				scrollTrigger: {
-					trigger: this.stage,
-					start: 'top bottom',
-					end: 'bottom top',
-					scrub: 1.4,
-				},
-			} );
+			// fromTo with immediateRender:false prevents a position jump when
+			// ScrollTrigger initialises mid-scroll after the entrance animation.
+			gsap.fromTo(
+				thumb,
+				{ y: 0 },
+				{
+					y: -travel,
+					ease: 'none',
+					immediateRender: false,
+					scrollTrigger: {
+						trigger: this.stage,
+						start: 'top bottom',
+						end: 'bottom top',
+						scrub: 1.4,
+					},
+				}
+			);
 		} );
 	}
 

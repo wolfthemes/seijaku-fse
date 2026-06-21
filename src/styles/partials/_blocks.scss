@@ -1,0 +1,135 @@
+// =============================================================
+//  Block-level overrides
+//  Styles for specific WP core blocks and third-party form blocks.
+//  Kept separate from helpers (which are utility classes) and from
+//  section partials (which own page-level layout).
+// =============================================================
+
+@use 'tokens' as *;
+
+// =============================================================
+//  Details / toggle block
+//  WP core `details` element — custom marker icon + slide animation.
+// =============================================================
+
+.wp-block-details {
+	border-block-end: 1px solid $c-border;
+
+	& + .wp-block-details {
+		border-block-start: none;
+	}
+
+	summary {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: space(4);
+		padding-block: space(4);
+		font-weight: 600;
+		cursor: pointer;
+		list-style: none; // remove default triangle in Firefox
+
+		// Remove webkit disclosure triangle
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		// Custom icon — a plus that rotates to ×
+		&::after {
+			content: '';
+			display: block;
+			flex-shrink: 0;
+			width: 1.125rem;
+			height: 1.125rem;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.5'%3E%3Cpath d='M8 2v12M2 8h12'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-size: contain;
+			transition: transform var(--wolf-dur) var(--wolf-ease-out);
+		}
+	}
+
+	&[open] > summary::after {
+		transform: rotate(45deg);
+	}
+
+	// Content wrapper — slide animation via grid trick (no max-height hack).
+	// The inner div wraps the slot content in the block editor output.
+	> :not(summary) {
+		overflow: hidden;
+	}
+
+	// Slide-down on open, slide-up on close via the `details` closing animation.
+	// Chrome 114+ / FF 126+ support @starting-style for entry; for broad compat
+	// we rely on a grid-rows trick on the wrapping element instead.
+	&:not([open]) > :not(summary) {
+		display: none; // fallback; browsers hide it natively anyway
+	}
+}
+
+// Animate open → closed with a max-block-size transition on browsers that
+// support the newer `details` content pseudo-element (progressive enhancement).
+@supports (interpolate-size: allow-keywords) {
+	:root {
+		interpolate-size: allow-keywords;
+	}
+
+	.wp-block-details > :not(summary) {
+		display: block;
+		block-size: 0;
+		overflow: hidden;
+		transition: block-size var(--wolf-dur) var(--wolf-ease-out);
+	}
+
+	.wp-block-details[open] > :not(summary) {
+		block-size: auto;
+	}
+}
+
+// =============================================================
+//  Form helpers
+//  Transparent input / textarea — suitable for contact forms
+//  (CF7, WPForms) and Mailchimp embed blocks where the form
+//  should blend into any section background.
+// =============================================================
+
+// Base field reset applied to common form elements across plugins.
+.wolf-form-transparent {
+
+	input[type='text'],
+	input[type='email'],
+	input[type='tel'],
+	input[type='url'],
+	input[type='search'],
+	input[type='number'],
+	input[type='password'],
+	textarea,
+	select {
+		width: 100%;
+		background: transparent;
+		border: none;
+		border-block-end: 1px solid $c-border;
+		border-radius: 0;
+		padding-block: space(3);
+		padding-inline: 0;
+		color: inherit;
+		font-family: $f-body;
+		font-size: fs(md);
+		line-height: 1.5;
+		outline: none;
+		transition: border-color var(--wolf-dur-fast) var(--wolf-ease-out);
+		appearance: none;
+
+		&::placeholder {
+			color: $c-muted;
+		}
+
+		&:focus {
+			border-block-end-color: $c-ink;
+		}
+	}
+
+	textarea {
+		resize: vertical;
+		min-block-size: 7rem;
+	}
+}

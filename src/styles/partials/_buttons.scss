@@ -53,6 +53,20 @@ a:focus-visible {
 	border-radius: var(--wolf-btn-radius);
 }
 
+// ---- Size modifiers -----------------------------------------
+// Apply alongside .wp-element-button to adjust the button scale.
+.wolf-btn-sm.wp-element-button,
+.wp-element-button.wolf-btn-sm {
+	padding: 0.35em 0.85em;
+	font-size: fs(sm);
+}
+
+.wolf-btn-lg.wp-element-button,
+.wp-element-button.wolf-btn-lg {
+	padding: 0.75em 1.75em;
+	font-size: fs(lg);
+}
+
 // ---- Inline "text link with arrow" affordance ---------------
 // Opt-in via .wolf-arrow on a link; the arrow nudges on hover.
 .wolf-arrow {
