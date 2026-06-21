@@ -3,6 +3,7 @@
  */
 
 import autoBind from 'auto-bind';
+import Details from './modules/Details';
 import HeroCollage from './modules/HeroCollage';
 import SmoothScroll from './modules/SmoothScroll';
 
@@ -23,6 +24,7 @@ class SeijakuFse {
 		this.initHeader();
 		this.initNavCurtain();
 		this.initHeroCollage();
+		this.initDetails();
 	}
 
 	initSmoothScroll() {
@@ -109,6 +111,10 @@ class SeijakuFse {
 		this.heroCollage = new HeroCollage( {
 			reduced: this.reduced,
 		} );
+	}
+
+	initDetails() {
+		this.details = new Details( { reduced: this.reduced } );
 	}
 }
 

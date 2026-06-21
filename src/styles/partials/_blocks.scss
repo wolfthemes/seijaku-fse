@@ -70,26 +70,9 @@
 	}
 }
 
-// Slide animation — progressive enhancement for browsers that support
-// interpolate-size (Chrome 129+, Firefox 130+).
-@supports (interpolate-size: allow-keywords) {
-	:root {
-		interpolate-size: allow-keywords;
-	}
-
-	.wp-block-details > :not(summary) {
-		display: block;
-		block-size: 0;
-		padding-block-end: 0;
-		overflow: hidden;
-		transition: block-size var(--wolf-dur) var(--wolf-ease-out),
-			padding-block-end var(--wolf-dur) var(--wolf-ease-out);
-	}
-
-	.wp-block-details[open] > :not(summary) {
-		block-size: auto;
-		padding-block-end: space(4);
-	}
+// Panel overflow is managed by Details.js; ensure no-JS fallback is visible.
+.wp-block-details > :not(summary) {
+	overflow: hidden;
 }
 
 // =============================================================
