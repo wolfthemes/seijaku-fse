@@ -51,39 +51,45 @@ export default class Details {
 
 	open( details, panel ) {
 		details.open = true;
-		const target = panel.scrollHeight;
+		const target = panel.scrollHeight + 'px';
 
-		panel.style.blockSize = '0px';
+		// Both keyframes given to WAAPI at once — no intermediate paint.
+		const anim = panel.animate(
+			[ { blockSize: '0px' }, { blockSize: target } ],
+			{
+				duration: this.dur,
+				easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+				fill: 'none',
+			}
+		);
 
-		// Force reflow so the starting value is registered before transitioning.
-		panel.offsetHeight; // eslint-disable-line no-unused-expressions
-
-		panel.style.transition = `block-size ${ this.dur }ms var(--wolf-ease-out, ease)`;
-		panel.style.blockSize = target + 'px';
-
-		panel.addEventListener(
-			'transitionend',
+		anim.addEventListener(
+			'finish',
 			() => {
 				panel.style.blockSize = 'auto';
-				panel.style.transition = '';
 			},
 			{ once: true }
 		);
 	}
 
 	close( details, panel ) {
-		panel.style.blockSize = panel.scrollHeight + 'px';
+		const from = panel.scrollHeight + 'px';
 
-		panel.offsetHeight; // eslint-disable-line no-unused-expressions
+		// Snapshot → 0 in one WAAPI call; no reflow trick needed.
+		const anim = panel.animate(
+			[ { blockSize: from }, { blockSize: '0px' } ],
+			{
+				duration: this.dur,
+				easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+				fill: 'none',
+			}
+		);
 
-		panel.style.transition = `block-size ${ this.dur }ms var(--wolf-ease-out, ease)`;
-		panel.style.blockSize = '0px';
-
-		panel.addEventListener(
-			'transitionend',
+		anim.addEventListener(
+			'finish',
 			() => {
 				details.open = false;
-				panel.style.transition = '';
+				panel.style.blockSize = '0px';
 			},
 			{ once: true }
 		);
