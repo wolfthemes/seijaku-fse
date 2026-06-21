@@ -1,22 +1,28 @@
 @use 'tokens' as *;
 
-.wolf-testimonials__grid.wp-block-columns {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: space(5);
+.wolf-testimonials {
 
-	@include until($bp-lg) {
-		grid-template-columns: repeat(2, 1fr);
-	}
+	&__grid {
 
-	@include until($bp-sm) {
-		grid-template-columns: 1fr;
-	}
+		&.wp-block-columns {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: space(5);
 
-	// Reset wp:column flex sizing since we're using grid
-	> .wp-block-column {
-		flex-basis: unset;
-		flex-grow: unset;
+			@include until($bp-lg) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include until($bp-sm) {
+				grid-template-columns: 1fr;
+			}
+
+			// Reset wp:column flex sizing since we're using grid
+			> .wp-block-column {
+				flex-basis: unset;
+				flex-grow: unset;
+			}
+		}
 	}
 }
 
@@ -25,47 +31,47 @@
 	flex-direction: column;
 	padding: space(6);
 	border: 1px solid $c-border;
-	background-color:var(--wp--preset--color--base-2);
-	border-radius: var(--wolf-radius-lg); // --wolf-radius-md undefined in tokens; using --wolf-radius-lg
+	background-color: var(--wp--preset--color--base-2);
+	border-radius: var(--wolf-radius-lg);
 	min-height: 340px;
-}
 
-.wolf-blocks-testimonial-card__quote {
-	margin: 0;
-	flex: 1;
-
-	p {
+	&__quote {
 		margin: 0;
-		font-style: normal;
-		// font-size: fs(sm);
-		font-size: var(--wp--preset--font-size--base);
-		line-height: 1.65;
+		flex: 1;
+
+		p {
+			margin: 0;
+			font-style: normal;
+			// font-size: fs(sm);
+			font-size: var(--wp--preset--font-size--base);
+			line-height: 1.65;
+			color: $c-ink;
+		}
+	}
+
+	&__author {
+		border-top: 1px solid var(--ws-card-border-color);
+		margin-top: space(6);
+		padding-top: space(5);
+		font-size: fs(sm);
+		font-weight: 600;
 		color: $c-ink;
 	}
-}
 
-.wolf-blocks-testimonial-card__author {
-	border-top: 1px solid var(--ws-card-border-color);
-	margin-top: space(6);
-	padding-top: space(5);
-	font-size: fs(sm);
-    font-weight: 600;
-	color: $c-ink;
-}
+	&__meta {
+		display: flex;
+		flex-direction: column;
+		gap: space(1);
+	}
 
-.wolf-blocks-testimonial-card__meta {
-	display: flex;
-	flex-direction: column;
-	gap: space(1);
-}
+	&__name {
+		font-weight: 600;
+		font-size: fs(sm);
+		color: $c-ink;
+	}
 
-.wolf-blocks-testimonial-card__name {
-	font-weight: 600;
-	font-size: fs(sm);
-	color: $c-ink;
-}
-
-.wolf-blocks-testimonial-card__title {
-	font-size: fs(xs);
-	color: $c-muted;
+	&__title {
+		font-size: fs(xs);
+		color: $c-muted;
+	}
 }

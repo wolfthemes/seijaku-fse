@@ -7,15 +7,15 @@
 	overflow: hidden;
 	isolation: isolate;
 
-    &.has-texture{
+	&.has-texture {
 
-        &::after{
-            opacity: 0.4;
-            mix-blend-mode: difference;
-        }
-    }
+		&::after {
+			opacity: 0.4;
+			mix-blend-mode: difference;
+		}
+	}
 
-	.wolf-hero-collage__inner {
+	&__inner {
 		position: relative;
 		z-index: 2;
 		display: grid;
@@ -26,7 +26,7 @@
 		padding: space(10) space(7);
 	}
 
-	.wolf-hero-collage__content {
+	&__content {
 		position: relative;
 		z-index: 3;
 		width: min(1100px, 100%);
@@ -38,24 +38,24 @@
 		}
 	}
 
-	.wolf-hero-collage__text-line {
+	&__text-line {
 		display: block;
 		opacity: 0;
 		text-shadow: 0 2px 28px color-mix(in srgb, #{$c-secondary} 70%, transparent);
 	}
 
-	.wolf-hero-collage__stage {
+	&__stage {
 		position: absolute;
 		inset: calc(var(--wolf-header-h) + #{space(5)}) 0 0;
 		z-index: 1;
 	}
 
-	.wolf-hero-collage__thumbs {
+	&__thumbs {
 		position: absolute;
 		inset: 0;
 	}
 
-	.wolf-hero-collage__thumb {
+	&__thumb {
 		position: absolute;
 		width: clamp(#{space(9)}, 23vw, 28rem);
 		margin: 0;
@@ -71,122 +71,122 @@
 			height: 100%;
 			object-fit: cover;
 		}
-	}
 
-	.wolf-hero-collage__thumb--1 {
-		top: 2%;
-		left: 6%;
-		transform: rotate(-2.5deg);
-		z-index: 2;
-	}
+		&--1 {
+			top: 2%;
+			left: 6%;
+			transform: rotate(-2.5deg);
+			z-index: 2;
+		}
 
-	.wolf-hero-collage__thumb--2 {
-		top: 0;
-		right: 14%;
-		width: clamp(#{space(10)}, 20vw, 24rem);
-		transform: rotate(1.8deg);
-		z-index: 1;
-	}
+		&--2 {
+			top: 0;
+			right: 14%;
+			width: clamp(#{space(10)}, 20vw, 24rem);
+			transform: rotate(1.8deg);
+			z-index: 1;
+		}
 
-	.wolf-hero-collage__thumb--3 {
-		top: 24%;
-		right: -4%;
-		width: clamp(#{space(10)}, 21vw, 25rem);
-		transform: rotate(-1.2deg);
-		z-index: 3;
-	}
+		&--3 {
+			top: 24%;
+			right: -4%;
+			width: clamp(#{space(10)}, 21vw, 25rem);
+			transform: rotate(-1.2deg);
+			z-index: 3;
+		}
 
-	.wolf-hero-collage__thumb--4 {
-		right: 8%;
-		bottom: 6%;
-		width: clamp(#{space(9)}, 18vw, 22rem);
-		transform: rotate(2deg);
-		z-index: 2;
-	}
+		&--4 {
+			right: 8%;
+			bottom: 6%;
+			width: clamp(#{space(9)}, 18vw, 22rem);
+			transform: rotate(2deg);
+			z-index: 2;
+		}
 
-	.wolf-hero-collage__thumb--5 {
-		bottom: 0;
-		left: 36%;
-		width: clamp(#{space(10)}, 21vw, 25rem);
-		transform: rotate(-1.5deg);
-		z-index: 2;
-	}
+		&--5 {
+			bottom: 0;
+			left: 36%;
+			width: clamp(#{space(10)}, 21vw, 25rem);
+			transform: rotate(-1.5deg);
+			z-index: 2;
+		}
 
-	.wolf-hero-collage__thumb--6 {
-		top: 27%;
-		left: -3%;
-		width: clamp(#{space(9)}, 20vw, 24rem);
-		transform: rotate(1.6deg);
-		z-index: 2;
-	}
+		&--6 {
+			top: 27%;
+			left: -3%;
+			width: clamp(#{space(9)}, 20vw, 24rem);
+			transform: rotate(1.6deg);
+			z-index: 2;
+		}
 
-	.wolf-hero-collage__thumb--7 {
-		bottom: 12%;
-		left: 3%;
-		width: clamp(#{space(9)}, 22vw, 26rem);
-		transform: rotate(-1deg);
-		z-index: 1;
-	}
+		&--7 {
+			bottom: 12%;
+			left: 3%;
+			width: clamp(#{space(9)}, 22vw, 26rem);
+			transform: rotate(-1deg);
+			z-index: 1;
+		}
 
-	.wolf-hero-collage__thumb--8 {
-		top: 42%;
-		right: 10%;
-		width: clamp(#{space(9)}, 17vw, 21rem);
-		transform: rotate(1deg);
-		z-index: 1;
+		&--8 {
+			top: 42%;
+			right: 10%;
+			width: clamp(#{space(9)}, 17vw, 21rem);
+			transform: rotate(1deg);
+			z-index: 1;
+		}
 	}
 
 	@include until($bp-lg) {
 
-		.wolf-hero-collage__inner {
+		&__inner {
 			padding-inline: space(6);
 		}
 
-		.wolf-hero-collage__thumb {
+		&__thumb {
 			width: clamp(#{space(8)}, 36vw, 16rem);
-		}
 
-		.wolf-hero-collage__thumb--2,
-		.wolf-hero-collage__thumb--8 {
-			display: none;
-		}
+			&--2,
+			&--8 {
+				display: none;
+			}
 
-		.wolf-hero-collage__thumb--3 {
-			right: -18%;
-		}
+			&--3 {
+				right: -18%;
+			}
 
-		.wolf-hero-collage__thumb--5 {
-			left: 38%;
+			&--5 {
+				left: 38%;
+			}
 		}
 	}
 
 	@include until($bp-sm) {
 
-		.wolf-hero-collage__inner {
+		&__inner {
 			padding-block: calc(#{space(9)} + #{space(4)});
 		}
 
-		.wolf-hero-collage__thumb--1 {
-			left: -12%;
-		}
+		&__thumb {
 
-		.wolf-hero-collage__thumb--4,
-		.wolf-hero-collage__thumb--6 {
-			display: none;
-		}
+			&--1 {
+				left: -12%;
+			}
 
-		.wolf-hero-collage__thumb--7 {
-			left: -16%;
+			&--4,
+			&--6 {
+				display: none;
+			}
+
+			&--7 {
+				left: -16%;
+			}
 		}
 	}
-}
 
-@media (prefers-reduced-motion: reduce) {
+	@media (prefers-reduced-motion: reduce) {
 
-	.wolf-hero-collage {
-
-		.wolf-hero-collage__text-line,
-		.wolf-hero-collage__thumb {
+		&__text-line,
+		&__thumb {
 			opacity: 1;
 		}
 	}

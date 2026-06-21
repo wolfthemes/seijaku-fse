@@ -15,16 +15,19 @@
 	}
 }
 
-.wolf-blocks-stats-counter__number {
-	font-family: $f-heading;
-	font-size: fs("hero");
-	font-weight: 700;
-	line-height: var(--wolf-lh-display);
-	letter-spacing: var(--wolf-track-display);
-	color: inherit;
-}
+.wolf-blocks-stats-counter {
 
-.wolf-blocks-stats-counter__title {
-	color: inherit;
-	opacity: 0.7;
+	&__number {
+		font-family: $f-heading;
+		font-size: fs("hero");
+		font-weight: 700;
+		line-height: var(--wolf-lh-display);
+		letter-spacing: var(--wolf-track-display);
+		color: inherit;
+	}
+
+	&__title {
+		color: inherit;
+		opacity: 0.7;
+	}
 }

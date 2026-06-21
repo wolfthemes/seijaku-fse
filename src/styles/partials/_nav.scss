@@ -24,16 +24,46 @@
 		background: color-mix(in srgb, #{$c-base} 92%, transparent);
 	}
 
-	&.wolf-header-overlay{
+	&.wolf-header-overlay {
 		// --wp--preset--color--contrast:white;
-		background:none;
-		position:absolute;
-		backdrop-filter:none;
+		background: none;
+		position: absolute;
+		backdrop-filter: none;
 
 		.wp-block-site-title a,
 		.wolf-nav .wp-block-navigation-item__content {
 			color: $c-base;
 		}
+	}
+
+	&__inner {
+		align-items: center;
+	}
+
+	// ---- Wordmark -----------------------------------------------
+	.wp-block-site-title {
+		margin: 0;
+		font-family: $f-heading;
+		font-size: fs(md);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: -0.03em;
+		line-height: 1;
+
+		a {
+			color: $c-ink;
+			text-decoration: none;
+			transition: color var(--wolf-dur-fast) var(--wolf-ease-out);
+
+			&:hover {
+				color: $c-primary;
+			}
+		}
+	}
+
+	// Mobile overlay menu — keep it airy and on-brand.
+	.wp-block-navigation__responsive-container.is-menu-open {
+		background: $c-base;
 	}
 }
 
@@ -42,31 +72,6 @@
 	// WP sets --wp-admin--admin-bar--height (32px → 46px on narrow viewports).
 	.wolf-header-overlay {
 		top: var(--wp-admin--admin-bar--height, 32px);
-	}
-}
-
-.wolf-header__inner {
-	align-items: center;
-}
-
-// ---- Wordmark -----------------------------------------------
-.wolf-header .wp-block-site-title {
-	margin: 0;
-	font-family: $f-heading;
-	font-size: fs(md);
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: -0.03em;
-	line-height: 1;
-
-	a {
-		color: $c-ink;
-		text-decoration: none;
-		transition: color var(--wolf-dur-fast) var(--wolf-ease-out);
-
-		&:hover {
-			color: $c-primary;
-		}
 	}
 }
 
@@ -139,9 +144,4 @@
 			}
 		}
 	}
-}
-
-// Mobile overlay menu — keep it airy and on-brand.
-.wolf-header .wp-block-navigation__responsive-container.is-menu-open {
-	background: $c-base;
 }

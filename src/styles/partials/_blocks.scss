@@ -172,19 +172,22 @@
 // Footer Mailchimp / newsletter input — inline layout on dark bg.
 // Inputs here inherit the dark palette via color: inherit;
 // override the bottom border to use the footer hairline token.
-.wolf-footer__news {
+.wolf-footer {
 
-	input[type='email'],
-	input[type='text'] {
-		border-block-end-color: var(--ft-line, #{$c-border});
-		color: var(--ft-fg, #{$c-base});
+	&__news {
 
-		&::placeholder {
-			color: var(--ft-muted, #{$c-muted});
-		}
+		input[type='email'],
+		input[type='text'] {
+			border-block-end-color: var(--ft-line, #{$c-border});
+			color: var(--ft-fg, #{$c-base});
 
-		&:focus {
-			border-block-end-color: var(--ft-fg, #{$c-base});
+			&::placeholder {
+				color: var(--ft-muted, #{$c-muted});
+			}
+
+			&:focus {
+				border-block-end-color: var(--ft-fg, #{$c-base});
+			}
 		}
 	}
 }

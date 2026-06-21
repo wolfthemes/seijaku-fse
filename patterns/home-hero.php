@@ -22,6 +22,10 @@
 		<h1 class="wp-block-heading wolf-hero__title">WordPress Themes for Creative People</h1>
 		<!-- /wp:heading -->
 
+		<!-- wp:paragraph {"align":"center","className":"wolf-hero__tagline wolf-hero__text-line"} -->
+			<p class="has-text-align-center wolf-hero_tagline wolf-hero_text-line">Get a professional website to showcase your work and grow your audience.</p>
+		<!-- /wp:paragraph -->
+
 		<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons wolf-hero__actions wolf-btn-lg">
 			<!-- wp:button -->
