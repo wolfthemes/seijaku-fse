@@ -10,15 +10,16 @@
 		},
 		"color": {
 			"palette": [
-				{ "slug": "primary",       "color": "#B0533A",          "name": "Primary" },
-				{ "slug": "primary-light", "color": "#fff3db",          "name": "Primary Light" },
+				{ "slug": "primary",       "color": "#72f4a0 ",          "name": "Primary" },
+				{ "slug": "primary-light", "color": "#f1f1f1",          "name": "Primary Light" },
 				{ "slug": "secondary",     "color": "#14110e",          "name": "Secondary" },
 				{ "slug": "accent",        "color": "#D3A043",          "name": "Accent" },
-				{ "slug": "base",          "color": "#FAF8F1",          "name": "Base" },
-				{ "slug": "base-2",        "color": "#EFE6D4",          "name": "Surface" },
+				{ "slug": "base",          "color": "#ffffff",          "name": "Base" },
+				{ "slug": "base-2",        "color": "#f1f1f1",          "name": "Surface" },
 				{ "slug": "contrast",      "color": "#121212",          "name": "Contrast" },
 				{ "slug": "contrast-2",    "color": "#6b6b6b",          "name": "Muted" },
-				{ "slug": "border",        "color": "rgba(0,0,0,0.10)", "name": "Border" }
+				{ "slug": "border",        "color": "rgba(0,0,0,0.10)",    "name": "Border" },
+				{ "slug": "border-alt",    "color": "rgba(255,255,255,0.15)", "name": "Border Alt" }
 			]
 		},
 		"typography": {

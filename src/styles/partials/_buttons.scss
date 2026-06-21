@@ -7,6 +7,12 @@
 
 @use 'tokens' as *;
 
+// input[type=submit] joins the WP button element so it inherits theme.json
+// elements.button styles (color, padding, typography, border-radius).
+input[type='submit'] {
+	@extend .wp-element-button;
+}
+
 .wp-element-button {
     border: var(--wolf-border-width) solid $c-primary;
 	transition: transform var(--wolf-dur-slow) var(--wolf-ease-out),

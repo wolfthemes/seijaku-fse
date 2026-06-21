@@ -68,6 +68,9 @@ $c-muted: var(--wp--preset--color--contrast-2);
 // Borders, dividers and input outlines.
 $c-border: var(--wp--preset--color--border);
 
+// Alt border for dark sections (light hairline).
+$c-border-alt: var(--wp--preset--color--border-alt);
+
 // ---- Type ---------------------------------------------------
 $f-heading: var(--wp--preset--font-family--heading);
 $f-body: var(--wp--preset--font-family--body);
