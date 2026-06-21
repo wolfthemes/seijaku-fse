@@ -7,10 +7,37 @@
 
 @use 'tokens' as *;
 
-// input[type=submit] joins the WP button element so it inherits theme.json
-// elements.button styles (color, padding, typography, border-radius).
+// theme.json elements.button targets .wp-element-button — WP never adds that
+// class to native <input type=submit>. Mirror the same token references so
+// submit buttons match without duplicating values.
 input[type='submit'] {
-	@extend .wp-element-button;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	appearance: none;
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+	border: var(--wolf-border-width, 1px) solid var(--wp--preset--color--primary);
+	border-radius: var(--wolf-btn-radius);
+	padding-block: var(--wolf-btn-padding-y);
+	padding-inline: var(--wolf-btn-padding-x);
+	font-family: var(--wp--preset--font-family--body);
+	font-size: var(--wp--preset--font-size--sm);
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	line-height: 1;
+	transition: transform var(--wolf-dur-slow) var(--wolf-ease-out),
+		background-color var(--wolf-dur-slow) var(--wolf-ease-out),
+		color var(--wolf-dur-slow) var(--wolf-ease-out),
+		box-shadow var(--wolf-dur-slow) var(--wolf-ease-out);
+
+	&:hover {
+		background-color: var(--wp--preset--color--primary-light);
+		border-color: color-mix(in srgb, var(--wp--preset--color--primary) 55%, transparent);
+		box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--wp--preset--color--primary) 55%, transparent);
+		color: var(--wp--preset--color--secondary);
+	}
 }
 
 .wp-element-button {

@@ -11,10 +11,7 @@
 
 .wp-block-details {
 	border-block-end: 1px solid $c-border;
-
-	&:first-child {
-		border-block-start: 1px solid $c-border;
-	}
+	margin-block-start: 0;
 
 	& + .wp-block-details {
 		border-block-start: none;
@@ -158,8 +155,6 @@
 			min-block-size: 8rem;
 		}
 
-		// Submit buttons inherit the site button style via the selector
-		// extension in _buttons.scss — no extra rules needed here.
 		input[type='submit'],
 		button[type='submit'] {
 			margin-block-start: space(4);
