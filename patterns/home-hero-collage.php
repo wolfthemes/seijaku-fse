@@ -30,8 +30,8 @@
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-buttons wolf-hero-collage__text-line">
-				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Browse themes</a></div>
+				<!-- wp:button {"className":"wolf-btn-lg"} -->
+				<div class="wp-block-button wolf-btn-lg"><a class="wp-block-button__link wp-element-button">Browse themes</a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

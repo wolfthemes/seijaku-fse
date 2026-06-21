@@ -40,8 +40,8 @@
 
 					<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 					<div class="wp-block-buttons">
-						<!-- wp:button -->
-						<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/music-wordpress-themes/' ) ); ?>">Discover Music Themes</a></div>
+						<!-- wp:button {"className":"wolf-btn-lg"} -->
+						<div class="wp-block-button wolf-btn-lg"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/music-wordpress-themes/' ) ); ?>">Discover Music Themes</a></div>
 						<!-- /wp:button -->
 					</div>
 					<!-- /wp:buttons -->
