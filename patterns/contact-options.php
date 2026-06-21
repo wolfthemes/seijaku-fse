@@ -9,8 +9,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","align":"full","backgroundColor":"base-2","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
-<section class="wp-block-group alignfull wolf-section-pad has-base-2-background-color has-background">
+<!-- wp:group {"tagName":"section","align":"full","backgroundColor":"base-2","className":"wolf-section-pad--big","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<section class="wp-block-group alignfull wolf-section-pad--big has-base-2-background-color has-background">
 
 	<!-- wp:columns -->
 	<div class="wp-block-columns">

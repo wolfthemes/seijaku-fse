@@ -9,8 +9,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Contact form"},"align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"760px"}} -->
-<section id="contact-form" class="wp-block-group alignfull wolf-section-pad">
+<!-- wp:group {"tagName":"section","metadata":{"name":"Contact form"},"align":"full","className":"wolf-section-pad--big","layout":{"type":"constrained","contentSize":"760px"}} -->
+<section id="contact-form" class="wp-block-group alignfull wolf-section-pad--big">
 
 	<!-- wp:heading {"textAlign":"center","level":2} -->
 	<h2 class="wp-block-heading has-text-align-center">Send a message</h2>

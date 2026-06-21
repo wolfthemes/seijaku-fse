@@ -8,8 +8,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","className":"wolf-section-pad","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
-<section class="wp-block-group alignfull wolf-section-pad">
+<!-- wp:group {"tagName":"section","className":"wolf-section-pad--big","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<section class="wp-block-group alignfull wolf-section-pad--big">
 
 	<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"fontSize":"small"} -->
 	<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">Browse by category</p>
@@ -29,9 +29,9 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 
-			<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>","dimRatio":60,"minHeight":440,"minHeightUnit":"px","className":"wolf-cat-card is-dark"} -->
-			<div class="wp-block-cover wolf-cat-card is-dark" style="min-height:440px">
-				<span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span>
+			<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>","dimRatio":10,"minHeight":440,"minHeightUnit":"px","className":"wolf-cat-card is-dark has-texture"} -->
+			<div class="wp-block-cover wolf-cat-card is-dark has-texture" style="min-height:440px">
+				<span aria-hidden="true" class="wp-block-cover__background has-background-dim-10 has-background-dim"></span>
 				<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>" data-object-fit="cover"/>
 				<div class="wp-block-cover__inner-container">
 
@@ -53,9 +53,9 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 
-			<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/home-collage/mediafoundry.jpg' ); ?>","dimRatio":60,"minHeight":440,"minHeightUnit":"px","className":"wolf-cat-card is-dark"} -->
-			<div class="wp-block-cover wolf-cat-card is-dark" style="min-height:440px">
-				<span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span>
+			<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/home-collage/mediafoundry.jpg' ); ?>","dimRatio":30,"minHeight":440,"minHeightUnit":"px","className":"wolf-cat-card is-dark has-texture"} -->
+			<div class="wp-block-cover wolf-cat-card is-dark has-texture" style="min-height:440px">
+				<span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim"></span>
 				<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/home-collage/mediafoundry.jpg' ); ?>" data-object-fit="cover"/>
 				<div class="wp-block-cover__inner-container">
 
@@ -78,8 +78,8 @@
 		<div class="wp-block-column">
 
 			<?php // TODO: third category is TBD — update label, link slug and image. ?>
-			<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/home-collage/sable.jpg' ); ?>","dimRatio":60,"minHeight":440,"minHeightUnit":"px","className":"wolf-cat-card is-dark"} -->
-			<div class="wp-block-cover wolf-cat-card is-dark" style="min-height:440px">
+			<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/home-collage/sable.jpg' ); ?>","dimRatio":60,"minHeight":440,"minHeightUnit":"px","className":"wolf-cat-card is-dark has-texture"} -->
+			<div class="wp-block-cover wolf-cat-card is-dark has-texture" style="min-height:440px">
 				<span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span>
 				<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/home-collage/sable.jpg' ); ?>" data-object-fit="cover"/>
 				<div class="wp-block-cover__inner-container">
