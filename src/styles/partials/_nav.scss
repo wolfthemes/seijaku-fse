@@ -39,13 +39,9 @@
 
 .admin-bar {
 
+	// WP sets --wp-admin--admin-bar--height (32px → 46px on narrow viewports).
 	.wolf-header-overlay {
-		top: 32px;
-
-		// WP admin bar collapses to 46 px on narrow viewports.
-		@include until($bp-md) {
-			top: 46px;
-		}
+		top: var(--wp-admin--admin-bar--height, 32px);
 	}
 }
 

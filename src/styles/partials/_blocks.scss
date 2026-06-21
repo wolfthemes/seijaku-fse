@@ -1,15 +1,12 @@
 // =============================================================
 //  Block-level overrides
-//  Styles for specific WP core blocks and third-party form blocks.
-//  Kept separate from helpers (which are utility classes) and from
-//  section partials (which own page-level layout).
+//  Styles for WP core blocks and site-wide form elements.
 // =============================================================
 
 @use 'tokens' as *;
 
 // =============================================================
 //  Details / toggle block
-//  WP core `details` element — custom marker icon + slide animation.
 // =============================================================
 
 .wp-block-details {
@@ -27,14 +24,13 @@
 		padding-block: space(4);
 		font-weight: 600;
 		cursor: pointer;
-		list-style: none; // remove default triangle in Firefox
+		list-style: none;
 
-		// Remove webkit disclosure triangle
 		&::-webkit-details-marker {
 			display: none;
 		}
 
-		// Custom icon — a plus that rotates to ×
+		// + icon that rotates to × on open
 		&::after {
 			content: '';
 			display: block;
@@ -48,26 +44,33 @@
 		}
 	}
 
-	&[open] > summary::after {
-		transform: rotate(45deg);
+	&[open] > summary {
+		padding-block-end: space(3);
+
+		&::after {
+			transform: rotate(45deg);
+		}
 	}
 
-	// Content wrapper — slide animation via grid trick (no max-height hack).
-	// The inner div wraps the slot content in the block editor output.
+	// Inner content: no top margin, tidy bottom gap
 	> :not(summary) {
 		overflow: hidden;
-	}
+		padding-block-end: space(4);
+		margin-block-start: 0;
 
-	// Slide-down on open, slide-up on close via the `details` closing animation.
-	// Chrome 114+ / FF 126+ support @starting-style for entry; for broad compat
-	// we rely on a grid-rows trick on the wrapping element instead.
-	&:not([open]) > :not(summary) {
-		display: none; // fallback; browsers hide it natively anyway
+		// Kill default block top-margins inside the panel
+		> * {
+			margin-block-start: 0;
+
+			&:last-child {
+				margin-block-end: 0;
+			}
+		}
 	}
 }
 
-// Animate open → closed with a max-block-size transition on browsers that
-// support the newer `details` content pseudo-element (progressive enhancement).
+// Slide animation — progressive enhancement for browsers that support
+// interpolate-size (Chrome 129+, Firefox 130+).
 @supports (interpolate-size: allow-keywords) {
 	:root {
 		interpolate-size: allow-keywords;
@@ -76,60 +79,105 @@
 	.wp-block-details > :not(summary) {
 		display: block;
 		block-size: 0;
+		padding-block-end: 0;
 		overflow: hidden;
-		transition: block-size var(--wolf-dur) var(--wolf-ease-out);
+		transition: block-size var(--wolf-dur) var(--wolf-ease-out),
+			padding-block-end var(--wolf-dur) var(--wolf-ease-out);
 	}
 
 	.wp-block-details[open] > :not(summary) {
 		block-size: auto;
+		padding-block-end: space(4);
 	}
 }
 
 // =============================================================
-//  Form helpers
-//  Transparent input / textarea — suitable for contact forms
-//  (CF7, WPForms) and Mailchimp embed blocks where the form
-//  should blend into any section background.
+//  Global form styles
+//  Applied site-wide (no wrapper class needed). Bottom-border
+//  treatment reads cleanly on both light and dark sections.
 // =============================================================
 
-// Base field reset applied to common form elements across plugins.
-.wolf-form-transparent {
+.entry-content,
+.wp-block-group,
+.wp-block-post-content {
 
-	input[type='text'],
-	input[type='email'],
-	input[type='tel'],
-	input[type='url'],
-	input[type='search'],
-	input[type='number'],
-	input[type='password'],
-	textarea,
-	select {
-		width: 100%;
-		background: transparent;
-		border: none;
-		border-block-end: 1px solid $c-border;
-		border-radius: 0;
-		padding-block: space(3);
-		padding-inline: 0;
-		color: inherit;
-		font-family: $f-body;
-		font-size: fs(md);
-		line-height: 1.5;
-		outline: none;
-		transition: border-color var(--wolf-dur-fast) var(--wolf-ease-out);
-		appearance: none;
+	form,
+	.wpcf7 {
 
-		&::placeholder {
+		label {
+			display: block;
+			margin-block-end: space(2);
+			font-size: fs(sm);
+			font-weight: 600;
+			letter-spacing: var(--wolf-track-label);
+			text-transform: uppercase;
 			color: $c-muted;
 		}
 
-		&:focus {
-			border-block-end-color: $c-ink;
+		input[type='text'],
+		input[type='email'],
+		input[type='tel'],
+		input[type='url'],
+		input[type='search'],
+		input[type='number'],
+		input[type='password'],
+		textarea,
+		select {
+			display: block;
+			width: 100%;
+			background: transparent;
+			border: none;
+			border-block-end: 1px solid $c-border;
+			border-radius: 0;
+			padding-block: space(3);
+			padding-inline: 0;
+			color: inherit;
+			font-family: $f-body;
+			font-size: fs(md);
+			line-height: 1.5;
+			outline: none;
+			transition: border-color var(--wolf-dur-fast) var(--wolf-ease-out);
+			appearance: none;
+			margin-block-end: space(5);
+
+			&::placeholder {
+				color: $c-muted;
+			}
+
+			&:focus {
+				border-block-end-color: $c-ink;
+			}
+		}
+
+		textarea {
+			resize: vertical;
+			min-block-size: 8rem;
+		}
+
+		input[type='submit'],
+		button[type='submit'] {
+			margin-block-start: space(4);
+			cursor: pointer;
 		}
 	}
+}
 
-	textarea {
-		resize: vertical;
-		min-block-size: 7rem;
+// Footer Mailchimp / newsletter input — inline layout on dark bg.
+// Inputs here inherit the dark palette via color: inherit;
+// override the bottom border to use the footer hairline token.
+.wolf-footer__news {
+
+	input[type='email'],
+	input[type='text'] {
+		border-block-end-color: var(--ft-line, #{$c-border});
+		color: var(--ft-fg, #{$c-base});
+
+		&::placeholder {
+			color: var(--ft-muted, #{$c-muted});
+		}
+
+		&:focus {
+			border-block-end-color: var(--ft-fg, #{$c-base});
+		}
 	}
 }
