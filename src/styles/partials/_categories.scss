@@ -1,0 +1,55 @@
+@use 'tokens' as *;
+
+// =============================================================
+//  Theme category cards (home — "Browse by category")
+//  Core cover blocks laid out in a columns grid. The category
+//  name is a linked <h3>; a stretched ::after makes the whole
+//  card clickable, and the background image scales on hover.
+// =============================================================
+
+.wolf-cat-grid {
+	gap: space(5);
+
+	@include until($bp-md) {
+		gap: space(4);
+	}
+}
+
+.wolf-cat-card {
+	position: relative;
+	overflow: hidden;
+	border-radius: var(--wolf-radius-lg);
+
+	// Image zoom on hover.
+	.wp-block-cover__image-background {
+		transition: transform var(--wolf-dur) var(--wolf-ease-out);
+	}
+
+	&:hover .wp-block-cover__image-background,
+	&:focus-within .wp-block-cover__image-background {
+		transform: scale(1.06);
+	}
+
+	// Category name — inherit the cover's light text, no underline.
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	// Stretched link: whole card is the click target.
+	h3 a::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+	}
+
+	.wp-block-cover__inner-container > * {
+		margin-block: 0;
+	}
+
+	p {
+		margin-top: space(2);
+		opacity: 0.75;
+	}
+}

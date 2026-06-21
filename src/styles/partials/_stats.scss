@@ -17,6 +17,10 @@
 
 .wolf-blocks-stats-counter__number {
 	font-family: $f-heading;
+	font-size: fs("hero");
+	font-weight: 700;
+	line-height: var(--wolf-lh-display);
+	letter-spacing: var(--wolf-track-display);
 	color: inherit;
 }
 
