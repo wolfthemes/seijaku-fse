@@ -12,6 +12,16 @@
 .wp-block-details {
 	border-block-end: 1px solid $c-border;
 
+	// First in a group: add top border but strip the top padding from summary
+	// so the title aligns flush with surrounding content.
+	&:first-child {
+		border-block-start: 1px solid $c-border;
+
+		> summary {
+			padding-block-start: 0;
+		}
+	}
+
 	& + .wp-block-details {
 		border-block-start: none;
 	}
@@ -158,6 +168,53 @@
 		button[type='submit'] {
 			margin-block-start: space(4);
 			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			padding: 0.6em 1.4em;
+			background: $c-primary;
+			color: $c-base;
+			border: var(--wolf-border-width, 1px) solid $c-primary;
+			border-radius: var(--wolf-btn-radius, 2px);
+			font-family: $f-body;
+			font-size: fs(md);
+			font-weight: 600;
+			letter-spacing: 0.01em;
+			line-height: 1;
+			text-transform: none;
+			transition: background-color var(--wolf-dur-slow) var(--wolf-ease-out),
+				border-color var(--wolf-dur-slow) var(--wolf-ease-out),
+				box-shadow var(--wolf-dur-slow) var(--wolf-ease-out);
+			appearance: none;
+
+			&:hover {
+				background: $c-primary-light;
+				border-color: $c-primary-light;
+				box-shadow: 0 10px 24px -12px color-mix(in srgb, #{$c-primary} 55%, transparent);
+			}
+		}
+	}
+}
+
+// is-dark sections: swap form field borders to a white hairline
+.is-dark {
+
+	form,
+	.wpcf7 {
+
+		input[type='text'],
+		input[type='email'],
+		input[type='tel'],
+		input[type='url'],
+		input[type='search'],
+		input[type='number'],
+		input[type='password'],
+		textarea,
+		select {
+			border-block-end-color: rgba(255, 255, 255, 0.18);
+
+			&:focus {
+				border-block-end-color: rgba(255, 255, 255, 0.7);
+			}
 		}
 	}
 }
