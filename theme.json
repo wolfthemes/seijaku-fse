@@ -10,7 +10,7 @@
 		},
 		"color": {
 			"palette": [
-				{ "slug": "primary",       "color": "#72f4a0 ",          "name": "Primary" },
+				{ "slug": "primary",       "color": "#000000 ",          "name": "Primary" },
 				{ "slug": "primary-light", "color": "#f1f1f1",          "name": "Primary Light" },
 				{ "slug": "secondary",     "color": "#14110e",          "name": "Secondary" },
 				{ "slug": "accent",        "color": "#D3A043",          "name": "Accent" },
@@ -76,7 +76,7 @@
 				"radius-pill":      "999px",
 				"border-color":     "rgba(0, 0, 0, 0.10)",
 				"border-width":     "1px",
-				"btn-radius":       "4px",
+				"btn-radius":       "999em",
 				"btn-padding-x":    "1.75rem",
 				"btn-padding-y":    "0.3rem",
 				"btn-font-weight":  "600",

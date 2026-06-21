@@ -42,7 +42,7 @@
 .wolf-hero__inner .wolf-hero__title {
 	margin: space(2) auto space(6);
 	max-width: 18ch;
-	font-size: fs("display");
+	font-size: fs("hero");
 	line-height: var(--wolf-lh-display);
 	letter-spacing: var(--wolf-track-display);
 	color: $c-ink;
