@@ -36,7 +36,6 @@ add_action( 'after_setup_theme', 'seijaku_fse_setup' );
  */
 function seijaku_fse_google_fonts_url() {
 	$fonts = array(
-		'Lexend'       => 'wght@100..900',
 		'Urbanist'     => 'wght@100..900',
 		'Rethink+Sans' => 'ital,wght@0,400..800;1,400..800',
 	);

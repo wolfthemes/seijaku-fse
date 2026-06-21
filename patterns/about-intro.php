@@ -16,8 +16,8 @@
 	<figure class="wp-block-image aligncenter size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/me.jpg' ); ?>" alt="Portrait placeholder" style="border-radius:999px;object-fit:cover;width:120px;height:120px"/></figure>
 	<!-- /wp:image -->
 
-	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"display"} -->
-	<h1 class="wp-block-heading has-text-align-center has-display-font-size">Hi there,</h1>
+	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"hero"} -->
+	<h1 class="wp-block-heading has-text-align-center has-hero-font-size">Hi there,</h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","fontSize":"md"} -->

@@ -12,7 +12,7 @@
 <!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"900px"}} -->
 <section class="wp-block-group alignfull wolf-section-pad">
 
-	<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"2xl"} -->
+	<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"2-xl"} -->
 	<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size">Premium WordPress themes work best when the setup is clean from day one.</h2>
 	<!-- /wp:heading -->
 

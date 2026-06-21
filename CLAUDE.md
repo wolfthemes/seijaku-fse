@@ -17,10 +17,12 @@ wolf-blank at ../wolf-blank/ — read its CLAUDE.md before touching any shared f
 ## Design direction
 - Current site: Seijaku + Elementor (being replaced entirely)
 - Target: Awwwards-level. Light skin, editorial, big negative space. Beautiful
-  typography, one strong accent (electric blue #0c10ff used sparingly). No
-  gradients, no shadows unless purposeful — let space do the work.
+  typography, one strong accent (mint green #72f4a0 used sparingly, plus a gold
+  #D3A043 secondary accent). No gradients, no shadows unless purposeful — let
+  space do the work.
 - Reference energy: Linear.app, Stripe, Rauno.me (spacing + type treatment).
-- Fonts: Lexend (headings) + Rethink Sans (body).
+- Fonts: Urbanist (headings, title case) + Rethink Sans (body). Loaded via Google
+  Fonts in functions.php (seijaku_fse_google_fonts_url).
 - Reference images: ../../.claude/images/reference/ (if present)
 - NOT: corporate, generic, template-looking, decorative
 
@@ -28,12 +30,20 @@ wolf-blank at ../wolf-blank/ — read its CLAUDE.md before touching any shared f
 - Colors: theme.json → settings.color.palette
   - Palette must keep wolf-blank's 8 slots (primary, primary-light, secondary, accent,
     base, base-2, contrast, contrast-2) — a child palette replaces the parent's array,
-    and parent block styles reference primary-light. `border` is an extra seijaku slot.
-  - Finalized (light skin): primary/accent `#0c10ff`, primary-light `#0a0bd1` (button
-    hover), secondary `#111111`, base `#ffffff`, base-2 `#f4f4f2`, contrast `#141414`,
-    contrast-2 `#6b6b6b`, border `rgba(0,0,0,0.10)`.
-  - Type adds a `display` size (hero) above 3xl; spacing adds `11`/`12` clamp section
-    steps. Root side padding (gutter) set in styles.spacing.padding.
+    and parent block styles reference primary-light. `border` and `border-alt` are
+    extra seijaku slots (10 total).
+  - Current (dev branch, light skin): primary `#72f4a0` (mint, button bg),
+    primary-light `#f1f1f1` (button hover), secondary `#14110e`, accent `#D3A043`
+    (gold), base `#ffffff`, base-2 `#f1f1f1`, contrast `#121212`, contrast-2 `#6b6b6b`,
+    border `rgba(0,0,0,0.10)`, border-alt `rgba(255,255,255,0.15)`.
+  - Type: font sizes are a true Major-Third scale (×1.25) anchored at base 1rem.
+    Heading map: h6=base, h5=md, h4=lg, h3=xl, h2=`2-xl` (2.441rem), h1=`3-xl`
+    (3.052rem); `display` (3.815rem) = inner-page hero titles, `hero` (4.768rem) =
+    full-cover hero. NOTE: the big size slugs are hyphenated — `2-xl`/`3-xl`, not
+    `2xl`/`3xl` (must match the `has-2-xl-font-size` classes WP emits and the SCSS
+    `fs('2-xl')` token). Headings carry a per-level line-height + negative letter-
+    spacing gradient (theme.json styles.elements.h1..h6). Spacing adds `11`/`12`
+    clamp section steps. Root side padding (gutter) in styles.spacing.padding.
 - Fonts: theme.json → settings.typography.fontFamilies
 - Spacing/layout: inherited from wolf-blank/theme.json
 - Wolf contract vars: theme.json → settings.custom.wolf

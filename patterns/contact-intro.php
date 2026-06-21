@@ -12,8 +12,8 @@
 <!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"760px"}} -->
 <section class="wp-block-group alignfull wolf-section-pad">
 
-	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"display"} -->
-	<h1 class="wp-block-heading has-text-align-center has-display-font-size">Get in Touch</h1>
+	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"hero"} -->
+	<h1 class="wp-block-heading has-text-align-center has-hero-font-size">Get in Touch</h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","fontSize":"md"} -->

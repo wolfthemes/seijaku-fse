@@ -21,8 +21,8 @@
 			<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">WolfThemes Services</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:heading {"level":1,"fontSize":"display"} -->
-			<h1 class="wp-block-heading has-display-font-size">Installation &amp; Customization Services</h1>
+			<!-- wp:heading {"level":1,"fontSize":"hero"} -->
+			<h1 class="wp-block-heading has-hero-font-size">Installation &amp; Customization Services</h1>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"lg"} -->
