@@ -53,6 +53,7 @@ input[type='submit'] {
 .wp-element-button:not(.is-style-outline) {
 
 	&:hover {
+		backdrop-filter: blur(20px);
 		border-color: color-mix(in srgb, #{$c-primary} 55%, transparent);
 		// transform: translateY(-2px);
 		box-shadow: 0 10px 24px -12px color-mix(in srgb, #{$c-primary} 55%, transparent);
@@ -85,6 +86,42 @@ a:focus-visible {
 	outline: 2px solid $c-primary;
 	outline-offset: 3px;
 	border-radius: var(--wolf-btn-radius);
+}
+
+// ---- Dark surfaces ------------------------------------------
+// WordPress exposes color choices as utility classes, but it does not provide
+// a semantic "dark section" class. Support both the theme helper and WP's
+// contrast/base utility pairing used by block markup.
+:where(.is-dark, .has-contrast-background-color.has-base-color) {
+
+	input[type='submit'],
+	.wp-block-button:not(.is-style-outline) > .wp-element-button {
+		background-color: $c-base;
+		border-color: $c-base;
+		color: $c-secondary;
+	}
+
+	input[type='submit']:hover,
+	.wp-block-button:not(.is-style-outline) > .wp-element-button:hover,
+	.wp-block-button:not(.is-style-outline) > .wp-element-button:focus-visible {
+		background-color: transparent;
+		border-color: color-mix(in srgb, #{$c-base} 65%, transparent);
+		box-shadow: 0 10px 24px -12px color-mix(in srgb, #{$c-base} 55%, transparent);
+		color: $c-base;
+	}
+
+	.wp-block-button.is-style-outline > .wp-element-button {
+		background-color: transparent;
+		border-color: color-mix(in srgb, #{$c-base} 65%, transparent);
+		color: $c-base;
+	}
+
+	.wp-block-button.is-style-outline > .wp-element-button:hover,
+	.wp-block-button.is-style-outline > .wp-element-button:focus-visible {
+		background-color: $c-base !important;
+		border-color: $c-base !important;
+		color: $c-secondary !important;
+	}
 }
 
 // ---- Size modifiers -----------------------------------------
