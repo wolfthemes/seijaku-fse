@@ -22,6 +22,7 @@
 	// ── Constrained wrapper: eyebrow → title → buttons ───────────
 
 	&__inner {
+
 		&.wp-block-group {
 			align-items: center;
 			gap: space(2) !important;
@@ -30,13 +31,19 @@
 		// Scoped under the flex inner so it beats WP's
 		// `.is-layout-flex > * { margin: 0 }` support style.
 		.wolf-hero__title {
-			margin: space(2) auto space(6);
+			margin: space(2) auto space(2);
 			max-width: 18ch;
 			font-size: fs("hero");
 			line-height: var(--wolf-lh-display);
 			letter-spacing: var(--wolf-track-display);
 			color: $c-ink;
 		}
+
+        .wolf-hero__tagline {
+            font-size: fs(md);
+			max-width: 40ch;
+            margin-bottom: space(5);
+        }
 	}
 
 	&__eyebrow {
@@ -57,11 +64,6 @@
 		letter-spacing: var(--wolf-track-display);
 		color: $c-ink;
 	}
-
-    &__tagline {
-        font-size: fs(md);
-        margin-bottom: space(5);
-    }
 
 	&__actions {
 		margin-top: space(4);

@@ -13,7 +13,7 @@
 	border-block-end: 1px solid $c-border;
 	margin-block-start: 0;
 
-	& + .wp-block-details {
+	+ .wp-block-details {
 		border-block-start: none;
 	}
 
@@ -68,11 +68,6 @@
 			}
 		}
 	}
-}
-
-// Panel overflow is managed by Details.js; ensure no-JS fallback is visible.
-.wp-block-details > :not(summary) {
-	overflow: hidden;
 }
 
 // =============================================================

@@ -33,7 +33,7 @@
 	border: 1px solid $c-border;
 	background-color: var(--wp--preset--color--base-2);
 	border-radius: var(--wolf-radius-lg);
-	min-height: 340px;
+	min-height: 400px;
 
 	&__quote {
 		margin: 0;
@@ -73,5 +73,10 @@
 	&__title {
 		font-size: fs(xs);
 		color: $c-muted;
+	}
+
+	&__rating {
+		font-size: fs(lg);
+		color: $c-accent;
 	}
 }

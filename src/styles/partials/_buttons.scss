@@ -66,6 +66,7 @@ input[type='submit'] {
 
 // Outline — fills with ink on hover.
 .wp-element-button.is-style-outline  {
+	backdrop-filter: blur(20px);
 	transition: color var(--wolf-dur-slow) var(--wolf-ease-out),
 		background-color var(--wolf-dur-slow) var(--wolf-ease-out),
 		border-color var(--wolf-dur-slow) var(--wolf-ease-out);

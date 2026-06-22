@@ -12,9 +12,9 @@ export default class Details {
 		this.dur = reduced
 			? 0
 			: parseFloat(
-					getComputedStyle( document.documentElement ).getPropertyValue(
-						'--wolf-dur'
-					)
+					getComputedStyle(
+						document.documentElement
+					).getPropertyValue( '--wolf-dur' )
 			  ) * 1000 || 500;
 
 		this.init();
