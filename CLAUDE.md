@@ -16,15 +16,19 @@ wolf-blank at ../wolf-blank/ — read its CLAUDE.md before touching any shared f
 
 ## Design direction
 - Current site: Seijaku + Elementor (being replaced entirely)
-- Target: Awwwards-level. Light skin, editorial, big negative space. Beautiful
-  typography, one strong accent (mint green #72f4a0 used sparingly, plus a gold
-  #D3A043 secondary accent). No gradients, no shadows unless purposeful — let
-  space do the work.
-- Reference energy: Linear.app, Stripe, Rauno.me (spacing + type treatment).
+- Target: Clean editorial with artisan human touch. Light skin, big negative space,
+  beautiful typography. The "artisan" quality comes from small handcrafted accents
+  (the brushstroke logo is the north star) — one or two per surface, never stacked.
+  No gradients, no shadows unless purposeful — let space do the work.
+- Palette: black and white. CTAs and interactive elements use black on white / white
+  on black. Gold #D3A043 is the sole accent — used very punctually (one element per
+  section at most). The brushstroke logo is the primary brand texture — don't compete with it.
+- Reference energy: editorial warmth of the brushstroke logo; spacing + type treatment
+  from Linear.app / Stripe / Rauno.me. NOT a cold SaaS aesthetic.
 - Fonts: Urbanist (headings, title case) + Rethink Sans (body). Loaded via Google
   Fonts in functions.php (seijaku_fse_google_fonts_url).
 - Reference images: ../../.claude/images/reference/ (if present)
-- NOT: corporate, generic, template-looking, decorative
+- NOT: corporate, generic, template-looking, decorative, cold/purely minimal SaaS
 
 ## Token locations
 - Colors: theme.json → settings.color.palette
@@ -32,10 +36,10 @@ wolf-blank at ../wolf-blank/ — read its CLAUDE.md before touching any shared f
     base, base-2, contrast, contrast-2) — a child palette replaces the parent's array,
     and parent block styles reference primary-light. `border` and `border-alt` are
     extra seijaku slots (10 total).
-  - Current (dev branch, light skin): primary `#72f4a0` (mint, button bg),
-    primary-light `#f1f1f1` (button hover), secondary `#14110e`, accent `#D3A043`
-    (gold), base `#ffffff`, base-2 `#f1f1f1`, contrast `#121212`, contrast-2 `#6b6b6b`,
-    border `rgba(0,0,0,0.10)`, border-alt `rgba(255,255,255,0.15)`.
+  - Current (dev branch, light skin): primary `#000000` (button bg), primary-light
+    `#f1f1f1` (button hover), secondary `#14110e`, accent `#D3A043` (gold — punctual
+    use only), base `#F5F5F7`, base-2 `#ffffff`, contrast `#1d1d1f`, contrast-2
+    `#6b6b6b`, border `rgba(0,0,0,0.10)`, border-alt `rgba(255,255,255,0.15)`.
   - Type: font sizes are a true Major-Third scale (×1.25) anchored at base 1rem.
     Heading map: h6=base, h5=md, h4=lg, h3=xl, h2=`2-xl` (2.441rem), h1=`3-xl`
     (3.052rem); `display` (3.815rem) = inner-page hero titles, `hero` (4.768rem) =

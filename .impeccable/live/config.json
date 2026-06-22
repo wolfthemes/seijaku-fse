@@ -1,0 +1,9 @@
+{
+  "files": ["templates/*.html", "parts/*.html"],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "framework": "wp-fse",
+  "devUrl": "http://localhost:8080",
+  "cspChecked": true,
+  "notes": "WordPress FSE — templates are cached in the DB. After editing templates/parts, clear customizations in Appearance → Editor → Templates."
+}

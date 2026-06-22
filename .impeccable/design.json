@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-22T00:00:00Z",
+  "title": "Design System: Seijaku FSE",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Primary Ink",
+        "canonical": "oklch(13% 0.004 264)",
+        "tonalRamp": ["#0a0a0b", "#111113", "#1d1d1f", "#2e2e31", "#464649", "#6b6b6b", "#9a9a9d", "#d1d1d3"]
+      },
+      "ink-deep": {
+        "role": "primary",
+        "displayName": "Deep Press Black",
+        "canonical": "oklch(0% 0 0)",
+        "tonalRamp": ["#000000", "#0d0d0d", "#1a1a1a", "#2e2e2e", "#4a4a4a", "#6b6b6b", "#9a9a9a", "#d1d1d1"]
+      },
+      "ink-near": {
+        "role": "neutral",
+        "displayName": "Near-Black",
+        "canonical": "oklch(9% 0.006 50)",
+        "tonalRamp": ["#060503", "#0f0d0a", "#14110e", "#221e1a", "#3a352f", "#5a534b", "#8a8078", "#c4bdb4"]
+      },
+      "page-bg": {
+        "role": "neutral",
+        "displayName": "Quiet Paper",
+        "canonical": "oklch(96.5% 0.003 250)",
+        "tonalRamp": ["#2a2a2c", "#4a4a4d", "#6b6b6f", "#909094", "#b8b8bb", "#d8d8db", "#ebebed", "#F5F5F7"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Clean Surface",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": ["#2e2e2e", "#4a4a4a", "#6b6b6b", "#929292", "#b8b8b8", "#d8d8d8", "#efefef", "#ffffff"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "oklch(46% 0.003 264)",
+        "tonalRamp": ["#1a1a1c", "#2e2e31", "#464649", "#5a5a5d", "#6b6b6b", "#848487", "#a8a8ab", "#d4d4d6"]
+      },
+      "gold": {
+        "role": "tertiary",
+        "displayName": "Archive Gold",
+        "canonical": "oklch(72% 0.11 75)",
+        "tonalRamp": ["#3d2a05", "#6b4a0c", "#9b6c12", "#c4891c", "#D3A043", "#ddb868", "#e8cd94", "#f5e8c8"]
+      },
+      "cta-bg": {
+        "role": "primary",
+        "displayName": "CTA Black",
+        "canonical": "oklch(0% 0 0)",
+        "tonalRamp": ["#000000", "#0d0d0d", "#1a1a1a", "#2e2e2e", "#4a4a4a", "#6b6b6b", "#9a9a9a", "#d1d1d1"]
+      },
+      "cta-hover-bg": {
+        "role": "neutral",
+        "displayName": "Hover Gray",
+        "canonical": "oklch(94.5% 0 0)",
+        "tonalRamp": ["#2e2e2e", "#4a4a4a", "#6b6b6b", "#929292", "#b8b8b8", "#d8d8d8", "#ececec", "#f1f1f1"]
+      }
+    },
+    "typographyMeta": {
+      "hero": { "displayName": "Hero", "purpose": "Full-cover homepage headline only. One instance per page." },
+      "display": { "displayName": "Display", "purpose": "Inner-page hero titles and major section leads." },
+      "h1": { "displayName": "H1", "purpose": "Primary page heading per template." },
+      "h2": { "displayName": "H2", "purpose": "Section headings." },
+      "h3": { "displayName": "H3", "purpose": "Sub-section headings and card titles." },
+      "body": { "displayName": "Body", "purpose": "All prose copy. Max 65–75ch line length." },
+      "label": { "displayName": "Label", "purpose": "Button text, tags, metadata. Short runs only." },
+      "nav": { "displayName": "Nav", "purpose": "Header navigation only." }
+    },
+    "shadows": [
+      {
+        "name": "button-hover-glow",
+        "value": "0 10px 24px -12px color-mix(in srgb, #000000 55%, transparent)",
+        "purpose": "Primary and outline button hover state only. Not for cards or containers."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Default easing for all reveals and transitions. --wolf-ease-out in SCSS."
+      },
+      {
+        "name": "ease-emphasis",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Symmetric easing for UI feedback (active states). --wolf-ease-emphasis in SCSS."
+      },
+      {
+        "name": "dur-fast",
+        "value": "0.22s",
+        "purpose": "Micro-interactions: arrow nudge, link underline wipe. --wolf-dur-fast."
+      },
+      {
+        "name": "dur-standard",
+        "value": "0.5s",
+        "purpose": "Standard transitions: header condensation, button state. --wolf-dur."
+      },
+      {
+        "name": "dur-slow",
+        "value": "0.85s",
+        "purpose": "Scroll reveals, curtain-roll nav. --wolf-dur-slow."
+      },
+      {
+        "name": "reveal-stagger",
+        "value": "80ms",
+        "purpose": "Stagger delay between children in .wolf-reveal-group. --wolf-reveal-stagger."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "600px" },
+      { "name": "md", "value": "782px", "note": "WP mobile/tablet boundary" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px", "note": "theme.json wideSize" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Black pill, white text, label size uppercase. Hover fades to light gray with compressed glow.",
+      "html": "<button class=\"ds-btn-primary\">GET STARTED</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; cursor: pointer; background-color: #000000; color: #F5F5F7; border: 1px solid #000000; border-radius: 999em; padding: 0.3rem 1.75rem; font-family: 'Rethink Sans', sans-serif; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; line-height: 1; text-decoration: none; transition: background-color 0.5s cubic-bezier(0.22,1,0.36,1), color 0.5s cubic-bezier(0.22,1,0.36,1), border-color 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s cubic-bezier(0.22,1,0.36,1); } .ds-btn-primary:hover { background-color: #f1f1f1; border-color: rgba(0,0,0,0.28); color: #14110e; box-shadow: 0 10px 24px -12px rgba(0,0,0,0.28); } .ds-btn-primary:active { transform: translateY(0); box-shadow: none; } .ds-btn-primary:focus-visible { outline: 2px solid #000000; outline-offset: 3px; border-radius: 999em; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary CTA. Transparent with ink border and frosted backdrop. Fills solid on hover.",
+      "html": "<button class=\"ds-btn-outline\">BROWSE THEMES</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; cursor: pointer; background-color: transparent; color: #1d1d1f; border: 1px solid #1d1d1f; border-radius: 999em; padding: 0.3rem 1.75rem; font-family: 'Rethink Sans', sans-serif; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; line-height: 1; text-decoration: none; backdrop-filter: blur(20px); transition: color 0.5s cubic-bezier(0.22,1,0.36,1), background-color 0.5s cubic-bezier(0.22,1,0.36,1), border-color 0.5s cubic-bezier(0.22,1,0.36,1); } .ds-btn-outline:hover { background-color: #1d1d1f; border-color: #1d1d1f; color: #F5F5F7; } .ds-btn-outline:focus-visible { outline: 2px solid #000000; outline-offset: 3px; border-radius: 999em; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Header navigation item. Curtain-roll hover: JS clone rolls up while original exits above.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\"><span class=\"ds-nav-label\">Themes</span><span class=\"ds-nav-curtain\" aria-hidden=\"true\">Themes</span></a>",
+      "css": ".ds-nav-link { display: inline-flex; overflow: hidden; position: relative; color: #1d1d1f; font-family: 'Rethink Sans', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: -0.01em; text-transform: uppercase; text-decoration: none; } .ds-nav-label { display: block; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); } .ds-nav-curtain { position: absolute; inset-block-start: 0; inset-inline-start: 0; display: block; transform: translateY(100%); white-space: nowrap; pointer-events: none; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); } .ds-nav-link:hover .ds-nav-label { transform: translateY(-100%); } .ds-nav-link:hover .ds-nav-curtain { transform: translateY(0); } @media (prefers-reduced-motion: reduce) { .ds-nav-label { transition: opacity 0.22s ease; } .ds-nav-curtain { display: none; } .ds-nav-link:hover .ds-nav-label { transform: none; opacity: 0.55; } }"
+    },
+    {
+      "name": "Wolf Arrow Link",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Inline directional link with a nudging arrow. Used for secondary editorial navigation.",
+      "html": "<a class=\"ds-arrow-link\" href=\"#\">View all themes</a>",
+      "css": ".ds-arrow-link { display: inline-flex; align-items: center; gap: 0.5em; font-weight: 600; color: #1d1d1f; text-decoration: none; font-family: 'Rethink Sans', sans-serif; font-size: 0.9375rem; } .ds-arrow-link::after { content: '\\2192'; transition: transform 0.22s cubic-bezier(0.22,1,0.36,1); } .ds-arrow-link:hover::after { transform: translateX(0.35em); } .ds-arrow-link:focus-visible { outline: 2px solid #000000; outline-offset: 2px; border-radius: 2px; }"
+    },
+    {
+      "name": "Gold Accent Rule",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "A horizontal hairline in Archive Gold. The canonical single-use accent per section. Decorative rule beneath a section heading or above a pull-quote.",
+      "html": "<div class=\"ds-gold-rule\" role=\"presentation\"></div>",
+      "css": ".ds-gold-rule { width: 2.5rem; height: 2px; background-color: #D3A043; border: none; margin: 0; }"
+    },
+    {
+      "name": "Pull Quote",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Editorial pull quote with a gold left marker. Used once per section that features testimonials or brand story copy.",
+      "html": "<blockquote class=\"ds-pull-quote\"><p>14 years of themes built with the same care as the first.</p><cite class=\"ds-pull-quote__cite\">Constantin Saguin, WolfThemes</cite></blockquote>",
+      "css": ".ds-pull-quote { margin: 0; padding: 0 0 0 1.5rem; border-left: 2px solid #D3A043; } .ds-pull-quote p { font-family: 'Urbanist', sans-serif; font-size: clamp(1.25rem, 2.5vw, 1.5625rem); font-weight: 700; line-height: 1.3; letter-spacing: -0.011em; color: #1d1d1f; margin: 0 0 0.75rem; } .ds-pull-quote__cite { font-family: 'Rethink Sans', sans-serif; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6b6b; font-style: normal; }"
+    },
+    {
+      "name": "Scroll Reveal (single)",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Single element that fades up when scrolled into view. JS adds .is-inview; body.wolf-anim-ready gates the hidden state for progressive enhancement.",
+      "html": "<div class=\"ds-reveal wolf-reveal is-inview\"><p>Content reveals on scroll.</p></div>",
+      "css": ".ds-reveal { opacity: 1; transform: none; } body.wolf-anim-ready .ds-reveal { opacity: 0; transform: translateY(1.4rem); transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1); } body.wolf-anim-ready .ds-reveal.is-inview { opacity: 1; transform: none; } @media (prefers-reduced-motion: reduce) { body.wolf-anim-ready .ds-reveal { opacity: 1; transform: none; transition: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Editor's Archive",
+    "overview": "A private design archive where 14 years of work lives on the walls. Nothing is labeled. Quality announces itself. The space is spare — not because it's empty, but because every object that didn't earn its place was removed. The brushstroke wordmark is the signature piece. It has warmth and weight; the system around it must give it room.\n\nThis system operates at the intersection of editorial restraint and artisan warmth. It isn't cold SaaS minimalism — that lane has no texture, no maker-energy. It isn't decorative either. The warmth comes from craft: the handwritten quality of the brushstroke mark, the gold used like a drop of wax on an envelope, the type set with the precision of a printer who knows what letter-spacing does to a headline at 4rem.\n\nPalette strategy: Restrained. Black and white carry everything. Gold (#D3A043) is a tool of exception — used once per surface, if at all. Its appearance should register as a punctuation mark, not a color system.",
+    "keyCharacteristics": [
+      "Black/white type and CTA surfaces; #F5F5F7 (near-white, trace cool-gray) for page background",
+      "Gold accent once per section at most — decorative rule, a pull-quote marker, a price badge",
+      "Urbanist (geometric, tall x-height) + Rethink Sans (humanist, body) — contrast axis pairing",
+      "Major-Third scale (×1.25) with aggressive negative tracking on large headings",
+      "Motion is choreographed scroll-reveal, not per-section uniform fade",
+      "No shadows on cards; surface separation via background alternation or border hairlines",
+      "Header frosts with backdrop-filter: blur(12px) on scroll — purposeful, not decorative"
+    ],
+    "rules": [
+      { "name": "The Gold Once Rule", "body": "Archive Gold appears at most once per section. Its rarity is structural — a second gold element on the same surface erases what made the first one matter. When in doubt, remove the second instance.", "section": "colors" },
+      { "name": "The Contrast Floor Rule", "body": "#6b6b6b on #F5F5F7 is at the acceptable floor (~4.9:1). Any lighter muted value is prohibited for body text. Placeholder text and captions must use at least #6b6b6b; never lighter.", "section": "colors" },
+      { "name": "The Tracking Gradient Rule", "body": "Negative letter-spacing scales with heading size: −0.005em at h6 (1rem) → −0.02em at h1+ (3rem+). Resist the urge to tighten past −0.04em; letters begin to touch.", "section": "typography" },
+      { "name": "The Balance Rule", "body": "text-wrap: balance on h1–h3. text-wrap: pretty on paragraph copy. Never set these individually on long-copy blocks.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "No box-shadow on cards, containers, or sections at rest. If you feel the need to add a shadow to create separation, solve it with background color, border, or spacing instead.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do give the brushstroke wordmark room — generous padding, never adjacent to competing display type or decorative elements.",
+      "Do use Archive Gold (#D3A043) once per section at most: a hairline rule, a pull-quote marker, a price callout. One. Move on.",
+      "Do use negative space as a structural element. Section vertical padding: clamp(6rem, 10vw, 10rem) minimum.",
+      "Do set text-wrap: balance on all h1–h3 and text-wrap: pretty on prose paragraphs.",
+      "Do respect the tracking gradient: tighten letter-spacing as heading size increases.",
+      "Do use prefers-reduced-motion on every transition and animation — crossfade or instant as fallback.",
+      "Do verify contrast before shipping muted text. #6b6b6b on #F5F5F7 is the acceptable floor (~4.9:1).",
+      "Do keep buttons pill-shaped and compact. The proportions (0.3rem vertical / 1.75rem horizontal) are deliberate."
+    ],
+    "donts": [
+      "Don't use gradient text (background-clip: text). Prohibited. Use solid color; emphasis via weight or size.",
+      "Don't add side-stripe borders (border-left > 1px as a colored accent).",
+      "Don't use the warm-neutral beige/cream band for backgrounds — the page background is #F5F5F7, a trace cool-gray. Don't warm it.",
+      "Don't repeat gold on the same screen surface twice. A second gold element cancels the first.",
+      "Don't use glassmorphism decoratively. The frosted header is the one sanctioned blur on the site.",
+      "Don't put uppercase tracked kicker labels above every section heading.",
+      "Don't use numbered section markers (01 / 02 / 03) as default scaffolding.",
+      "Don't animate CSS layout properties. Scroll reveals use opacity + translateY only.",
+      "Don't let the design feel cold/purely minimal SaaS — zero warmth is wrong for this brand.",
+      "Don't stack decorative elements: gradients, glassmorphism, large icon arrays, and excessive animation are each individually prohibited.",
+      "Don't use ThemeForest-pattern badge overload, feature grid clutter, or orange CTAs."
+    ]
+  }
+}
