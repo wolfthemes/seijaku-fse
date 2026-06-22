@@ -26,11 +26,11 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"wolf-about__text"} -->
-			<p class="wolf-about__text">No agency, no rotating dev team, no outsourced support tickets. Every theme here started as a real problem someone brought to me — a band needing a tour page, a label needing a catalogue that didn't feel like a spreadsheet.</p>
+			<p class="wolf-about__text">No agency, no rotating dev team, no outsourced support tickets. Every theme here started as a real problem someone brought to me: a band needing a tour page, a label needing a catalogue that didn't feel like a spreadsheet.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"className":"wolf-about__text"} -->
-			<p class="wolf-about__text">When you reach out, you're talking to the person who built the theme — not a queue. That's the whole reason I started selling direct.</p>
+			<p class="wolf-about__text">When you reach out, you're talking to the person who built the theme, not a queue. That's the whole reason I started selling direct.</p>
 			<!-- /wp:paragraph -->
 
 		</div>

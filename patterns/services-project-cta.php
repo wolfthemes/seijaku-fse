@@ -20,8 +20,8 @@
 	<p class="has-text-align-center">Share what you are building and what you need help with. You will get clear next steps before any custom work begins.</p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-	<div class="wp-block-buttons">
+	<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->
+	<div class="wp-block-buttons wolf-hero__actions wolf-btn-lg">
 		<!-- wp:button -->
 		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/contact">Contact us</a></div>
 		<!-- /wp:button -->

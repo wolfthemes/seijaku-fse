@@ -80,7 +80,7 @@
 				"btn-padding-x":    "1.75rem",
 				"btn-padding-y":    "0.3rem",
 				"btn-font-weight":  "600",
-				"shadow-card":      "none",
+				"shadow-card":      "5px 5px 25px #02020254",
 				"transition-speed": "0.25s",
 				"transition-ease":  "ease"
 			}

@@ -26,6 +26,7 @@
 		font-weight: 600;
 		cursor: pointer;
 		list-style: none;
+		font-size: fs(md);
 
 		&::-webkit-details-marker {
 			display: none;
@@ -70,6 +71,36 @@
 }
 
 // =============================================================
+//  Wolf Blocks pricing table
+// =============================================================
+
+.wolf-blocks-pricing-table {
+
+	&.is-featured {
+		box-shadow: var(--wolf-shadow-card);
+	}
+
+	&__tagline {
+		color: $c-muted;
+		text-transform: uppercase;
+		margin-block-end: space(2);
+		letter-spacing: 0.08em;
+		font-size: fs(xs);
+	}
+
+	&__badge {
+		border-end-start-radius: var(--wolf-radius-md);
+		border-end-end-radius: var(--wolf-radius-md);
+		font-size: fs(xs);
+	}
+
+	&__price-main {
+		font-size: fs("3-xl");
+		font-weight: 800;
+	}
+}
+
+// =============================================================
 //  Global form styles
 //  Applied site-wide (no wrapper class needed). Bottom-border
 //  treatment reads cleanly on both light and dark sections.
@@ -84,72 +115,72 @@
 
 		label {
 			display: block;
-			margin-block-end: space(2);
-			font-size: fs(sm);
-			font-weight: 600;
-			letter-spacing: var(--wolf-track-label);
-			text-transform: uppercase;
-			color: $c-muted;
-		}
+              margin-block-end: space(2);
+              font-size: fs(sm);
+              font-weight: 600;
+              letter-spacing: var(--wolf-track-label);
+                text-transform: uppercase;
+                color: $c-muted;
+            }
 
-		input[type='text'],
-		input[type='email'],
-		input[type='tel'],
-		input[type='url'],
-		input[type='search'],
-		input[type='number'],
-		input[type='password'],
-		textarea,
-		select {
-			display: block;
-			width: 100%;
-			background: transparent;
-			border: none;
-			border-block-end: 1px solid $c-border;
-			border-radius: 0;
-			padding-block: space(3);
-			padding-inline: 0;
-			color: inherit;
-			font-family: $f-body;
-			font-size: fs(md);
-			line-height: 1.5;
-			outline: none;
-			transition: border-color var(--wolf-dur-fast) var(--wolf-ease-out);
-			appearance: none;
-			margin-block-end: space(5);
+            input[type='text'],
+            input[type='email'],
+            input[type='tel'],
+            input[type='url'],
+            input[type='search'],
+            input[type='number'],
+            input[type='password'],
+            textarea,
+            select {
+                display: block;
+                width: 100%;
+                background: transparent;
+                border: none;
+                border-block-end: 1px solid $c-border;
+                border-radius: 0;
+                padding-block: space(3);
+                padding-inline: 0;
+                color: inherit;
+                font-family: $f-body;
+                font-size: fs(md);
+                line-height: 1.5;
+                outline: none;
+                transition: border-color var(--wolf-dur-fast) var(--wolf-ease-out);
+                appearance: none;
+                margin-block-end: space(5);
 
-			&::placeholder {
-				color: $c-muted;
-			}
+                &::placeholder {
+                    color: $c-muted;
+                }
 
-			&:focus {
-				border-block-end-color: $c-ink;
-			}
-		}
+                &:focus {
+                    border-block-end-color: $c-ink;
+                }
+            }
 
-		textarea {
-			resize: vertical;
-			min-block-size: 8rem;
-		}
+            textarea {
+                resize: vertical;
+                min-block-size: 8rem;
+            }
 
-		input[type='submit'],
-		button[type='submit'] {
-			margin-block-start: space(4);
-		}
-	}
-}
+            input[type='submit'],
+            button[type='submit'] {
+                margin-block-start: space(4);
+            }
+        }
+    }
 
-// is-dark sections: swap form field borders to the alt border token
-.is-dark {
+    // is-dark sections: swap form field borders to the alt border token
+    .is-dark {
 
-	form,
-	.wpcf7 {
+        form,
+        .wpcf7 {
 
-		input[type='text'],
-		input[type='email'],
-		input[type='tel'],
-		input[type='url'],
-		input[type='search'],
+            input[type='text'],
+            input[type='email'],
+            input[type='tel'],
+            input[type='url'],
+            input[type='search'],
 		input[type='number'],
 		input[type='password'],
 		textarea,
