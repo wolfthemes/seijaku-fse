@@ -15,7 +15,7 @@
 	<div class="wp-block-group wolf-hero__inner">
 
 		<!-- wp:paragraph {"className":"wolf-hero__eyebrow"} -->
-		<p class="wolf-hero__eyebrow">One-man studio · since 2011</p>
+		<p class="wolf-hero__eyebrow">One-man studio ✦ since 2011</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":1,"className":"wolf-hero__title"} -->
@@ -23,7 +23,7 @@
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","className":"wolf-hero__tagline wolf-hero__text-line"} -->
-			<p class="has-text-align-center wolf-hero__tagline wolf-hero__text-line">14 years of themes for musicians, creatives, and the people who build their sites.</p>
+			<p class="has-text-align-center wolf-hero__tagline wolf-hero__text-line">14 years of themes for musicians, creatives,<br>and the people who build their sites.</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->

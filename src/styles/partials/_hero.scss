@@ -32,16 +32,9 @@
 		// `.is-layout-flex > * { margin: 0 }` support style.
 		.wolf-hero__title {
 			margin: space(2) auto space(2);
-			max-width: 18ch;
-			font-size: fs("hero");
-			line-height: var(--wolf-lh-display);
-			letter-spacing: var(--wolf-track-display);
-			color: $c-ink;
 		}
 
         .wolf-hero__tagline {
-            font-size: fs(md);
-			max-width: 40ch;
             margin-bottom: space(5);
         }
 	}
@@ -57,12 +50,16 @@
 	}
 
 	&__title {
-		margin: space(2) auto space(2);
-		max-width: 18ch;
+		max-width: 22ch;
 		font-size: fs("hero");
 		line-height: var(--wolf-lh-display);
 		letter-spacing: var(--wolf-track-display);
 		color: $c-ink;
+	}
+
+	&__tagline {
+		font-size: fs(md);
+		max-width: 40ch;
 	}
 
 	&__actions {

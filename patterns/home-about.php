@@ -40,7 +40,7 @@
 		<div class="wp-block-column wolf-about__pullquote" style="flex-basis:40%">
 
 			<!-- wp:paragraph -->
-			<p>14 years.<br>35,000 customers.<br>One person who still answers the emails.</p>
+			<p>14 years.<br>36,000 customers.<br>One person who still answers the emails.</p>
 			<!-- /wp:paragraph -->
 
 		</div>
