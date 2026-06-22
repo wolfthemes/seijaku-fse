@@ -19,7 +19,7 @@
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":1,"className":"wolf-hero__title"} -->
-		<h1 class="wp-block-heading wolf-hero__title">Premium WordPress Themes. Built by One Person.</h1>
+		<h1 class="wp-block-heading wolf-hero__title">WordPress Themes for Musicians, Artists &amp; Creators</h1>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","className":"wolf-hero__tagline wolf-hero__text-line"} -->
@@ -29,7 +29,7 @@
 		<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons wolf-hero__actions wolf-btn-lg">
 			<!-- wp:button -->
-			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Choose a Theme</a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/store">Browse Themes</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
