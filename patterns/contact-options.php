@@ -26,8 +26,8 @@
 
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
 			<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--6)">
-				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/services">View services</a></div>
+				<!-- wp:button {"className":"is-style-text"} -->
+				<div class="wp-block-button is-style-text"><a class="wp-block-button__link wp-element-button" href="/services">View services</a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
@@ -45,8 +45,8 @@
 
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
 			<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--6)">
-				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contact-form">Ask a question</a></div>
+				<!-- wp:button {"className":"is-style-text"} -->
+				<div class="wp-block-button is-style-text"><a class="wp-block-button__link wp-element-button" href="#contact-form">Ask a question</a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
@@ -70,8 +70,8 @@
 
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
 			<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--6)">
-				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contact-form">Request support</a></div>
+				<!-- wp:button {"className":"is-style-text"} -->
+				<div class="wp-block-button is-style-text"><a class="wp-block-button__link wp-element-button" href="#contact-form">Request support</a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
@@ -89,8 +89,8 @@
 
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
 			<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--6)">
-				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contact-form">Send message</a></div>
+				<!-- wp:button {"className":"is-style-text"} -->
+				<div class="wp-block-button is-style-text"><a class="wp-block-button__link wp-element-button" href="#contact-form">Send message</a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

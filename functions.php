@@ -31,6 +31,20 @@ function seijaku_fse_setup() {
 add_action( 'after_setup_theme', 'seijaku_fse_setup' );
 
 /**
+ * Register custom block styles exposed in the editor.
+ */
+function seijaku_fse_register_block_styles() {
+	register_block_style(
+		'core/button',
+		array(
+			'name'  => 'text',
+			'label' => __( 'Text', 'seijaku-fse' ),
+		)
+	);
+}
+add_action( 'init', 'seijaku_fse_register_block_styles' );
+
+/**
  * Build the Google Fonts CSS2 URL from a simple family → variants map.
  * Add or remove entries here to trial different typefaces.
  */
