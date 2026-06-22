@@ -24,8 +24,8 @@
 				<!-- wp:column {"verticalAlignment":"center"} -->
 				<div class="wp-block-column is-vertically-aligned-center">
 
-					<!-- wp:heading {"level":2} -->
-					<h2 class="wp-block-heading">Music WordPress Themes</h2>
+					<!-- wp:heading {"fontSize":"3-xl"} -->
+					<h2 class="wp-block-heading has-3-xl-font-size">Music WordPress Themes</h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->

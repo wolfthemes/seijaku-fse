@@ -9,9 +9,9 @@
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-services.jpg' ); ?>","dimRatio":70,"overlayColor":"contrast","minHeight":72,"minHeightUnit":"vh","align":"full","className":"has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|9"}}}} -->
-<div class="wp-block-cover alignfull has-texture" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--9);min-height:72vh">
-	<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-70 has-background-dim"></span>
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-services.jpg' ); ?>","dimRatio":20,"minHeight":72,"minHeightUnit":"vh","align":"full","className":"is-dark has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|9"}}}} -->
+<div class="wp-block-cover alignfull is-dark has-texture" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--9);min-height:72vh">
+	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span>
 	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-services.jpg' ); ?>" data-object-fit="cover"/>
 
 	<div class="wp-block-cover__inner-container">
@@ -25,8 +25,8 @@
 			<h1 class="wp-block-heading has-hero-font-size">Installation &amp; Customization Services</h1>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"fontSize":"lg"} -->
-			<p class="has-lg-font-size">Fast, hassle-free setup for WolfThemes WordPress themes, from clean installation to custom website setup.</p>
+			<!-- wp:paragraph {"fontSize":"md"} -->
+			<p class="has-md-font-size">Fast, hassle-free setup for WolfThemes WordPress themes, from clean installation to custom website setup.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
