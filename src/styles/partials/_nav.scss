@@ -75,6 +75,18 @@
 	}
 }
 
+// ---- Header CTA — compact pill, no size modifier needed -----
+// wp:button defaults to theme.json button styles (black pill, label size).
+// We just ensure it sits flush in the flex row without extra margin.
+.wolf-header__cta {
+	margin: 0;
+
+	.wp-element-button {
+		padding-block: space(1);
+		padding-inline: space(5);
+	}
+}
+
 // ---- Nav links — curtain roll hover -------------------------
 // theme.js appends a .wolf-nav-curtain span (aria-hidden) that
 // mirrors the label text and starts translated 100% below.
