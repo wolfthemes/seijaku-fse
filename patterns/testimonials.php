@@ -11,9 +11,9 @@
 <!-- wp:group {"tagName":"section","className":"wolf-testimonials wolf-section-pad","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|11","bottom":"var:preset|spacing|11"}}},"layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-testimonials wolf-section-pad" style="padding-top:var(--wp--preset--spacing--11);padding-bottom:var(--wp--preset--spacing--11)">
 
-	<!-- wp:heading {"textAlign":"center","level":2,"className":"wolf-section-title"} -->
-	<h2 class="wp-block-heading has-text-align-center wolf-section-title">What our customers say</h2>
-	<!-- /wp:heading -->
+	<!-- wp:paragraph {"align":"center","className":"wolf-testimonials__byline"} -->
+	<p class="has-text-align-center wolf-testimonials__byline">500+ five-star reviews on ThemeForest</p>
+	<!-- /wp:paragraph -->
 
 	<!-- wp:columns {"className":"wolf-testimonials__grid"} -->
 	<div class="wp-block-columns wolf-testimonials__grid">
