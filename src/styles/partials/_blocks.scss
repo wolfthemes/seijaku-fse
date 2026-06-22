@@ -46,7 +46,6 @@
 	}
 
 	&[open] > summary {
-		padding-block-end: space(3);
 
 		&::after {
 			transform: rotate(45deg);
@@ -56,8 +55,8 @@
 	// Inner content: no top margin, tidy bottom gap
 	> :not(summary) {
 		overflow: hidden;
-		padding-block-end: space(4);
 		margin-block-start: 0;
+		margin-block-end: space(4);
 
 		// Kill default block top-margins inside the panel
 		> * {
