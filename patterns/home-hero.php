@@ -29,7 +29,7 @@
 		<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons wolf-hero__actions wolf-btn-lg">
 			<!-- wp:button -->
-			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/store">Browse Themes</a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/wordpress-themes">Browse Themes</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

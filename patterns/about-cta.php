@@ -19,7 +19,7 @@
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons">
 		<!-- wp:button -->
-		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/themes">Browse Themes</a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/wordpress-themes">Browse Themes</a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->
