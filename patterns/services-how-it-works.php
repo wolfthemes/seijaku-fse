@@ -17,10 +17,6 @@
 
 		<!-- wp:column {"verticalAlignment":"center","width":"48%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:48%">
-			<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"fontSize":"small"} -->
-			<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">How it works</p>
-			<!-- /wp:paragraph -->
-
 			<!-- wp:heading {"level":2} -->
 			<h2 class="wp-block-heading">Order the service, send the details, and let the setup begin.</h2>
 			<!-- /wp:heading -->

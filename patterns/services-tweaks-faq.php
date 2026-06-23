@@ -17,10 +17,6 @@
 
 		<!-- wp:column {"width":"40%"} -->
 		<div class="wp-block-column" style="flex-basis:40%">
-			<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"fontSize":"small"} -->
-			<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">Simple tweaks</p>
-			<!-- /wp:paragraph -->
-
 			<!-- wp:heading {"level":2} -->
 			<h2 class="wp-block-heading">Small changes can make a theme feel fully yours.</h2>
 			<!-- /wp:heading -->
