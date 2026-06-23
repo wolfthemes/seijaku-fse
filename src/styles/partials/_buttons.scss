@@ -137,7 +137,7 @@ a:focus-visible {
 // WordPress exposes color choices as utility classes, but it does not provide
 // a semantic "dark section" class. Support both the theme helper and WP's
 // contrast/base utility pairing used by block markup.
-:where(.is-dark, .has-contrast-background-color.has-base-color) {
+:where(.is-dark, .has-contrast-background-color.has-base-color, .wolf-header-overlay) {
 
 	input[type='submit'],
 	.wp-block-button:not(.is-style-outline) > .wp-element-button {
