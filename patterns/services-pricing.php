@@ -20,7 +20,7 @@
 	<p class="has-text-align-center">Choose the level of help you need, from a focused performance pass to a complete custom website setup.</p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:columns {"className":"wolf-section-pad"} -->
+	<!-- wp:columns {"className":"wolf-section-pad--small"} -->
 	<div class="wp-block-columns wolf-section-pad">
 
 		<!-- wp:column {"layout":{"type":"default"}} -->

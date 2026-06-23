@@ -9,7 +9,7 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad--small","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-section-pad">
 
 	<!-- wp:columns {"verticalAlignment":"center"} -->
