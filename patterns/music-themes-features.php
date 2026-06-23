@@ -11,10 +11,6 @@
 <!-- wp:group {"tagName":"section","className":"wolf-music-features wolf-section-pad","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-music-features wolf-section-pad" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
 
-	<!-- wp:paragraph {"align":"center","className":"wolf-section-eyebrow"} -->
-	<p class="has-text-align-center wolf-section-eyebrow">Discography, Events, Artist Lists, Videos, Blog, Social Media & more...</p>
-	<!-- /wp:paragraph -->
-
 	<!-- wp:heading {"textAlign":"center","className":"wolf-section-title"} -->
 	<h2 class="wp-block-heading has-text-align-center wolf-section-title">All You Need to Build Your Presence Online</h2>
 	<!-- /wp:heading -->
