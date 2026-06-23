@@ -54,7 +54,7 @@
 				<summary>How can I pay?</summary>
 
 				<!-- wp:paragraph -->
-				<p>Payment details are provided during the order or project discussion process.</p>
+				<p>Fixed-price services are paid via PayPal at the time of order. Custom work and small tweaks are invoiced separately after a brief discussion and estimate.</p>
 				<!-- /wp:paragraph -->
 			</details>
 			<!-- /wp:details -->
