@@ -167,6 +167,59 @@
             button[type='submit'] {
                 margin-block-start: space(4);
             }
+
+            // CF7: reset <p> wrappers it injects around each field
+            .wpcf7-form p {
+                margin-block: 0;
+            }
+
+            .wpcf7-form-control-wrap {
+                display: block;
+            }
+
+            // Inline validation error highlight
+            .wpcf7-form-control.wpcf7-not-valid {
+                border-block-end-color: $c-accent;
+            }
+
+            // Tip text below an invalid field
+            .wpcf7-not-valid-tip {
+                display: block;
+                margin-block-start: calc(-1 * var(--wp--preset--spacing--4));
+                margin-block-end: space(5);
+                font-size: fs(xs);
+                text-transform: uppercase;
+                letter-spacing: var(--wolf-track-label);
+                color: $c-accent;
+            }
+
+            // Response banner (success / error)
+            .wpcf7-response-output {
+                margin-block-start: space(5);
+                padding: space(3) space(4);
+                font-size: fs(sm);
+                letter-spacing: 0.02em;
+                border: 1px solid currentColor;
+                border-radius: var(--wolf-radius-md);
+                color: $c-muted;
+            }
+
+            .wpcf7-form.sent ~ .wpcf7-response-output {
+                color: $c-ink;
+                border-color: $c-border;
+            }
+
+            .wpcf7-form.invalid ~ .wpcf7-response-output,
+            .wpcf7-form.unaccepted ~ .wpcf7-response-output,
+            .wpcf7-form.spam ~ .wpcf7-response-output {
+                color: $c-accent;
+                border-color: $c-accent;
+            }
+
+            // Spinner: CF7 adds its own; hide it (native AJAX feedback is enough)
+            .wpcf7-spinner {
+                display: none;
+            }
         }
     }
 
@@ -194,25 +247,102 @@
 	}
 }
 
-// Footer Mailchimp / newsletter input — inline layout on dark bg.
-// Inputs here inherit the dark palette via color: inherit;
-// override the bottom border to use the footer hairline token.
+// Footer newsletter — email input + ↗ arrow button, dark palette.
+// The form is a single flex row: input grows, action sits flush right,
+// both sharing one continuous bottom border hairline.
 .wolf-footer {
 
-	&__news {
+	.wolf-blocks-mailchimp-form {
 
-		input[type='email'],
-		input[type='text'] {
-			border-block-end-color: var(--ft-line, #{$c-border});
-			color: var(--ft-fg, #{$c-base});
+		&__form {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: stretch;
+			gap: 0;
+		}
 
-			&::placeholder {
-				color: var(--ft-muted, #{$c-muted});
+		&__field {
+			flex: 1 1 auto;
+
+			input[type='email'],
+			input[type='text'] {
+				margin-block-end: 0;
+				padding-inline-start: 0;
+				border-block-end-color: var(--ft-line);
+				color: var(--ft-fg);
+
+				&::placeholder {
+					color: var(--ft-muted);
+				}
+
+				&:focus {
+					border-block-end-color: var(--ft-fg);
+				}
+			}
+		}
+
+		// Arrow button — shares the same bottom border as the input,
+		// creating one seamless underline across the full row.
+		&__action {
+			flex: 0 0 auto;
+			display: flex;
+			align-items: center;
+			border-block-end: 1px solid var(--ft-line);
+			padding-inline-start: space(3);
+			transition: border-color var(--wolf-dur-fast) var(--wolf-ease-out);
+
+			&:has(.wp-element-button:focus-visible) {
+				border-block-end-color: var(--ft-fg);
 			}
 
-			&:focus {
-				border-block-end-color: var(--ft-fg, #{$c-base});
+			.wp-element-button {
+				background: transparent !important;
+				border: none !important;
+				box-shadow: none !important;
+				padding: 0;
+				// Hide the block attribute label ("Subscribe") visually;
+				// screen readers still read it — the text stays in the DOM.
+				font-size: 0 !important;
+				letter-spacing: 0;
+				line-height: 1;
+				cursor: pointer;
+				border-radius: 0;
+				transition: opacity var(--wolf-dur-fast) var(--wolf-ease-out);
+
+				&::after {
+					content: '↗';
+					font-size: 1.25rem;
+					font-family: var(--wp--preset--font-family--body);
+					color: var(--ft-fg);
+					display: inline-block;
+					line-height: 1;
+					transition: transform var(--wolf-dur-fast) var(--wolf-ease-out);
+				}
+
+				&:hover {
+					opacity: 1;
+
+					&::after {
+						transform: translate(2px, -2px);
+					}
+				}
+
+				&:focus-visible {
+					outline: 2px solid var(--ft-fg);
+					outline-offset: 4px;
+					border-radius: 2px;
+					font-size: 0 !important;
+				}
 			}
+		}
+
+		// Status / validation message row
+		&__message {
+			flex: 1 1 100%;
+			margin-block-start: space(3);
+			font-size: fs(xs);
+			text-transform: uppercase;
+			letter-spacing: var(--wolf-track-label);
 		}
 	}
 }
