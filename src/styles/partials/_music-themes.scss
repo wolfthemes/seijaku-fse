@@ -94,6 +94,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
 	.wolf-blocks-stats-counter__value {
 		transition: none !important;
 		animation: none !important;
@@ -114,6 +115,7 @@
 		}
 
 		@include until($bp-sm) {
+
 			> .wp-block-column {
 				flex-basis: 100% !important;
 				min-width: 100%;
