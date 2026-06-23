@@ -8,9 +8,9 @@
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>","dimRatio":20,"minHeight":72,"minHeightUnit":"vh","align":"full","className":"wolf-music-themes-hero is-dark has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|9"}}}} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>","dimRatio":40,"minHeight":72,"minHeightUnit":"vh","align":"full","className":"wolf-music-themes-hero is-dark has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-cover alignfull wolf-music-themes-hero is-dark has-texture" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--9);min-height:72vh">
-	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span>
+	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-40 has-background-dim"></span>
 	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>" data-object-fit="cover"/>
 
 	<div class="wp-block-cover__inner-container">
