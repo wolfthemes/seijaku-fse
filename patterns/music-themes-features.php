@@ -121,6 +121,18 @@
 		</div>
 		<!-- /wp:column -->
 
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:heading {"level":3,"fontSize":"md"} -->
+			<h3 class="wp-block-heading has-md-font-size">Multi-language Ready</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph -->
+			<p>WPML and Polylang compatible out of the box — translate your site and reach a global audience with ease.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
 	</div>
 	<!-- /wp:columns -->
 
