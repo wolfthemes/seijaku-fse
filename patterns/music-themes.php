@@ -8,8 +8,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","anchor":"featured-music-themes","className":"wolf-grid wolf-section-pad wolf-music-themes-grid","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
-<section id="featured-music-themes" class="wp-block-group alignfull wolf-grid wolf-section-pad wolf-music-themes-grid">
+<!-- wp:group {"tagName":"section","anchor":"featured-music-themes","className":"wolf-grid wolf-section-pad--big wolf-music-themes-grid","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<section id="featured-music-themes" class="wp-block-group alignfull wolf-grid wolf-section-pad--big wolf-music-themes-grid">
 
 	<!-- wp:paragraph {"align":"center","className":"wolf-section-eyebrow"} -->
 	<p class="has-text-align-center wolf-section-eyebrow">Complete Web Solutions to Build Your Online Presence</p>
