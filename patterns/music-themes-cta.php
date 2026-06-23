@@ -17,7 +17,7 @@
 		<!-- wp:group {"layout":{"type":"constrained","contentSize":"820px"}} -->
 		<div class="wp-block-group">
 			<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"2-xl"} -->
-			<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size">Discover why over 34,000 musicians and creatives trust WolfThemes to build their online presence.</h2>
+			<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size">34,000+ musicians trust WolfThemes. Build your presence today.</h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->

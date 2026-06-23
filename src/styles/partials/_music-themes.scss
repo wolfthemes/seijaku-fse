@@ -109,6 +109,28 @@
 	}
 }
 
+.wolf-music-themes-testimonials {
+
+	.wolf-testimonials__grid.wp-block-columns {
+
+		@include until($bp-lg) {
+			flex-wrap: wrap;
+
+			> .wp-block-column {
+				flex-basis: calc(50% - 1rem) !important;
+				min-width: calc(50% - 1rem);
+			}
+		}
+
+		@include until($bp-sm) {
+			> .wp-block-column {
+				flex-basis: 100% !important;
+				min-width: 100%;
+			}
+		}
+	}
+}
+
 .wolf-music-themes-cta {
 	text-align: center;
 
