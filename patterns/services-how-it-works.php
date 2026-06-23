@@ -38,7 +38,7 @@
 		<!-- wp:column {"verticalAlignment":"center","width":"52%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:52%">
 			<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/service-how-it-works.jpg' ); ?>" alt="WordPress setup workspace" style="border-radius:var(--wolf-radius-md)"/></figure>
+			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/service-how-it-works.jpg' ); ?>" alt="WordPress setup workspace" width="2000" height="1333" style="border-radius:var(--wolf-radius-md)"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
