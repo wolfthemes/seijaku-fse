@@ -51,6 +51,12 @@ main.wp-block-group {
 	max-inline-size: 68ch;
 }
 
+// Standard paragraph reading width (≈60 characters).
+// Tighter than .wolf-measure; use on body-copy paragraphs in wide sections.
+.has-text-max-width {
+	max-inline-size: 60ch;
+}
+
 .wolf-section-title {
 	margin-bottom: space(6);
 }

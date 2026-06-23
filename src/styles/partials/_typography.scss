@@ -42,6 +42,29 @@ main p a:not(.wp-element-button) {
 	}
 }
 
+// ---- Eyebrow label ------------------------------------------
+// Small uppercase label above a heading. Conveys section identity
+// without competing with the heading's weight.
+.wolf-eyebrow {
+	font-family: $f-body;
+	font-size: fs(xs);
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: var(--wolf-track-label);
+	color: $c-muted;
+	margin-bottom: space(3);
+}
+
+// ---- Section tagline ----------------------------------------
+// Short descriptor beneath (or above) a section heading.
+// Provides context without becoming a second heading.
+.wolf-tagline {
+	font-size: fs(sm);
+	color: $c-muted;
+	max-inline-size: 52ch;
+	margin-bottom: space(6);
+}
+
 // ---- Selection ----------------------------------------------
 ::selection {
 	background: $c-primary;

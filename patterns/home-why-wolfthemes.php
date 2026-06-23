@@ -16,8 +16,8 @@
 
 		<!-- wp:column {"width":"45%"} -->
 		<div class="wp-block-column" style="flex-basis:45%">
-			<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"fontSize":"small"} -->
-			<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">Why WolfThemes</p>
+			<!-- wp:paragraph {"className":"wolf-eyebrow"} -->
+			<p class="wolf-eyebrow">Why WolfThemes</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":2} -->

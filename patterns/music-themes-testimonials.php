@@ -15,8 +15,8 @@
 	<h2 class="wp-block-heading has-text-align-center wolf-section-title">Raising the Bar of Music Themes Quality Since 2011</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:paragraph {"align":"center","className":"wolf-section-subtitle"} -->
-	<p class="has-text-align-center wolf-section-subtitle">Trusted by Thousands of Musicians</p>
+	<!-- wp:paragraph {"align":"center","className":"wolf-section-subtitle wolf-tagline"} -->
+	<p class="has-text-align-center wolf-section-subtitle wolf-tagline">Trusted by Thousands of Musicians</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:columns {"className":"wolf-testimonials__grid"} -->
