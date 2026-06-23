@@ -16,7 +16,7 @@
 	<h2 class="wp-block-heading has-text-align-center">Looking for a theme that feels right for your project?</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->
+	<!-- wp:buttons {"className":"wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons wolf-btn-lg">
 		<!-- wp:button -->
 		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/wordpress-themes">Browse Themes</a></div>
