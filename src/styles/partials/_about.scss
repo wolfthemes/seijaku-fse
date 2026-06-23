@@ -50,6 +50,24 @@
         line-height: 1.65;
     }
 
+    &__grid.wp-block-columns {
+
+        @include until($bp-lg) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: space(6);
+
+            > .wp-block-column {
+                flex-basis: unset;
+                flex-grow: unset;
+            }
+        }
+
+        @include until($bp-sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+
     @include until($bp-lg) {
         padding-top: space(7);
         padding-bottom: space(7);
