@@ -140,15 +140,18 @@ a:focus-visible {
 :where(.is-dark, .has-contrast-background-color.has-base-color, .wolf-header-overlay) {
 
 	input[type='submit'],
-	.wp-block-button:not(.is-style-outline) > .wp-element-button {
+	.wp-element-button:not(.is-style-outline):not(.is-style-text):not(.wp-block-button > .wp-element-button),
+	.wp-block-button:not(.is-style-outline):not(.is-style-text) > .wp-element-button {
 		background-color: $c-base;
 		border-color: $c-base;
 		color: $c-secondary;
 	}
 
 	input[type='submit']:hover,
-	.wp-block-button:not(.is-style-outline) > .wp-element-button:hover,
-	.wp-block-button:not(.is-style-outline) > .wp-element-button:focus-visible {
+	.wp-element-button:not(.is-style-outline):not(.is-style-text):not(.wp-block-button > .wp-element-button):hover,
+	.wp-element-button:not(.is-style-outline):not(.is-style-text):not(.wp-block-button > .wp-element-button):focus-visible,
+	.wp-block-button:not(.is-style-outline):not(.is-style-text) > .wp-element-button:hover,
+	.wp-block-button:not(.is-style-outline):not(.is-style-text) > .wp-element-button:focus-visible {
 		background-color: transparent;
 		border-color: color-mix(in srgb, #{$c-base} 65%, transparent);
 		box-shadow: 0 10px 24px -12px color-mix(in srgb, #{$c-base} 55%, transparent);

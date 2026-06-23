@@ -42,6 +42,18 @@ main p a:not(.wp-element-button) {
 	}
 }
 
+// ---- Links inside dark sections -----------------------------
+// On .is-dark surfaces the primary colour (black) is invisible on hover.
+// Override both the ink colour and the underline gradient to use base (white).
+main :where(.is-dark, .has-contrast-background-color.has-base-color) p:not(.wp-block-button) a:not(.wp-element-button) {
+	background-image: linear-gradient($c-base, $c-base);
+
+	&:hover,
+	&:focus-visible {
+		color: $c-base;
+	}
+}
+
 // ---- Selection ----------------------------------------------
 ::selection {
 	background: $c-primary;
