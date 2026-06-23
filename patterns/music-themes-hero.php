@@ -8,30 +8,30 @@
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-services.jpg' ); ?>","dimRatio":70,"overlayColor":"contrast","minHeight":72,"minHeightUnit":"vh","align":"full","className":"has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|9"}}}} -->
-<div class="wp-block-cover alignfull has-texture" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--9);min-height:72vh">
-	<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-70 has-background-dim"></span>
-	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-services.jpg' ); ?>" data-object-fit="cover"/>
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>","dimRatio":20,"minHeight":72,"minHeightUnit":"vh","align":"full","className":"wolf-music-themes-hero is-dark has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|9"}}}} -->
+<div class="wp-block-cover alignfull wolf-music-themes-hero is-dark has-texture" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--9);min-height:72vh">
+	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span>
+	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>" data-object-fit="cover"/>
 
 	<div class="wp-block-cover__inner-container">
-		<!-- wp:group {"layout":{"type":"constrained","contentSize":"920px"}} -->
-		<div class="wp-block-group">
+		<!-- wp:group {"className":"wolf-music-themes-hero__content","layout":{"type":"constrained","contentSize":"920px"}} -->
+		<div class="wp-block-group wolf-music-themes-hero__content">
 			<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"fontSize":"small"} -->
-			<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">WolfThemes Services</p>
+			<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">WolfThemes</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:heading {"level":1,"fontSize":"hero"} -->
-			<h1 class="wp-block-heading has-hero-font-size">Music WordPress Themes</h1>
+			<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"display"} -->
+			<h1 class="wp-block-heading has-text-align-center has-display-font-size">The Best WordPress Themes for the Music Industry</h1>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"fontSize":"lg"} -->
-			<p class="has-lg-font-size">Fast, hassle-free setup for WolfThemes WordPress themes, from clean installation to custom website setup.</p>
+			<!-- wp:paragraph {"align":"center","fontSize":"md"} -->
+			<p class="has-text-align-center has-md-font-size">Explore our collection of powerful, feature-rich WordPress themes specifically designed for musicians, artists, bands, DJs, music labels and industry professionals.</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:buttons -->
+			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"className":"wolf-btn-lg"} -->
-				<div class="wp-block-button wolf-btn-lg"><a class="wp-block-button__link wp-element-button" href="/contact">Start a project</a></div>
+				<div class="wp-block-button wolf-btn-lg"><a class="wp-block-button__link wp-element-button" href="#featured-music-themes">Explore Music Themes</a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
