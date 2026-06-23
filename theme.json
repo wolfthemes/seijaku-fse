@@ -18,8 +18,8 @@
 				{ "slug": "base-2",        "color": "#ffffff",          "name": "Surface" },
 				{ "slug": "contrast",      "color": "#1d1d1f",          "name": "Contrast" },
 				{ "slug": "contrast-2",    "color": "#6b6b6b",          "name": "Muted" },
-				{ "slug": "border",        "color": "rgba(0,0,0,0.10)",    "name": "Border" },
-				{ "slug": "border-alt",    "color": "rgba(255,255,255,0.15)", "name": "Border Alt" }
+				{ "slug": "border",        "color": "rgba(0,0,0,0.20)",    "name": "Border" },
+				{ "slug": "border-alt",    "color": "rgba(255,255,255,0.40)", "name": "Border Alt" }
 			]
 		},
 		"typography": {
