@@ -94,6 +94,13 @@
 	}
 }
 
+@media (prefers-reduced-motion: reduce) {
+	.wolf-blocks-stats-counter__value {
+		transition: none !important;
+		animation: none !important;
+	}
+}
+
 .wolf-music-themes-cta {
 	text-align: center;
 

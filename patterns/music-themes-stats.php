@@ -21,7 +21,7 @@
 	<!-- /wp:wolf-blocks/stats-counter -->
 
 	<!-- wp:wolf-blocks/stats-counter {"title":"Items Sold","endNumber":36,"suffix":"k"} -->
-	<div class="wp-block-wolf-blocks-stats-counter wolf-blocks-stats-counter" data-start="0" data-end="36" data-duration="2000" data-thousands="true" data-separator="default"><div class="wolf-blocks-stats-counter__number"><span class="wolf-blocks-stats-counter__prefix"></span><span class="wolf-blocks-stats-counter__value">35</span><span class="wolf-blocks-stats-counter__suffix">k</span></div><p class="wolf-blocks-stats-counter__title">Items Sold</p></div>
+	<div class="wp-block-wolf-blocks-stats-counter wolf-blocks-stats-counter" data-start="0" data-end="36" data-duration="2000" data-thousands="true" data-separator="default"><div class="wolf-blocks-stats-counter__number"><span class="wolf-blocks-stats-counter__prefix"></span><span class="wolf-blocks-stats-counter__value">36</span><span class="wolf-blocks-stats-counter__suffix">k</span></div><p class="wolf-blocks-stats-counter__title">Items Sold</p></div>
 	<!-- /wp:wolf-blocks/stats-counter -->
 
 	<!-- wp:wolf-blocks/stats-counter {"title":"Out of 1600+ ratings","endNumber":4.5,"suffix":"/5"} -->
