@@ -13,7 +13,7 @@
 <section class="wp-block-group alignfull wolf-section-pad--small">
 
 	<!-- wp:image {"width":"120px","height":"120px","scale":"cover","sizeSlug":"thumbnail","linkDestination":"none","align":"center","style":{"border":{"radius":"999px"}}} -->
-	<figure class="wp-block-image aligncenter size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/me.jpg' ); ?>" alt="Constantin Saguin, founder of WolfThemes" style="border-radius:999px;object-fit:cover;width:120px;height:120px"/></figure>
+	<figure class="wp-block-image aligncenter size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/me.jpg' ); ?>" alt="Constantin Saguin, founder of WolfThemes" width="180" height="180" fetchpriority="high" style="border-radius:999px;object-fit:cover;width:120px;height:120px"/></figure>
 	<!-- /wp:image -->
 
 	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"hero"} -->
