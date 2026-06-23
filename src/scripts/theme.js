@@ -23,7 +23,7 @@ class SeijakuFse {
 		this.initReveals();
 		this.initHeader();
 		this.initNavCurtain();
-		this.initHeroCollage();
+		// this.initHeroCollage();
 		this.initDetails();
 	}
 

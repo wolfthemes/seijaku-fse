@@ -1,0 +1,13 @@
+@use 'tokens' as *;
+
+.wolf-contact-options {
+
+	.wp-block-columns:first-child {
+		margin-block-end: space(3);
+	}
+
+	.wp-block-paragraph {
+		max-width: 40ch;
+		font-size: fs(md);
+	}
+}

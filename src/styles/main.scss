@@ -23,7 +23,7 @@
 
 // Page sections (front-page.html) — built incrementally
 @use 'partials/hero';
-@use 'partials/hero-collage';
+// @use 'partials/hero-collage';
 @use 'partials/about';
 @use 'partials/music-cta';
 @use 'partials/marquee';
@@ -31,3 +31,4 @@
 @use 'partials/categories';
 @use 'partials/testimonials';
 @use 'partials/music-themes';
+@use 'partials/contact';

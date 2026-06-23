@@ -10,7 +10,7 @@
 
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad--small","layout":{"type":"constrained","contentSize":"720px"}} -->
-<section class="wp-block-group alignfull wolf-section-pad">
+<section class="wp-block-group alignfull wolf-section-pad--small">
 
 	<!-- wp:image {"width":"120px","height":"120px","scale":"cover","sizeSlug":"thumbnail","linkDestination":"none","align":"center","style":{"border":{"radius":"999px"}}} -->
 	<figure class="wp-block-image aligncenter size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/me.jpg' ); ?>" alt="Portrait placeholder" style="border-radius:999px;object-fit:cover;width:120px;height:120px"/></figure>
