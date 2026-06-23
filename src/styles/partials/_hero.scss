@@ -47,6 +47,10 @@
 		text-transform: uppercase;
 		letter-spacing: var(--wolf-track-label);
 		color: $c-muted;
+
+		&--separator {
+			color: $c-accent;
+		}
 	}
 
 	&__title {

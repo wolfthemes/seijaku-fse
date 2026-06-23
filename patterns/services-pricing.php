@@ -20,6 +20,10 @@
 	<p class="has-text-align-center">Choose the level of help you need, from a focused performance pass to a complete custom website setup.</p>
 	<!-- /wp:paragraph -->
 
+	<!-- wp:spacer {"height":"var:preset|spacing|5"} -->
+	<div style="height:var(--wp--preset--spacing--5)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
 	<!-- wp:columns {"className":"wolf-section-pad--small"} -->
 	<div class="wp-block-columns wolf-section-pad">
 

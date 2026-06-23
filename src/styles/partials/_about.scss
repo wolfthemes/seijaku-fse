@@ -67,6 +67,10 @@
         margin-bottom: space(3);
     }
 
+	&__text {
+		max-width: 60ch;
+	}
+
     &__pullquote {
 
         p {
@@ -75,7 +79,7 @@
             font-weight: 700;
             line-height: 1.3;
             color: inherit; // section sets color via .is-dark; hardcoding $c-ink fails on dark bg
-            border-left: 2px solid $c-accent;
+            border-left: 3px solid $c-accent;
             padding-left: space(5);
         }
 
