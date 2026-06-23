@@ -94,7 +94,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /home/customer/www/staging20.wolfthemes.com/public_html/wp-content/themes/seijaku-fse
+            cd /home/customer/www/wolfthemes.com/public_html/wp-content/themes/seijaku-fse
             git pull origin master
             rsync -a --delete /tmp/seijaku-fse-build/ build/
             rm -rf /tmp/seijaku-fse-build
