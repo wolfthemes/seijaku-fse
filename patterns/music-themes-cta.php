@@ -26,8 +26,8 @@
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-buttons">
-				<!-- wp:button {"className":"wolf-btn-lg is-style-outline"} -->
-				<div class="wp-block-button wolf-btn-lg is-style-outline"><a class="wp-block-button__link wp-element-button" href="/theme-category/music/">Explore Music Themes</a></div>
+				<!-- wp:button -->
+				<div class="wp-block-button wolf-btn-lg"><a class="wp-block-button__link wp-element-button" href="/theme-category/music/">Explore Music Themes</a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
