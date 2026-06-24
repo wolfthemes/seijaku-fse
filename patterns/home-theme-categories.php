@@ -11,8 +11,8 @@
 <!-- wp:group {"tagName":"section","className":"wolf-section-pad--big","align":"full","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
 <section class="wp-block-group alignfull wolf-section-pad--big">
 
-	<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"fontSize":"small"} -->
-	<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">Browse by category</p>
+	<!-- wp:paragraph {"className":"wolf-eyebrow"} -->
+	<p class="wolf-eyebrow">Browse by category</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":2} -->

@@ -1,21 +1,17 @@
 @use 'tokens' as *;
 
+// .wolf-section-eyebrow and .wolf-section-subtitle are aliases for the
+// global .wolf-eyebrow / .wolf-tagline helpers (defined in _typography.scss).
+// These section-specific rules add only what differs: centred alignment
+// and a tighter negative top-margin so the subtitle tucks under a heading.
 .wolf-section-eyebrow,
 .wolf-section-subtitle {
-	max-width: 62ch;
+	max-inline-size: 62ch;
 	margin-inline: auto;
-	color: $c-muted;
-}
-
-.wolf-section-eyebrow {
-	margin-bottom: space(2);
-	font-size: fs(xs);
 }
 
 .wolf-section-subtitle {
 	margin-top: calc(-1 * #{space(4)});
-	margin-bottom: space(6);
-	font-size: fs(sm);
 }
 
 .wolf-music-themes-hero {

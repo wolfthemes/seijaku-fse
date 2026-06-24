@@ -17,8 +17,8 @@
 		<!-- wp:column {"width":"60%","className":"wolf-about__main"} -->
 		<div class="wp-block-column wolf-about__main" style="flex-basis:60%">
 
-			<!-- wp:paragraph {"className":"wolf-about__eyebrow"} -->
-			<p class="wolf-about__eyebrow">The person behind the code</p>
+			<!-- wp:paragraph {"className":"wolf-about__eyebrow wolf-eyebrow"} -->
+			<p class="wolf-about__eyebrow wolf-eyebrow">The person behind the code</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":2,"className":"wolf-about__title"} -->

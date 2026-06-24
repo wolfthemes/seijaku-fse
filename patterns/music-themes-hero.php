@@ -16,8 +16,8 @@
 	<div class="wp-block-cover__inner-container">
 		<!-- wp:group {"className":"wolf-music-themes-hero__content","layout":{"type":"constrained","contentSize":"920px"}} -->
 		<div class="wp-block-group wolf-music-themes-hero__content">
-			<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"fontSize":"small"} -->
-			<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">WolfThemes</p>
+			<!-- wp:paragraph {"className":"wolf-eyebrow"} -->
+			<p class="wolf-eyebrow">WolfThemes</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"display"} -->

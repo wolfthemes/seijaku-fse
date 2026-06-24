@@ -17,8 +17,8 @@
 	<div class="wp-block-cover__inner-container">
 		<!-- wp:group {"layout":{"type":"constrained","contentSize":"920px"}} -->
 		<div class="wp-block-group">
-			<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.08em"}},"fontSize":"small"} -->
-			<p class="has-small-font-size" style="letter-spacing:0.08em;text-transform:uppercase">WolfThemes Services</p>
+			<!-- wp:paragraph {"className":"wolf-eyebrow"} -->
+			<p class="wolf-eyebrow">WolfThemes Services</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":1,"fontSize":"hero"} -->
