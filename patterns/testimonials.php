@@ -12,7 +12,7 @@
 <section class="wp-block-group alignfull wolf-testimonials wolf-section-pad" style="padding-top:var(--wp--preset--spacing--11);padding-bottom:var(--wp--preset--spacing--11)">
 
 	<!-- wp:heading {"textAlign":"center","level":2,"className":"wolf-section-title"} -->
-	<h2 class="wp-block-heading has-text-align-center wolf-section-title">500+ five-star reviews on ThemeForest</h2>
+	<h2 class="wp-block-heading has-text-align-center wolf-section-title">1000+ five-star reviews on ThemeForest</h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"className":"wolf-testimonials__grid"} -->
