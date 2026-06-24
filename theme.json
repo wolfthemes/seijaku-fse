@@ -163,7 +163,7 @@
 				"typography": {
 					"fontWeight": "600",
 					"fontSize": "var(--wp--preset--font-size--sm)",
-					"letterSpacing": "-0.022em",
+					"letterSpacing": "var(--wolf-btn-letter-spacing)",
 					"textTransform": "uppercase"
 				},
 				"spacing": {
