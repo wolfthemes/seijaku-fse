@@ -22,10 +22,8 @@
 	}
 
 	&.is-sticky {
-		border-block-end-color: $c-border;
-		background: color-mix(in srgb, #{$c-base} 92%, transparent);
 		position: fixed;
-		inset-block-start: var(--wp-admin--admin-bar--height, 0px);
+		inset-block-start: var(--wp-admin--admin-bar--height, 0);
 		inset-inline: 0;
 		padding-block: var(--wolf-header-pad-scrolled);
 		border-block-end-color: $c-border;
@@ -161,6 +159,12 @@
 }
 
 @keyframes wolf-header-slide-in {
-	from { transform: translateY(-100%); }
-	to   { transform: translateY(0); }
+
+	from {
+		transform: translateY(-100%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
 }
