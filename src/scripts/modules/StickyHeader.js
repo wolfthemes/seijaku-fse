@@ -12,7 +12,11 @@ export default class StickyHeader {
 		if ( this.lenis ) {
 			this.lenis.on( 'scroll', ( { scroll } ) => this.update( scroll ) );
 		} else {
-			window.addEventListener( 'scroll', () => this.update( window.scrollY ), { passive: true } );
+			window.addEventListener(
+				'scroll',
+				() => this.update( window.scrollY ),
+				{ passive: true }
+			);
 		}
 	}
 
