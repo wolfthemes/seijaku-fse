@@ -1,0 +1,14 @@
+// =============================================================
+//  Wolf Blocks countdown
+// =============================================================
+
+@use '../tokens' as *;
+
+.wp-block-wolf-blocks-countdown,
+.wolf-blocks-countdown {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: space(4);
+	text-align: center;
+}

@@ -1,0 +1,31 @@
+// =============================================================
+//  Wolf Blocks pricing table
+// =============================================================
+
+@use '../tokens' as *;
+
+.wolf-blocks-pricing-table {
+
+	&.is-featured {
+		box-shadow: var(--wolf-shadow-card);
+	}
+
+	&__tagline {
+		color: $c-muted;
+		text-transform: uppercase;
+		margin-block-end: space(2);
+		letter-spacing: 0.08em;
+		font-size: fs(xs);
+	}
+
+	&__badge {
+		border-end-start-radius: var(--wolf-radius-md);
+		border-end-end-radius: var(--wolf-radius-md);
+		font-size: fs(xs);
+	}
+
+	&__price-main {
+		font-size: fs("3-xl");
+		font-weight: 800;
+	}
+}
