@@ -19,11 +19,11 @@
 
 	&.is-scrolled {
 		padding-block: var(--wolf-header-pad-scrolled);
-		border-block-end-color: $c-border;
-		background: color-mix(in srgb, #{$c-base} 92%, transparent);
 	}
 
 	&.is-sticky {
+		border-block-end-color: $c-border;
+		background: color-mix(in srgb, #{$c-base} 92%, transparent);
 		position: fixed;
 		inset-block-start: var(--wp-admin--admin-bar--height, 0px);
 		inset-inline: 0;
