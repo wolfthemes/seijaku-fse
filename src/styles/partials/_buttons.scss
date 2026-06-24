@@ -24,9 +24,9 @@ input[type='submit'] {
 	font-family: var(--wp--preset--font-family--body);
 	font-size: var(--wp--preset--font-size--sm);
 	font-weight: var(--wolf-btn-font-weight, 600);
-	letter-spacing: 0.01em;
+	letter-spacing: var(--wolf-btn-letter-spacing);
 	text-transform: uppercase;
-	line-height: 1;
+	line-height: inherit;
 	transition: transform var(--wolf-dur-slow) var(--wolf-ease-out),
 		background-color var(--wolf-dur-slow) var(--wolf-ease-out),
 		color var(--wolf-dur-slow) var(--wolf-ease-out),
