@@ -59,7 +59,7 @@ main p a:not(.wp-element-button) {
 // Short descriptor beneath (or above) a section heading.
 // Provides context without becoming a second heading.
 .wolf-tagline {
-	font-size: fs(sm);
+	// font-size: fs(sm);
 	color: $c-muted;
 	max-inline-size: 52ch;
 	margin-bottom: space(6);
