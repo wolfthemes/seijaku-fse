@@ -6,6 +6,7 @@ import autoBind from 'auto-bind';
 import Details from './modules/Details';
 import HeroCollage from './modules/HeroCollage';
 import SmoothScroll from './modules/SmoothScroll';
+import StickyHeader from './modules/StickyHeader';
 
 class SeijakuFse {
 	constructor() {
@@ -22,6 +23,7 @@ class SeijakuFse {
 		this.initSmoothScroll();
 		this.initReveals();
 		this.initHeader();
+		this.initStickyHeader();
 		this.initNavCurtain();
 		// this.initHeroCollage();
 		this.initDetails();
@@ -30,6 +32,13 @@ class SeijakuFse {
 	initSmoothScroll() {
 		this.smoothScroll = new SmoothScroll( {
 			reduced: this.reduced,
+		} );
+	}
+
+	initStickyHeader() {
+		new StickyHeader( {
+			header: this.header,
+			lenis: this.smoothScroll?.lenis ?? null,
 		} );
 	}
 
