@@ -27,7 +27,7 @@
 		inset-inline: 0;
 		padding-block: var(--wolf-header-pad-scrolled);
 		border-block-end-color: $c-border;
-		background: color-mix(in srgb, #{$c-base} 92%, transparent);
+		background: color-mix(in srgb, #{$c-base} 77%, transparent);
 		animation: wolf-header-slide-in var(--wolf-dur) var(--wolf-ease-out) both;
 	}
 
