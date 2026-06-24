@@ -38,6 +38,10 @@ main.wp-block-group {
 
 .wolf-section-pad--big {
 	padding-block: space(10);
+
+	@include until($bp-md) {
+		padding-block: space(8);
+	}
 }
 
 .wolf-grid{
