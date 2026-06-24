@@ -91,6 +91,10 @@
 		{ "name": "footer", "title": "Footer", "area": "footer" },
 		{ "name": "header-overlay", "title": "Header Overlay", "area": "header" }
 	],
+	"customTemplates": [
+		{ "name": "blank", "title": "Blank", "postTypes": [ "page" ] },
+		{ "name": "coming-soon", "title": "Coming Soon", "postTypes": [ "page" ] }
+	],
 	"styles": {
 		"spacing": {
 			"padding": {
