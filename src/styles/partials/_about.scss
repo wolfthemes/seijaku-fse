@@ -99,7 +99,7 @@
             font-weight: 700;
             line-height: 1.3;
             color: inherit; // section sets color via .is-dark; hardcoding $c-ink fails on dark bg
-            border-top: 2px solid $c-accent;
+            // border-top: 2px solid $c-accent;
             padding-top: space(4);
         }
 
