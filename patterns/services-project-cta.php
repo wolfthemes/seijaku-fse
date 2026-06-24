@@ -16,8 +16,8 @@
 	<h2 class="wp-block-heading has-text-align-center">Need to talk about your project?</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:paragraph {"align":"center"} -->
-	<p class="has-text-align-center">Share what you are building and what you need help with. You will get clear next steps before any custom work begins.</p>
+	<!-- wp:paragraph {"align":"center","className":"wolf-tagline"} -->
+	<p class="has-text-align-center wolf-tagline">Share what you are building and what you need help with. You will get clear next steps before any custom work begins.</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->

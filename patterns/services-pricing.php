@@ -16,8 +16,8 @@
 	<h2 class="wp-block-heading has-text-align-center">Services and pricing</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:paragraph {"align":"center"} -->
-	<p class="has-text-align-center">Choose the level of help you need, from a focused performance pass to a complete custom website setup.</p>
+	<!-- wp:paragraph {"align":"center","className":"wolf-tagline"} -->
+	<p class="has-text-align-center wolf-tagline">Choose the level of help you need, from a focused performance pass to a complete custom website setup.</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:spacer {"height":"var:preset|spacing|5"} -->

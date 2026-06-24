@@ -21,12 +21,12 @@
 			<h2 class="wp-block-heading">Order the service, send the details, and let the setup begin.</h2>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph -->
-			<p>After checkout, you provide the required WordPress and hosting access details through a secure form. The theme is installed, configured, and prepared according to the selected service.</p>
+			<!-- wp:paragraph {"className":"has-text-max-width"} -->
+			<p class="has-text-max-width">After checkout, you provide the required WordPress and hosting access details through a secure form. The theme is installed, configured, and prepared according to the selected service.</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:paragraph -->
-			<p>The goal is simple: a clean, working WordPress site that follows the theme demo direction and gives you a reliable base for your content.</p>
+			<!-- wp:paragraph {"className":"has-text-max-width"} -->
+			<p class="has-text-max-width">The goal is simple: a clean, working WordPress site that follows the theme demo direction and gives you a reliable base for your content.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->

@@ -9,8 +9,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad--big","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
-<section class="wp-block-group alignfull wolf-section-pad--big">
+<!-- wp:group {"tagName":"section","align":"full","className":"wolf-section-pad--big wolf-services-tweaks-faq","layout":{"type":"constrained","contentSize":"var(--wp--style--global--wide-size)"}} -->
+<section class="wp-block-group alignfull wolf-section-pad--big wolf-services-tweaks-faq">
 
 	<!-- wp:columns -->
 	<div class="wp-block-columns">
