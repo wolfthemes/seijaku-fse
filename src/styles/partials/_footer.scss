@@ -106,7 +106,7 @@
 		}
 
 		a {
-			color: var(--ft-muted);
+			color: var(--ft-fg);
 			font-size: fs(xs);
 			font-weight: 600;
 			text-transform: uppercase;
@@ -116,7 +116,7 @@
 
 			&:hover,
 			&:focus-visible {
-				color: var(--ft-fg);
+				color: var(--ft-muted);
 			}
 		}
 	}
@@ -130,11 +130,12 @@
 
 		p {
 			margin: 0;
-			font-size: fs(xs);
-			font-weight: 600;
+			font-size: fs(xxs);
+			// font-weight: 600;
 			text-transform: uppercase;
 			letter-spacing: var(--wolf-track-label);
 			color: var(--ft-muted);
+			opacity: 0.7;
 		}
 
 		a {
