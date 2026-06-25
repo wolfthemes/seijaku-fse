@@ -23,7 +23,7 @@
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr);
 		gap: space(7);
-		align-items: start;
+		align-items: center;
 
 		@include until($bp-lg) {
 			grid-template-columns: 1fr;
