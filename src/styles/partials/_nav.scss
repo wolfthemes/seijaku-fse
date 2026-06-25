@@ -37,10 +37,7 @@
 		// --wp--preset--color--contrast:white;
 		background: none;
 		position: absolute;
-		inset-block-start: calc(
-			var(--wp-admin--admin-bar--height, 0px) +
-				var(--wolf-header-overlay-offset, 0px)
-		);
+		inset-block-start: calc(var(--wp-admin--admin-bar--height, 0px) + var(--wolf-header-overlay-offset, 0px));
 		backdrop-filter: none;
 
 		.wp-block-site-title a,
@@ -105,10 +102,7 @@
 .admin-bar {
 	// WP sets --wp-admin--admin-bar--height (32px → 46px on narrow viewports).
 	.wolf-header-overlay {
-		inset-block-start: calc(
-			var(--wp-admin--admin-bar--height, 32px) +
-				var(--wolf-header-overlay-offset, 0px)
-		);
+		inset-block-start: calc(var(--wp-admin--admin-bar--height, 32px) + var(--wolf-header-overlay-offset, 0px));
 	}
 
 	.wolf-header-overlay.is-sticky {
