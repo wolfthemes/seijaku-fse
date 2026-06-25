@@ -15,7 +15,7 @@
 	<div class="wp-block-group wolf-hero__inner">
 
 		<!-- wp:paragraph {"className":"wolf-hero__eyebrow wolf-eyebrow"} -->
-		<p class="wolf-hero__eyebrow wolf-eyebrow"><span style="white-space:nowrap">36,000+ customers</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">4.5/5 rating</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">since 2011</span></p>
+		<p class="wolf-hero__eyebrow wolf-eyebrow"><span style="white-space:nowrap">36,000+ customers</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">4.5/5 on ThemeForest</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">since 2011</span></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":1,"className":"wolf-hero__title"} -->
@@ -23,7 +23,7 @@
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","className":"wolf-hero__tagline wolf-hero__text-line wolf-tagline"} -->
-			<p class="has-text-align-center wolf-hero__tagline wolf-hero__text-line wolf-tagline">Handcrafted themes. Direct support from the person who built them.<br>One-man studio, since 2011.</p>
+			<p class="has-text-align-center wolf-hero__tagline wolf-hero__text-line wolf-tagline">Handcrafted themes. Direct support from the person who built them.</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->

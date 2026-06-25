@@ -8,10 +8,10 @@
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>","dimRatio":60,"minHeight":440,"minHeightUnit":"px","align":"full","style":{"spacing":{"margin":{"top":"0"}}},"className":"wolf-music-cta is-dark has-texture"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri() . '/assets/images/music-themes-cta-bg.jpg' ); ?>","dimRatio":60,"minHeight":440,"minHeightUnit":"px","align":"full","style":{"spacing":{"margin":{"top":"0"}}},"className":"wolf-music-cta is-dark has-texture"} -->
 <div class="wp-block-cover alignfull wolf-music-cta is-dark has-texture" style="margin-top:0;min-height:440px">
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span>
-	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>" data-object-fit="cover"/>
+	<img class="wp-block-cover__image-background" alt="Music WordPress themes — atmospheric background" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/music-themes-cta-bg.jpg' ); ?>" data-object-fit="cover" loading="lazy"/>
 
 	<div class="wp-block-cover__inner-container">
 
@@ -28,8 +28,8 @@
 					<h2 class="wp-block-heading has-3-xl-font-size">Music WordPress Themes</h2>
 					<!-- /wp:heading -->
 
-					<!-- wp:paragraph -->
-					<p>Explore 20+ themes for bands, labels, festivals and music businesses.</p>
+					<!-- wp:paragraph { "className" : "wolf-tagline" } -->
+					<p class="wolf-tagline">Explore 20+ themes for bands, labels, festivals and music businesses.</p>
 					<!-- /wp:paragraph -->
 
 				</div>
