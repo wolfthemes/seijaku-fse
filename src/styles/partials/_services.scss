@@ -1,0 +1,22 @@
+.wolf-services {
+	&--hero {
+		p {
+			&:not(.wolf-eyebrow) {
+				margin-top: var(--wp--preset--spacing--2);
+				margin-bottom: var(--wp--preset--spacing--6);
+			}
+		}
+	}
+
+	&--process {
+		.wp-block-paragraph {
+			max-width: 30ch;
+		}
+	}
+
+	&--tweaks-faq {
+		.wp-block-paragraph {
+			max-width: 49ch;
+		}
+	}
+}
