@@ -10,12 +10,16 @@
 	margin-inline: auto;
 }
 
-.wolf-section-subtitle {
-	margin-top: calc(-1 * #{space(4)});
-}
+// .wolf-section-subtitle {
+// 	margin-top: calc(-1 * #{space(4)});
+// }
 
 .wolf-music-themes-hero {
 	text-align: center;
+
+	&__title {
+		margin: var(--wp--preset--spacing--2) auto var(--wp--preset--spacing--2);
+	}
 
 	&__content {
 

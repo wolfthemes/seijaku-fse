@@ -16,16 +16,17 @@
 	<div class="wp-block-cover__inner-container">
 		<!-- wp:group {"className":"wolf-music-themes-hero__content","layout":{"type":"constrained","contentSize":"920px"}} -->
 		<div class="wp-block-group wolf-music-themes-hero__content">
-			<!-- wp:paragraph {"className":"wolf-eyebrow"} -->
-			<p class="wolf-eyebrow">WolfThemes</p>
+
+			<!-- wp:paragraph {"className":"wolf-hero__eyebrow wolf-eyebrow"} -->
+			<p class="wolf-hero__eyebrow wolf-eyebrow"><span style="white-space:nowrap">36,000+ customers</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">4.5/5 on ThemeForest</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">since 2011</span></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"display"} -->
-			<h1 class="wp-block-heading has-text-align-center has-display-font-size">The Best WordPress Themes for the Music Industry</h1>
+			<!-- wp:heading { "className" : "wolf-music-themes-hero__title", "textAlign":"center","level":1,"fontSize":"display"} -->
+			<h1 class="wp-block-heading has-text-align-center has-display-font-size wolf-music-themes-hero__title">The Best WordPress Themes for the Music Industry</h1>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"align":"center","fontSize":"md"} -->
-			<p class="has-text-align-center has-md-font-size">Explore our collection of powerful, feature-rich WordPress themes specifically designed for musicians, artists, bands, DJs, music labels and industry professionals.</p>
+			<!-- wp:paragraph {"className" : "wolf-tagline", "align":"center","fontSize":"md"} -->
+			<p class="has-text-align-center has-md-font-size wolf-tagline">Explore our collection of powerful, feature-rich WordPress themes specifically designed for musicians, artists, bands, DJs, music labels and industry professionals.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
