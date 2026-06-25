@@ -1,11 +1,11 @@
-@use 'tokens' as *;
+@use "tokens" as *;
 
 .wolf-blocks-marquee {
 	border-top: 1px solid $c-border;
 
-    &__item {
-        font-weight: 700;
-    }
+	&__item {
+		font-weight: 700;
+	}
 
 	&__item-separator {
 		color: $c-accent;

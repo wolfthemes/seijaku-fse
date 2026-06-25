@@ -4,7 +4,7 @@
 //  each section's own partial.
 // =============================================================
 
-@use 'tokens' as *;
+@use "tokens" as *;
 
 // Smooth in-page anchor scrolling, offset for the sticky header. Lenis adds
 // .lenis to <html>; native smooth scrolling stays as the no-JS fallback only.
@@ -44,7 +44,7 @@ main.wp-block-group {
 	}
 }
 
-.wolf-grid{
+.wolf-grid {
 	padding-block-end: space(10);
 }
 

@@ -2,7 +2,7 @@
 //  Details / toggle block
 // =============================================================
 
-@use '../tokens' as *;
+@use "../tokens" as *;
 
 .wp-block-details {
 	border-block-end: 1px solid $c-border;
@@ -28,7 +28,7 @@
 		}
 
 		&::after {
-			content: '';
+			content: "";
 			display: block;
 			flex-shrink: 0;
 			width: 1.125rem;

@@ -124,7 +124,11 @@ $f-body: var(--wp--preset--font-family--body);
 	--wolf-lh-display: 0.92;
 
 	// Hero sub-text (base at reduced opacity for dark hero)
-	--wolf-hero-sub-color: color-mix(in srgb, var(--wp--preset--color--base) 60%, transparent);
+	--wolf-hero-sub-color: color-mix(
+		in srgb,
+		var(--wp--preset--color--base) 60%,
+		transparent
+	);
 
 	--wolf-btn-letter-spacing: -0.022em;
 }

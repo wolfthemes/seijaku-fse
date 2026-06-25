@@ -6,7 +6,7 @@
 //  optical balance, body measure, and the accent link underline.
 // =============================================================
 
-@use 'tokens' as *;
+@use "tokens" as *;
 
 // Headings: let long titles wrap evenly, render numerals tabular.
 h1,
@@ -32,7 +32,8 @@ main p a:not(.wp-element-button) {
 	background-repeat: no-repeat;
 	background-size: 0% 1px;
 	padding-bottom: 0.08em;
-	transition: background-size var(--wolf-dur-fast) var(--wolf-ease-out),
+	transition:
+		background-size var(--wolf-dur-fast) var(--wolf-ease-out),
 		color var(--wolf-dur-fast) var(--wolf-ease-out);
 
 	&:hover,
@@ -45,8 +46,12 @@ main p a:not(.wp-element-button) {
 // ---- Links inside dark sections -----------------------------
 // On .is-dark surfaces the primary colour (black) is invisible on hover.
 // Override both the ink colour and the underline gradient to use base (white).
-main :where(.is-dark, .has-contrast-background-color.has-base-color) a:not(.wp-element-button):hover,
-main :where(.is-dark, .has-contrast-background-color.has-base-color) a:not(.wp-element-button):focus-visible {
+main
+	:where(.is-dark, .has-contrast-background-color.has-base-color)
+	a:not(.wp-element-button):hover,
+main
+	:where(.is-dark, .has-contrast-background-color.has-base-color)
+	a:not(.wp-element-button):focus-visible {
 	color: $c-base;
 }
 

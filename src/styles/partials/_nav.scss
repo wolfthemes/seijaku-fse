@@ -4,7 +4,7 @@
 //  sticky, condenses on scroll (theme.js toggles .is-scrolled).
 // =============================================================
 
-@use 'tokens' as *;
+@use "tokens" as *;
 
 .wolf-header {
 	position: relative;
@@ -13,7 +13,8 @@
 	background: color-mix(in srgb, #{$c-base} 82%, transparent);
 	backdrop-filter: saturate(180%) blur(12px);
 	border-block-end: 1px solid transparent;
-	transition: padding-block var(--wolf-dur) var(--wolf-ease-out),
+	transition:
+		padding-block var(--wolf-dur) var(--wolf-ease-out),
 		border-color var(--wolf-dur) var(--wolf-ease-out),
 		background-color var(--wolf-dur) var(--wolf-ease-out);
 
@@ -28,7 +29,8 @@
 		padding-block: var(--wolf-header-pad-scrolled);
 		border-block-end-color: $c-border;
 		background: color-mix(in srgb, #{$c-base} 77%, transparent);
-		animation: wolf-header-slide-in var(--wolf-dur) var(--wolf-ease-out) both;
+		animation: wolf-header-slide-in var(--wolf-dur) var(--wolf-ease-out)
+			both;
 	}
 
 	&.wolf-header-overlay {
@@ -75,7 +77,6 @@
 }
 
 .admin-bar {
-
 	// WP sets --wp-admin--admin-bar--height (32px → 46px on narrow viewports).
 	.wolf-header-overlay {
 		top: var(--wp-admin--admin-bar--height, 32px);

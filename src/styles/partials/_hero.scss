@@ -5,7 +5,7 @@
 //  room. No cover image, no forced min-height.
 // =============================================================
 
-@use 'tokens' as *;
+@use "tokens" as *;
 
 // Fills the space below the header and centres its content, leaving
 // the top edge of the themes grid peeking ~half a card above the fold.
@@ -34,9 +34,9 @@
 			margin: space(2) auto space(2);
 		}
 
-        .wolf-hero__tagline {
-            margin-bottom: space(5);
-        }
+		.wolf-hero__tagline {
+			margin-bottom: space(5);
+		}
 	}
 
 	&__eyebrow {

@@ -1,122 +1,122 @@
-@use 'tokens' as *;
+@use "tokens" as *;
 
 // ─── Story section ────────────────────────────────────────────────────────────
 
 .wolf-about-story {
-    padding-top: space(10);
-    padding-bottom: space(10);
+	padding-top: space(10);
+	padding-bottom: space(10);
 
-    &__heading {
-        font-size: fs('2-xl');
-        line-height: 1.15;
-        text-transform: none;
-        font-weight: 700;
-    }
+	&__heading {
+		font-size: fs("2-xl");
+		line-height: 1.15;
+		text-transform: none;
+		font-weight: 700;
+	}
 
-    p {
-        color: $c-muted;
-        line-height: 1.7;
+	p {
+		color: $c-muted;
+		line-height: 1.7;
 		max-width: 60ch;
 
-        + p {
-            margin-top: space(4);
-        }
-    }
+		+ p {
+			margin-top: space(4);
+		}
+	}
 
-    @include until($bp-lg) {
-        padding-top: space(8);
-        padding-bottom: space(8);
+	@include until($bp-lg) {
+		padding-top: space(8);
+		padding-bottom: space(8);
 
-        .wp-block-columns {
-            flex-direction: column;
+		.wp-block-columns {
+			flex-direction: column;
 
-            .wp-block-column {
-                flex-basis: 100% !important;
-            }
-        }
-    }
+			.wp-block-column {
+				flex-basis: 100% !important;
+			}
+		}
+	}
 }
 
 // ─── Values section ───────────────────────────────────────────────────────────
 
 .wolf-about-values {
-    padding-top: space(9);
-    padding-bottom: space(9);
-    border-top: 1px solid $c-border;
+	padding-top: space(9);
+	padding-bottom: space(9);
+	border-top: 1px solid $c-border;
 
-    p {
-        font-size: fs(sm);
-        color: $c-muted;
-        line-height: 1.65;
-        text-wrap: pretty;
+	p {
+		font-size: fs(sm);
+		color: $c-muted;
+		line-height: 1.65;
+		text-wrap: pretty;
 		margin-block-start: space(3);
 		max-width: 36ch;
-    }
+	}
 
-    &__label {
-        font-size: fs(sm);
-        font-weight: 600;
-        color: $c-primary !important;
-        letter-spacing: var(--wolf-track-label);
-        text-transform: uppercase;
-        margin-bottom: space(2);
-    }
+	&__label {
+		font-size: fs(sm);
+		font-weight: 600;
+		color: $c-primary !important;
+		letter-spacing: var(--wolf-track-label);
+		text-transform: uppercase;
+		margin-bottom: space(2);
+	}
 
-    &__grid.wp-block-columns {
+	&__grid.wp-block-columns {
 
-        @include until($bp-lg) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: space(6);
+		@include until($bp-lg) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: space(6);
 
-            > .wp-block-column {
-                flex-basis: unset;
-                flex-grow: unset;
-            }
-        }
+			> .wp-block-column {
+				flex-basis: unset;
+				flex-grow: unset;
+			}
+		}
 
-        @include until($bp-sm) {
-            grid-template-columns: 1fr;
-        }
-    }
+		@include until($bp-sm) {
+			grid-template-columns: 1fr;
+		}
+	}
 
-    @include until($bp-lg) {
-        padding-top: space(7);
-        padding-bottom: space(7);
-    }
+	@include until($bp-lg) {
+		padding-top: space(7);
+		padding-bottom: space(7);
+	}
 }
 
 // ─── Legacy classes (home-about section) ─────────────────────────────────────
 
 .wolf-about {
 
-    &__eyebrow {
-        font-size: fs(xs);
-        text-transform: uppercase;
-        letter-spacing: var(--wolf-track-label);
-        color: $c-accent;
-        opacity: 1;
-        margin-bottom: space(3);
-    }
+	&__eyebrow {
+		font-size: fs(xs);
+		text-transform: uppercase;
+		letter-spacing: var(--wolf-track-label);
+		color: $c-accent;
+		opacity: 1;
+		margin-bottom: space(3);
+	}
 
 	&__text {
 		max-width: 60ch;
 	}
 
-    &__pullquote {
+	&__pullquote {
 
-        p {
-            font-family: $f-heading;
-            font-size: fs(xl);
-            font-weight: 700;
-            line-height: 1.3;
-            color: inherit; // section sets color via .is-dark; hardcoding $c-ink fails on dark bg
-            // border-top: 2px solid $c-accent;
-            padding-top: space(4);
-        }
+		p {
+			font-family: $f-heading;
+			font-size: fs(xl);
+			font-weight: 700;
+			line-height: 1.3;
+			color: inherit; // section sets color via .is-dark; hardcoding $c-ink fails on dark bg
+			// border-top: 2px solid $c-accent;
+			padding-top: space(4);
+		}
 
-        @include until($bp-lg) {
-            margin-top: space(6);
-        }
-    }
+		@include until($bp-lg) {
+			margin-top: space(6);
+		}
+	}
 }

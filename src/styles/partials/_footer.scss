@@ -5,14 +5,14 @@
 //  and a base bar. All uppercase, balanced, tight tracking.
 // =============================================================
 
-@use 'tokens' as *;
+@use "tokens" as *;
 
 .wolf-footer {
 	// Local dark palette so children read cleanly on black.
-	--ft-bg: #0D0302;
+	--ft-bg: #0d0302;
 	--ft-fg: #fff;
 	--ft-muted: rgba(255, 255, 255, 0.55);
-	--ft-line: rgba(255, 255, 255, 0.12);
+	--ft-line: rgba(255, 255, 255, 0.4);
 
 	background: var(--ft-bg);
 	color: var(--ft-muted);
@@ -62,7 +62,7 @@
 		min-block-size: space(8);
 
 		&:empty::before {
-			content: 'Newsletter — coming soon';
+			content: "Newsletter — coming soon";
 			font-size: fs(sm);
 			text-transform: uppercase;
 			letter-spacing: var(--wolf-track-label);

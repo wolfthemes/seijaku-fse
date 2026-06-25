@@ -10,7 +10,7 @@
 //    .is-inview           added by theme.js when the element enters
 // =============================================================
 
-@use 'tokens' as *;
+@use "tokens" as *;
 
 @mixin hidden {
 	opacity: 0;
@@ -23,7 +23,8 @@
 }
 
 @mixin reveal-transition {
-	transition: opacity var(--wolf-dur-slow) var(--wolf-ease-out),
+	transition:
+		opacity var(--wolf-dur-slow) var(--wolf-ease-out),
 		transform var(--wolf-dur-slow) var(--wolf-ease-out);
 }
 

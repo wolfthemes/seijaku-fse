@@ -1,4 +1,4 @@
-@use 'tokens' as *;
+@use "tokens" as *;
 
 .wolf-hero-collage {
 	position: relative;
@@ -41,7 +41,8 @@
 	&__text-line {
 		display: block;
 		opacity: 0;
-		text-shadow: 0 2px 28px color-mix(in srgb, #{$c-secondary} 70%, transparent);
+		text-shadow: 0 2px 28px
+			color-mix(in srgb, #{$c-secondary} 70%, transparent);
 	}
 
 	&__stage {

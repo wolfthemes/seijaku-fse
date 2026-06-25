@@ -10,26 +10,26 @@
 // =============================================================
 
 // Foundations
-@use 'partials/tokens' as *;
-@use 'partials/typography';
-@use 'partials/helpers';
-@use 'partials/layout';
-@use 'partials/lenis';
-@use 'partials/buttons';
-@use 'partials/nav';
-@use 'partials/animations';
-@use 'partials/blocks';
-@use 'partials/footer';
+@use "partials/tokens" as *;
+@use "partials/typography";
+@use "partials/helpers";
+@use "partials/layout";
+@use "partials/lenis";
+@use "partials/buttons";
+@use "partials/nav";
+@use "partials/animations";
+@use "partials/blocks";
+@use "partials/footer";
 
 // Page sections (front-page.html) — built incrementally
-@use 'partials/hero';
+@use "partials/hero";
 // @use 'partials/hero-collage';
-@use 'partials/about';
-@use 'partials/music-cta';
-@use 'partials/marquee';
-@use 'partials/stats';
-@use 'partials/categories';
-@use 'partials/testimonials';
-@use 'partials/services';
-@use 'partials/music-themes';
-@use 'partials/contact';
+@use "partials/about";
+@use "partials/music-cta";
+@use "partials/marquee";
+@use "partials/stats";
+@use "partials/categories";
+@use "partials/testimonials";
+@use "partials/services";
+@use "partials/music-themes";
+@use "partials/contact";

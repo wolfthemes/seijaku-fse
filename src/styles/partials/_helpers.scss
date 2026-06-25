@@ -1,24 +1,29 @@
-@use 'tokens' as *;
+@use "tokens" as *;
 
 // Dark section.
 // Used for hero, footer, CTA sections.
 .is-dark {
-	--wp--preset--color--contrast:#{$c-base};
-    background: $c-secondary;
-    color: $c-base;
-    fill: $c-base;
+	--wp--preset--color--contrast: #{$c-base};
+	background: $c-secondary;
+	color: $c-base;
+	fill: $c-base;
 
-    // Headings and text inherit automatically via `color: inherit`
-    // already set on most components — but force it here too
-    // in case a component hardcodes its own ink color.
-    h1, h2, h3, h4, h5, h6, p {
-        color: inherit;
-    }
+	// Headings and text inherit automatically via `color: inherit`
+	// already set on most components — but force it here too
+	// in case a component hardcodes its own ink color.
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: inherit;
+	}
 
 	.wolf-tagline {
 		color: $c-base;
 	}
-
 }
 
 // Alternate light section.
@@ -36,7 +41,7 @@
 }
 
 // Add grungy sibtle overlay to a background
-.has-texture{
+.has-texture {
 	position: relative;
 	overflow: hidden;
 
@@ -47,7 +52,7 @@
 		pointer-events: none;
 		background-image: url(/assets/images/texture.jpg);
 		background-repeat: repeat;
-		opacity: .8;
+		opacity: 0.8;
 		mix-blend-mode: exclusion;
 		z-index: 1;
 	}
@@ -57,4 +62,3 @@
 		z-index: 3;
 	}
 }
-

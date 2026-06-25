@@ -4,7 +4,7 @@
 //  treatment reads cleanly on both light and dark sections.
 // =============================================================
 
-@use '../tokens' as *;
+@use "../tokens" as *;
 
 .entry-content,
 .wp-block-group,
@@ -23,13 +23,13 @@
 			color: $c-muted;
 		}
 
-		input[type='text'],
-		input[type='email'],
-		input[type='tel'],
-		input[type='url'],
-		input[type='search'],
-		input[type='number'],
-		input[type='password'],
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		input[type="url"],
+		input[type="search"],
+		input[type="number"],
+		input[type="password"],
 		textarea,
 		select {
 			display: block;
@@ -63,8 +63,8 @@
 			min-block-size: 8rem;
 		}
 
-		input[type='submit'],
-		button[type='submit'] {
+		input[type="submit"],
+		button[type="submit"] {
 			margin-block-start: space(4);
 		}
 
@@ -123,13 +123,13 @@
 	form,
 	.wpcf7 {
 
-		input[type='text'],
-		input[type='email'],
-		input[type='tel'],
-		input[type='url'],
-		input[type='search'],
-		input[type='number'],
-		input[type='password'],
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		input[type="url"],
+		input[type="search"],
+		input[type="number"],
+		input[type="password"],
 		textarea,
 		select {
 			border-block-end-color: $c-border-alt;
