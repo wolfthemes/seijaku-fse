@@ -26,6 +26,14 @@
     @include until($bp-lg) {
         padding-top: space(8);
         padding-bottom: space(8);
+
+        .wp-block-columns {
+            flex-direction: column;
+
+            .wp-block-column {
+                flex-basis: 100% !important;
+            }
+        }
     }
 }
 
@@ -34,20 +42,24 @@
 .wolf-about-values {
     padding-top: space(9);
     padding-bottom: space(9);
-    border-top: 1px solid var(--wp--preset--color--border);
-
-    &__label {
-        font-size: fs(xs);
-        font-weight: 600;
-        letter-spacing: var(--wolf-track-label);
-        text-transform: uppercase;
-        margin-bottom: space(2);
-    }
+    border-top: 1px solid $c-border;
 
     p {
         font-size: fs(sm);
         color: $c-muted;
         line-height: 1.65;
+        text-wrap: pretty;
+		margin-block-start: space(3);
+		max-width: 36ch;
+    }
+
+    &__label {
+        font-size: fs(sm);
+        font-weight: 600;
+        color: $c-primary !important;
+        letter-spacing: var(--wolf-track-label);
+        text-transform: uppercase;
+        margin-bottom: space(2);
     }
 
     &__grid.wp-block-columns {

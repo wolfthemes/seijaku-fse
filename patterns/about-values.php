@@ -17,9 +17,9 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:heading {"level":3,"className":"wolf-about-values__label"} -->
-			<h3 class="wp-block-heading wolf-about-values__label">Human support</h3>
-			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"wolf-about-values__label"} -->
+			<p class="wolf-about-values__label">Human support</p>
+			<!-- /wp:paragraph -->
 			<!-- wp:paragraph -->
 			<p>Clear answers from someone who knows the themes directly.</p>
 			<!-- /wp:paragraph -->
@@ -28,9 +28,9 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:heading {"level":3,"className":"wolf-about-values__label"} -->
-			<h3 class="wp-block-heading wolf-about-values__label">Clean design</h3>
-			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"wolf-about-values__label"} -->
+			<p class="wolf-about-values__label">Clean design</p>
+			<!-- /wp:paragraph -->
 			<!-- wp:paragraph -->
 			<p>Layouts that feel polished without adding visual noise.</p>
 			<!-- /wp:paragraph -->
@@ -39,9 +39,9 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:heading {"level":3,"className":"wolf-about-values__label"} -->
-			<h3 class="wp-block-heading wolf-about-values__label">Reliable WordPress foundations</h3>
-			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"wolf-about-values__label"} -->
+			<p class="wolf-about-values__label">Reliable WP foundations</p>
+			<!-- /wp:paragraph -->
 			<!-- wp:paragraph -->
 			<p>Theme structures built for editing, updates, and long-term use.</p>
 			<!-- /wp:paragraph -->
@@ -50,9 +50,9 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:heading {"level":3,"className":"wolf-about-values__label"} -->
-			<h3 class="wp-block-heading wolf-about-values__label">Built for real projects</h3>
-			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"wolf-about-values__label"} -->
+			<p class="wolf-about-values__label">Built for real projects</p>
+			<!-- /wp:paragraph -->
 			<!-- wp:paragraph -->
 			<p>Practical sections for launches, portfolios, releases, and services.</p>
 			<!-- /wp:paragraph -->
