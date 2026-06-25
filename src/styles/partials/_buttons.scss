@@ -151,7 +151,7 @@ a:focus-visible {
 :where(
 		.is-dark,
 		.has-contrast-background-color.has-base-color,
-		.wolf-header-overlay
+		.wolf-header-overlay:not(.is-sticky)
 	) {
 
 	input[type="submit"],

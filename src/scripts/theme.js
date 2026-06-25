@@ -23,6 +23,7 @@ class SeijakuFse {
 		this.initSmoothScroll();
 		this.initReveals();
 		this.initHeader();
+		this.initHeaderOverlayOffset();
 		this.initStickyHeader();
 		this.initNavCurtain();
 		// this.initHeroCollage();
@@ -84,9 +85,55 @@ class SeijakuFse {
 		} );
 	}
 
+	initHeaderOverlayOffset() {
+		if (
+			! this.header ||
+			! this.header.classList.contains( 'wolf-header-overlay' )
+		) {
+			return;
+		}
+
+		this.updateHeaderOverlayOffset();
+
+		if ( 'ResizeObserver' in window ) {
+			this.headerOverlayResizeObserver = new ResizeObserver(
+				this.updateHeaderOverlayOffset
+			);
+
+			const marquee = this.header.previousElementSibling;
+
+			if ( marquee ) {
+				this.headerOverlayResizeObserver.observe( marquee );
+			}
+		}
+
+		window.addEventListener( 'resize', this.updateHeaderOverlayOffset, {
+			passive: true,
+		} );
+	}
+
 	updateHeader() {
 		this.header.classList.toggle( 'is-scrolled', window.scrollY > 24 );
 		this.headerTicking = false;
+	}
+
+	updateHeaderOverlayOffset() {
+		if (
+			! this.header ||
+			! this.header.classList.contains( 'wolf-header-overlay' )
+		) {
+			return;
+		}
+
+		const marquee = this.header.previousElementSibling;
+		const offset = marquee?.classList.contains( 'wolf-blocks-marquee' )
+			? marquee.offsetHeight
+			: 0;
+
+		document.documentElement.style.setProperty(
+			'--wolf-header-overlay-offset',
+			`${ offset }px`
+		);
 	}
 
 	onHeaderScroll() {

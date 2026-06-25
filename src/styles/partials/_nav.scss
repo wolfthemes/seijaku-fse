@@ -37,11 +37,37 @@
 		// --wp--preset--color--contrast:white;
 		background: none;
 		position: absolute;
+		inset-block-start: calc(
+			var(--wp-admin--admin-bar--height, 0px) +
+				var(--wolf-header-overlay-offset, 0px)
+		);
 		backdrop-filter: none;
 
 		.wp-block-site-title a,
 		.wolf-nav .wp-block-navigation-item__content {
 			color: $c-base;
+		}
+
+		.wolf-logo {
+			transition:
+				filter var(--wolf-dur-fast) var(--wolf-ease-out),
+				opacity var(--wolf-dur-fast) var(--wolf-ease-out);
+		}
+	}
+
+	&.wolf-header-overlay.is-sticky {
+		position: fixed;
+		inset-block-start: var(--wp-admin--admin-bar--height, 0);
+		background: color-mix(in srgb, #{$c-base} 77%, transparent);
+		backdrop-filter: saturate(180%) blur(12px);
+
+		.wp-block-site-title a,
+		.wolf-nav .wp-block-navigation-item__content {
+			color: $c-ink;
+		}
+
+		.wolf-logo {
+			filter: brightness(0);
 		}
 	}
 
@@ -79,7 +105,14 @@
 .admin-bar {
 	// WP sets --wp-admin--admin-bar--height (32px → 46px on narrow viewports).
 	.wolf-header-overlay {
-		top: var(--wp-admin--admin-bar--height, 32px);
+		inset-block-start: calc(
+			var(--wp-admin--admin-bar--height, 32px) +
+				var(--wolf-header-overlay-offset, 0px)
+		);
+	}
+
+	.wolf-header-overlay.is-sticky {
+		inset-block-start: var(--wp-admin--admin-bar--height, 32px);
 	}
 }
 
