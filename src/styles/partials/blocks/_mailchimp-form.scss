@@ -24,13 +24,13 @@
 			}
 
 			> :is(
-				.wolf-blocks-mailchimp-form__message,
-				[class*='message'],
-				[class*='error'],
-				[class*='response'],
-				.components-notice,
-				p:last-child
-			) {
+					.wolf-blocks-mailchimp-form__message,
+					[class*="message"],
+					[class*="error"],
+					[class*="response"],
+					.components-notice,
+					p:last-child
+				) {
 				flex: 1 1 100%;
 				margin: 0;
 				font-size: fs(xs);

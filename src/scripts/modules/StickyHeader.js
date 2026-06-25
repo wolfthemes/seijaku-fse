@@ -4,7 +4,9 @@ export default class StickyHeader {
 	constructor( { header, lenis = null } = {} ) {
 		this.header = header;
 		this.lenis = lenis;
-		this.isOverlay = this.header?.classList.contains( 'wolf-header-overlay' );
+		this.isOverlay = this.header?.classList.contains(
+			'wolf-header-overlay'
+		);
 
 		if ( ! this.header ) {
 			return;
@@ -26,8 +28,7 @@ export default class StickyHeader {
 	update( y ) {
 		const sticky = y > THRESHOLD;
 		this.header.classList.toggle( 'is-sticky', sticky );
-		document.body.style.paddingTop = sticky && ! this.isOverlay
-			? `${ this.header.offsetHeight }px`
-			: '';
+		document.body.style.paddingTop =
+			sticky && ! this.isOverlay ? `${ this.header.offsetHeight }px` : '';
 	}
 }
