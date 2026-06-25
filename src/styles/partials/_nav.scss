@@ -39,6 +39,16 @@
 		position: absolute;
 		inset-block-start: calc(var(--wp-admin--admin-bar--height, 0px) + var(--wolf-header-overlay-offset, 0px));
 		backdrop-filter: none;
+		opacity: 0;
+		pointer-events: none;
+		transition:
+			opacity var(--wolf-dur-slow) var(--wolf-ease-out),
+			filter var(--wolf-dur-slow) var(--wolf-ease-out);
+
+		&.is-ready {
+			opacity: 1;
+			pointer-events: auto;
+		}
 
 		.wp-block-site-title a,
 		.wolf-nav .wp-block-navigation-item__content {
@@ -46,9 +56,7 @@
 		}
 
 		.wolf-logo {
-			transition:
-				filter var(--wolf-dur-fast) var(--wolf-ease-out),
-				opacity var(--wolf-dur-fast) var(--wolf-ease-out);
+			transition: filter var(--wolf-dur-fast) var(--wolf-ease-out);
 		}
 	}
 

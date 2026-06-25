@@ -93,6 +93,7 @@ class SeijakuFse {
 			return;
 		}
 
+		this.header.classList.remove( 'is-ready' );
 		this.updateHeaderOverlayOffset();
 
 		if ( 'ResizeObserver' in window ) {
@@ -134,6 +135,7 @@ class SeijakuFse {
 			'--wolf-header-overlay-offset',
 			`${ offset }px`
 		);
+		this.header.classList.add( 'is-ready' );
 	}
 
 	onHeaderScroll() {
