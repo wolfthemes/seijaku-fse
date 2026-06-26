@@ -92,6 +92,7 @@ $f-body: var(--wp--preset--font-family--body);
 	// Motion — one expressive curve for reveals, one symmetric for UI.
 	--wolf-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 	--wolf-ease-emphasis: cubic-bezier(0.65, 0, 0.35, 1);
+	--wolf-ease-elegant: cubic-bezier(0.32, 0.72, 0, 1);
 	--wolf-dur-fast: 0.22s;
 	--wolf-dur: 0.5s;
 	--wolf-dur-slow: 0.85s;

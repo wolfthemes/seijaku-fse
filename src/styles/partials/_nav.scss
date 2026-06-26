@@ -240,21 +240,82 @@
 	.wolf-nav {
 		margin-inline-start: auto;
 
+		// ---- Menu toggle — editorial two-bar mark ---------------
+		// No chrome (no pill, border, blur or shadow): the brand lets space
+		// do the work. We hide WP's SVG and draw two clean, equal ink bars as
+		// pseudo-elements. No hover motion — the mark reads quiet and
+		// confident at rest.
 		.wp-block-navigation__responsive-container-open {
-			inline-size: 3rem;
-			block-size: 3rem;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			padding: 0;
-			border: 1px solid $c-border;
-			border-radius: var(--wolf-radius-pill);
-			background: color-mix(in srgb, #{$c-base} 88%, transparent);
-			backdrop-filter: saturate(180%) blur(12px);
+			--bar-w-top: 2.8rem; // 45px — top bar length
+			--bar-w-bottom: 1.95rem; // 31px — bottom bar length
+			--bar-gap: 0.28rem; // subtle separation between bars
+			--bar-offset-end: 0.15rem; // keeps both bars optically right-aligned
 
+			position: relative;
+			inline-size: 2.75rem;
+			block-size: 2.75rem;
+			display: inline-flex;
+			padding: 0;
+			border: 0;
+			border-radius: var(--wolf-radius-md);
+			background: none;
+			color: $c-ink;
+			cursor: pointer;
+			-webkit-tap-highlight-color: transparent;
+			transition:
+				color var(--wolf-dur-slow) var(--wolf-ease-elegant),
+				background-color var(--wolf-dur-slow) var(--wolf-ease-elegant),
+				box-shadow var(--wolf-dur-slow) var(--wolf-ease-elegant);
+
+			// WP ships a two-path SVG; we replace it with our own bars.
 			svg {
-				inline-size: 1.1rem;
-				block-size: 1.1rem;
+				display: none;
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				inset-inline-end: var(--bar-offset-end);
+				inset-block-start: 50%;
+				block-size: 1px;
+				border-radius: 999px;
+				background: currentcolor;
+				transition:
+					transform var(--wolf-dur-slow) var(--wolf-ease-elegant),
+					inline-size var(--wolf-dur-slow) var(--wolf-ease-elegant),
+					background-color var(--wolf-dur-slow) var(--wolf-ease-elegant);
+			}
+
+			&::before {
+				inline-size: var(--bar-w-top);
+				transform: translateY(calc(-1 * var(--bar-gap)));
+			}
+
+			&::after {
+				inline-size: var(--bar-w-bottom);
+				transform: translateY(var(--bar-gap));
+			}
+
+			&:hover,
+			&:active {
+				background: none;
+				box-shadow: none;
+
+				&::before,
+				&::after {
+					transform: translateY(calc(-1 * var(--bar-gap)));
+				}
+			}
+
+			&:active::after,
+			&:hover::after {
+				transform: translateY(var(--bar-gap));
+			}
+
+			&:focus-visible {
+				outline: 2px solid $c-accent;
+				outline-offset: 3px;
 			}
 		}
 	}
@@ -272,7 +333,7 @@
 		border: 0;
 		overflow: hidden;
 		overscroll-behavior: contain;
-		background: color-mix(in srgb, #{$c-secondary} 32%, transparent);
+		background: color-mix(in srgb, #{$c-secondary} 22%, transparent);
 		z-index: 1000;
 	}
 
@@ -288,8 +349,8 @@
 		// the dialog's ancestor — re-rooting its `position: fixed` containing
 		// block and nudging it vertically, which muddies our horizontal slide.
 		// Replace it with a pure opacity fade for the backdrop only.
-		animation: wolf-mobile-nav-fade-in var(--wolf-dur-fast)
-			var(--wolf-ease-out) both !important;
+		animation: wolf-mobile-nav-fade-in var(--wolf-dur-slow)
+			var(--wolf-ease-elegant) both !important;
 	}
 
 	// WP core pads the content with `calc(2rem + 24px)` to clear its own
@@ -323,8 +384,8 @@
 
 	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open
 		.wp-block-navigation__responsive-dialog {
-		animation: wolf-mobile-nav-slide-in var(--wolf-dur-fast) var(--wolf-ease-out)
-			both;
+		animation: wolf-mobile-nav-slide-in var(--wolf-dur-slow)
+			var(--wolf-ease-elegant) both;
 	}
 
 	// Logged-in (admin bar present): WP pushes the dialog down with
@@ -422,7 +483,9 @@
 
 		.wp-block-navigation__responsive-container,
 		.wp-block-navigation__responsive-dialog,
-		.wp-block-navigation__responsive-container-open {
+		.wp-block-navigation__responsive-container-open,
+		.wp-block-navigation__responsive-container-open::before,
+		.wp-block-navigation__responsive-container-open::after {
 			transition: none;
 		}
 	}
