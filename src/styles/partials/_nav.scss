@@ -212,6 +212,7 @@
 }
 
 @include until($bp-md) {
+
 	html,
 	body {
 		overflow-x: clip;
@@ -292,21 +293,40 @@
 	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open {
 		display: flex !important;
 		pointer-events: auto;
+		// WP core adds root-padding-aware padding to the open container
+		// (.is-menu-open:not(.disable-default-overlay)) — neutralise it so
+		// the backdrop fills the viewport and the dialog hugs the edges.
+		padding: 0 !important;
+		// WP core animates the container with `overlay-menu__fade-in-animation`
+		// (a translateY(0.5em) + opacity). The translate puts a transform on
+		// the dialog's ancestor — re-rooting its `position: fixed` containing
+		// block and nudging it vertically, which muddies our horizontal slide.
+		// Replace it with a pure opacity fade for the backdrop only.
+		animation: wolf-mobile-nav-fade-in var(--wolf-dur-fast)
+			var(--wolf-ease-out) both !important;
+	}
+
+	// WP core pads the content with `calc(2rem + 24px)` to clear its own
+	// close button — that's the gap at the top of our off-canvas panel.
+	// We position the close button ourselves, so drop it.
+	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open
+		.wp-block-navigation__responsive-container-content {
+		padding-top: 0;
 	}
 
 	.wolf-nav .wp-block-navigation__responsive-dialog {
 		position: fixed;
-		inset-block-start: var(--wp-admin--admin-bar--height, 0px) !important;
+		inset-block-start: 0 !important;
 		inset-inline-end: 0;
 		display: flex;
 		flex-direction: column;
 		inline-size: min(86vw, 380px);
 		max-inline-size: none;
-		block-size: calc(100dvh - var(--wp-admin--admin-bar--height, 0px));
+		block-size: 100dvh;
 		margin: 0;
-		padding: 4.75rem clamp(1.5rem, 5vw, 2.25rem) 2rem;
+		padding: 1.5rem clamp(1.5rem, 5vw, 2.25rem) 2rem;
 		box-sizing: border-box;
-		background: color-mix(in srgb, #{$c-base} 97%, white 3%);
+		background: color-mix(in srgb, #{$c-base} 97%, #fff 3%);
 		border-inline-start: 1px solid color-mix(in srgb, #{$c-ink} 10%, transparent);
 		box-shadow: -24px 0 60px rgba(0, 0, 0, 0.16);
 		transform: translateX(100%);
@@ -319,6 +339,17 @@
 		.wp-block-navigation__responsive-dialog {
 		animation: wolf-mobile-nav-slide-in var(--wolf-dur-fast) var(--wolf-ease-out)
 			both;
+	}
+
+	// Logged-in (admin bar present): WP pushes the dialog down with
+	// `margin-top: 46px` to clear the fixed admin bar, which reads as a gap
+	// floating above our full-height drawer. Drop the margin and tuck the
+	// drawer under the bar via inset + reduced height instead. `!important`
+	// is required — WP's selector (0,4,0) outranks ours.
+	.admin-bar .wolf-nav .wp-block-navigation__responsive-dialog {
+		margin-block-start: 0 !important;
+		inset-block-start: var(--wp-admin--admin-bar--height, 46px) !important;
+		block-size: calc(100dvh - var(--wp-admin--admin-bar--height, 46px));
 	}
 
 	.wolf-nav .wp-block-navigation__responsive-container-content {
@@ -338,6 +369,7 @@
 		align-items: stretch;
 		gap: 0;
 		inline-size: 100%;
+		padding-block-start: 3.5rem;
 	}
 
 	.wolf-nav .wp-block-navigation__responsive-container-close,
@@ -399,6 +431,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
 	.wolf-nav {
 
 		.wp-block-navigation__responsive-container,
@@ -426,6 +459,16 @@ body.wolf-nav-open {
 	overscroll-behavior: none;
 }
 
+// While the drawer is open, strip the header's `backdrop-filter`. A non-none
+// backdrop-filter makes the header a containing block for `position: fixed`
+// descendants, so the fixed drawer would anchor to the header box (narrower
+// than the viewport, offset when not scrolled) instead of the viewport —
+// that's the "weird at the top + strip on the right" behaviour.
+.wolf-nav-open .wolf-header {
+	backdrop-filter: none !important;
+	transform: none !important;
+}
+
 @keyframes wolf-header-slide-in {
 
 	from {
@@ -445,5 +488,18 @@ body.wolf-nav-open {
 
 	to {
 		transform: translate3d(0, 0, 0);
+	}
+}
+
+// Backdrop fade only — replaces WP's translateY-based container animation
+// so the dialog's horizontal slide stays clean (see .is-menu-open above).
+@keyframes wolf-mobile-nav-fade-in {
+
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
 	}
 }
