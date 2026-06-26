@@ -195,7 +195,10 @@ class SeijakuFse {
 			} );
 		} );
 
-		this.mobileNavMedia.addEventListener( 'change', this.syncMobileNavState );
+		this.mobileNavMedia.addEventListener(
+			'change',
+			this.syncMobileNavState
+		);
 		this.syncMobileNavState();
 	}
 

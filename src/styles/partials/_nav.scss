@@ -310,7 +310,7 @@
 		max-inline-size: none;
 		block-size: 100dvh;
 		margin: 0;
-		padding: space(5) clamp(#{space(5)}, 5vw, 2.25rem) space(6);
+		padding: space(5) space(7) space(6);
 		box-sizing: border-box;
 		background: color-mix(in srgb, #{$c-base} 97%, #fff 3%);
 		border-inline-start: 1px solid $c-border;
