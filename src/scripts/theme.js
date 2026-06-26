@@ -26,6 +26,7 @@ class SeijakuFse {
 		this.initHeaderOverlayOffset();
 		this.initStickyHeader();
 		this.initNavCurtain();
+		this.initMobileNav();
 		// this.initHeroCollage();
 		this.initDetails();
 	}
@@ -163,6 +164,63 @@ class SeijakuFse {
 					.closest( '.wp-block-navigation-item__content' )
 					.appendChild( clone );
 			} );
+	}
+
+	initMobileNav() {
+		this.mobileNavMedia = window.matchMedia( '(max-width: 781.98px)' );
+		this.mobileNavContainers = Array.from(
+			document.querySelectorAll(
+				'.wolf-nav .wp-block-navigation__responsive-container'
+			)
+		);
+
+		if ( ! this.mobileNavContainers.length ) {
+			return;
+		}
+
+		this.mobileNavContainers.forEach( ( container ) => {
+			container
+				.querySelector( '.wp-block-navigation__responsive-dialog' )
+				?.setAttribute( 'data-lenis-prevent', '' );
+		} );
+
+		this.mobileNavObserver = new MutationObserver(
+			this.syncMobileNavState
+		);
+
+		this.mobileNavContainers.forEach( ( container ) => {
+			this.mobileNavObserver.observe( container, {
+				attributes: true,
+				attributeFilter: [ 'class' ],
+			} );
+		} );
+
+		this.mobileNavMedia.addEventListener( 'change', this.syncMobileNavState );
+		this.syncMobileNavState();
+	}
+
+	syncMobileNavState() {
+		if ( ! this.mobileNavContainers?.length ) {
+			return;
+		}
+
+		const isMobile = this.mobileNavMedia?.matches ?? false;
+		const isOpen =
+			isMobile &&
+			this.mobileNavContainers.some( ( container ) =>
+				container.classList.contains( 'is-menu-open' )
+			);
+
+		document.documentElement.classList.toggle( 'wolf-nav-open', isOpen );
+		document.body.classList.toggle( 'wolf-nav-open', isOpen );
+
+		if ( this.smoothScroll?.lenis ) {
+			if ( isOpen ) {
+				this.smoothScroll.lenis.stop();
+			} else {
+				this.smoothScroll.lenis.start();
+			}
+		}
 	}
 
 	initHeroCollage() {
