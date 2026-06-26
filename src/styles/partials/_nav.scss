@@ -212,6 +212,11 @@
 }
 
 @include until($bp-md) {
+	html,
+	body {
+		overflow-x: clip;
+	}
+
 	.wolf-header {
 
 		&__inner {
@@ -270,7 +275,7 @@
 	.wolf-nav .wp-block-navigation__responsive-container {
 		position: fixed !important;
 		inset: 0;
-		display: flex !important;
+		display: none !important;
 		align-items: stretch;
 		justify-content: flex-end;
 		inline-size: 100vw;
@@ -279,54 +284,41 @@
 		padding: 0;
 		border: 0;
 		background: rgba(17, 18, 24, 0.32);
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
 		overflow: hidden;
 		overscroll-behavior: contain;
 		z-index: 1000;
-		transition:
-			opacity var(--wolf-dur-fast) var(--wolf-ease-out),
-			visibility 0s linear var(--wolf-dur-fast);
 	}
 
 	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open {
-		opacity: 1;
-		visibility: visible;
+		display: flex !important;
 		pointer-events: auto;
-		transition-delay: 0s;
 	}
 
 	.wolf-nav .wp-block-navigation__responsive-dialog {
 		position: fixed;
-		inset-block-start: 0;
+		inset-block-start: var(--wp-admin--admin-bar--height, 0px) !important;
 		inset-inline-end: 0;
 		display: flex;
 		flex-direction: column;
 		inline-size: min(86vw, 380px);
 		max-inline-size: none;
-		block-size: 100dvh;
+		block-size: calc(100dvh - var(--wp-admin--admin-bar--height, 0px));
 		margin: 0;
-		padding: clamp(1.25rem, 4vw, 2rem);
+		padding: 4.75rem clamp(1.5rem, 5vw, 2.25rem) 2rem;
 		box-sizing: border-box;
 		background: color-mix(in srgb, #{$c-base} 97%, white 3%);
 		border-inline-start: 1px solid color-mix(in srgb, #{$c-ink} 10%, transparent);
 		box-shadow: -24px 0 60px rgba(0, 0, 0, 0.16);
 		transform: translateX(100%);
-		transition: transform var(--wolf-dur) var(--wolf-ease-out);
+		animation: none;
 		overflow-y: auto;
 		overflow-x: hidden;
 	}
 
-	.admin-bar .wolf-nav .wp-block-navigation__responsive-dialog {
-		padding-block-start: calc(
-			clamp(1.25rem, 4vw, 2rem) + var(--wp-admin--admin-bar--height, 32px)
-		);
-	}
-
 	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open
 		.wp-block-navigation__responsive-dialog {
-		transform: translateX(0);
+		animation: wolf-mobile-nav-slide-in var(--wolf-dur-fast) var(--wolf-ease-out)
+			both;
 	}
 
 	.wolf-nav .wp-block-navigation__responsive-container-content {
@@ -350,10 +342,12 @@
 
 	.wolf-nav .wp-block-navigation__responsive-container-close,
 	.wolf-nav .wp-block-navigation__responsive-close {
+		position: absolute;
+		inset-block-start: 10px;
+		inset-inline-end: 10px;
 		inline-size: 2.75rem;
 		block-size: 2.75rem;
-		margin-inline-start: auto;
-		margin-block-end: 1.5rem;
+		margin: 0;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -371,11 +365,22 @@
 	.wolf-nav .wp-block-navigation__responsive-container .wp-block-navigation-item__content {
 		display: flex;
 		inline-size: 100%;
-		padding-block: 0.95rem;
+		padding: 0.95rem 0;
 		overflow: visible;
-		border-block-end: 1px solid color-mix(in srgb, #{$c-ink} 8%, transparent);
 		font-size: fs(sm);
 		justify-content: space-between;
+		transition: none;
+	}
+
+	.wolf-nav .wp-block-navigation__responsive-container .wp-block-navigation-item:hover
+		.wp-block-navigation-item__content,
+	.wolf-nav .wp-block-navigation__responsive-container .wp-block-navigation-item:focus-within
+		.wp-block-navigation-item__content {
+
+		.wp-block-navigation-item__label {
+			transform: none;
+			opacity: 1;
+		}
 	}
 
 	.wolf-nav .wp-block-navigation__responsive-container .wolf-nav-curtain {
@@ -408,7 +413,8 @@
 	}
 
 	.wolf-nav .wp-block-navigation__responsive-dialog {
-		transition: none;
+		animation: none !important;
+		transform: translateX(0);
 	}
 }
 
@@ -428,5 +434,16 @@ body.wolf-nav-open {
 
 	to {
 		transform: translateY(0);
+	}
+}
+
+@keyframes wolf-mobile-nav-slide-in {
+
+	from {
+		transform: translate3d(100%, 0, 0);
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
 	}
 }
