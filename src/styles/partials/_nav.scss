@@ -247,24 +247,10 @@
 			align-items: center;
 			justify-content: center;
 			padding: 0;
-			border: 1px solid color-mix(in srgb, #{$c-ink} 14%, transparent);
-			border-radius: 999px;
+			border: 1px solid $c-border;
+			border-radius: var(--wolf-radius-pill);
 			background: color-mix(in srgb, #{$c-base} 88%, transparent);
-			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 			backdrop-filter: saturate(180%) blur(12px);
-			transition:
-				transform var(--wolf-dur-fast) var(--wolf-ease-out),
-				border-color var(--wolf-dur-fast) var(--wolf-ease-out),
-				background-color var(--wolf-dur-fast) var(--wolf-ease-out),
-				box-shadow var(--wolf-dur-fast) var(--wolf-ease-out);
-
-			&:hover,
-			&:focus-visible {
-				transform: translateY(-1px);
-				border-color: color-mix(in srgb, #{$c-ink} 26%, transparent);
-				background: color-mix(in srgb, #{$c-base} 94%, transparent);
-				box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
-			}
 
 			svg {
 				inline-size: 1.1rem;
@@ -284,9 +270,9 @@
 		block-size: 100dvh;
 		padding: 0;
 		border: 0;
-		background: rgba(17, 18, 24, 0.32);
 		overflow: hidden;
 		overscroll-behavior: contain;
+		background: color-mix(in srgb, #{$c-secondary} 32%, transparent);
 		z-index: 1000;
 	}
 
@@ -324,11 +310,11 @@
 		max-inline-size: none;
 		block-size: 100dvh;
 		margin: 0;
-		padding: 1.5rem clamp(1.5rem, 5vw, 2.25rem) 2rem;
+		padding: space(5) clamp(#{space(5)}, 5vw, 2.25rem) space(6);
 		box-sizing: border-box;
 		background: color-mix(in srgb, #{$c-base} 97%, #fff 3%);
-		border-inline-start: 1px solid color-mix(in srgb, #{$c-ink} 10%, transparent);
-		box-shadow: -24px 0 60px rgba(0, 0, 0, 0.16);
+		border-inline-start: 1px solid $c-border;
+		box-shadow: -24px 0 60px color-mix(in srgb, #{$c-secondary} 16%, transparent);
 		transform: translateX(100%);
 		animation: none;
 		overflow-y: auto;
@@ -375,8 +361,8 @@
 	.wolf-nav .wp-block-navigation__responsive-container-close,
 	.wolf-nav .wp-block-navigation__responsive-close {
 		position: absolute;
-		inset-block-start: 10px;
-		inset-inline-end: 10px;
+		inset-block-start: space(2);
+		inset-inline-end: space(2);
 		inline-size: 2.75rem;
 		block-size: 2.75rem;
 		margin: 0;
@@ -384,8 +370,8 @@
 		align-items: center;
 		justify-content: center;
 		flex: 0 0 auto;
-		border: 1px solid color-mix(in srgb, #{$c-ink} 12%, transparent);
-		border-radius: 999px;
+		border: 0;
+		border-radius: var(--wolf-radius-pill);
 		background: color-mix(in srgb, #{$c-base} 92%, transparent);
 	}
 
