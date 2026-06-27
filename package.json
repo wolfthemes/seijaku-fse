@@ -30,6 +30,7 @@
 		"lenis": "^1.3.23"
 	},
 	"devDependencies": {
+		"@guty/core": "file:../../tools/guty",
 		"@wordpress/scripts": "^30.0.0",
 		"browser-sync": "^3.0.0",
 		"browser-sync-webpack-plugin": "^2.3.0"
@@ -37,6 +38,8 @@
 	"scripts": {
 		"build": "wp-scripts build",
 		"start": "wp-scripts start",
+		"guty:test": "guty build src --out test-output",
+		"guty:theme": "guty build src --out .",
 		"lint:js": "wp-scripts lint-js \"src/scripts/**/*.js\" --no-error-on-unmatched-pattern",
 		"format:js": "wp-scripts lint-js --fix",
 		"lint:css": "wp-scripts lint-style \"src/styles/**/*.scss\"",
