@@ -18,8 +18,8 @@
 	<!-- wp:heading {"level":1,"textAlign":"center","fontSize":"hero"} -->
 	<h1 class="wp-block-heading has-text-align-center has-hero-font-size">Hi there,</h1>
 	<!-- /wp:heading -->
-	<!-- wp:paragraph {"fontSize":"md"} -->
-	<p class="has-md-font-size">I'm Constantin, the founder of WolfThemes. I design and build WordPress themes for creative people who need a site that looks sharp, works reliably, and stays easy to manage.</p>
+	<!-- wp:paragraph {"align":"center","fontSize":"md"} -->
+	<p class="has-text-align-center has-md-font-size">I'm Constantin, the founder of WolfThemes. I design and build WordPress themes for creative people who need a site that looks sharp, works reliably, and stays easy to manage.</p>
 	<!-- /wp:paragraph -->
 </section>
 <!-- /wp:group -->
