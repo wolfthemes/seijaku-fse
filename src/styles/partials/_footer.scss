@@ -31,6 +31,27 @@
 		}
 	}
 
+	&__subscribe-copy {
+		grid-column: 3;
+		margin: 0;
+
+		@include until($bp-lg) {
+			grid-column: 1;
+		}
+	}
+
+	.wolf-blocks-brevo-form,
+	.wolf-blocks-subscribe-form,
+	.wolf-blocks-mailchimp-form {
+		grid-column: 3;
+		margin-block-start: space(4);
+
+		@include until($bp-lg) {
+			grid-column: 1;
+			margin-block-start: 0;
+		}
+	}
+
 	&__logo {
 		margin: 0;
 		font-family: $f-heading;
