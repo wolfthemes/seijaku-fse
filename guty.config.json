@@ -1,0 +1,6 @@
+{
+  "blocks": [
+    "../../plugins/wolf-blocks/src/blocks",
+    "../../plugins/wolf-store/src/scripts/blocks"
+  ]
+}
