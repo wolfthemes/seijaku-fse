@@ -16,7 +16,7 @@
 		layoutType="constrained"
 		layoutContentSize="820px"
 	>
-		<Heading level={2} textAlign="center">Looking for a theme that feels right for your project?</Heading>
+		<Heading level={2} textAlign="center" mb="{10}">Looking for a theme that feels right for your project?</Heading>
 		<Buttons className="wolf-btn-lg" layoutType="flex" layoutJustifyContent="center">
 			<Button url="/wordpress-themes">Browse Themes</Button>
 		</Buttons>
