@@ -11,6 +11,10 @@ Thumbs.db
 node_modules/
 vendor/
 
+# Local AI tooling
+.claude/
+graphify-out/
+
 # Build output
 build/
 
