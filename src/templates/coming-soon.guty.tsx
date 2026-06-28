@@ -16,7 +16,7 @@
 			<Heading level={1} textAlign="center" fontSize="hero" style={{ typography: { textTransform: "uppercase", letterSpacing: "0", lineHeight: "0.95" } }}>Coming Soon</Heading>
 			<Paragraph textAlign="center" className="wolf-tagline">The new WolfThemes store opens July 1 with fresh WordPress themes built for creators, musicians, and ambitious brands.</Paragraph>
 			<Container mt={7} layoutType="flex" layoutJustifyContent="center">
-				<Block name="wolf-blocks/countdown" targetDate="2026-07-01T00:00:00" label="" fontSize="3-xl" />
+				<Block name="wolf-blocks/countdown" targetDate="2026-07-01T08:00:00" label="" fontSize="3-xl" />
 			</Container>
 		</Container>
 	</Cover>

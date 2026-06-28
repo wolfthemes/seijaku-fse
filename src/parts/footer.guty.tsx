@@ -9,7 +9,7 @@
 			<Pattern slug="seijaku-fse/logo-mark-light" />
 			<Paragraph className="wolf-footer__tagline">Themes built to look sharp, move fast, and convert.</Paragraph>
 			<Paragraph fontSize="xs">Subscribe to get updates, fresh releases, and coupon codes straight to your inbox.</Paragraph>
-			<Block name="wolf-blocks/brevo-form" />
+			<Block name="wolf-blocks/brevo-form" listId="3" />
 		</Container>
 
 		<Container align="wide" className="wolf-footer__nav">
