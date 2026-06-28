@@ -14,8 +14,8 @@
 		className="wolf-music-themes-cta is-dark has-texture"
 	>
 		<Container layoutType="constrained" layoutContentSize="820px">
-			<Heading level={2} textAlign="center" fontSize="2-xl">36,000+ musicians trust WolfThemes. Build your presence today.</Heading>
-			<Buttons layoutType="flex" layoutJustifyContent="center">
+			<Heading level={2} mb="{6}" textAlign="center" fontSize="2-xl">36,000+ musicians trust WolfThemes. Build your presence today.</Heading>
+			<Buttons className="wolf-btn-lg" layoutType="flex" layoutJustifyContent="center">
 				<Button url="/theme-category/music/">Explore Music Themes</Button>
 			</Buttons>
 		</Container>
