@@ -6,7 +6,7 @@
 
 <Page>
 	<Cover
-		url={ `<?php echo esc_url( get_theme_file_uri() . '/assets/images/music-themes-cta-bg.jpg' ); ?>` }
+		url="../assets/images/music-themes-cta-bg.jpg"
 		dimRatio={ 60 }
 		minHeight={ 440 }
 		minHeightUnit="px"

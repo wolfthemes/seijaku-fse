@@ -6,8 +6,8 @@
 
 <Page>
 	<Cover
-		url={ `<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>` }
-		dimRatio={ 40 }
+		url="../assets/images/hero-music-themes.jpg"
+		dimRatio={ 30 }
 		minHeight={ 72 }
 		minHeightUnit="vh"
 		align="full"

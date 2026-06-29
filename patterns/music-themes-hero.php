@@ -9,8 +9,8 @@
 
 ?>
 
-<!-- wp:cover {"url":"\u003c?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?\u003e","dimRatio":40,"minHeight":72,"minHeightUnit":"vh","align":"full","className":"wolf-music-themes-hero is-dark has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|9"}}}} -->
-<div class="wp-block-cover alignfull wolf-music-themes-hero is-dark has-texture" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--9);min-height:72vh"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-40 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+<!-- wp:cover {"url":"\u003c?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?\u003e","dimRatio":30,"minHeight":72,"minHeightUnit":"vh","align":"full","className":"wolf-music-themes-hero is-dark has-texture","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|9"}}}} -->
+<div class="wp-block-cover alignfull wolf-music-themes-hero is-dark has-texture" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--9);min-height:72vh"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-music-themes.jpg' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
 <!-- wp:group {"className":"wolf-music-themes-hero__content","layout":{"type":"constrained","contentSize":"920px"}} -->
 <div class="wp-block-group wolf-music-themes-hero__content">
 	<!-- wp:paragraph {"className":"wolf-hero__eyebrow wolf-eyebrow"} -->
