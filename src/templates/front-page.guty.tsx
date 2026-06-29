@@ -7,4 +7,4 @@
 		<Pattern slug="seijaku-fse/home-music-themes-cta" />
 	</Main>
 	<Footer slug="footer" />
-</Page>
+</Page>;

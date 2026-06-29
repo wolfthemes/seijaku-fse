@@ -11,9 +11,18 @@
 		layoutType="constrained"
 		layoutContentSize="var(--wp--style--global--wide-size)"
 	>
-		<Block name="wolf-store/theme-index" perPage={12} pagination="none" orderby="featured" order="DESC" cardHeading="h2" />
+		<Block
+			name="wolf-store/theme-index"
+			perPage={ 12 }
+			pagination="none"
+			orderby="featured"
+			order="DESC"
+			cardHeading="h2"
+		/>
 		<Buttons layoutType="flex" layoutJustifyContent="center">
-			<Button className="is-style-outline" url="/wordpress-themes">See All Themes</Button>
+			<Button className="is-style-outline" url="/wordpress-themes">
+				See All Themes
+			</Button>
 		</Buttons>
 	</Section>
-</Page>
+</Page>;

@@ -12,7 +12,13 @@
 		layoutType="constrained"
 		layoutContentSize="760px"
 	>
-		<Heading level={1} textAlign="center" fontSize="hero">Get in Touch</Heading>
-		<Paragraph textAlign="center" fontSize="md">Use the options below to reach WolfThemes about services, presale questions, theme support, or general requests. Choose the closest match so your message lands in the right place.</Paragraph>
+		<Heading level={ 1 } textAlign="center" fontSize="hero">
+			Get in Touch
+		</Heading>
+		<Paragraph textAlign="center" fontSize="md">
+			Use the options below to reach WolfThemes about services, presale
+			questions, theme support, or general requests. Choose the closest
+			match so your message lands in the right place.
+		</Paragraph>
 	</Section>
-</Page>
+</Page>;

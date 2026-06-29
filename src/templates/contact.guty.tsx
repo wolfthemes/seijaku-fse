@@ -6,4 +6,4 @@
 		<Pattern slug="seijaku-fse/contact-form" />
 	</Main>
 	<Footer slug="footer" />
-</Page>
+</Page>;

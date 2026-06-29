@@ -9,4 +9,4 @@
 		<Pattern slug="seijaku-fse/music-themes-cta" />
 	</Main>
 	<Footer slug="footer" />
-</Page>
+</Page>;

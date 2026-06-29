@@ -8,9 +8,9 @@
 	<Block
 		name="wolf-blocks/marquee"
 		className="is-dark"
-		text={` LAUNCH OFFER <span class="wolf-blocks-marquee__item-separator">✦</span> 20% OFF STOREWIDE <span class="wolf-blocks-marquee__item-separator">✦</span> LIMITED TIME ONLY <span class="wolf-blocks-marquee__item-separator">✦</span> `}
+		text={ ` LAUNCH OFFER <span class="wolf-blocks-marquee__item-separator">✦</span> 20% OFF STOREWIDE <span class="wolf-blocks-marquee__item-separator">✦</span> LIMITED TIME ONLY <span class="wolf-blocks-marquee__item-separator">✦</span> ` }
 		direction="left"
-		animationDuration={30}
+		animationDuration={ 30 }
 		mt="0"
 	/>
-</Page>
+</Page>;

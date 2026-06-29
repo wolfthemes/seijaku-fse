@@ -10,4 +10,4 @@
 		<Pattern slug="seijaku-fse/services-tweaks-faq" />
 	</Main>
 	<Footer slug="footer" />
-</Page>
+</Page>;
