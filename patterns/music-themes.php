@@ -24,5 +24,3 @@
 	<!-- /wp:buttons -->
 </section>
 <!-- /wp:group -->
-ection>
-<!-- /wp:group -->
