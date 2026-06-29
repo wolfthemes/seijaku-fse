@@ -12,7 +12,14 @@
 		layoutType="constrained"
 		layoutContentSize="900px"
 	>
-		<Heading level={2} textAlign="center" fontSize="2-xl">Premium WordPress themes work best when the setup is clean from day one.</Heading>
-		<Paragraph textAlign="center" fontSize="md">WolfThemes installation and customization services help you launch faster, configure the essentials correctly, and adapt your theme to your content without unnecessary complexity.</Paragraph>
+		<Heading level={ 2 } textAlign="center" fontSize="2-xl">
+			Premium WordPress themes work best when the setup is clean from day
+			one.
+		</Heading>
+		<Paragraph textAlign="center" fontSize="md">
+			WolfThemes installation and customization services help you launch
+			faster, configure the essentials correctly, and adapt your theme to
+			your content without unnecessary complexity.
+		</Paragraph>
 	</Section>
 </Page>

@@ -1,2 +1,1 @@
-<Page>
-</Page>
+<Page></Page>

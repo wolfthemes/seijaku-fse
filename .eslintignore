@@ -1,3 +1,5 @@
 build/
 node_modules/
 vendor/
+# guty DSL files — not standard TS/TSX, formatter breaks the syntax
+**/*.guty.tsx

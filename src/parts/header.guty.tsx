@@ -25,9 +25,16 @@
 				<NavigationLink label="Store" url="/wordpress-themes" />
 				<NavigationLink label="Services" url="/services" />
 				<NavigationLink label="Contact" url="/contact" />
-				<Button className="wolf-header__cta wolf-header__cta--drawer" url="/wordpress-themes">Browse Themes</Button>
+				<Button
+					className="wolf-header__cta wolf-header__cta--drawer"
+					url="/wordpress-themes"
+				>
+					Browse Themes
+				</Button>
 			</Navigation>
-			<Button className="wolf-header__cta" url="/wordpress-themes">Browse Themes</Button>
+			<Button className="wolf-header__cta" url="/wordpress-themes">
+				Browse Themes
+			</Button>
 		</Container>
 	</Container>
 </Page>

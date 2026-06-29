@@ -33,11 +33,14 @@
 		"@guty/core": "file:../../tools/guty",
 		"@wordpress/scripts": "^30.0.0",
 		"browser-sync": "^3.0.0",
-		"browser-sync-webpack-plugin": "^2.3.0"
+		"browser-sync-webpack-plugin": "^2.3.0",
+		"concurrently": "^10.0.3"
 	},
 	"scripts": {
-		"build": "wp-scripts build",
-		"start": "wp-scripts start",
+		"build": "(guty build src --out . || true) && wp-scripts build",
+		"start": "node ./node_modules/concurrently/dist/bin/index.js --kill-others --names guty,wp \"npm run start:guty\" \"npm run start:wp\"",
+		"start:guty": "guty watch src --out .",
+		"start:wp": "wp-scripts start",
 		"guty:test": "guty build src --out test-output",
 		"guty:theme": "guty build src --out .",
 		"lint:js": "wp-scripts lint-js \"src/scripts/**/*.js\" --no-error-on-unmatched-pattern",
