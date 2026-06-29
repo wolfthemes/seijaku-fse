@@ -27,7 +27,7 @@
 	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--7)">
 		<!-- wp:wolf-blocks/countdown {"targetDate":"2026-07-01T08:00:00","label":"","fontSize":"3-xl"} /-->
 		<!-- wp:paragraph {"align":"center","className":"wolf-tagline"} -->
-		<p class="has-text-align-center wolf-tagline">Join the launch list and get 30% off your first WolfThemes theme when the new store opens.</p>
+		<p class="has-text-align-center wolf-tagline">Join the launch list and get 30% off your first WolfThemes theme when the new store opens - only 24hrs left!</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:wolf-blocks/brevo-form {"listId":"3"} /-->
 	</div>
