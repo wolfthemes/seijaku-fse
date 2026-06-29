@@ -8,8 +8,10 @@
 
 // Smooth in-page anchor scrolling, offset for the sticky header. Lenis adds
 // .lenis to <html>; native smooth scrolling stays as the no-JS fallback only.
+// --wolf-header-overlay-offset is set by JS when a marquee sits above the
+// overlay header (e.g. the music themes page offer banner).
 html {
-	scroll-padding-top: calc(var(--wolf-header-h) + #{space(5)});
+	scroll-padding-top: calc(var(--wolf-header-h) + var(--wolf-header-overlay-offset, 0px) + #{space(5)});
 }
 
 html:not(.lenis) {
