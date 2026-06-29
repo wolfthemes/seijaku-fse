@@ -17,7 +17,7 @@
 		<p class="wolf-hero__eyebrow wolf-eyebrow">36,000+ customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 4.5/5 on ThemeForest <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:heading {"level":1,"className":"wolf-hero__title"} -->
-		<h1 class="wp-block-heading wolf-hero__title">WordPress Themes for Musicians, Artists &amp; <span class="wolf-brush">Creators</span></h1>
+		<h1 class="wp-block-heading wolf-hero__title">WordPress Themes for Musicians, Artists &amp; Creators</h1>
 		<!-- /wp:heading -->
 		<!-- wp:paragraph {"align":"center","className":"wolf-hero__tagline wolf-hero__text-line wolf-tagline"} -->
 		<p class="has-text-align-center wolf-hero__tagline wolf-hero__text-line wolf-tagline">Handcrafted themes. Direct support from the person who built them.</p>
