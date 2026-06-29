@@ -18,7 +18,7 @@
 	<p class="wolf-eyebrow">WolfThemes Services</p>
 	<!-- /wp:paragraph -->
 	<!-- wp:heading {"level":1,"fontSize":"hero"} -->
-	<h1 class="wp-block-heading has-hero-font-size">Installation &amp; Customization Services</h1>
+	<h1 class="wp-block-heading has-hero-font-size">Installation & Customization Services</h1>
 	<!-- /wp:heading -->
 	<!-- wp:paragraph {"fontSize":"md"} -->
 	<p class="has-md-font-size">Fast, hassle-free setup for WolfThemes WordPress themes,<br> from clean installation to custom website setup.</p>

@@ -53,7 +53,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:heading {"level":3,"fontSize":"md"} -->
-			<h3 class="wp-block-heading has-md-font-size">Video &amp; Photo Galleries</h3>
+			<h3 class="wp-block-heading has-md-font-size">Video & Photo Galleries</h3>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph -->
 			<p>A set of ready-to-use gallery layouts for your photos, videos, and artist visuals.</p>
