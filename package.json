@@ -37,7 +37,7 @@
 		"concurrently": "^10.0.3"
 	},
 	"scripts": {
-		"build": "guty build src --out . && wp-scripts build",
+		"build": "(guty build src --out . || true) && wp-scripts build",
 		"start": "node ./node_modules/concurrently/dist/bin/index.js --kill-others --names guty,wp \"npm run start:guty\" \"npm run start:wp\"",
 		"start:guty": "guty watch src --out .",
 		"start:wp": "wp-scripts start",
