@@ -28,6 +28,8 @@
 	vertical-align: bottom;
 	// Height set via JS to exactly one word's offsetHeight.
 	overflow: hidden;
+	// Left-align words regardless of the parent heading's text-align.
+	text-align: left;
 }
 
 .wolf-rotating-words__inner {

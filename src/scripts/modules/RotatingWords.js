@@ -3,7 +3,6 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
 gsap.registerPlugin( DrawSVGPlugin );
 
-// Seconds each word stays fully visible.
 const DWELL = 2.2;
 
 export default class RotatingWords {
@@ -25,20 +24,27 @@ export default class RotatingWords {
 		);
 		this.svgs = Array.from( this.el.querySelectorAll( '.wolf-word-svg' ) );
 		this.paths = this.svgs.map( ( s ) => s.querySelector( 'path' ) );
+
+		// Original word count before cloning.
+		this.count = this.words.length;
 		this.current = 0;
 
-		// Clip height = one word's rendered height (text only, no SVG padding).
-		// Must run after layout — words are display:block in the inner stack.
+		// Clone first word + SVG and append to the end so the carousel can
+		// slide forward through Musicians → Artists → Creators → Musicians
+		// without ever reversing.
+		this._appendClone();
+
+		// Set clip height to one word's rendered line height.
 		if ( this.clip && this.words[ 0 ] ) {
 			this.clip.style.height = this.words[ 0 ].offsetHeight + 'px';
 		}
 
-		// All underlines hidden; only word-0 SVG visible.
+		// All underlines invisible; word-0 SVG ready to draw.
 		gsap.set( this.paths, { drawSVG: '0%' } );
 		gsap.set( this.svgs, { opacity: 0 } );
 		gsap.set( this.svgs[ 0 ], { opacity: 1 } );
 
-		// Draw in the first underline after page-load animations settle.
+		// Draw in the first underline after page load settles.
 		gsap.to( this.paths[ 0 ], {
 			drawSVG: '100%',
 			duration: 1,
@@ -48,34 +54,68 @@ export default class RotatingWords {
 		} );
 	}
 
+	_appendClone() {
+		// Clone word[0] into the inner stack.
+		const wordClone = this.words[ 0 ].cloneNode( true );
+		this.inner.appendChild( wordClone );
+
+		// Clone svg[0] as a sibling of the other SVGs.
+		const svgClone = this.svgs[ 0 ].cloneNode( true );
+		this.el.appendChild( svgClone );
+
+		// Refresh node lists to include the clones.
+		this.words = Array.from(
+			this.el.querySelectorAll( '.wolf-rotating-word' )
+		);
+		this.svgs = Array.from( this.el.querySelectorAll( '.wolf-word-svg' ) );
+		this.paths = this.svgs.map( ( s ) => s.querySelector( 'path' ) );
+
+		// Clone starts hidden.
+		gsap.set( this.svgs[ this.count ], { opacity: 0 } );
+		gsap.set( this.paths[ this.count ], { drawSVG: '0%' } );
+	}
+
 	_scheduleNext() {
 		gsap.delayedCall( DWELL, () => this._transition() );
 	}
 
 	_transition() {
 		const from = this.current;
-		const to = ( from + 1 ) % this.words.length;
+		const to = from + 1; // always slide forward
 		const wordH = this.words[ 0 ].offsetHeight;
 
 		const tl = gsap.timeline( {
 			onComplete: () => {
-				this.current = to;
+				if ( to === this.count ) {
+					// We just showed the clone (Musicians again). Snap back to the
+					// real word-0 position instantly — no visible jump because the
+					// clone and word-0 look identical.
+					gsap.set( this.inner, { y: 0 } );
+					gsap.set( this.svgs[ to ], { opacity: 0 } );
+					gsap.set( this.paths[ to ], { drawSVG: '0%' } );
+					gsap.set( this.svgs[ 0 ], { opacity: 1 } );
+					gsap.set( this.paths[ 0 ], { drawSVG: '100%' } );
+					this.current = 0;
+				} else {
+					this.current = to;
+				}
+
 				this._scheduleNext();
 			},
 		} );
 
-		// 1. Underline draws out.
+		// 1. Reverse the outgoing underline.
 		tl.to( this.paths[ from ], {
 			drawSVG: '0%',
 			duration: 0.5,
 			ease: 'power2.in',
 		} );
 
-		// 2. Swap visible SVG (instant, mid-slide).
+		// 2. Swap which SVG is visible (instant, mid-slide).
 		tl.set( this.svgs[ from ], { opacity: 0 } );
 		tl.set( this.svgs[ to ], { opacity: 1 } );
 
-		// 3. Slide the inner stack upward — old word exits top, new enters from below.
+		// 3. Slide inner upward — old word exits top, new enters from below.
 		tl.to(
 			this.inner,
 			{
@@ -86,7 +126,7 @@ export default class RotatingWords {
 			'-=0.35'
 		);
 
-		// 4. Draw in the next underline.
+		// 4. Draw in the incoming underline.
 		tl.to(
 			this.paths[ to ],
 			{
