@@ -35,7 +35,7 @@
 					<Buttons layoutType="flex" layoutJustifyContent="right">
 						<Button
 							className="wolf-btn-lg"
-							url="./wordpress-music-themes"
+							url="./music-wordpress-themes"
 						>
 							Discover Music Themes
 						</Button>
