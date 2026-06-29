@@ -9,10 +9,10 @@
 
 ?>
 
-<!-- wp:group {"tagName":"section","backgroundColor":"base-2","className":"wolf-music-features wolf-section-pad","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained","contentSize":"var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002dglobal\u002d\u002dwide-size)"}} -->
-<section class="wp-block-group alignfull has-base-2-background-color has-background wolf-music-features wolf-section-pad" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
-	<!-- wp:heading {"level":2,"textAlign":"center","className":"wolf-section-title"} -->
-	<h2 class="wp-block-heading has-text-align-center wolf-section-title">All You Need to Build Your Presence Online</h2>
+<!-- wp:group {"tagName":"section","backgroundColor":"base-2","className":"wolf-music-features wolf-section-pad\u002d\u002dbig","align":"full","layout":{"type":"constrained","contentSize":"var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002dglobal\u002d\u002dwide-size)"}} -->
+<section class="wp-block-group alignfull has-base-2-background-color has-background wolf-music-features wolf-section-pad--big">
+	<!-- wp:heading {"level":2,"textAlign":"center","className":"wolf-section-title","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|8"}}}} -->
+	<h2 class="wp-block-heading has-text-align-center wolf-section-title" style="margin-bottom:var(--wp--preset--spacing--8)">All You Need to Build Your Presence Online</h2>
 	<!-- /wp:heading -->
 	<!-- wp:columns {"className":"wolf-music-features__grid"} -->
 	<div class="wp-block-columns wolf-music-features__grid">

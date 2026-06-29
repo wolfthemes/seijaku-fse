@@ -6,15 +6,13 @@
 
 <Page>
 	<Section
-		className="wolf-music-features wolf-section-pad"
+		className="wolf-music-features wolf-section-pad--big"
 		backgroundColor="base-2"
 		align="full"
-		pt={ 10 }
-		pb={ 10 }
 		layoutType="constrained"
 		layoutContentSize="var(--wp--style--global--wide-size)"
 	>
-		<Heading textAlign="center" className="wolf-section-title">
+		<Heading textAlign="center" mb="{8}" className="wolf-section-title">
 			All You Need to Build Your Presence Online
 		</Heading>
 		<Columns className="wolf-music-features__grid">
