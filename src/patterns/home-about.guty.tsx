@@ -32,6 +32,13 @@
 					the theme, not a queue. That's the whole reason I started
 					selling direct.
 				</Paragraph>
+				<Image
+					width="120px"
+					sizeSlug="thumbnail"
+					src="../assets/images/signature.png"
+					alt="Signature"
+					linkDestination="none"
+				/>
 			</Column>
 			<Column width="40%" className="wolf-about__pullquote">
 				<Paragraph>{ `14 years.<br>36,000 customers.<br>4.5/5 out of 1600+ ratings.<br>One person who still answers the emails.` }</Paragraph>
