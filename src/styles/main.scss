@@ -24,6 +24,7 @@
 
 // Page sections (front-page.html) — built incrementally
 @use "partials/hero";
+@use "partials/rotating-words";
 @use "partials/about";
 @use "partials/music-cta";
 @use "partials/marquee";

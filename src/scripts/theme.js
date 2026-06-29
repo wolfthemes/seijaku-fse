@@ -5,6 +5,7 @@
 import autoBind from 'auto-bind';
 import Details from './modules/Details';
 import HeroCollage from './modules/HeroCollage';
+import RotatingWords from './modules/RotatingWords';
 import SmoothScroll from './modules/SmoothScroll';
 import StickyHeader from './modules/StickyHeader';
 
@@ -29,6 +30,7 @@ class SeijakuFse {
 		this.initMobileNav();
 		// this.initHeroCollage();
 		this.initDetails();
+		this.initRotatingWords();
 	}
 
 	initSmoothScroll() {
@@ -234,6 +236,10 @@ class SeijakuFse {
 
 	initDetails() {
 		this.details = new Details( { reduced: this.reduced } );
+	}
+
+	initRotatingWords() {
+		new RotatingWords( { reduced: this.reduced } );
 	}
 }
 

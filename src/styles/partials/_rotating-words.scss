@@ -1,0 +1,52 @@
+// =============================================================
+//  Rotating Words — animated word slot in the hero heading.
+//
+//  Structure:
+//    .wolf-rotating-words          ← inline-block, position:relative
+//      .wolf-rotating-words__clip  ← overflow:hidden, height set by JS
+//        .wolf-rotating-words__inner ← GSAP slides y
+//          .wolf-rotating-word × N ← stacked words
+//      svg.wolf-word-svg × N       ← absolutely below clip, drawSVG animated
+// =============================================================
+
+@use "tokens" as *;
+
+.wolf-rotating-words {
+	display: inline-block;
+	position: relative;
+	// No overflow:hidden here — SVGs need to render below the clip boundary.
+	vertical-align: bottom;
+	// Bottom padding creates room for the SVG underlines without affecting
+	// the clip height (which is set explicitly by JS in px).
+	padding-bottom: 0.4em;
+}
+
+.wolf-rotating-words__clip {
+	// Height set via JS to exactly one word's offsetHeight.
+	// overflow:hidden clips the sliding inner stack to one word at a time.
+	overflow: hidden;
+}
+
+.wolf-rotating-words__inner {
+	// GSAP animates translateY on this to cycle words.
+	will-change: transform;
+}
+
+.wolf-rotating-word {
+	display: block;
+	white-space: nowrap;
+}
+
+// SVG underlines: siblings of .wolf-rotating-words__clip, positioned
+// absolutely below it. Colored gold via the accent token.
+.wolf-word-svg {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.35em;
+	overflow: visible;
+	color: var(--wp--preset--color--accent);
+	// Initial state set by GSAP (opacity + drawSVG).
+	opacity: 0;
+}
