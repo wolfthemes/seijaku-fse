@@ -4,4 +4,4 @@
 // categories: text
 // package: SeijakuFSE
 
-<Page></Page>;
+<Page></Page>

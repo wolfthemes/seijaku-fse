@@ -9,4 +9,4 @@
 	<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo-black.svg' ) ); ?>"
 		class="wolf-logo" alt="WolfThemes" width="150" height="auto">
 </a>` }</Html>
-</Page>;
+</Page>

@@ -22,4 +22,4 @@
 		</Paragraph>
 		<Shortcode>{ `[contact-form-7 id="CONTACT_FORM_ID"]` }</Shortcode>
 	</Section>
-</Page>;
+</Page>

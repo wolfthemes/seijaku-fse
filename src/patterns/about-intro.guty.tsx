@@ -32,4 +32,4 @@
 			sharp, works reliably, and stays easy to manage.
 		</Paragraph>
 	</Section>
-</Page>;
+</Page>

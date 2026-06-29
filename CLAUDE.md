@@ -85,6 +85,14 @@ wolf-blocks and marked with `<!-- WOLF-BLOCKS: ... -->` placeholder comments.
 - wp-cli is not in the WP image; the sandbox blocks writing the shared DB and
   downloading binaries — ask the user to activate / verify in the browser.
 
+## Guty DSL files (`*.guty.tsx`)
+- Guty is a LOCAL DEV TOOL only — not installed in CI. The build script uses `|| true` so CI skips it gracefully.
+- `*.guty.tsx` files use a custom DSL (plain JSX, no module wrapper). They are NOT standard TypeScript/TSX.
+- **NEVER run formatters (Prettier) or linters (ESLint) on `*.guty.tsx` files** — formatters add semicolons (`;` after `</Page>`) that break guty's parser. Files are excluded via `.eslintignore` and `.prettierignore`.
+- Correct format: file starts directly with `<Page>` (no `export default`, no imports) and ends with `</Page>` — NO trailing semicolon.
+- Exception: `reference-coverage.guty.tsx` uses `export default (\n  <Page>...\n);` — that's intentional, matches the guty examples.
+- The guty tool lives at `tools/guty/`. See its README for DSL reference.
+
 ## Design tooling (skills, personal scope ~/.claude/skills)
 - `frontend-design` and `ui-ux-pro-max` are installed — use them for UI/visual
   decisions (styles, palettes, type pairing, UX review).

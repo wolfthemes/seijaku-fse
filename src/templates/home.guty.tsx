@@ -59,4 +59,4 @@
 		</Section>
 	</Main>
 	<Footer slug="footer" />
-</Page>;
+</Page>

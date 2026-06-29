@@ -26,4 +26,4 @@
 			suffix="k"
 		/>
 	</Container>
-</Page>;
+</Page>

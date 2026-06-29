@@ -5,4 +5,4 @@
 		<PostContent layoutType="constrained" />
 	</Main>
 	<Footer slug="footer" />
-</Page>;
+</Page>

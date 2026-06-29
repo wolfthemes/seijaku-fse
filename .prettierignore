@@ -3,3 +3,5 @@ node_modules/
 vendor/
 *.min.css
 *.min.js
+# guty DSL files — not standard TS/TSX, formatter breaks the syntax
+**/*.guty.tsx

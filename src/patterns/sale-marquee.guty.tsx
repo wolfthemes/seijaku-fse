@@ -13,4 +13,4 @@
 		animationDuration={ 30 }
 		mt="0"
 	/>
-</Page>;
+</Page>

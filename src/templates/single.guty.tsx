@@ -18,4 +18,4 @@
 		</Container>
 	</Main>
 	<Footer slug="footer" />
-</Page>;
+</Page>

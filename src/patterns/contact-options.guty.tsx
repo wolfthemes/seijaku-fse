@@ -75,4 +75,4 @@
 			</Column>
 		</Columns>
 	</Section>
-</Page>;
+</Page>

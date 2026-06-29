@@ -7,4 +7,4 @@
 		<Pattern slug="seijaku-fse/about-cta" />
 	</Main>
 	<Footer slug="footer" />
-</Page>;
+</Page>

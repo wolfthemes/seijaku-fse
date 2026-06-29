@@ -29,4 +29,4 @@
 			<Button url="/contact">Contact us</Button>
 		</Buttons>
 	</Section>
-</Page>;
+</Page>

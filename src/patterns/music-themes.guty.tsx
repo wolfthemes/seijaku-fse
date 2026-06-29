@@ -30,4 +30,4 @@
 			</Button>
 		</Buttons>
 	</Section>
-</Page>;
+</Page>

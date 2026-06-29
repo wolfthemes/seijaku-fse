@@ -27,4 +27,4 @@
 			<Button url="/wordpress-themes">Browse Themes</Button>
 		</Buttons>
 	</Section>
-</Page>;
+</Page>

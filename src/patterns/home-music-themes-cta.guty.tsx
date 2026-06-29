@@ -35,7 +35,7 @@
 					<Buttons layoutType="flex" layoutJustifyContent="right">
 						<Button
 							className="wolf-btn-lg"
-							url={ `<?php echo esc_url( home_url( '/music-wordpress-themes/' ) ); ?>` }
+							url="./wordpress-music-themes"
 						>
 							Discover Music Themes
 						</Button>
@@ -44,4 +44,4 @@
 			</Columns>
 		</Container>
 	</Cover>
-</Page>;
+</Page>

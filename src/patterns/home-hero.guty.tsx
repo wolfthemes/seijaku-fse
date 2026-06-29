@@ -31,4 +31,4 @@
 			</Buttons>
 		</Container>
 	</Container>
-</Page>;
+</Page>

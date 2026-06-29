@@ -12,4 +12,4 @@
 			<Paragraph>Compiled through the pattern target.</Paragraph>
 		</Container>
 	</Section>
-</Page>;
+</Page>

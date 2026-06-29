@@ -48,4 +48,4 @@
 			</Container>
 		</Container>
 	</Cover>
-</Page>;
+</Page>

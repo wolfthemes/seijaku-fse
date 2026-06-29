@@ -113,4 +113,4 @@
 			<Paragraph className="wolf-footer__legal">{ `<a href="/privacy-policy">Privacy Policy</a> &bull; <a href="/cookie-policy-eu">Cookie Policy</a>` }</Paragraph>
 		</Container>
 	</Container>
-</Page>;
+</Page>

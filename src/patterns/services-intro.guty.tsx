@@ -22,4 +22,4 @@
 			your content without unnecessary complexity.
 		</Paragraph>
 	</Section>
-</Page>;
+</Page>

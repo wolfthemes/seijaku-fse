@@ -36,4 +36,4 @@
 			/>
 		</Block>
 	</Section>
-</Page>;
+</Page>

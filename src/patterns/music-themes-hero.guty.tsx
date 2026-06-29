@@ -45,4 +45,4 @@
 			</Buttons>
 		</Container>
 	</Cover>
-</Page>;
+</Page>

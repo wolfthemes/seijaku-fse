@@ -21,4 +21,4 @@
 			match so your message lands in the right place.
 		</Paragraph>
 	</Section>
-</Page>;
+</Page>
