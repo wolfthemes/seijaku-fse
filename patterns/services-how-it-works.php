@@ -29,8 +29,8 @@
 		<!-- /wp:column -->
 		<!-- wp:column {"width":"52%","verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:52%">
-			<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/service-how-it-works.jpg' ); ?>" alt="WordPress setup workspace" width="2000" height="1333" style="border-radius:var(--wolf-radius-md)"/></figure>
+			<!-- wp:image {"src":"\u003c?php echo esc_url( get_theme_file_uri() . '/assets/images/service-how-it-works.jpg' ); ?\u003e","alt":"How it works","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"var(\u002d\u002dwolf-border-radius)"}}} -->
+			<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/service-how-it-works.jpg' ); ?>" alt="How it works" style="border-radius:var(--wolf-border-radius)"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

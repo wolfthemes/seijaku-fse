@@ -34,7 +34,10 @@
 				<Image
 					sizeSlug="large"
 					linkDestination="none"
-				>{ `<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/service-how-it-works.jpg' ); ?>" alt="WordPress setup workspace" width="2000" height="1333" style="border-radius:var(--wolf-radius-md)"/></figure>` }</Image>
+					src="../assets/images/service-how-it-works.jpg"
+					alt="How it works"
+					style={ { border: { radius: 'var(--wolf-border-radius)' } } }
+				/>
 			</Column>
 		</Columns>
 	</Section>
