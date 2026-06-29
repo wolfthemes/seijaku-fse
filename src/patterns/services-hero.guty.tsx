@@ -7,7 +7,7 @@
 
 <Page>
 	<Cover
-		url={ `<?php echo esc_url( get_theme_file_uri() . '/assets/images/hero-services.jpg' ); ?>` }
+		url="../assets/images/hero-services.jpg"
 		dimRatio={ 40 }
 		minHeight={ 72 }
 		minHeightUnit="vh"
