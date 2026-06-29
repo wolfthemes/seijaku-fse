@@ -22,19 +22,24 @@
 }
 
 .wolf-rotating-words__clip {
+	// Must be block/inline-block for height + overflow:hidden to take effect
+	// on <span> elements inside a heading.
+	display: inline-block;
+	vertical-align: bottom;
 	// Height set via JS to exactly one word's offsetHeight.
-	// overflow:hidden clips the sliding inner stack to one word at a time.
 	overflow: hidden;
 }
 
 .wolf-rotating-words__inner {
-	// GSAP animates translateY on this to cycle words.
+	display: block;
 	will-change: transform;
 }
 
 .wolf-rotating-word {
 	display: block;
 	white-space: nowrap;
+	// Identical line-height to heading so slide distance = exact word height.
+	line-height: inherit;
 }
 
 // SVG underlines: siblings of .wolf-rotating-words__clip, positioned
