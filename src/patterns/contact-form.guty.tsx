@@ -15,7 +15,7 @@
 		layoutContentSize="760px"
 	>
 		<Heading level={2} textAlign="center">Send a message</Heading>
-		<Paragraph textAlign="center">Replace the placeholder below with your active contact form shortcode.</Paragraph>
+		<Paragraph textAlign="center" mb="{6}">Fill the form below and I will get back to you shortly</Paragraph>
 		<Shortcode>{`[contact-form-7 id="CONTACT_FORM_ID"]`}</Shortcode>
 	</Section>
 </Page>
