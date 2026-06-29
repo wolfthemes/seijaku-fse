@@ -50,10 +50,12 @@ export default class SmoothScroll {
 	}
 
 	onAnchorClick = ( event ) => {
-		const anchor = event.composedPath().find(
-			( node ) => node instanceof HTMLAnchorElement && node.href
-		);
-		if ( ! anchor ) return;
+		const anchor = event
+			.composedPath()
+			.find( ( node ) => node instanceof HTMLAnchorElement && node.href );
+		if ( ! anchor ) {
+			return;
+		}
 
 		const currentUrl = new URL( window.location.href );
 		let targetUrl;
