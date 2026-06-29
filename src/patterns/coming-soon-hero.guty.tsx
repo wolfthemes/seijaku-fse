@@ -51,7 +51,12 @@
 					label=""
 					fontSize="3-xl"
 				/>
+				<Paragraph textAlign="center" className="wolf-tagline">
+Join the launch list and get 30% off your first WolfThemes theme when the new store opens.
+				</Paragraph>
+				<Block name="wolf-blocks/brevo-form" listId="3" />
 			</Container>
+
 		</Container>
 	</Cover>
 </Page>
