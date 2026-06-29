@@ -60,4 +60,13 @@
 			}
 		}
 	}
+
+	.wp-block-paragraph::after {
+		content: '';
+		display: block;
+		height: var(--wp--preset--spacing--5);
+		min-height: var(--wp--preset--spacing--5);
+		block-size: var(--wp--preset--spacing--5);
+		overflow: visible;
+	}
 }
