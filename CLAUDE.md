@@ -97,6 +97,11 @@ wolf-blocks and marked with `<!-- WOLF-BLOCKS: ... -->` placeholder comments.
 - `frontend-design` and `ui-ux-pro-max` are installed — use them for UI/visual
   decisions (styles, palettes, type pairing, UX review).
 
+## Git branch rules — CRITICAL
+- **NEVER commit, merge, or push to `master` unless the user explicitly asks.** This should be rare and always requires confirmation before acting.
+- Branch flow: `feature/*` → `dev` → `stage` → `master`
+- `dev` is the integration branch. `stage` is pre-production. `master` is production.
+
 ## Commands (from workspace root)
 n/a — this is a theme, no build step. Edit files directly, reload browser.
 
