@@ -10,7 +10,7 @@
 ?>
 
 <!-- wp:group {"tagName":"section","anchor":"featured-music-themes","className":"wolf-grid wolf-section-pad\u002d\u002dbig wolf-music-themes-grid","align":"full","layout":{"type":"constrained","contentSize":"var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002dglobal\u002d\u002dwide-size)"}} -->
-<section id="featured-music-themes" class="wp-block-group alignfull wolf-grid wolf-section-pad--big wolf-music-themes-grid">
+<section class="wp-block-group alignfull wolf-grid wolf-section-pad--big wolf-music-themes-grid">
 	<!-- wp:heading {"level":2,"textAlign":"center","className":"wolf-section-title"} -->
 	<h2 class="wp-block-heading has-text-align-center wolf-section-title">Featured Music Themes</h2>
 	<!-- /wp:heading -->
@@ -23,4 +23,6 @@
 	</div>
 	<!-- /wp:buttons -->
 </section>
+<!-- /wp:group -->
+ection>
 <!-- /wp:group -->

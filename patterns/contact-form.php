@@ -11,7 +11,7 @@
 ?>
 
 <!-- wp:group {"tagName":"section","metadata":{"name":"Contact form"},"anchor":"contact-form","className":"wolf-section-pad\u002d\u002dbig","align":"full","layout":{"type":"constrained","contentSize":"760px"}} -->
-<section id="contact-form" class="wp-block-group alignfull wolf-section-pad--big">
+<section class="wp-block-group alignfull wolf-section-pad--big">
 	<!-- wp:heading {"level":2,"textAlign":"center"} -->
 	<h2 class="wp-block-heading has-text-align-center">Send a message</h2>
 	<!-- /wp:heading -->
@@ -23,3 +23,4 @@
 	<!-- /wp:shortcode -->
 </section>
 <!-- /wp:group -->
+!-- /wp:group -->

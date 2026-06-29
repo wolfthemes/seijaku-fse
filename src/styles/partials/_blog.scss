@@ -1,0 +1,19 @@
+@use "tokens" as *;
+
+.tagcloud {
+
+	a {
+		text-decoration: none;
+		font-family: $f-body;
+		font-size: fs(xs);
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: var(--wolf-track-label);
+		color: $c-surface;
+		margin-bottom: space(3);
+
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+}
