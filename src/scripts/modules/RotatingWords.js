@@ -126,6 +126,12 @@ export default class RotatingWords {
 			const wrapper = document.createElement( 'span' );
 			wrapper.className = 'wolf-word-underlines';
 
+			// Measure actual text width before SVG injection so the underline
+			// fits the word, not the full block width of the container.
+			const range = document.createRange();
+			range.selectNodeContents( wordEl );
+			wrapper.style.width = range.getBoundingClientRect().width + 'px';
+
 			const layers = config.layers.map( ( layerCfg, layerIdx ) => {
 				const tmp = document.createElement( 'div' );
 				// ponytail: innerHTML is safe here — content is fetched from our
@@ -153,9 +159,13 @@ export default class RotatingWords {
 		// Wait one frame so the browser can measure the injected DOM.
 		await new Promise( ( r ) => requestAnimationFrame( r ) );
 
-		// Lock clip to one word height.
+		// Lock clip to one line-height only (no padding) so it doesn't inflate
+		// the inline line box. SVG bleeds below via clip-path on the clip element.
 		if ( this.clip && this.words[ 0 ] ) {
-			this.clip.style.height = this.words[ 0 ].offsetHeight + 'px';
+			const lineH = parseFloat(
+				getComputedStyle( this.words[ 0 ] ).lineHeight
+			);
+			this.clip.style.height = lineH + 'px';
 		}
 
 		// Clone word[0] + its injected SVGs for seamless infinite loop.

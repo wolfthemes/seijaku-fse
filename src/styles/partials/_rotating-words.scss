@@ -20,11 +20,13 @@
 }
 
 .wolf-rotating-words__clip {
-	// inline-block so height + overflow:hidden work on a <span> inside <h1>.
+	// inline-block so height works on a <span> inside <h1>.
 	display: inline-block;
 	vertical-align: bottom;
-	overflow: hidden;
-	// Height injected as inline px by JS after measuring first word.
+	// clip-path instead of overflow:hidden — negative bottom allows SVG underlines
+	// to bleed below the text line while still clipping during the slide transition.
+	clip-path: inset(0 0 -0.55em 0);
+	// Height injected as inline px by JS (line-height only, no padding).
 	text-align: left;
 }
 
