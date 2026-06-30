@@ -16,7 +16,13 @@ export default class HeroIntro {
 		this.onComplete = onComplete || ( () => {} );
 		this.hero = document.querySelector( '.wolf-hero' );
 
-		if ( ! this.hero || reduced ) {
+		if ( ! this.hero ) {
+			this.onComplete();
+			return;
+		}
+
+		if ( reduced ) {
+			this._showInstantly();
 			this.onComplete();
 			return;
 		}

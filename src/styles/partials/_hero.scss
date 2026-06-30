@@ -64,18 +64,16 @@
 	}
 
 	// ── Load-in intro (HeroIntro.js) ──────────────────────────────
-	// Hidden only once JS confirms it's driving the reveal — if JS never
-	// runs, nothing here is ever invisible (progressive enhancement, same
-	// contract as the .wolf-reveal system).
-	body.wolf-anim-ready & {
-
-		&__eyebrow,
-		&__title-text,
-		.wolf-rotating-words,
-		&__tagline,
-		&__actions {
-			opacity: 0;
-		}
+	// Hidden unconditionally (not gated behind a JS-added class) so there's
+	// no flash of unstyled content before theme.js attaches and runs —
+	// HeroIntro is responsible for revealing these in every code path
+	// (animated, reduced-motion, and its own error fallback).
+	&__eyebrow,
+	&__title-text,
+	.wolf-rotating-words,
+	&__tagline,
+	&__actions {
+		opacity: 0;
 	}
 
 	&__title-line-mask {
