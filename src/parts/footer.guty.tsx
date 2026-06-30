@@ -54,12 +54,12 @@
 				<Heading className="wolf-footer__head">Support</Heading>
 				<List className="wolf-footer__links">
 					<ListItem>
-						<Link href="/help-center">Help Center</Link>
-					</ListItem>
-					<ListItem>
 						<Link href="https://wiki.wolfthemes.com/">
 							Knowledge Base
 						</Link>
+					</ListItem>
+					<ListItem>
+						<Link href="/contact">Get Help</Link>
 					</ListItem>
 				</List>
 			</Container>
