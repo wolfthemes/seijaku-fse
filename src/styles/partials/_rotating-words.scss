@@ -1,6 +1,5 @@
 // =============================================================
 //  Rotating Words — animated word slot in the hero heading.
-//
 //  Structure (JS-built):
 //    .wolf-rotating-words          ← inline-block, position:relative
 //      .wolf-rotating-words__clip  ← overflow:hidden, height set by JS (px)
@@ -54,9 +53,11 @@
 	white-space: nowrap;
 	line-height: inherit;
     text-align: center;
+	// color: $c-accent;
 	// Bottom padding creates room for the absolutely-positioned SVG layers
 	// without expanding the clip (clip height is set in px by JS).
 	padding-bottom: 0.4em;
+    // color: $c-accent;
 }
 
 // Wrapper injected by JS that holds both SVG layers for one word.
@@ -70,7 +71,6 @@
 	pointer-events: none;
 }
 
-// Individual SVG layers — stretch to word width via preserveAspectRatio="none".
 .wolf-word-svg--1,
 .wolf-word-svg--2 {
 	position: absolute;
@@ -79,5 +79,5 @@
 	height: 100%;
 	overflow: visible;
 	// Accent gold from the theme palette.
-	color: var(--wp--preset--color--accent);
+	color: $c-accent;
 }

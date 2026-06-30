@@ -130,7 +130,10 @@ export default class RotatingWords {
 			);
 		} catch ( err ) {
 			// eslint-disable-next-line no-console
-			console.warn( '[RotatingWords] Could not load SVG underlines.', err );
+			console.warn(
+				'[RotatingWords] Could not load SVG underlines.',
+				err
+			);
 			return;
 		}
 
@@ -152,7 +155,7 @@ export default class RotatingWords {
 			const layers = config.layers.map( ( layerCfg, layerIdx ) => {
 				const tmp = document.createElement( 'div' );
 				// ponytail: innerHTML is safe — same-origin developer-controlled SVGs.
-				tmp.innerHTML = svgTexts[ fileIdx++ ]; // eslint-disable-line no-unsanitized/property
+				tmp.innerHTML = svgTexts[ fileIdx++ ]; // eslint-disable-line
 				const svg = tmp.querySelector( 'svg' );
 				svg.classList.add(
 					'wolf-word-svg',
