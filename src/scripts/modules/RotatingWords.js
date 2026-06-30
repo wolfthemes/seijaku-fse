@@ -85,16 +85,37 @@ export default class RotatingWords {
 		);
 		this.count = this.words.length;
 		this.current = 0;
+		this.textWidths = [];
+		this._ready = false;
+		this._startPending = false;
 
-		// Theme URL passed via wp_localize_script('seijaku-fse','seijakuFse',…).
+		// Hide until start() is called so all stacked words don't flash on load.
+		// The intro animation (SplitType) will call start() on its onComplete.
+		gsap.set( this.el, { opacity: 0 } );
+
 		const themeUrl =
 			window.seijakuFse?.themeUrl?.replace( /\/$/, '' ) || '';
 
 		this._loadAndInit( `${ themeUrl }/assets/svg/` );
 	}
 
+	/**
+	 * Begin the rotating-words cycle. Called by the hero intro animation's
+	 * onComplete so the two sequences are chained. Until that intro is built,
+	 * _loadAndInit fires a delayed auto-call — remove that call when wiring up
+	 * SplitType and call rotatingWords.start() from the intro timeline instead.
+	 */
+	start() {
+		if ( ! this._ready ) {
+			// _loadAndInit hasn't finished yet — flag so it calls start() on ready.
+			this._startPending = true;
+			return;
+		}
+		gsap.to( this.el, { opacity: 1, duration: 0.5, ease: 'power2.out' } );
+		this._drawIn( 0, 0, () => this._scheduleNext() );
+	}
+
 	async _loadAndInit( svgBase ) {
-		// Fetch all SVG files in parallel.
 		const allFiles = WORD_CONFIG.flatMap( ( w ) =>
 			w.layers.map( ( l ) => l.file )
 		);
@@ -118,7 +139,6 @@ export default class RotatingWords {
 			return;
 		}
 
-		// Inject SVGs into each word span.
 		let fileIdx = 0;
 
 		this.wordLayers = this.words.map( ( wordEl, wordIdx ) => {
@@ -126,16 +146,17 @@ export default class RotatingWords {
 			const wrapper = document.createElement( 'span' );
 			wrapper.className = 'wolf-word-underlines';
 
-			// Measure actual text width before SVG injection so the underline
-			// fits the word, not the full block width of the container.
+			// Measure text width BEFORE SVG injection — the word contains only
+			// a text node at this point so Range gives the actual glyph width.
 			const range = document.createRange();
 			range.selectNodeContents( wordEl );
-			wrapper.style.width = range.getBoundingClientRect().width + 'px';
+			const textWidth = range.getBoundingClientRect().width;
+			this.textWidths.push( textWidth );
+			wrapper.style.width = textWidth + 'px';
 
 			const layers = config.layers.map( ( layerCfg, layerIdx ) => {
 				const tmp = document.createElement( 'div' );
-				// ponytail: innerHTML is safe here — content is fetched from our
-				// own theme assets (same origin, developer-controlled SVG files).
+				// ponytail: innerHTML is safe — same-origin developer-controlled SVGs.
 				tmp.innerHTML = svgTexts[ fileIdx++ ]; // eslint-disable-line no-unsanitized/property
 				const svg = tmp.querySelector( 'svg' );
 				svg.classList.add(
@@ -156,47 +177,49 @@ export default class RotatingWords {
 			return layers;
 		} );
 
-		// Wait one frame so the browser can measure the injected DOM.
 		await new Promise( ( r ) => requestAnimationFrame( r ) );
 
-		// Lock clip to one line-height only (no padding) so it doesn't inflate
-		// the inline line box. SVG bleeds below via clip-path on the clip element.
 		if ( this.clip && this.words[ 0 ] ) {
 			const lineH = parseFloat(
 				getComputedStyle( this.words[ 0 ] ).lineHeight
 			);
 			this.clip.style.height = lineH + 'px';
+			// Initial clip width = first word's text width.
+			this.clip.style.width = this.textWidths[ 0 ] + 'px';
 		}
 
-		// Clone word[0] + its injected SVGs for seamless infinite loop.
 		this._appendClone();
 
-		// Kick off the first underline draw.
-		this._drawIn( 0, 1.2, () => this._scheduleNext() );
+		this._ready = true;
+
+		if ( this._startPending ) {
+			// start() was called before we were ready.
+			this.start();
+		} else {
+			// TODO: remove this auto-call once the SplitType hero intro is wired up.
+			// Call rotatingWords.start() from the intro timeline's onComplete instead.
+			gsap.delayedCall( 1.0, () => this.start() );
+		}
 	}
 
 	_appendClone() {
-		// cloneNode(true) copies the injected SVG wrapper too.
 		const clone = this.words[ 0 ].cloneNode( true );
 		this.inner.appendChild( clone );
 
 		const clonePaths = Array.from( clone.querySelectorAll( 'path' ) );
 		clonePaths.forEach( ( p ) => gsap.set( p, { drawSVG: '0%' } ) );
 
-		// Map clone paths to the original layer configs.
 		const cloneLayers = this.wordLayers[ 0 ].map( ( layer, i ) => ( {
 			...layer,
 			path: clonePaths[ i ],
 		} ) );
 
 		this.wordLayers.push( cloneLayers );
-		// Refresh so this.words[this.count] = the clone.
 		this.words = Array.from(
 			this.inner.querySelectorAll( '.wolf-rotating-word' )
 		);
 	}
 
-	// Draw in both layers of wordIdx, with an optional initial delay.
 	_drawIn( wordIdx, initialDelay = 0, onComplete ) {
 		const layers = this.wordLayers[ wordIdx ];
 		const tl = gsap.timeline( { delay: initialDelay, onComplete } );
@@ -216,7 +239,6 @@ export default class RotatingWords {
 		return tl;
 	}
 
-	// Draw out both layers simultaneously.
 	_drawOut( wordIdx ) {
 		const layers = this.wordLayers[ wordIdx ];
 		const tl = gsap.timeline();
@@ -240,16 +262,16 @@ export default class RotatingWords {
 		const from = this.current;
 		const to = from + 1;
 		const wordH = this.words[ 0 ].offsetHeight;
+		// Use modulo so the clone (index = this.count) maps back to word 0's width.
+		const nextWidth = this.textWidths[ to % this.count ];
 
 		const master = gsap.timeline( {
 			onComplete: () => {
 				if ( to === this.count ) {
-					// Clone just landed — snap back to real word-0 instantly.
 					gsap.set( this.inner, { y: 0 } );
 					this.wordLayers[ to ].forEach( ( { path } ) =>
 						gsap.set( path, { drawSVG: '0%' } )
 					);
-					// Restore word-0 drawn state (clone and word-0 are identical).
 					this.wordLayers[ 0 ].forEach( ( { path } ) =>
 						gsap.set( path, { drawSVG: '100%' } )
 					);
@@ -265,10 +287,15 @@ export default class RotatingWords {
 		// 1. Underlines out.
 		master.add( this._drawOut( from ), 'start' );
 
-		// 2. Slide inner stack upward — starts as draw-out finishes.
+		// 2. Slide + clip width — run in sync.
 		master.to(
 			this.inner,
 			{ y: -( to * wordH ), duration: 0.65, ease: 'power3.inOut' },
+			'start+=0.25'
+		);
+		master.to(
+			this.clip,
+			{ width: nextWidth, duration: 0.65, ease: 'power3.inOut' },
 			'start+=0.25'
 		);
 
