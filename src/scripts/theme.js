@@ -69,7 +69,6 @@ class SeijakuFse {
 	initMobileNav() {
 		this.mobileNav = new MobileNav( {
 			lenis: this.smoothScroll?.lenis ?? null,
-			reduced: this.reduced,
 		} );
 	}
 

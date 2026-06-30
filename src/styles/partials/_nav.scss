@@ -317,6 +317,16 @@
 				outline: 2px solid $c-accent;
 				outline-offset: 3px;
 			}
+
+			// WP core hides this button while the menu is open via the
+			// `hidden` attribute (swapping it for the dialog's close button).
+			// Our unconditional `display: inline-flex` above has equal
+			// selector specificity and loads after the UA stylesheet, so it
+			// wins over `[hidden]` and keeps this button's box rendered
+			// underneath the close button — a stray circle. Restore it.
+			&[hidden] {
+				display: none !important;
+			}
 		}
 	}
 
@@ -337,20 +347,13 @@
 		z-index: 1000;
 	}
 
-	// `.wolf-nav-closing` is added by MobileNav.js for one animation cycle
-	// after `is-menu-open` is removed, so the panel can slide out instead of
-	// vanishing instantly with WP's `display: none`.
-	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open,
-	.wolf-nav .wp-block-navigation__responsive-container.wolf-nav-closing {
+	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open {
 		display: flex !important;
+		pointer-events: auto;
 		// WP core adds root-padding-aware padding to the open container
 		// (.is-menu-open:not(.disable-default-overlay)) — neutralise it so
 		// the backdrop fills the viewport and the dialog hugs the edges.
 		padding: 0 !important;
-	}
-
-	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open {
-		pointer-events: auto;
 		// WP core animates the container with `overlay-menu__fade-in-animation`
 		// (a translateY(0.5em) + opacity). The translate puts a transform on
 		// the dialog's ancestor — re-rooting its `position: fixed` containing
@@ -363,18 +366,10 @@
 			var(--wolf-ease-elegant) both !important;
 	}
 
-	.wolf-nav .wp-block-navigation__responsive-container.wolf-nav-closing {
-		pointer-events: none;
-		animation: wolf-mobile-nav-fade-out var(--wolf-dur-slow)
-			var(--wolf-ease-elegant) both !important;
-	}
-
 	// WP core pads the content with `calc(2rem + 24px)` to clear its own
 	// close button — that's the gap at the top of our off-canvas panel.
 	// We position the close button ourselves, so drop it.
 	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open
-		.wp-block-navigation__responsive-container-content,
-	.wolf-nav .wp-block-navigation__responsive-container.wolf-nav-closing
 		.wp-block-navigation__responsive-container-content {
 		padding-top: 0;
 	}
@@ -403,12 +398,6 @@
 	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open
 		.wp-block-navigation__responsive-dialog {
 		animation: wolf-mobile-nav-slide-in var(--wolf-dur-slow)
-			var(--wolf-ease-elegant) both;
-	}
-
-	.wolf-nav .wp-block-navigation__responsive-container.wolf-nav-closing
-		.wp-block-navigation__responsive-dialog {
-		animation: wolf-mobile-nav-slide-out var(--wolf-dur-slow)
 			var(--wolf-ease-elegant) both;
 	}
 
@@ -457,7 +446,7 @@
 		flex: 0 0 auto;
 		border: 0;
 		border-radius: var(--wolf-radius-pill);
-		background: color-mix(in srgb, #{$c-base} 92%, transparent);
+		background: none;
 	}
 
 	.wolf-nav .wp-block-navigation-item,
@@ -564,17 +553,6 @@ body.wolf-nav-open {
 	}
 }
 
-@keyframes wolf-mobile-nav-slide-out {
-
-	from {
-		transform: translate3d(0, 0, 0);
-	}
-
-	to {
-		transform: translate3d(100%, 0, 0);
-	}
-}
-
 // Backdrop tint only (background-color, not opacity) — replaces WP's
 // translateY+opacity container animation so the dialog's horizontal slide
 // stays clean and isn't dimmed as a child of this container (see
@@ -590,13 +568,3 @@ body.wolf-nav-open {
 	}
 }
 
-@keyframes wolf-mobile-nav-fade-out {
-
-	from {
-		background-color: color-mix(in srgb, #{$c-secondary} 22%, transparent);
-	}
-
-	to {
-		background-color: transparent;
-	}
-}
