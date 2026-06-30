@@ -87,10 +87,8 @@ export default class RotatingWords {
 	}
 
 	/**
-	 * Begin the rotating-words cycle. Called by the hero intro animation's
-	 * onComplete so the two sequences are chained. Until that intro is built,
-	 * _loadAndInit fires a delayed auto-call — remove that call when wiring up
-	 * SplitType and call rotatingWords.start() from the intro timeline instead.
+	 * Begin the rotating-words cycle. Called by HeroIntro's onComplete so
+	 * the title fade-in and the rotation are chained, not racing.
 	 */
 	start() {
 		if ( ! this._ready ) {
@@ -225,12 +223,8 @@ export default class RotatingWords {
 		this._ready = true;
 
 		if ( this._startPending ) {
-			// start() was called before we were ready.
+			// start() was called before we were ready — HeroIntro's onComplete.
 			this.start();
-		} else {
-			// TODO: remove this auto-call once the SplitType hero intro is wired up.
-			// Call rotatingWords.start() from the intro timeline's onComplete instead.
-			gsap.delayedCall( 1.0, () => this.start() );
 		}
 	}
 

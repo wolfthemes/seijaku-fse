@@ -6,6 +6,7 @@ import autoBind from 'auto-bind';
 import Details from './modules/Details';
 import HeaderOverlayOffset from './modules/HeaderOverlayOffset';
 import HeaderScroll from './modules/HeaderScroll';
+import HeroIntro from './modules/HeroIntro';
 import MobileNav from './modules/MobileNav';
 import NavCurtain from './modules/NavCurtain';
 import Reveals from './modules/Reveals';
@@ -34,6 +35,7 @@ class SeijakuFse {
 		this.initMobileNav();
 		this.initDetails();
 		this.initRotatingWords();
+		this.initHeroIntro();
 		this.initSignatureReveal();
 	}
 
@@ -77,7 +79,16 @@ class SeijakuFse {
 	}
 
 	initRotatingWords() {
-		new RotatingWords( { reduced: this.reduced } );
+		this.rotatingWords = new RotatingWords( { reduced: this.reduced } );
+	}
+
+	// Title line-split fade-in runs first; rotating words only start cycling
+	// once that intro lands, so the two animations don't race each other.
+	initHeroIntro() {
+		new HeroIntro( {
+			reduced: this.reduced,
+			onComplete: () => this.rotatingWords?.start(),
+		} );
 	}
 
 	initSignatureReveal() {

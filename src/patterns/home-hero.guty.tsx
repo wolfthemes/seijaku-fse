@@ -12,7 +12,7 @@
 			layoutOrientation="vertical"
 		>
 			<Paragraph className="wolf-hero__eyebrow wolf-eyebrow">{ `36,000+ customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 4.5/5 on ThemeForest <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011` }</Paragraph>
-			<Heading level={ 1 } className="wolf-hero__title">{ `WordPress Themes for <span class="wolf-rotating-words" aria-label="Musicians, Artists &amp; Creators"><span class="wolf-rotating-words__clip"><span class="wolf-rotating-words__inner"><span class="wolf-rotating-word">Musicians</span><span class="wolf-rotating-word">Artists</span><span class="wolf-rotating-word">Creators</span></span></span></span>` }</Heading>
+			<Heading level={ 1 } className="wolf-hero__title">{ `<span class="wolf-hero__title-text">WordPress Themes for</span> <span class="wolf-rotating-words" aria-label="Musicians, Artists &amp; Creators"><span class="wolf-rotating-words__clip"><span class="wolf-rotating-words__inner"><span class="wolf-rotating-word">Musicians</span><span class="wolf-rotating-word">Artists</span><span class="wolf-rotating-word">Creators</span></span></span></span>` }</Heading>
 			<Paragraph
 				textAlign="center"
 				className="wolf-hero__tagline wolf-hero__text-line wolf-tagline"

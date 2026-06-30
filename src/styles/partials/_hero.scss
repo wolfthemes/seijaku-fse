@@ -62,4 +62,28 @@
 	&__actions {
 		margin-top: space(4);
 	}
+
+	// ── Load-in intro (HeroIntro.js) ──────────────────────────────
+	// Hidden only once JS confirms it's driving the reveal — if JS never
+	// runs, nothing here is ever invisible (progressive enhancement, same
+	// contract as the .wolf-reveal system).
+	body.wolf-anim-ready & {
+
+		&__eyebrow,
+		&__title-text,
+		.wolf-rotating-words,
+		&__tagline,
+		&__actions {
+			opacity: 0;
+		}
+	}
+
+	&__title-line-mask {
+		display: block;
+		overflow: hidden;
+	}
+
+	&__title-line {
+		display: block;
+	}
 }
