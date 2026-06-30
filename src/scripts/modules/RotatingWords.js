@@ -253,6 +253,17 @@ export default class RotatingWords {
 	}
 
 	_transition() {
+		if ( this._pendingReset ) {
+			gsap.set( this.inner, { y: 0 } );
+			this.wordLayers[ this.count ].forEach( ( { path } ) =>
+				gsap.set( path, { drawSVG: '0%' } )
+			);
+			this.wordLayers[ 0 ].forEach( ( { path } ) =>
+				gsap.set( path, { drawSVG: '100%' } )
+			);
+			this._pendingReset = false;
+		}
+
 		const from = this.current;
 		const to = from + 1;
 		const wordH = this.words[ 0 ].offsetHeight;
@@ -260,14 +271,8 @@ export default class RotatingWords {
 		const master = gsap.timeline( {
 			onComplete: () => {
 				if ( to === this.count ) {
-					gsap.set( this.inner, { y: 0 } );
-					this.wordLayers[ to ].forEach( ( { path } ) =>
-						gsap.set( path, { drawSVG: '0%' } )
-					);
-					this.wordLayers[ 0 ].forEach( ( { path } ) =>
-						gsap.set( path, { drawSVG: '100%' } )
-					);
 					this.current = 0;
+					this._pendingReset = true;
 				} else {
 					this.current = to;
 				}
