@@ -92,3 +92,6 @@ jobs:
             git pull origin stage
             rsync -a --delete /tmp/seijaku-fse-build/ build/
             rm -rf /tmp/seijaku-fse-build
+            cd /home/customer/www/staging20.wolfthemes.com/public_html
+            wp cache flush
+            curl -D - -sSX PURGE http://127.0.0.1/* -H "Host: staging20.wolfthemes.com"
