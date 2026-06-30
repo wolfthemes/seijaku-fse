@@ -25,23 +25,17 @@
 	<div class="wp-block-columns wolf-section-pad--small">
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:wolf-blocks/pricing-table {"tagline":"Theme not included","title":"Speed Optimization","price":39,"buttonText":"Order Now","buttonUrl":"https://www.paypal.com/ncp/payment/TJB86HQUEAEX4","services":["Performance optimization","Browser caching setup","Minification of CSS and JS"]} -->
-			<div class="wp-block-wolf-blocks-pricing-table wolf-blocks-pricing-table"><div class="wolf-blocks-pricing-table__header"><p class="wolf-blocks-pricing-table__tagline">Theme not included</p><h3 class="wolf-blocks-pricing-table__title">Speed Optimization</h3></div><div class="wolf-blocks-pricing-table__price"><span class="wolf-blocks-pricing-table__price-main">$39</span></div><ul class="wolf-blocks-pricing-table__services"><li>Performance optimization</li><li>Browser caching setup</li><li>Minification of CSS and JS</li></ul><div class="wolf-blocks-pricing-table__ctas"><a href="https://www.paypal.com/ncp/payment/TJB86HQUEAEX4" class="wp-element-button wolf-blocks-pricing-table__btn wolf-blocks-pricing-table__btn--primary">Order Now</a></div></div>
-			<!-- /wp:wolf-blocks/pricing-table -->
+			<!-- wp:wolf-blocks/pricing-table {"tagline":"Theme not included","title":"Speed Optimization","price":39,"buttonText":"Order Now","buttonUrl":"https://www.paypal.com/ncp/payment/TJB86HQUEAEX4","services":["Performance optimization","Browser caching setup","Minification of CSS and JS"]} /-->
 		</div>
 		<!-- /wp:column -->
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:wolf-blocks/pricing-table {"tagline":"Theme not included","title":"Basic Installation","price":49,"buttonText":"Order Now","buttonUrl":"https://www.paypal.com/ncp/payment/QRK8XZUPP7482","services":["Theme Installation","Demo Data Import"]} -->
-			<div class="wp-block-wolf-blocks-pricing-table wolf-blocks-pricing-table"><div class="wolf-blocks-pricing-table__header"><p class="wolf-blocks-pricing-table__tagline">Theme not included</p><h3 class="wolf-blocks-pricing-table__title">Basic Installation</h3></div><div class="wolf-blocks-pricing-table__price"><span class="wolf-blocks-pricing-table__price-main">$49</span></div><ul class="wolf-blocks-pricing-table__services"><li>Theme Installation</li><li>Demo Data Import</li></ul><div class="wolf-blocks-pricing-table__ctas"><a href="https://www.paypal.com/ncp/payment/QRK8XZUPP7482" class="wp-element-button wolf-blocks-pricing-table__btn wolf-blocks-pricing-table__btn--primary">Order Now</a></div></div>
-			<!-- /wp:wolf-blocks/pricing-table -->
+			<!-- wp:wolf-blocks/pricing-table {"tagline":"Theme not included","title":"Basic Installation","price":49,"buttonText":"Order Now","buttonUrl":"https://www.paypal.com/ncp/payment/QRK8XZUPP7482","services":["Theme Installation","Demo Data Import"]} /-->
 		</div>
 		<!-- /wp:column -->
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:wolf-blocks/pricing-table {"tagline":"Theme not included","title":"Complete Installation","price":69,"buttonText":"Order Now","buttonUrl":"https://www.paypal.com/ncp/payment/3FGUFHZU49H8Q","featured":true,"featuredText":"Recommended","services":["Theme Installation","Demo Data Import","Speed Optimization"]} -->
-			<div class="wp-block-wolf-blocks-pricing-table wolf-blocks-pricing-table is-featured"><span class="wolf-blocks-pricing-table__badge">Recommended</span><div class="wolf-blocks-pricing-table__header"><p class="wolf-blocks-pricing-table__tagline">Theme not included</p><h3 class="wolf-blocks-pricing-table__title">Complete Installation</h3></div><div class="wolf-blocks-pricing-table__price"><span class="wolf-blocks-pricing-table__price-main">$69</span></div><ul class="wolf-blocks-pricing-table__services"><li>Theme Installation</li><li>Demo Data Import</li><li>Speed Optimization</li></ul><div class="wolf-blocks-pricing-table__ctas"><a href="https://www.paypal.com/ncp/payment/3FGUFHZU49H8Q" class="wp-element-button wolf-blocks-pricing-table__btn wolf-blocks-pricing-table__btn--primary">Order Now</a></div></div>
-			<!-- /wp:wolf-blocks/pricing-table -->
+			<!-- wp:wolf-blocks/pricing-table {"tagline":"Theme not included","title":"Complete Installation","price":69,"buttonText":"Order Now","buttonUrl":"https://www.paypal.com/ncp/payment/3FGUFHZU49H8Q","featured":true,"featuredText":"Recommended","services":["Theme Installation","Demo Data Import","Speed Optimization"]} /-->
 		</div>
 		<!-- /wp:column -->
 	</div>

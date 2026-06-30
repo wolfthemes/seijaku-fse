@@ -27,8 +27,8 @@
 			<!-- wp:paragraph {"className":"wolf-about__text"} -->
 			<p class="wolf-about__text">When you reach out, you're talking to the person who built the theme, not a queue. That's the whole reason I started selling direct.</p>
 			<!-- /wp:paragraph -->
-			<!-- wp:image {"src":"\u003c?php echo esc_url( get_theme_file_uri() . '/assets/images/signature.svg' ); ?\u003e","alt":"Signature","sizeSlug":"thumbnail","linkDestination":"none","width":"120px"} -->
-			<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/signature.svg' ); ?>" alt="Signature" style="width:120px"/></figure>
+			<!-- wp:image {"className":"wolf-signature","src":"\u003c?php echo esc_url( get_theme_file_uri() . '/assets/images/signature.svg' ); ?\u003e","alt":"Signature","sizeSlug":"thumbnail","linkDestination":"none","width":"140px"} -->
+			<figure class="wp-block-image size-thumbnail is-resized wolf-signature"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/signature.svg' ); ?>" alt="Signature" style="width:140px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

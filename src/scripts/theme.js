@@ -4,6 +4,7 @@
 
 import autoBind from 'auto-bind';
 import Details from './modules/Details';
+import SignatureReveal from './modules/SignatureReveal';
 import HeroCollage from './modules/HeroCollage';
 import RotatingWords from './modules/RotatingWords';
 import SmoothScroll from './modules/SmoothScroll';
@@ -31,6 +32,7 @@ class SeijakuFse {
 		// this.initHeroCollage();
 		this.initDetails();
 		this.initRotatingWords();
+		this.initSignatureReveal();
 	}
 
 	initSmoothScroll() {
@@ -240,6 +242,10 @@ class SeijakuFse {
 
 	initRotatingWords() {
 		new RotatingWords( { reduced: this.reduced } );
+	}
+
+	initSignatureReveal() {
+		new SignatureReveal( { reduced: this.reduced } );
 	}
 }
 

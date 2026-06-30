@@ -120,3 +120,16 @@
 		}
 	}
 }
+
+// Inline SVG signature — constrain width, preserve aspect ratio.
+.wolf-signature {
+	margin-top: space(5);
+
+	svg {
+		width: 120px;
+		height: auto;
+		display: block;
+		color: $c-ink;
+		overflow: hidden;
+	}
+}

@@ -33,10 +33,11 @@
 					selling direct.
 				</Paragraph>
 				<Image
-					width="120px"
+					width="140px"
 					sizeSlug="thumbnail"
 					src="../assets/images/signature.svg"
 					alt="Signature"
+					className="wolf-signature"
 					linkDestination="none"
 				/>
 			</Column>
