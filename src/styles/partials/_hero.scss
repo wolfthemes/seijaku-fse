@@ -31,7 +31,7 @@
 		// Scoped under the flex inner so it beats WP's
 		// `.is-layout-flex > * { margin: 0 }` support style.
 		.wolf-hero__title {
-			margin: space(2) auto space(5);
+			margin: space(2) auto space(6);
 		}
 
 		.wolf-hero__tagline {
@@ -42,7 +42,7 @@
 	&__eyebrow {
 
 		&--separator {
-			color: $c-accent;
+			// color: $c-accent;
 		}
 	}
 
