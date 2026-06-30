@@ -1,5 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 28" fill="none">
-  <!-- Crisp brush stroke — quick diagonal sweep with natural pressure variation -->
-  <path d="M2,15 C50,8 110,20 170,12 C220,7 265,16 298,12"
-    stroke="currentColor" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 30" fill="none">
+  <!-- Fine top bristle — short, ends early, ragged upper edge -->
+  <path d="M18,8 C65,6 135,10 240,7" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.45"/>
+  <!-- Upper bristle strand -->
+  <path d="M6,11 C55,9 148,13 268,10 C280,10 290,10 296,10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+  <!-- Core stroke — the dominant bristle group -->
+  <path d="M2,14 C60,11 155,17 258,13 C272,12 286,13 297,13" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <!-- Secondary core — slight lower offset, pressure variation -->
+  <path d="M4,16 C70,13 165,19 262,15 C276,15 288,15 296,15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+  <!-- Lower bristle strand -->
+  <path d="M10,19 C72,17 168,21 270,18 C280,18 288,18 294,18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Fine bottom bristle — short, ragged lower edge -->
+  <path d="M22,22 C85,20 170,24 248,21" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.3"/>
 </svg>

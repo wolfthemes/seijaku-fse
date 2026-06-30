@@ -81,3 +81,14 @@
 	// Accent gold from the theme palette.
 	color: $c-accent;
 }
+
+// Reveal-mode SVGs (filled shapes like paintline.svg) need a taller box
+// so the brushstroke texture shows at a readable scale. The clip-path
+// animation handles show/hide instead of DrawSVG.
+.wolf-word-svg--reveal {
+	height: 0.55em;
+	// Anchor to the bottom of the underlines wrapper so the stroke sits
+	// just below the text baseline.
+	top: auto;
+	bottom: 0;
+}

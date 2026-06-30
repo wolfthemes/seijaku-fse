@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 28" fill="none">
-  <!-- Faint pencil guide line — single smooth cubic, very thin -->
-  <path d="M0,14 C100,12 200,16 300,13"
-    stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <!-- Waxy crayon base — broad soft band, like wax pigment clinging to paper grain -->
+  <path d="M0,15 C60,12 120,18 180,14 C240,10 280,17 300,15"
+    stroke="currentColor" stroke-width="11" stroke-linecap="round" fill="none" opacity="0.11"/>
 </svg>

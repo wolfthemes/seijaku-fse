@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 28" fill="none">
-  <!-- Soft diffuse brush bleed — wide stroke, low opacity, organic curve -->
-  <path d="M0,16 C80,9 160,22 300,13"
-    stroke="currentColor" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.18"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 30" fill="none">
+  <!-- Base paint wash — the pigment mass under all the bristles -->
+  <path d="M2,16 C70,8 180,22 298,14" stroke="currentColor" stroke-width="16" stroke-linecap="round" opacity="0.08"/>
+  <!-- Upper ambient bristle band -->
+  <path d="M8,9 C65,7 155,11 278,8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/>
+  <!-- Lower ambient bristle band -->
+  <path d="M14,21 C80,19 175,23 272,20" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.18"/>
 </svg>

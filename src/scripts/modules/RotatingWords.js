@@ -6,9 +6,9 @@ gsap.registerPlugin( DrawSVGPlugin );
 const DWELL = 2.2;
 
 // Per-word underline config.
-// Two layers per word: layer 0 = ambient/background, layer 1 = main stroke.
-// Files live in assets/svg/ and are fetched + injected at runtime so they
-// can be refined without touching JS.
+// animationType 'draw'   → DrawSVG stroke animation (default).
+// animationType 'reveal' → clipPath left-to-right reveal; use for filled SVGs
+//                          like paintline.svg where DrawSVG has nothing to animate.
 const WORD_CONFIG = [
 	{
 		layers: [
@@ -31,18 +31,12 @@ const WORD_CONFIG = [
 	{
 		layers: [
 			{
-				file: 'underline-artists-1.svg',
-				drawDuration: 0.5,
-				drawEase: 'power3.out',
+				file: 'paintline.svg',
+				animationType: 'reveal',
+				drawDuration: 0.75,
+				drawEase: 'power3.inOut',
 				drawDelay: 0,
-				outDuration: 0.25,
-			},
-			{
-				file: 'underline-artists-2.svg',
-				drawDuration: 0.85,
-				drawEase: 'power3.out',
-				drawDelay: 0.08,
-				outDuration: 0.3,
+				outDuration: 0.35,
 			},
 		],
 	},
@@ -65,6 +59,10 @@ const WORD_CONFIG = [
 		],
 	},
 ];
+
+// Clip values for reveal animation: hidden = right side fully clipped, shown = unclipped.
+const CLIP_HIDDEN = 'inset(0 100% 0 0)';
+const CLIP_SHOWN  = 'inset(0 0% 0 0)';
 
 export default class RotatingWords {
 	constructor( { reduced } ) {
@@ -161,14 +159,23 @@ export default class RotatingWords {
 					'wolf-word-svg',
 					`wolf-word-svg--${ layerIdx + 1 }`
 				);
-				svg.setAttribute( 'preserveAspectRatio', 'none' );
 				svg.setAttribute( 'aria-hidden', 'true' );
 				wrapper.appendChild( svg );
 
-				const path = svg.querySelector( 'path' );
-				gsap.set( path, { drawSVG: '0%' } );
+				if ( layerCfg.animationType === 'reveal' ) {
+					// Reveal mode: animate the SVG element itself with clipPath.
+					// preserveAspectRatio:none fills the wrapper box exactly.
+					svg.setAttribute( 'preserveAspectRatio', 'none' );
+					svg.classList.add( 'wolf-word-svg--reveal' );
+					gsap.set( svg, { clipPath: CLIP_HIDDEN } );
+					return { paths: [], el: svg, cfg: layerCfg };
+				}
 
-				return { path, cfg: layerCfg };
+				// Draw mode: DrawSVG on all paths in the SVG.
+				svg.setAttribute( 'preserveAspectRatio', 'none' );
+				const paths = Array.from( svg.querySelectorAll( 'path' ) );
+				paths.forEach( ( p ) => gsap.set( p, { drawSVG: '0%' } ) );
+				return { paths, el: null, cfg: layerCfg };
 			} );
 
 			wordEl.appendChild( wrapper );
@@ -203,13 +210,26 @@ export default class RotatingWords {
 		const clone = this.words[ 0 ].cloneNode( true );
 		this.inner.appendChild( clone );
 
-		const clonePaths = Array.from( clone.querySelectorAll( 'path' ) );
-		clonePaths.forEach( ( p ) => gsap.set( p, { drawSVG: '0%' } ) );
+		// Reset clone SVGs according to each layer's animation type.
+		const cloneSvgs = Array.from( clone.querySelectorAll( '.wolf-word-svg' ) );
 
-		const cloneLayers = this.wordLayers[ 0 ].map( ( layer, i ) => ( {
-			...layer,
-			path: clonePaths[ i ],
-		} ) );
+		const clonePaths = Array.from( clone.querySelectorAll( 'path' ) );
+		let pathIdx = 0;
+
+		const cloneLayers = this.wordLayers[ 0 ].map( ( layer, layerIdx ) => {
+			const cloneSvg = cloneSvgs[ layerIdx ];
+
+			if ( layer.cfg.animationType === 'reveal' ) {
+				gsap.set( cloneSvg, { clipPath: CLIP_HIDDEN } );
+				return { paths: [], el: cloneSvg, cfg: layer.cfg };
+			}
+
+			const count = layer.paths.length;
+			const paths = clonePaths.slice( pathIdx, pathIdx + count );
+			pathIdx += count;
+			paths.forEach( ( p ) => gsap.set( p, { drawSVG: '0%' } ) );
+			return { paths, el: null, cfg: layer.cfg };
+		} );
 
 		this.wordLayers.push( cloneLayers );
 		this.words = Array.from(
@@ -221,16 +241,20 @@ export default class RotatingWords {
 		const layers = this.wordLayers[ wordIdx ];
 		const tl = gsap.timeline( { delay: initialDelay, onComplete } );
 
-		layers.forEach( ( { path, cfg } ) => {
-			tl.to(
-				path,
-				{
-					drawSVG: '100%',
-					duration: cfg.drawDuration,
-					ease: cfg.drawEase,
-				},
-				cfg.drawDelay
-			);
+		layers.forEach( ( { paths, el, cfg } ) => {
+			if ( cfg.animationType === 'reveal' ) {
+				tl.to(
+					el,
+					{ clipPath: CLIP_SHOWN, duration: cfg.drawDuration, ease: cfg.drawEase },
+					cfg.drawDelay
+				);
+			} else {
+				tl.to(
+					paths,
+					{ drawSVG: '100%', duration: cfg.drawDuration, ease: cfg.drawEase },
+					cfg.drawDelay
+				);
+			}
 		} );
 
 		return tl;
@@ -240,12 +264,20 @@ export default class RotatingWords {
 		const layers = this.wordLayers[ wordIdx ];
 		const tl = gsap.timeline();
 
-		layers.forEach( ( { path, cfg } ) => {
-			tl.to(
-				path,
-				{ drawSVG: '0%', duration: cfg.outDuration, ease: 'power2.in' },
-				0
-			);
+		layers.forEach( ( { paths, el, cfg } ) => {
+			if ( cfg.animationType === 'reveal' ) {
+				tl.to(
+					el,
+					{ clipPath: CLIP_HIDDEN, duration: cfg.outDuration, ease: 'power2.in' },
+					0
+				);
+			} else {
+				tl.to(
+					paths,
+					{ drawSVG: '0%', duration: cfg.outDuration, ease: 'power2.in' },
+					0
+				);
+			}
 		} );
 
 		return tl;
@@ -258,12 +290,23 @@ export default class RotatingWords {
 	_transition() {
 		if ( this._pendingReset ) {
 			gsap.set( this.inner, { y: 0 } );
-			this.wordLayers[ this.count ].forEach( ( { path } ) =>
-				gsap.set( path, { drawSVG: '0%' } )
-			);
-			this.wordLayers[ 0 ].forEach( ( { path } ) =>
-				gsap.set( path, { drawSVG: '100%' } )
-			);
+
+			this.wordLayers[ this.count ].forEach( ( { paths, el, cfg } ) => {
+				if ( cfg.animationType === 'reveal' ) {
+					gsap.set( el, { clipPath: CLIP_HIDDEN } );
+				} else {
+					gsap.set( paths, { drawSVG: '0%' } );
+				}
+			} );
+
+			this.wordLayers[ 0 ].forEach( ( { paths, el, cfg } ) => {
+				if ( cfg.animationType === 'reveal' ) {
+					gsap.set( el, { clipPath: CLIP_SHOWN } );
+				} else {
+					gsap.set( paths, { drawSVG: '100%' } );
+				}
+			} );
+
 			this._pendingReset = false;
 		}
 

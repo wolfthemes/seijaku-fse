@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 28" fill="none">
-  <!-- Dynamic waveform: flat at edges, amplitude builds to centre then fades —
-       mimics a real audio burst playing through. Q beziers alternate above/below
-       y=14 with a bell-curve amplitude envelope. -->
-  <path d="M0,14 Q5,13.5 10,14 Q15,14.5 20,14 Q25,12 30,14 Q35,16 40,14 Q45,9 50,14 Q55,19 60,14 Q65,6 70,14 Q75,22 80,14 Q85,3 90,14 Q95,25 100,14 Q105,2 110,14 Q115,26 120,14 Q125,1 130,14 Q135,27 140,14 Q145,1 150,14 Q155,27 160,14 Q165,2 170,14 Q175,26 180,14 Q185,3 190,14 Q195,25 200,14 Q205,6 210,14 Q215,22 220,14 Q225,9 230,14 Q235,19 240,14 Q245,12 250,14 Q255,16 260,14 Q265,13 270,14 Q275,15 280,14 Q285,13.8 290,14 Q295,14.2 300,14"
-    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Audio waveform: bell-curve amplitude envelope — flat at edges, peaks at centre -->
+  <path d="M0,14 L14,14 Q17,12 20,14 Q23,16 26,14 Q29,11 32,14 Q35,17 38,14 Q41,9 44,14 Q47,19 50,14 Q53,7 56,14 Q59,21 62,14 Q65,5 68,14 Q71,23 74,14 Q77,3 80,14 Q83,25 86,14 Q89,2 92,14 Q95,26 98,14 Q101,2 104,14 Q107,26 110,14 Q113,3 116,14 Q119,25 122,14 Q125,5 128,14 Q131,23 134,14 Q137,7 140,14 Q143,21 146,14 Q149,9 152,14 Q155,19 158,14 Q161,11 164,14 Q167,17 170,14 Q173,12 176,14 Q179,16 182,14 Q185,13 188,14 L300,14"
+    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
 </svg>
