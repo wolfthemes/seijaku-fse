@@ -17,6 +17,13 @@
 	display: inline-block;
 	position: relative;
 	vertical-align: bottom;
+
+	// In the hero h1, force the rotating slot onto its own line so the
+	// line break is always consistent regardless of word width.
+	.wolf-hero__title & {
+		display: block;
+		text-align: center;
+	}
 }
 
 .wolf-rotating-words__clip {

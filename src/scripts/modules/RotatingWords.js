@@ -262,8 +262,6 @@ export default class RotatingWords {
 		const from = this.current;
 		const to = from + 1;
 		const wordH = this.words[ 0 ].offsetHeight;
-		// Use modulo so the clone (index = this.count) maps back to word 0's width.
-		const nextWidth = this.textWidths[ to % this.count ];
 
 		const master = gsap.timeline( {
 			onComplete: () => {
@@ -287,15 +285,10 @@ export default class RotatingWords {
 		// 1. Underlines out.
 		master.add( this._drawOut( from ), 'start' );
 
-		// 2. Slide + clip width — run in sync.
+		// 2. Slide inner stack upward.
 		master.to(
 			this.inner,
 			{ y: -( to * wordH ), duration: 0.65, ease: 'power3.inOut' },
-			'start+=0.25'
-		);
-		master.to(
-			this.clip,
-			{ width: nextWidth, duration: 0.65, ease: 'power3.inOut' },
 			'start+=0.25'
 		);
 
