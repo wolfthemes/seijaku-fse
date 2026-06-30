@@ -3,7 +3,7 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
 gsap.registerPlugin( DrawSVGPlugin );
 
-const DWELL = 2.2;
+const DWELL = 1.6;
 
 // Per-word underline config.
 // animationType 'draw'   → DrawSVG stroke animation (default).
@@ -43,12 +43,11 @@ const WORD_CONFIG = [
 	{
 		layers: [
 			{
-				file: 'crayonline.svg',
-				animationType: 'reveal',
-				drawDuration: 0.65,
-				drawEase: 'power3.inOut',
+				file: 'underline-creators.svg',
+				drawDuration: 0.9,
+				drawEase: 'power3.out',
 				drawDelay: 0,
-				outDuration: 0.3,
+				outDuration: 0.35,
 			},
 		],
 	},
