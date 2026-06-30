@@ -1,3 +1,8 @@
+// Hide recaptcha badge
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
 .page-template-coming-soon .cky-consent-container {
     display:none;
     visibility: hidden;
