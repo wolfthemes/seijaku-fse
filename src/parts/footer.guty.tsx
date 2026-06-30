@@ -110,7 +110,7 @@
 			<Paragraph className="wolf-footer__copy">
 				© 2026 WolfThemes
 			</Paragraph>
-			<Paragraph className="wolf-footer__legal">{ `<a href="/terms-condition">Terms & Conditions</a> &bull; <a href="/privacy-policy">Privacy Policy</a> &bull; <a href="/cookie-policy-eu">Cookie Policy</a>` }</Paragraph>
+			<Paragraph className="wolf-footer__legal">{ `<a href="/terms-condition">Terms & Conditions</a> &bull; <a href="/privacy-policy">Privacy Policy</a> &bull; <a href="/cookie-policy">Cookie Policy</a>` }</Paragraph>
 		</Container>
 	</Container>
 </Page>
