@@ -53,11 +53,20 @@ export default class MobileNav {
 		this.containers.forEach( ( container ) => {
 			const containerIsOpen =
 				container.classList.contains( 'is-menu-open' );
-			isOpen = isOpen || ( isMobile && containerIsOpen );
 
+			// animateClose() adds `wolf-nav-closing` synchronously, so check
+			// it after — the close transition must keep the lock/backdrop
+			// active for the duration of the slide-out, or the header's
+			// `backdrop-filter` comes back mid-animation and re-roots the
+			// fixed dialog's containing block (it jumps under the marquee).
 			if ( this.wasOpen.get( container ) && ! containerIsOpen ) {
 				this.animateClose( container );
 			}
+
+			const containerIsActive =
+				containerIsOpen ||
+				container.classList.contains( 'wolf-nav-closing' );
+			isOpen = isOpen || ( isMobile && containerIsActive );
 			this.wasOpen.set( container, containerIsOpen );
 		} );
 
@@ -84,7 +93,13 @@ export default class MobileNav {
 
 		container.classList.add( 'wolf-nav-closing' );
 
-		const cleanup = () => container.classList.remove( 'wolf-nav-closing' );
+		// Re-sync once the slide-out finishes so the open/lock state
+		// (wolf-nav-open class, lenis.start()) releases only now, not at the
+		// start of the close.
+		const cleanup = () => {
+			container.classList.remove( 'wolf-nav-closing' );
+			this.sync();
+		};
 
 		if ( dialog ) {
 			dialog.addEventListener( 'animationend', cleanup, { once: true } );
