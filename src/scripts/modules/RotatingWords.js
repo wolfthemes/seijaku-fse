@@ -133,10 +133,18 @@ export default class RotatingWords {
 		this.wordLayers = this.words.map( ( wordEl, wordIdx ) => {
 			const config = WORD_CONFIG[ wordIdx ];
 			const wrapper = document.createElement( 'span' );
-			wrapper.className = 'wolf-word-underlines';
+			// Modifier class per word index lets each underline's vertical
+			// offset be tuned independently in CSS (e.g. Musicians sits lower).
+			wrapper.className = `wolf-word-underlines wolf-word-underlines--${ wordIdx }`;
 
 			// Measure text width BEFORE SVG injection — the word contains only
 			// a text node at this point so Range gives the actual glyph width.
+			// Keep the text node reference so resize can re-measure it later
+			// (the hero font-size is fluid/clamped, so width shifts on resize).
+			const textNode = wordEl.firstChild;
+			this.textNodes = this.textNodes || [];
+			this.textNodes.push( textNode );
+
 			const range = document.createRange();
 			range.selectNodeContents( wordEl );
 			const textWidth = range.getBoundingClientRect().width;
@@ -196,6 +204,21 @@ export default class RotatingWords {
 
 		this._appendClone();
 
+		// Hero title font-size is fluid (clamps with viewport width), so the
+		// clip height and underline geometry measured above go stale on
+		// resize. Recompute them (debounced) instead of leaving them frozen.
+		window.addEventListener(
+			'resize',
+			() => {
+				clearTimeout( this._resizeTimer );
+				this._resizeTimer = setTimeout(
+					() => this._recalcGeometry(),
+					150
+				);
+			},
+			{ passive: true }
+		);
+
 		this._ready = true;
 
 		if ( this._startPending ) {
@@ -208,9 +231,53 @@ export default class RotatingWords {
 		}
 	}
 
+	_recalcGeometry() {
+		if ( ! this.clip || ! this.words[ 0 ] ) {
+			return;
+		}
+
+		const lineH = parseFloat(
+			getComputedStyle( this.words[ 0 ] ).lineHeight
+		);
+		this.clip.style.height = lineH + 'px';
+
+		this.words.forEach( ( wordEl, idx ) => {
+			const textNode = this.textNodes[ idx ];
+			const wrapper = wordEl.querySelector( '.wolf-word-underlines' );
+			if ( ! textNode || ! wrapper ) {
+				return;
+			}
+
+			const range = document.createRange();
+			range.selectNodeContents( textNode );
+			const textWidth = range.getBoundingClientRect().width;
+			wrapper.style.width = textWidth + 'px';
+
+			this.wordLayers[ idx ].forEach( ( { el, cfg } ) => {
+				if ( cfg.animationType !== 'reveal' || ! el ) {
+					return;
+				}
+				const vbAttr = el.getAttribute( 'viewBox' );
+				if ( ! vbAttr ) {
+					return;
+				}
+				const parts = vbAttr.trim().split( /[\s,]+/ ).map( Number );
+				const [ , , vbW, vbH ] = parts;
+				if ( vbW > 0 ) {
+					el.style.height = ( textWidth * ( vbH / vbW ) ) + 'px';
+				}
+			} );
+		} );
+
+		// Keep the slide stack aligned with the (possibly resized) word height.
+		const wordH = this.words[ 0 ].getBoundingClientRect().height;
+		gsap.set( this.inner, { y: -( this.current * wordH ) } );
+	}
+
 	_appendClone() {
 		const clone = this.words[ 0 ].cloneNode( true );
 		this.inner.appendChild( clone );
+		this.textNodes.push( clone.firstChild );
 
 		// Reset clone SVGs according to each layer's animation type.
 		const cloneSvgs = Array.from( clone.querySelectorAll( '.wolf-word-svg' ) );

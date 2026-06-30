@@ -20,7 +20,7 @@
 			cardHeading="h2"
 		/>
 		<Buttons layoutType="flex" layoutJustifyContent="center">
-			<Button className="is-style-outline" url="/wordpress-themes">
+			<Button url="/wordpress-themes">
 				See All Themes
 			</Button>
 		</Buttons>

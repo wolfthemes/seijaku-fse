@@ -14,8 +14,8 @@
 	<!-- wp:wolf-store/theme-index {"perPage":12,"pagination":"none","orderby":"featured","order":"DESC","cardHeading":"h2"} /-->
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons">
-		<!-- wp:button {"className":"is-style-outline"} -->
-		<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/wordpress-themes">See All Themes</a></div>
+		<!-- wp:button -->
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/wordpress-themes">See All Themes</a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

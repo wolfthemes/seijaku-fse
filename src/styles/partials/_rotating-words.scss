@@ -69,6 +69,11 @@
 	width: 100%;
 	height: 0.38em;
 	pointer-events: none;
+
+	// Musicians (word index 0) sits lower than the other two underlines.
+	&--0 {
+		bottom: 0.5rem;
+	}
 }
 
 .wolf-word-svg--1,

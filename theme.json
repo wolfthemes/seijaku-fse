@@ -46,7 +46,7 @@
 				{ "slug": "2-xl",    "name": "2XL (h2 · ×2.441)",     "size": "2.441rem",  "fluid": { "min": "1.953rem",  "max": "2.441rem" } },
 				{ "slug": "3-xl",    "name": "3XL (h1 · ×3.052)",     "size": "3.052rem",  "fluid": { "min": "2.25rem",   "max": "3.052rem" } },
 				{ "slug": "display", "name": "Display (page hero · ×3.815)", "size": "3.815rem",  "fluid": { "min": "2.625rem",  "max": "3.815rem" } },
-				{ "slug": "hero",    "name": "Hero (cover · ×4.768)", "size": "4.768rem",  "fluid": { "min": "3rem",      "max": "4.768rem" } }
+				{ "slug": "hero",    "name": "Hero (cover · ×4.768)", "size": "4.768rem",  "fluid": { "min": "3.8rem",    "max": "4.768rem" } }
 			]
 		},
 		"spacing": {
