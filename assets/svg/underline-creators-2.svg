@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 28" fill="none">
+  <!-- Hand-drawn line — organic wobble suggesting human gesture -->
+  <path d="M0,13 C30,11 60,16 100,12 C140,8 180,17 220,13 C255,10 280,15 300,12"
+    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+</svg>

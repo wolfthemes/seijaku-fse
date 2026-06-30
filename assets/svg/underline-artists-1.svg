@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 28" fill="none">
+  <!-- Soft diffuse brush bleed — wide stroke, low opacity, organic curve -->
+  <path d="M0,16 C80,9 160,22 300,13"
+    stroke="currentColor" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.18"/>
+</svg>

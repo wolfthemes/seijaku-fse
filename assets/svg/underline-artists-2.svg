@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 28" fill="none">
+  <!-- Crisp brush stroke — quick diagonal sweep with natural pressure variation -->
+  <path d="M2,15 C50,8 110,20 170,12 C220,7 265,16 298,12"
+    stroke="currentColor" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+</svg>

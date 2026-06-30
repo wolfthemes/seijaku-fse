@@ -1,12 +1,14 @@
 // =============================================================
 //  Rotating Words — animated word slot in the hero heading.
 //
-//  Structure:
+//  Structure (JS-built):
 //    .wolf-rotating-words          ← inline-block, position:relative
-//      .wolf-rotating-words__clip  ← overflow:hidden, height set by JS
-//        .wolf-rotating-words__inner ← GSAP slides y
-//          .wolf-rotating-word × N ← stacked words
-//      svg.wolf-word-svg × N       ← absolutely below clip, drawSVG animated
+//      .wolf-rotating-words__clip  ← overflow:hidden, height set by JS (px)
+//        .wolf-rotating-words__inner ← GSAP slides translateY
+//          .wolf-rotating-word × N ← position:relative, one per word
+//            .wolf-word-underlines ← absolute container for SVG layers
+//              svg.wolf-word-svg--1 ← ambient/background layer
+//              svg.wolf-word-svg--2 ← main stroke layer
 // =============================================================
 
 @use "tokens" as *;
@@ -14,21 +16,15 @@
 .wolf-rotating-words {
 	display: inline-block;
 	position: relative;
-	// No overflow:hidden here — SVGs need to render below the clip boundary.
 	vertical-align: bottom;
-	// Bottom padding creates room for the SVG underlines without affecting
-	// the clip height (which is set explicitly by JS in px).
-	padding-bottom: 0.4em;
 }
 
 .wolf-rotating-words__clip {
-	// Must be block/inline-block for height + overflow:hidden to take effect
-	// on <span> elements inside a heading.
+	// inline-block so height + overflow:hidden work on a <span> inside <h1>.
 	display: inline-block;
 	vertical-align: bottom;
-	// Height set via JS to exactly one word's offsetHeight.
 	overflow: hidden;
-	// Left-align words regardless of the parent heading's text-align.
+	// Height injected as inline px by JS after measuring first word.
 	text-align: left;
 }
 
@@ -39,21 +35,32 @@
 
 .wolf-rotating-word {
 	display: block;
+	position: relative;
 	white-space: nowrap;
-	// Identical line-height to heading so slide distance = exact word height.
 	line-height: inherit;
+	// Bottom padding creates room for the absolutely-positioned SVG layers
+	// without expanding the clip (clip height is set in px by JS).
+	padding-bottom: 0.4em;
 }
 
-// SVG underlines: siblings of .wolf-rotating-words__clip, positioned
-// absolutely below it. Colored gold via the accent token.
-.wolf-word-svg {
+// Wrapper injected by JS that holds both SVG layers for one word.
+.wolf-word-underlines {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 0.35em;
+	height: 0.38em;
+	pointer-events: none;
+}
+
+// Individual SVG layers — stretch to word width via preserveAspectRatio="none".
+.wolf-word-svg--1,
+.wolf-word-svg--2 {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
 	overflow: visible;
+	// Accent gold from the theme palette.
 	color: var(--wp--preset--color--accent);
-	// Initial state set by GSAP (opacity + drawSVG).
-	opacity: 0;
 }

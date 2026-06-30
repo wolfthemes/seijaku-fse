@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 28" fill="none">
+  <!-- Thin ambient baseline wave — low amplitude, full width -->
+  <path d="M0,14 Q10,12 20,14 T40,14 T60,14 T80,14 T100,14 T120,14 T140,14 T160,14 T180,14 T200,14 T220,14 T240,14 T260,14 T280,14 T300,14"
+    stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.45"/>
+</svg>

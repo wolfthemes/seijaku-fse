@@ -101,6 +101,12 @@ function seijaku_fse_enqueue_assets() {
 			$asset['version'],
 			true
 		);
+
+		wp_localize_script(
+			'seijaku-fse',
+			'seijakuFse',
+			array( 'themeUrl' => get_template_directory_uri() )
+		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'seijaku_fse_enqueue_assets' );
