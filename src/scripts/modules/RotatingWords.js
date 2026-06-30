@@ -3,7 +3,7 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
 gsap.registerPlugin( DrawSVGPlugin );
 
-const DWELL = 1.0;
+const DWELL = 0.8;
 
 // Per-word underline config.
 // animationType 'draw'   → DrawSVG stroke animation (default).
