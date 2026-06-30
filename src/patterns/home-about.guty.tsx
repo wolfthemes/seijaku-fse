@@ -33,7 +33,7 @@
 					selling direct.
 				</Paragraph>
 				<Image
-					width="140px"
+					width="160px"
 					sizeSlug="thumbnail"
 					src="../assets/images/signature.svg"
 					alt="Signature"

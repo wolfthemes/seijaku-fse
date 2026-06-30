@@ -124,6 +124,7 @@
 // Inline SVG signature — constrain width, preserve aspect ratio.
 .wolf-signature {
 	margin-top: space(5);
+    opacity: 0;
 
 	svg {
 		width: 120px;
@@ -131,5 +132,14 @@
 		display: block;
 		color: $c-ink;
 		overflow: hidden;
+
+		path {
+			fill: none;
+			stroke: currentColor;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-width: 10px; // SVG user units; ~1.26px at 120px display
+		}
 	}
 }
+
