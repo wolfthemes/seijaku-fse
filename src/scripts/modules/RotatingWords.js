@@ -55,7 +55,7 @@ const WORD_CONFIG = [
 
 // Clip values for reveal animation: hidden = right side fully clipped, shown = unclipped.
 const CLIP_HIDDEN = 'inset(0 100% 0 0)';
-const CLIP_SHOWN  = 'inset(0 0% 0 0)';
+const CLIP_SHOWN = 'inset(0 0% 0 0)';
 
 export default class RotatingWords {
 	constructor( { reduced } ) {
@@ -169,11 +169,14 @@ export default class RotatingWords {
 					// squashed — compute height from viewBox proportions + text width.
 					const vbAttr = svg.getAttribute( 'viewBox' );
 					if ( vbAttr ) {
-						const parts = vbAttr.trim().split( /[\s,]+/ ).map( Number );
+						const parts = vbAttr
+							.trim()
+							.split( /[\s,]+/ )
+							.map( Number );
 						const vbW = parts[ 2 ];
 						const vbH = parts[ 3 ];
 						if ( vbW > 0 ) {
-							svg.style.height = ( textWidth * ( vbH / vbW ) ) + 'px';
+							svg.style.height = textWidth * ( vbH / vbW ) + 'px';
 						}
 					}
 					svg.classList.add( 'wolf-word-svg--reveal' );
@@ -261,10 +264,13 @@ export default class RotatingWords {
 				if ( ! vbAttr ) {
 					return;
 				}
-				const parts = vbAttr.trim().split( /[\s,]+/ ).map( Number );
+				const parts = vbAttr
+					.trim()
+					.split( /[\s,]+/ )
+					.map( Number );
 				const [ , , vbW, vbH ] = parts;
 				if ( vbW > 0 ) {
-					el.style.height = ( textWidth * ( vbH / vbW ) ) + 'px';
+					el.style.height = textWidth * ( vbH / vbW ) + 'px';
 				}
 			} );
 		} );
@@ -280,7 +286,9 @@ export default class RotatingWords {
 		this.textNodes.push( clone.firstChild );
 
 		// Reset clone SVGs according to each layer's animation type.
-		const cloneSvgs = Array.from( clone.querySelectorAll( '.wolf-word-svg' ) );
+		const cloneSvgs = Array.from(
+			clone.querySelectorAll( '.wolf-word-svg' )
+		);
 
 		const clonePaths = Array.from( clone.querySelectorAll( 'path' ) );
 		let pathIdx = 0;
@@ -314,13 +322,21 @@ export default class RotatingWords {
 			if ( cfg.animationType === 'reveal' ) {
 				tl.to(
 					el,
-					{ clipPath: CLIP_SHOWN, duration: cfg.drawDuration, ease: cfg.drawEase },
+					{
+						clipPath: CLIP_SHOWN,
+						duration: cfg.drawDuration,
+						ease: cfg.drawEase,
+					},
 					cfg.drawDelay
 				);
 			} else {
 				tl.to(
 					paths,
-					{ drawSVG: '100%', duration: cfg.drawDuration, ease: cfg.drawEase },
+					{
+						drawSVG: '100%',
+						duration: cfg.drawDuration,
+						ease: cfg.drawEase,
+					},
 					cfg.drawDelay
 				);
 			}
@@ -337,13 +353,21 @@ export default class RotatingWords {
 			if ( cfg.animationType === 'reveal' ) {
 				tl.to(
 					el,
-					{ clipPath: CLIP_HIDDEN, duration: cfg.outDuration, ease: 'power2.in' },
+					{
+						clipPath: CLIP_HIDDEN,
+						duration: cfg.outDuration,
+						ease: 'power2.in',
+					},
 					0
 				);
 			} else {
 				tl.to(
 					paths,
-					{ drawSVG: '0%', duration: cfg.outDuration, ease: 'power2.in' },
+					{
+						drawSVG: '0%',
+						duration: cfg.outDuration,
+						ease: 'power2.in',
+					},
 					0
 				);
 			}

@@ -34,7 +34,6 @@ export default class SignatureReveal {
 
 		gsap.set( paths, { drawSVG: '0%' } );
 
-
 		// Per-path duration proportional to path length → consistent pen speed.
 		const lengths = paths.map( ( p ) => p.getTotalLength() || 1 );
 		const totalLength = lengths.reduce( ( s, l ) => s + l, 0 );

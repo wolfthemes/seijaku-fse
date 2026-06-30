@@ -2,8 +2,8 @@
  * Replace <img src="*.svg"> elements with inline SVG fetched from the same URL.
  * Preserves id, class, aria-label, role, style, and width/height attributes.
  *
- * @param {string} selector  CSS selector for img elements to inline. Defaults to img[src$=".svg"].
- * @returns {Promise<SVGSVGElement[]>}  Resolves with all successfully inlined SVG elements.
+ * @param {string} selector CSS selector for img elements to inline. Defaults to img[src$=".svg"].
+ * @return {Promise<SVGSVGElement[]>}  Resolves with all successfully inlined SVG elements.
  */
 export async function inlineSvg( selector = 'img[src$=".svg"]' ) {
 	const imgs = Array.from( document.querySelectorAll( selector ) );
@@ -35,7 +35,9 @@ async function replaceOne( img ) {
 	}
 
 	// Forward attributes from the img to the SVG.
-	if ( img.id ) svg.setAttribute( 'id', img.id );
+	if ( img.id ) {
+		svg.setAttribute( 'id', img.id );
+	}
 	if ( img.getAttribute( 'aria-label' ) ) {
 		svg.setAttribute( 'aria-label', img.getAttribute( 'aria-label' ) );
 	}
@@ -50,8 +52,12 @@ async function replaceOne( img ) {
 	classes.push( 'replaced-svg' );
 	svg.classList.add( ...classes );
 	// Preserve inline width/height style if present.
-	if ( img.style.width ) svg.style.width = img.style.width;
-	if ( img.style.height ) svg.style.height = img.style.height;
+	if ( img.style.width ) {
+		svg.style.width = img.style.width;
+	}
+	if ( img.style.height ) {
+		svg.style.height = img.style.height;
+	}
 
 	svg.removeAttribute( 'xmlns:a' );
 

@@ -2,7 +2,10 @@ export default class HeaderOverlayOffset {
 	constructor( { header } = {} ) {
 		this.header = header;
 
-		if ( ! this.header || ! this.header.classList.contains( 'wolf-header-overlay' ) ) {
+		if (
+			! this.header ||
+			! this.header.classList.contains( 'wolf-header-overlay' )
+		) {
 			return;
 		}
 
