@@ -12,7 +12,7 @@ gsap.registerPlugin( ScrollTrigger, DrawSVGPlugin );
 // back in on complete so the final look matches the original artwork.
 
 const TOTAL_DURATION = 2.0; // seconds — full signature at pen speed
-const STROKE_WIDTH = 15; // SVG units; adjust if stroke weight looks off at 120px display
+const STROKE_WIDTH = 6; // SVG units; 951px SVG at 120px display → ×0.126 scale → ~0.75px visual
 
 export default class SignatureReveal {
 	constructor( { reduced = false } = {} ) {
@@ -86,8 +86,7 @@ export default class SignatureReveal {
 				{ drawSVG: '100%', opacity: 1, duration: dur, ease: 'none' },
 				cursor
 			);
-			// ponytail: slight overlap between consecutive strokes feels like continuous pen lift
-			cursor += dur * 0.6;
+			cursor += dur; // strict sequential — each path starts only after the previous finishes
 		} );
 	}
 }

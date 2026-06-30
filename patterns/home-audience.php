@@ -17,10 +17,6 @@
 	<!-- wp:spacer {"height":"var:preset|spacing|5"} -->
 	<div style="height:var(--wp--preset--spacing--5)" aria-hidden="true" class="wp-block-spacer"></div>
 	<!-- /wp:spacer -->
-	<!-- wp:wolf-blocks/feature-grid {"columns":3} -->
-	<!-- wp:wolf-blocks/feature-grid-item {"icon":"starFilled","title":"Musicians and labels","description":"Publish releases, tours, media, and merchandise with layouts made for music-focused sites."} /-->
-	<!-- wp:wolf-blocks/feature-grid-item {"icon":"layout","title":"Studios and agencies","description":"Present work, services, case studies, and announcements with polished editorial sections."} /-->
-	<!-- wp:wolf-blocks/feature-grid-item {"icon":"tag","title":"Shops and creators","description":"Launch a flexible brand site that can support products, updates, and long-term content."} /-->
-	<!-- /wp:wolf-blocks/feature-grid -->
+	<!-- wp:wolf-blocks/feature-grid {"columns":3} /-->
 </section>
 <!-- /wp:group -->

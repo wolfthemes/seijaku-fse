@@ -82,13 +82,12 @@
 	color: $c-accent;
 }
 
-// Reveal-mode SVGs (filled shapes like paintline.svg) need a taller box
-// so the brushstroke texture shows at a readable scale. The clip-path
-// animation handles show/hide instead of DrawSVG.
+// Reveal-mode SVGs (filled shapes like paintline.svg / crayonline.svg).
+// Height is set in JS from the SVG's viewBox aspect ratio × text width,
+// so the artwork keeps its natural proportions. clip-path handles show/hide.
 .wolf-word-svg--reveal {
-	height: 0.55em;
-	// Anchor to the bottom of the underlines wrapper so the stroke sits
-	// just below the text baseline.
+	// Anchor to the bottom of the underlines wrapper (baseline of the word).
 	top: auto;
 	bottom: 0;
+	// width is already 100% from the base rule; height is inline from JS.
 }

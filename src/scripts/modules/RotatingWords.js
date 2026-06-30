@@ -43,18 +43,12 @@ const WORD_CONFIG = [
 	{
 		layers: [
 			{
-				file: 'underline-creators-1.svg',
-				drawDuration: 0.55,
-				drawEase: 'power2.inOut',
+				file: 'crayonline.svg',
+				animationType: 'reveal',
+				drawDuration: 0.65,
+				drawEase: 'power3.inOut',
 				drawDelay: 0,
-				outDuration: 0.28,
-			},
-			{
-				file: 'underline-creators-2.svg',
-				drawDuration: 0.9,
-				drawEase: 'power2.inOut',
-				drawDelay: 0.1,
-				outDuration: 0.32,
+				outDuration: 0.3,
 			},
 		],
 	},
@@ -164,8 +158,17 @@ export default class RotatingWords {
 
 				if ( layerCfg.animationType === 'reveal' ) {
 					// Reveal mode: animate the SVG element itself with clipPath.
-					// preserveAspectRatio:none fills the wrapper box exactly.
-					svg.setAttribute( 'preserveAspectRatio', 'none' );
+					// Preserve the SVG's natural aspect ratio so the artwork isn't
+					// squashed — compute height from viewBox proportions + text width.
+					const vbAttr = svg.getAttribute( 'viewBox' );
+					if ( vbAttr ) {
+						const parts = vbAttr.trim().split( /[\s,]+/ ).map( Number );
+						const vbW = parts[ 2 ];
+						const vbH = parts[ 3 ];
+						if ( vbW > 0 ) {
+							svg.style.height = ( textWidth * ( vbH / vbW ) ) + 'px';
+						}
+					}
 					svg.classList.add( 'wolf-word-svg--reveal' );
 					gsap.set( svg, { clipPath: CLIP_HIDDEN } );
 					return { paths: [], el: svg, cfg: layerCfg };
