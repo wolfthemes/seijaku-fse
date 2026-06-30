@@ -135,11 +135,10 @@
 
 		path {
 			fill: none;
-			stroke: currentColor;
+			stroke: currentcolor;
 			stroke-linecap: round;
 			stroke-linejoin: round;
 			stroke-width: 10px; // SVG user units; ~1.26px at 120px display
 		}
 	}
 }
-
