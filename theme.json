@@ -188,7 +188,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--body)",
 					"fontSize": "var(--wp--preset--font-size--xs)",
-					"fontWeight": "600",
+					"fontWeight": "700",
 					"textTransform": "uppercase",
 					"letterSpacing": "-0.01em"
 				}

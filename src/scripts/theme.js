@@ -5,7 +5,6 @@
 import autoBind from 'auto-bind';
 import Details from './modules/Details';
 import SignatureReveal from './modules/SignatureReveal';
-import HeroCollage from './modules/HeroCollage';
 import RotatingWords from './modules/RotatingWords';
 import SmoothScroll from './modules/SmoothScroll';
 import StickyHeader from './modules/StickyHeader';
@@ -29,7 +28,6 @@ class SeijakuFse {
 		this.initStickyHeader();
 		this.initNavCurtain();
 		this.initMobileNav();
-		// this.initHeroCollage();
 		this.initDetails();
 		this.initRotatingWords();
 		this.initSignatureReveal();
