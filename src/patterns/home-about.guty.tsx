@@ -35,7 +35,7 @@
 				<Image
 					width="120px"
 					sizeSlug="thumbnail"
-					src="../assets/images/signature.png"
+					src="../assets/images/signature.svg"
 					alt="Signature"
 					linkDestination="none"
 				/>
