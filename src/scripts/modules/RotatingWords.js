@@ -266,7 +266,7 @@ export default class RotatingWords {
 
 		const from = this.current;
 		const to = from + 1;
-		const wordH = this.words[ 0 ].offsetHeight;
+		const wordH = this.words[ 0 ].getBoundingClientRect().height;
 
 		const master = gsap.timeline( {
 			onComplete: () => {
