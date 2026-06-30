@@ -22,11 +22,13 @@
 			get clear next steps before any custom work begins.
 		</Paragraph>
 		<Buttons
-			className="wolf-hero__actions wolf-btn-lg"
+			className="wolf-btn-lg"
 			layoutType="flex"
 			layoutJustifyContent="center"
 		>
-			<Button url="/contact">Contact us</Button>
+			<Button url="/contact">
+				Contact us
+			</Button>
 		</Buttons>
 	</Section>
 </Page>
