@@ -27,14 +27,20 @@
 }
 
 .wolf-rotating-words__clip {
-	// inline-block so height works on a <span> inside <h1>.
 	display: inline-block;
 	vertical-align: bottom;
-	// clip-path instead of overflow:hidden — negative bottom allows SVG underlines
-	// to bleed below the text line while still clipping during the slide transition.
-	clip-path: inset(0 0 -0.45em 0);
-	// Height injected as inline px by JS (line-height only, no padding).
+	// overflow:hidden + height hides stacked words before JS runs (no flash).
+	// Height is 1.08em = h1 line-height × font-size = one visible line.
+	overflow: hidden;
+	height: 1.08em;
 	text-align: left;
+
+	// JS adds this class once it has set the exact px height and SVG is ready.
+	// Switches to clip-path so SVG underlines can bleed below the line.
+	&--active {
+		overflow: visible;
+		clip-path: inset(0 0 -0.45em 0);
+	}
 }
 
 .wolf-rotating-words__inner {
@@ -47,6 +53,7 @@
 	position: relative;
 	white-space: nowrap;
 	line-height: inherit;
+    text-align: center;
 	// Bottom padding creates room for the absolutely-positioned SVG layers
 	// without expanding the clip (clip height is set in px by JS).
 	padding-bottom: 0.4em;
@@ -56,7 +63,8 @@
 .wolf-word-underlines {
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	left: 50%;
+    transform: translateX(-50%);
 	width: 100%;
 	height: 0.38em;
 	pointer-events: none;

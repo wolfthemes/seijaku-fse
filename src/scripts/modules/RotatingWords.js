@@ -89,10 +89,6 @@ export default class RotatingWords {
 		this._ready = false;
 		this._startPending = false;
 
-		// Hide until start() is called so all stacked words don't flash on load.
-		// The intro animation (SplitType) will call start() on its onComplete.
-		gsap.set( this.el, { opacity: 0 } );
-
 		const themeUrl =
 			window.seijakuFse?.themeUrl?.replace( /\/$/, '' ) || '';
 
@@ -111,7 +107,6 @@ export default class RotatingWords {
 			this._startPending = true;
 			return;
 		}
-		gsap.to( this.el, { opacity: 1, duration: 0.5, ease: 'power2.out' } );
 		this._drawIn( 0, 0, () => this._scheduleNext() );
 	}
 
@@ -184,8 +179,7 @@ export default class RotatingWords {
 				getComputedStyle( this.words[ 0 ] ).lineHeight
 			);
 			this.clip.style.height = lineH + 'px';
-			// Initial clip width = first word's text width.
-			this.clip.style.width = this.textWidths[ 0 ] + 'px';
+			this.clip.classList.add( 'wolf-rotating-words__clip--active' );
 		}
 
 		this._appendClone();
