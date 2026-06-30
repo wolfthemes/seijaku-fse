@@ -333,23 +333,39 @@
 		border: 0;
 		overflow: hidden;
 		overscroll-behavior: contain;
-		background: color-mix(in srgb, #{$c-secondary} 22%, transparent);
+		background-color: transparent;
 		z-index: 1000;
 	}
 
-	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open {
+	// `.wolf-nav-closing` is added by MobileNav.js for one animation cycle
+	// after `is-menu-open` is removed, so the panel can slide out instead of
+	// vanishing instantly with WP's `display: none`.
+	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open,
+	.wolf-nav .wp-block-navigation__responsive-container.wolf-nav-closing {
 		display: flex !important;
-		pointer-events: auto;
 		// WP core adds root-padding-aware padding to the open container
 		// (.is-menu-open:not(.disable-default-overlay)) — neutralise it so
 		// the backdrop fills the viewport and the dialog hugs the edges.
 		padding: 0 !important;
+	}
+
+	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open {
+		pointer-events: auto;
 		// WP core animates the container with `overlay-menu__fade-in-animation`
 		// (a translateY(0.5em) + opacity). The translate puts a transform on
 		// the dialog's ancestor — re-rooting its `position: fixed` containing
 		// block and nudging it vertically, which muddies our horizontal slide.
-		// Replace it with a pure opacity fade for the backdrop only.
+		// Opacity also dims the panel nested inside (it's a child of this
+		// container), making the slide-in read as a fade too. Animate
+		// `background-color` instead — it tints the backdrop only, the panel
+		// stays fully opaque and purely slides.
 		animation: wolf-mobile-nav-fade-in var(--wolf-dur-slow)
+			var(--wolf-ease-elegant) both !important;
+	}
+
+	.wolf-nav .wp-block-navigation__responsive-container.wolf-nav-closing {
+		pointer-events: none;
+		animation: wolf-mobile-nav-fade-out var(--wolf-dur-slow)
 			var(--wolf-ease-elegant) both !important;
 	}
 
@@ -385,6 +401,12 @@
 	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open
 		.wp-block-navigation__responsive-dialog {
 		animation: wolf-mobile-nav-slide-in var(--wolf-dur-slow)
+			var(--wolf-ease-elegant) both;
+	}
+
+	.wolf-nav .wp-block-navigation__responsive-container.wolf-nav-closing
+		.wp-block-navigation__responsive-dialog {
+		animation: wolf-mobile-nav-slide-out var(--wolf-dur-slow)
 			var(--wolf-ease-elegant) both;
 	}
 
@@ -540,15 +562,39 @@ body.wolf-nav-open {
 	}
 }
 
-// Backdrop fade only — replaces WP's translateY-based container animation
-// so the dialog's horizontal slide stays clean (see .is-menu-open above).
-@keyframes wolf-mobile-nav-fade-in {
+@keyframes wolf-mobile-nav-slide-out {
 
 	from {
-		opacity: 0;
+		transform: translate3d(0, 0, 0);
 	}
 
 	to {
-		opacity: 1;
+		transform: translate3d(100%, 0, 0);
+	}
+}
+
+// Backdrop tint only (background-color, not opacity) — replaces WP's
+// translateY+opacity container animation so the dialog's horizontal slide
+// stays clean and isn't dimmed as a child of this container (see
+// .is-menu-open above).
+@keyframes wolf-mobile-nav-fade-in {
+
+	from {
+		background-color: transparent;
+	}
+
+	to {
+		background-color: color-mix(in srgb, #{$c-secondary} 22%, transparent);
+	}
+}
+
+@keyframes wolf-mobile-nav-fade-out {
+
+	from {
+		background-color: color-mix(in srgb, #{$c-secondary} 22%, transparent);
+	}
+
+	to {
+		background-color: transparent;
 	}
 }
