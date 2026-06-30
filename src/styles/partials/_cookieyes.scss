@@ -1,0 +1,33 @@
+.cky-notice * {
+    font-size:small!important;
+    line-height:1.5;
+}
+
+.cky-notice p {
+    max-width: 88ch!important;
+}
+
+.cky-title{
+     margin-bottom:0!important;
+}
+
+.cky-btn-accept {
+    background: #000!important;
+    color: #ffffff;
+    border: 1px solid #000!important;
+	border-radius: var(--wolf-radius-md);
+}
+
+.cky-btn-reject {
+    color: #000!important;
+    background: transparent;
+    border: 1px solid #000!important;
+	border-radius: var(--wolf-radius-md);
+}
+
+.cky-btn-customize {
+    color: #000!important;
+    background: transparent;
+    border: 1px solid #000!important;
+	border-radius: var(--wolf-radius-md);
+}
