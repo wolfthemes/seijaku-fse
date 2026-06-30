@@ -373,6 +373,8 @@
 	// close button — that's the gap at the top of our off-canvas panel.
 	// We position the close button ourselves, so drop it.
 	.wolf-nav .wp-block-navigation__responsive-container.is-menu-open
+		.wp-block-navigation__responsive-container-content,
+	.wolf-nav .wp-block-navigation__responsive-container.wolf-nav-closing
 		.wp-block-navigation__responsive-container-content {
 		padding-top: 0;
 	}
