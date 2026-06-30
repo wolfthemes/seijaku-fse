@@ -25,7 +25,7 @@
 	vertical-align: bottom;
 	// clip-path instead of overflow:hidden — negative bottom allows SVG underlines
 	// to bleed below the text line while still clipping during the slide transition.
-	clip-path: inset(0 0 -0.55em 0);
+	clip-path: inset(0 0 -0.45em 0);
 	// Height injected as inline px by JS (line-height only, no padding).
 	text-align: left;
 }
