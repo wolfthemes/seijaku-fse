@@ -32,7 +32,7 @@
 					Browse Themes
 				</Button>
 			</Navigation>
-			<Button className="wolf-header__cta" url="/wordpress-themes">
+			<Button className="is-style-outline wolf-header__cta" url="/wordpress-themes">
 				Browse Themes
 			</Button>
 		</Container>
