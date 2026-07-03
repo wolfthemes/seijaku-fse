@@ -29,8 +29,14 @@
 				</Paragraph>
 				<Paragraph className="wolf-about__text">
 					When you reach out, you're talking to the person who built
-					the theme, not a queue. That's the whole reason I started
-					selling direct.
+					the theme, not a queue — I reply within 24 hours, usually
+					faster. That's the whole reason I started selling direct.
+				</Paragraph>
+				<Paragraph className="wolf-about__text">
+					Know my themes from ThemeForest? These are the same themes,
+					bought direct: better support, a 7-day money-back
+					guarantee, and more of your money going to the person who
+					actually builds them.
 				</Paragraph>
 				<Image
 					width="160px"

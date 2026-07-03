@@ -17,8 +17,8 @@
 				</Column>
 				<Column width="33.33%">
 					<Paragraph fontSize="xs">
-						Subscribe to get updates, fresh releases, and coupon
-						codes straight to your inbox.
+						Get launch discounts and new theme releases. No spam —
+						I only email when it matters.
 					</Paragraph>
 					<Block name="wolf-blocks/brevo-form" listId="3" />
 				</Column>

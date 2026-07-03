@@ -63,6 +63,11 @@
 		margin-top: space(4);
 	}
 
+	&__note {
+		font-size: fs(xs);
+		color: $c-muted;
+	}
+
 	// ── Load-in intro (HeroIntro.js) ──────────────────────────────
 	// Hidden unconditionally (not gated behind a JS-added class) so there's
 	// no flash of unstyled content before theme.js attaches and runs —
@@ -72,7 +77,8 @@
 	&__title-text,
 	.wolf-rotating-words,
 	&__tagline,
-	&__actions {
+	&__actions,
+	&__note {
 		opacity: 0;
 	}
 

@@ -60,6 +60,7 @@ export default class HeroIntro {
 		const rotating = this.hero.querySelector( '.wolf-rotating-words' );
 		const tagline = this.hero.querySelector( '.wolf-hero__tagline' );
 		const actions = this.hero.querySelector( '.wolf-hero__actions' );
+		const note = this.hero.querySelector( '.wolf-hero__note' );
 
 		const split = new SplitType( titleText, {
 			types: 'lines',
@@ -80,7 +81,7 @@ export default class HeroIntro {
 
 		gsap.set( titleText, { opacity: 1 } );
 		gsap.set( lines, { yPercent: 110, opacity: 0 } );
-		gsap.set( [ eyebrow, rotating, tagline, actions ], {
+		gsap.set( [ eyebrow, rotating, tagline, actions, note ], {
 			opacity: 0,
 			y: 14,
 		} );
@@ -103,13 +104,14 @@ export default class HeroIntro {
 			)
 			.to( rotating, { opacity: 1, y: 0, duration: 0.6 }, '>-0.4' )
 			.to( tagline, { opacity: 1, y: 0, duration: 0.5 }, '<0.05' )
-			.to( actions, { opacity: 1, y: 0, duration: 0.5 }, '<0.05' );
+			.to( actions, { opacity: 1, y: 0, duration: 0.5 }, '<0.05' )
+			.to( note, { opacity: 1, y: 0, duration: 0.5 }, '<0.05' );
 	}
 
 	_showInstantly() {
 		gsap.set(
 			this.hero.querySelectorAll(
-				'.wolf-hero__eyebrow, .wolf-hero__title-text, .wolf-rotating-words, .wolf-hero__tagline, .wolf-hero__actions'
+				'.wolf-hero__eyebrow, .wolf-hero__title-text, .wolf-rotating-words, .wolf-hero__tagline, .wolf-hero__actions, .wolf-hero__note'
 			),
 			{ clearProps: 'all' }
 		);
