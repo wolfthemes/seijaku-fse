@@ -92,6 +92,14 @@ wolf-blocks and marked with `<!-- WOLF-BLOCKS: ... -->` placeholder comments.
 - Correct format: file starts directly with `<Page>` (no `export default`, no imports) and ends with `</Page>` — NO trailing semicolon.
 - Exception: `reference-coverage.guty.tsx` uses `export default (\n  <Page>...\n);` — that's intentional, matches the guty examples.
 - The guty tool lives at `tools/guty/`. See its README for DSL reference.
+- **Source of truth is `src/{templates,parts,patterns}/*.guty.tsx`, not the compiled
+  `templates/*.html`, `parts/*.html`, `patterns/*.php` at the theme root.** Always edit
+  the `.guty.tsx` source and rebuild — never hand-edit the compiled output, it gets
+  overwritten on the next build.
+- Rebuild after any `.guty.tsx` change: `npm run guty:theme` (= `guty build src --out .`,
+  writes straight into the theme root). Use `npm run start:guty` to watch instead.
+- Block roots for third-party blocks (so `<Block name="wolf-blocks/…">` etc. render
+  real save output) are configured in `guty.config.json`.
 
 ## Design tooling (skills, personal scope ~/.claude/skills)
 - `frontend-design` and `ui-ux-pro-max` are installed — use them for UI/visual

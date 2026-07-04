@@ -1,5 +1,5 @@
 <Page>
-	<Header slug="header" />
+	<Header slug="header-single-theme" />
 	<Main layoutType="default">
 		<Block name="wolf-store/theme-single" />
 	</Main>
