@@ -8,3 +8,18 @@
 @use "blocks/forms";
 @use "blocks/mailchimp-form";
 @use "blocks/countdown";
+
+// ponytail: WP core sets `.wp-block-columns { align-items: initial !important; }`,
+// which beats the non-!important verticalAlignment rule below it. Re-assert with
+// !important so `verticalAlignment` on core/columns actually applies.
+.wp-block-columns {
+	&.are-vertically-aligned-top {
+		align-items: flex-start !important;
+	}
+	&.are-vertically-aligned-center {
+		align-items: center !important;
+	}
+	&.are-vertically-aligned-bottom {
+		align-items: flex-end !important;
+	}
+}
