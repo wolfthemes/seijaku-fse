@@ -14,7 +14,7 @@
 	<!-- wp:group {"className":"wolf-hero__inner","layout":{"type":"flex","orientation":"vertical"}} -->
 	<div class="wp-block-group wolf-hero__inner">
 		<!-- wp:paragraph {"className":"wolf-hero__eyebrow wolf-eyebrow"} -->
-		<p class="wolf-hero__eyebrow wolf-eyebrow">★ 4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011</p>
+		<p class="wolf-hero__eyebrow wolf-eyebrow">4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:heading {"level":1,"className":"wolf-hero__title"} -->
 		<h1 class="wp-block-heading wolf-hero__title"><span class="wolf-hero__title-text">Websites That Sell Your</span> <span class="wolf-rotating-words" aria-label="Music, Art &amp; Work"><span class="wolf-rotating-words__clip"><span class="wolf-rotating-words__inner"><span class="wolf-rotating-word">Music</span><span class="wolf-rotating-word">Art</span><span class="wolf-rotating-word">Work</span></span></span></span></h1>
@@ -30,7 +30,7 @@
 		</div>
 		<!-- /wp:buttons -->
 		<!-- wp:paragraph {"align":"center","className":"wolf-hero__note"} -->
-		<p class="has-text-align-center wolf-hero__note">From $69/yr &middot; 7-day money-back guarantee</p>
+		<p class="has-text-align-center wolf-hero__note">7-day money-back guarantee</p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

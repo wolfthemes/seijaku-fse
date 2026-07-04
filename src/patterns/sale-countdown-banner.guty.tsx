@@ -9,12 +9,14 @@
 		className="is-dark wolf-countdown-banner"
 		align="full"
 		layoutType="constrained"
-		layoutContentSize="var(--wp--style--global--content-size)"
+		layoutContentSize="670px"
 		layoutJustifyContent="center"
+		pt={ 2 }
+		pb={ 2 }
 	>
 		<Columns verticalAlignment="center">
-			<Column width="30%">
-				<Paragraph className="wolf-countdown-banner__text">
+			<Column>
+				<Paragraph textAlign="center" className="wolf-countdown-banner__text">
 					20% off launch pricing — ends July 15
 				</Paragraph>
 			</Column>

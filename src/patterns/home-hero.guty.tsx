@@ -11,7 +11,7 @@
 			layoutType="flex"
 			layoutOrientation="vertical"
 		>
-			<Paragraph className="wolf-hero__eyebrow wolf-eyebrow">{ `★ 4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011` }</Paragraph>
+			<Paragraph className="wolf-hero__eyebrow wolf-eyebrow">{ `4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011` }</Paragraph>
 			<Heading level={ 1 } className="wolf-hero__title">{ `<span class="wolf-hero__title-text">Websites That Sell Your</span> <span class="wolf-rotating-words" aria-label="Music, Art &amp; Work"><span class="wolf-rotating-words__clip"><span class="wolf-rotating-words__inner"><span class="wolf-rotating-word">Music</span><span class="wolf-rotating-word">Art</span><span class="wolf-rotating-word">Work</span></span></span></span>` }</Heading>
 			<Paragraph
 				textAlign="center"
@@ -30,7 +30,7 @@
 			<Paragraph
 				textAlign="center"
 				className="wolf-hero__note"
-			>{ `From $69/yr &middot; 7-day money-back guarantee` }</Paragraph>
+			>{ `7-day money-back guarantee` }</Paragraph>
 		</Container>
 	</Container>
 </Page>

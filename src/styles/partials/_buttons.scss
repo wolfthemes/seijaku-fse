@@ -182,14 +182,21 @@ a:focus-visible {
 		color: $c-base;
 	}
 
-	.wp-block-button.is-style-outline > .wp-element-button {
+	// Second selector: wolf-store React blocks put is-style-outline directly
+	// on the anchor (no .wp-block-button wrapper). Without it the base rule's
+	// hover applies — its $c-ink bg resolves to white here (.is-dark remaps
+	// --wp--preset--color--contrast) → white text on a white pill.
+	.wp-block-button.is-style-outline > .wp-element-button,
+	.wp-element-button.is-style-outline {
 		background-color: transparent;
 		border-color: color-mix(in srgb, #{$c-base} 65%, transparent);
 		color: $c-base;
 	}
 
 	.wp-block-button.is-style-outline > .wp-element-button:hover,
-	.wp-block-button.is-style-outline > .wp-element-button:focus-visible {
+	.wp-block-button.is-style-outline > .wp-element-button:focus-visible,
+	.wp-element-button.is-style-outline:hover,
+	.wp-element-button.is-style-outline:focus-visible {
 		background-color: $c-base !important;
 		border-color: $c-base !important;
 		color: $c-secondary !important;

@@ -26,8 +26,12 @@
 
 .wolf-countdown-banner {
 
-	.wolf-blocks-countdown__unit {
+    .wolf-blocks-countdown__units {
+		gap: space(4);
 		justify-content: center;
+    }
+
+	.wolf-blocks-countdown__unit {
 		flex-direction: row;
 		gap: space(2);
 	}

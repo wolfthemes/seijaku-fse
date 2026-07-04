@@ -56,7 +56,10 @@
 
 	&__tagline {
 		font-size: fs(md);
-		max-width: 37ch;
+		// 42ch + balance = two even lines. At 37ch it wrapped to three stubby
+		// lines with a bad break ("…by one / person for 14 years").
+		max-width: 42ch;
+		text-wrap: balance;
 	}
 
 	&__actions {

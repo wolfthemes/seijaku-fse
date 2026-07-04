@@ -36,9 +36,12 @@
 
 	// JS adds this class once it has set the exact px height and SVG is ready.
 	// Switches to clip-path so SVG underlines can bleed below the line.
+	// Bleed must stay UNDER the word's 0.4em padding-bottom, or the top of
+	// the next stacked word peeks through below the current one. The SVG
+	// underlines only extend ~0.23em below the line, so 0.35em is plenty.
 	&--active {
 		overflow: visible;
-		clip-path: inset(0 0 -0.45em 0);
+		clip-path: inset(0 0 -0.35em 0);
 	}
 }
 
