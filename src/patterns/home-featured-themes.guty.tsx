@@ -21,7 +21,7 @@
 		/>
 		<Buttons layoutType="flex" layoutJustifyContent="center">
 			<Button url="/wordpress-themes">
-				See All Themes
+				See All 40+ Themes
 			</Button>
 		</Buttons>
 	</Section>
