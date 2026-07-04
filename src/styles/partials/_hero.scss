@@ -58,7 +58,7 @@
 		font-size: fs(md);
 		// 42ch + balance = two even lines. At 37ch it wrapped to three stubby
 		// lines with a bad break ("…by one / person for 14 years").
-		max-width: 42ch;
+		// max-width: 42ch;
 		text-wrap: balance;
 	}
 
