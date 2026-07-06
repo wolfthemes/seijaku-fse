@@ -22,7 +22,7 @@
 				layoutFlexWrap="wrap"
 			>
 				<NavigationLink label="Home" url="/" />
-				<NavigationLink label="Store" url="/wordpress-themes" />
+				<NavigationLink label="Themes" url="/wordpress-themes" />
 				<NavigationLink label="Services" url="/services" />
 				<NavigationLink label="Contact" url="/contact" />
 				<Button
