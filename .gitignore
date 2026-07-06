@@ -13,6 +13,7 @@ vendor/
 # Local AI tooling
 .claude/
 .codex/
+.impeccable/
 graphify-out/
 
 # Build output
