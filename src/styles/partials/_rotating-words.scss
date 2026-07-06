@@ -79,6 +79,13 @@
 	&--0 {
 		bottom: 0.1em;
 	}
+
+	// "Art" — raise the underline closer to the word and thicken the stroke
+	// (the SVG stretches to the wrapper, so more height = thicker line).
+	&--1 {
+		bottom: 0.24em;
+		height: 0.7em;
+	}
 }
 
 .wolf-word-svg--1,
