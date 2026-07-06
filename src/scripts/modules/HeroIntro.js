@@ -58,6 +58,7 @@ export default class HeroIntro {
 
 		const eyebrow = this.hero.querySelector( '.wolf-hero__eyebrow' );
 		const rotating = this.hero.querySelector( '.wolf-rotating-words' );
+		const titleRest = this.hero.querySelector( '.wolf-hero__title-rest' );
 		const tagline = this.hero.querySelector( '.wolf-hero__tagline' );
 		const actions = this.hero.querySelector( '.wolf-hero__actions' );
 		const note = this.hero.querySelector( '.wolf-hero__note' );
@@ -77,7 +78,18 @@ export default class HeroIntro {
 			line.classList.add( 'wolf-hero__title-line' );
 		} );
 
-		const lines = titleText.querySelectorAll( '.wolf-hero__title-line' );
+		// "Sell Your" gets the same masked slide-up as the split lines; its
+		// mask stays inline-block so the rotating word keeps sharing its line.
+		if ( titleRest ) {
+			const mask = document.createElement( 'span' );
+			mask.className =
+				'wolf-hero__title-line-mask wolf-hero__title-line-mask--inline';
+			titleRest.parentNode.insertBefore( mask, titleRest );
+			mask.appendChild( titleRest );
+			titleRest.classList.add( 'wolf-hero__title-line' );
+		}
+
+		const lines = this.hero.querySelectorAll( '.wolf-hero__title-line' );
 
 		gsap.set( titleText, { opacity: 1 } );
 		gsap.set( lines, { yPercent: 110, opacity: 0 } );
@@ -111,7 +123,7 @@ export default class HeroIntro {
 	_showInstantly() {
 		gsap.set(
 			this.hero.querySelectorAll(
-				'.wolf-hero__eyebrow, .wolf-hero__title-text, .wolf-rotating-words, .wolf-hero__tagline, .wolf-hero__actions, .wolf-hero__note'
+				'.wolf-hero__eyebrow, .wolf-hero__title-text, .wolf-hero__title-rest, .wolf-rotating-words, .wolf-hero__tagline, .wolf-hero__actions, .wolf-hero__note'
 			),
 			{ clearProps: 'all' }
 		);

@@ -17,11 +17,10 @@
 	position: relative;
 	vertical-align: bottom;
 
-	// In the hero h1, force the rotating slot onto its own line so the
-	// line break is always consistent regardless of word width.
+	// In the hero h1 the slot flows inline after "Sell Your"; the <br>
+	// in the markup fixes the line break.
 	.wolf-hero__title & {
-		display: block;
-		text-align: center;
+		text-align: left;
 	}
 }
 
@@ -55,7 +54,7 @@
 	position: relative;
 	white-space: nowrap;
 	line-height: inherit;
-    text-align: center;
+    text-align: left;
 	// color: $c-accent;
 	// Bottom padding creates room for the absolutely-positioned SVG layers
 	// without expanding the clip (clip height is set in px by JS).
@@ -66,16 +65,19 @@
 // Wrapper injected by JS that holds both SVG layers for one word.
 .wolf-word-underlines {
 	position: absolute;
-	bottom: 0.8rem;
-	left: 50%;
-    transform: translateX(-50%);
+	// Em-based so the gap under the word scales with the (now viewport-sized)
+	// hero font instead of drifting apart at large sizes.
+	bottom: 0.17em;
+	// Anchored left to follow the left-aligned word (JS sets width to the
+	// measured text width).
+	left: 0;
 	width: 100%;
 	height: 0.38em;
 	pointer-events: none;
 
 	// Musicians (word index 0) sits lower than the other two underlines.
 	&--0 {
-		bottom: 0.5rem;
+		bottom: 0.1em;
 	}
 }
 

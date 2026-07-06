@@ -17,25 +17,44 @@
 	padding-block: 0 space(8);
 	background: $c-base;
 	color: $c-ink;
-	text-align: center;
+	text-align: left;
 
-	// ── Constrained wrapper: eyebrow → title → buttons ───────────
+	// ── Constrained wrapper: eyebrow → title → bottom row ────────
 
 	&__inner {
 
 		&.wp-block-group {
-			align-items: center;
+			// .wolf-hero is display:flex, so WP's constrained auto margins make
+			// this shrink-to-fit instead of stretching to the wide max-width.
+			width: 100%;
+			align-items: flex-start;
 			gap: space(2) !important;
 		}
 
 		// Scoped under the flex inner so it beats WP's
 		// `.is-layout-flex > * { margin: 0 }` support style.
 		.wolf-hero__title {
-			margin: space(2) auto space(6);
+			margin: space(2) 0 space(6);
 		}
+	}
 
-		.wolf-hero__tagline {
-			margin-bottom: space(5);
+	// ── Bottom row: tagline left, CTA right ──────────────────────
+
+	&__bottom {
+
+		&.wp-block-group {
+			width: 100%;
+			align-items: flex-end;
+			gap: space(4);
+			flex-wrap: wrap;
+		}
+	}
+
+	&__cta {
+
+		&.wp-block-group {
+			align-items: flex-end;
+			gap: space(2);
 		}
 	}
 
@@ -46,9 +65,14 @@
 		}
 	}
 
+	// Line 1 on its own; "Sell Your" + rotating word share line 2.
+	&__title-text {
+		display: block;
+	}
+
 	&__title {
-		max-width: 22ch;
-		font-size: fs("hero");
+		// Sized to make "Websites That Sell Your" fill the 1600px wide container.
+		font-size: clamp(3rem, 8vw, 8.5rem);
 		line-height: var(--wolf-lh-display);
 		letter-spacing: var(--wolf-track-display);
 		color: $c-ink;
@@ -56,19 +80,15 @@
 
 	&__tagline {
 		font-size: fs(md);
-		// 42ch + balance = two even lines. At 37ch it wrapped to three stubby
-		// lines with a bad break ("…by one / person for 14 years").
-		// max-width: 42ch;
+		max-width: 56ch;
 		text-wrap: balance;
-	}
-
-	&__actions {
-		margin-top: space(4);
 	}
 
 	&__note {
 		font-size: fs(xs);
 		color: $c-muted;
+		// Optically align with the button's pill-radius edge.
+		margin-right: 0.75rem !important;
 	}
 
 	// ── Load-in intro (HeroIntro.js) ──────────────────────────────
@@ -78,6 +98,7 @@
 	// (animated, reduced-motion, and its own error fallback).
 	&__eyebrow,
 	&__title-text,
+	&__title-rest,
 	.wolf-rotating-words,
 	&__tagline,
 	&__actions,
@@ -88,9 +109,57 @@
 	&__title-line-mask {
 		display: block;
 		overflow: hidden;
+
+		// Inline variant for "Sell Your" so the rotating word stays on its line.
+		&--inline {
+			display: inline-block;
+			vertical-align: bottom;
+		}
 	}
 
 	&__title-line {
 		display: block;
+	}
+}
+
+// ── Featured themes grid heading ─────────────────────────────────
+.wolf-grid {
+
+	&__header.wp-block-group {
+		align-items: flex-end;
+		margin-bottom: space(6);
+	}
+
+	&__text {
+		color: $c-muted;
+	}
+
+	&__text-dot {
+		display: inline-block;
+		width: 0.5em;
+		height: 0.5em;
+		margin-right: 0.6em;
+		border-radius: 50%;
+		background: $c-accent;
+		vertical-align: middle;
+		// Optical centering: `middle` sits a touch high against sentence case.
+		transform: translateY(-0.075em);
+		animation: wolf-dot-glow 2s ease-in-out infinite;
+
+		@media (prefers-reduced-motion: reduce) {
+			animation: none;
+		}
+	}
+}
+
+@keyframes wolf-dot-glow {
+
+	0%,
+	100% {
+		box-shadow: 0 0 0 0 rgba(211, 160, 67, 0.6);
+	}
+
+	50% {
+		box-shadow: 0 0 6px 3px rgba(211, 160, 67, 0.25);
 	}
 }

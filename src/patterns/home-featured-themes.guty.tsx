@@ -11,6 +11,16 @@
 		layoutType="constrained"
 		layoutContentSize="var(--wp--style--global--wide-size)"
 	>
+		<Container
+			className="wolf-grid__header"
+			layoutType="flex"
+			layoutJustifyContent="space-between"
+		>
+			<Heading level={ 2 } className="wolf-grid__title">
+				Featured themes
+			</Heading>
+			<Paragraph className="wolf-grid__text">{ `<span class="wolf-grid__text-dot" aria-hidden="true"></span>20% launch discount applied to all prices` }</Paragraph>
+		</Container>
 		<Block
 			name="wolf-store/theme-index"
 			perPage={ 12 }
@@ -20,7 +30,9 @@
 			cardHeading="h2"
 		/>
 		<Buttons layoutType="flex" layoutJustifyContent="center">
-			<Button url="/wordpress-themes">
+			<Button
+				className="wolf-btn-lg"
+				url="/wordpress-themes">
 				See All 40+ Themes
 			</Button>
 		</Buttons>
