@@ -7,7 +7,7 @@ redesign — a child of [Wolf Blank](https://github.com/wolfthemes/wolf-blank) b
 Seijaku replaces the previous Elementor-based site with a pure block theme: no page builders,
 no third-party front-end frameworks. The design is **light, editorial, and minimal** — big
 negative space, bold typography (Urbanist + Rethink Sans), black-and-white with a single gold
-accent used sparingly. Reference energy: Linear, Stripe, Rauno.me.
+accent used sparingly.
 
 ## How templates are authored
 
