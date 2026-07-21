@@ -1,5 +1,4 @@
 <Page>
-	<Pattern slug="seijaku-fse/sale-countdown-banner" />
 	<Container
 		tagName="header"
 		className="wolf-header"

@@ -17,21 +17,22 @@
 			layoutOrientation="vertical"
 		>
 			<Paragraph className="wolf-hero__eyebrow wolf-eyebrow">{ `<span class="wolf-hero__eyebrow--stars" aria-hidden="true">★★★★★</span> 4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011` }</Paragraph>
-			<Heading level={ 1 } className="wolf-hero__title">{ `<span class="wolf-hero__title-text">Websites That</span> <span class="wolf-hero__title-rest">Sell Your</span> <span class="wolf-rotating-words" aria-label="Music, Art &amp; Work"><span class="wolf-rotating-words__clip"><span class="wolf-rotating-words__inner"><span class="wolf-rotating-word">Music</span><span class="wolf-rotating-word">Art</span><span class="wolf-rotating-word">Work</span></span></span></span>` }</Heading>
+			<Heading level={ 1 } className="wolf-hero__title">{ `<span class="wolf-hero__title-text">WordPress Solutions for</span> <span class="wolf-hero__title-rest">Musicians, Artists & Creators</span>` }</Heading>
 			<Container
 				className="wolf-hero__bottom"
 				layoutType="flex"
-				layoutJustifyContent="space-between"
+				layoutOrientation="vertical"
+				layoutJustifyContent="center"
 			>
-				<Paragraph className="wolf-hero__tagline wolf-hero__text-line wolf-tagline">
+				<Paragraph mb={ 3 } className="wolf-hero__tagline wolf-hero__text-line wolf-tagline">
 					Handcrafted WordPress themes for musicians, artists &amp;
-					creators — built and supported by one person for 14 years.
+					creators. Built and supported by one person for 14 years.
 				</Paragraph>
 				<Container
 					className="wolf-hero__cta"
 					layoutType="flex"
 					layoutOrientation="vertical"
-					layoutJustifyContent="right"
+					layoutJustifyContent="center"
 				>
 					<Buttons
 						className="wolf-hero__actions wolf-btn-lg"

@@ -1,5 +1,5 @@
 <Page>
-	<Pattern slug="seijaku-fse/sale-marquee" />
+	<Pattern slug="seijaku-fse/marquee" />
 	<Container
 		tagName="header"
 		className="wolf-header"

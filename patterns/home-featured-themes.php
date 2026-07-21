@@ -17,7 +17,7 @@
 		<h2 class="wp-block-heading wolf-grid__title">Featured themes</h2>
 		<!-- /wp:heading -->
 		<!-- wp:paragraph {"className":"wolf-grid__text"} -->
-		<p class="wolf-grid__text"><span class="wolf-grid__text-dot" aria-hidden="true"></span>20% launch discount applied to all prices</p>
+		<p class="wolf-grid__text"><span class="wolf-grid__text-dot" aria-hidden="true"></span>Hand-picked from our full catalog</p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

@@ -48,7 +48,8 @@
 				/>
 			</Column>
 			<Column width="40%" className="wolf-about__pullquote">
-				<Paragraph>{ `14 years.<br>36,000 customers.<br>4.5/5 out of 1600+ ratings.<br>"The customer support is what sets it apart." — joergrappl, on Tune` }</Paragraph>
+				<Paragraph>{ `14 years.<br>36,000 customers.<br>4.5/5 out of 1600+ ratings.` }</Paragraph>
+				<Paragraph>{ `"The customer support is what sets it apart." — joergrappl, on Tune` }</Paragraph>
 			</Column>
 		</Columns>
 	</Section>

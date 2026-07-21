@@ -38,7 +38,10 @@
 		<!-- wp:column {"className":"wolf-about__pullquote","width":"40%"} -->
 		<div class="wp-block-column wolf-about__pullquote" style="flex-basis:40%">
 			<!-- wp:paragraph -->
-			<p>14 years.<br>36,000 customers.<br>4.5/5 out of 1600+ ratings.<br>"The customer support is what sets it apart." — joergrappl, on Tune</p>
+			<p>14 years.<br>36,000 customers.<br>4.5/5 out of 1600+ ratings.</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:paragraph -->
+			<p>"The customer support is what sets it apart." — joergrappl, on Tune</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->

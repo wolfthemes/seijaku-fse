@@ -17,7 +17,7 @@
 	padding-block: 0 space(8);
 	background: $c-base;
 	color: $c-ink;
-	text-align: left;
+	text-align: center;
 
 	// ── Constrained wrapper: eyebrow → title → bottom row ────────
 
@@ -27,7 +27,7 @@
 			// .wolf-hero is display:flex, so WP's constrained auto margins make
 			// this shrink-to-fit instead of stretching to the wide max-width.
 			width: 100%;
-			align-items: flex-start;
+			align-items: center;
 			gap: space(2) !important;
 		}
 
@@ -38,13 +38,13 @@
 		}
 	}
 
-	// ── Bottom row: tagline left, CTA right ──────────────────────
+	// ── Bottom stack: tagline → CTA, all centered ─────────────────
 
 	&__bottom {
 
 		&.wp-block-group {
 			width: 100%;
-			align-items: flex-end;
+			align-items: center;
 			gap: space(4);
 			flex-wrap: wrap;
 		}
@@ -53,7 +53,7 @@
 	&__cta {
 
 		&.wp-block-group {
-			align-items: flex-end;
+			align-items: center;
 			gap: space(2);
 		}
 	}
@@ -72,7 +72,7 @@
 
 	&__title {
 		// Sized to make "Websites That Sell Your" fill the 1600px wide container.
-		font-size: clamp(3rem, 8vw, 8.5rem);
+		font-size: clamp(3rem, 8vw, 6rem);
 		line-height: var(--wolf-lh-display);
 		letter-spacing: var(--wolf-track-display);
 		color: $c-ink;
@@ -87,8 +87,6 @@
 	&__note {
 		font-size: fs(xs);
 		color: $c-muted;
-		// Optically align with the button's pill-radius edge.
-		margin-right: 0.75rem !important;
 	}
 
 	// ── Load-in intro (HeroIntro.js) ──────────────────────────────

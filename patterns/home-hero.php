@@ -17,14 +17,14 @@
 		<p class="wolf-hero__eyebrow wolf-eyebrow"><span class="wolf-hero__eyebrow--stars" aria-hidden="true">★★★★★</span> 4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:heading {"level":1,"className":"wolf-hero__title"} -->
-		<h1 class="wp-block-heading wolf-hero__title"><span class="wolf-hero__title-text">Websites That</span> <span class="wolf-hero__title-rest">Sell Your</span> <span class="wolf-rotating-words" aria-label="Music, Art &amp; Work"><span class="wolf-rotating-words__clip"><span class="wolf-rotating-words__inner"><span class="wolf-rotating-word">Music</span><span class="wolf-rotating-word">Art</span><span class="wolf-rotating-word">Work</span></span></span></span></h1>
+		<h1 class="wp-block-heading wolf-hero__title"><span class="wolf-hero__title-text">WordPress Solutions for</span> <span class="wolf-hero__title-rest">Musicians, Artists & Creators</span></h1>
 		<!-- /wp:heading -->
-		<!-- wp:group {"className":"wolf-hero__bottom","layout":{"type":"flex","justifyContent":"space-between"}} -->
+		<!-- wp:group {"className":"wolf-hero__bottom","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 		<div class="wp-block-group wolf-hero__bottom">
-			<!-- wp:paragraph {"className":"wolf-hero__tagline wolf-hero__text-line wolf-tagline"} -->
-			<p class="wolf-hero__tagline wolf-hero__text-line wolf-tagline">Handcrafted WordPress themes for musicians, artists & creators — built and supported by one person for 14 years.</p>
+			<!-- wp:paragraph {"className":"wolf-hero__tagline wolf-hero__text-line wolf-tagline","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3"}}}} -->
+			<p class="wolf-hero__tagline wolf-hero__text-line wolf-tagline" style="margin-bottom:var(--wp--preset--spacing--3)">Handcrafted WordPress themes for musicians, artists & creators. Built and supported by one person for 14 years.</p>
 			<!-- /wp:paragraph -->
-			<!-- wp:group {"className":"wolf-hero__cta","layout":{"type":"flex","orientation":"vertical","justifyContent":"right"}} -->
+			<!-- wp:group {"className":"wolf-hero__cta","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group wolf-hero__cta">
 				<!-- wp:buttons {"className":"wolf-hero__actions wolf-btn-lg","layout":{"type":"flex"}} -->
 				<div class="wp-block-buttons wolf-hero__actions wolf-btn-lg">

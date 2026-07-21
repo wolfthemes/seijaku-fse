@@ -19,7 +19,7 @@
 			<Heading level={ 2 } className="wolf-grid__title">
 				Featured themes
 			</Heading>
-			<Paragraph className="wolf-grid__text">{ `<span class="wolf-grid__text-dot" aria-hidden="true"></span>20% launch discount applied to all prices` }</Paragraph>
+			<Paragraph className="wolf-grid__text">{ `<span class="wolf-grid__text-dot" aria-hidden="true"></span>Hand-picked from our full catalog` }</Paragraph>
 		</Container>
 		<Block
 			name="wolf-store/theme-index"
