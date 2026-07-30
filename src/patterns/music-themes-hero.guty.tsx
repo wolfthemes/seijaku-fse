@@ -20,7 +20,7 @@
 			layoutType="constrained"
 			layoutContentSize="920px"
 		>
-			<Paragraph className="wolf-hero__eyebrow wolf-eyebrow">{ `<span style="white-space:nowrap">36,000+ customers</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">4.5/5 on ThemeForest</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">since 2011</span>` }</Paragraph>
+			<Paragraph className="wolf-hero__eyebrow wolf-eyebrow">{ `<span style="white-space:nowrap">36,000+ customers</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">4.5/5 on ThemeForest</span> <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> <span style="white-space:nowrap">since 2012</span>` }</Paragraph>
 			<Heading
 				level={ 1 }
 				textAlign="center"

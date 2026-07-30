@@ -16,7 +16,7 @@
 			layoutType="flex"
 			layoutOrientation="vertical"
 		>
-			<Paragraph className="wolf-hero__eyebrow wolf-eyebrow">{ `<span class="wolf-hero__eyebrow--stars" aria-hidden="true">★★★★★</span> 4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011` }</Paragraph>
+			<Paragraph className="wolf-hero__eyebrow wolf-eyebrow">{ `<span class="wolf-hero__eyebrow--stars" aria-hidden="true">★★★★★</span> 4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2012` }</Paragraph>
 			<Heading level={ 1 } className="wolf-hero__title">{ `<span class="wolf-hero__title-text">WordPress Solutions for</span> <span class="wolf-hero__title-rest">Musicians, Artists & Creators</span>` }</Heading>
 			<Container
 				className="wolf-hero__bottom"

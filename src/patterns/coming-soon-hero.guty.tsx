@@ -25,7 +25,7 @@
 			<Paragraph
 				textAlign="center"
 				className="wolf-hero__eyebrow wolf-eyebrow"
-			>{ `One-man studio <span class="wolf-hero__eyebrow--separator">✦</span> since 2011` }</Paragraph>
+			>{ `One-man studio <span class="wolf-hero__eyebrow--separator">✦</span> since 2012` }</Paragraph>
 			<Heading
 				level={ 1 }
 				textAlign="center"

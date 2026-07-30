@@ -14,7 +14,7 @@
 		layoutContentSize="var(--wp--style--global--wide-size)"
 	>
 		<Heading level={ 2 } textAlign="center">
-			Raising the Bar of Music Themes Quality Since 2011
+			Raising the Bar of Music Themes Quality Since 2012
 		</Heading>
 		<Paragraph
 			textAlign="center"

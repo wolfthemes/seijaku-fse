@@ -14,7 +14,7 @@
 	<!-- wp:group {"className":"wolf-hero__inner","layout":{"type":"flex","orientation":"vertical"}} -->
 	<div class="wp-block-group wolf-hero__inner">
 		<!-- wp:paragraph {"className":"wolf-hero__eyebrow wolf-eyebrow"} -->
-		<p class="wolf-hero__eyebrow wolf-eyebrow"><span class="wolf-hero__eyebrow--stars" aria-hidden="true">★★★★★</span> 4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2011</p>
+		<p class="wolf-hero__eyebrow wolf-eyebrow"><span class="wolf-hero__eyebrow--stars" aria-hidden="true">★★★★★</span> 4.5/5 from 1,600+ reviews <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> 36,000 customers <span class="wolf-hero__eyebrow--separator" aria-hidden="true">✦</span> since 2012</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:heading {"level":1,"className":"wolf-hero__title"} -->
 		<h1 class="wp-block-heading wolf-hero__title"><span class="wolf-hero__title-text">WordPress Solutions for</span> <span class="wolf-hero__title-rest">Musicians, Artists & Creators</span></h1>

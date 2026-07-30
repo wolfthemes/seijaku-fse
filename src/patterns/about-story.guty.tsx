@@ -26,7 +26,7 @@
 			<Column width="58%">
 				<Paragraph className="has-text-max-width">
 					WolfThemes has been an independent WordPress theme studio
-					since 2011, focused on websites for musicians, artists,
+					since 2012, focused on websites for musicians, artists,
 					agencies, freelancers, and creative businesses.
 				</Paragraph>
 				<Paragraph className="has-text-max-width">
