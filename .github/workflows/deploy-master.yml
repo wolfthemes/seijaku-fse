@@ -91,10 +91,10 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /home/customer/www/wolfthemes.com/public_html/wp-content/themes/seijaku-fse
+            cd /home/sys-admin/wolfthemes.com/wp-content/themes/seijaku-fse
             git pull origin master
             rsync -a --delete /tmp/seijaku-fse-build/ build/
             rm -rf /tmp/seijaku-fse-build
-            cd /home/customer/www/wolfthemes.com/public_html
+            cd /home/sys-admin/wolfthemes.com
             wp cache flush
             curl -D - -sSX PURGE http://127.0.0.1/* -H "Host: wolfthemes.com"
