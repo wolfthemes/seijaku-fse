@@ -15,11 +15,12 @@
 		layoutContentSize="820px"
 	>
 		<Heading level={ 2 } textAlign="center">
-			Need to talk about your project?
+			Need more than a setup?
 		</Heading>
 		<Paragraph textAlign="center" className="wolf-tagline">
 			Share what you are building and what you need help with. You will
-			get clear next steps before any custom work begins.
+			get clear next steps before any custom work begins. For a complete
+			custom website, see my project services.
 		</Paragraph>
 		<Buttons
 			className="wolf-btn-lg"
@@ -28,6 +29,9 @@
 		>
 			<Button url="/contact">
 				Contact us
+			</Button>
+			<Button className="is-style-text" url="https://constantin.saguin.com/services?utm_source=wolfthemes&utm_medium=services">
+				Custom WordPress projects ↗
 			</Button>
 		</Buttons>
 	</Section>

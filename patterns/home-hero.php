@@ -22,7 +22,7 @@
 		<!-- wp:group {"className":"wolf-hero__bottom","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 		<div class="wp-block-group wolf-hero__bottom">
 			<!-- wp:paragraph {"className":"wolf-hero__tagline wolf-hero__text-line wolf-tagline","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3"}}}} -->
-			<p class="wolf-hero__tagline wolf-hero__text-line wolf-tagline" style="margin-bottom:var(--wp--preset--spacing--3)">Handcrafted WordPress themes for musicians, artists & creators. Built and supported by one person for 14 years.</p>
+			<p class="wolf-hero__tagline wolf-hero__text-line wolf-tagline" style="margin-bottom:var(--wp--preset--spacing--3)">Handcrafted WordPress themes for musicians, artists & creators. Built and supported by one person for 15 years.</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:group {"className":"wolf-hero__cta","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group wolf-hero__cta">

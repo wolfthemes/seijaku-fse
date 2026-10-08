@@ -42,6 +42,9 @@
 						<Link href="/services">Services</Link>
 					</ListItem>
 					<ListItem>
+						<Link href="https://constantin.saguin.com/services?utm_source=wolfthemes&utm_medium=footer">Custom Projects ↗</Link>
+					</ListItem>
+					<ListItem>
 						<Link href="/about">About</Link>
 					</ListItem>
 					<ListItem>

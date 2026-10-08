@@ -26,7 +26,7 @@
 			>
 				<Paragraph mb={ 3 } className="wolf-hero__tagline wolf-hero__text-line wolf-tagline">
 					Handcrafted WordPress themes for musicians, artists &amp;
-					creators. Built and supported by one person for 14 years.
+					creators. Built and supported by one person for 15 years.
 				</Paragraph>
 				<Container
 					className="wolf-hero__cta"

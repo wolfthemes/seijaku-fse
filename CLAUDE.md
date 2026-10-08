@@ -2,7 +2,7 @@
 
 ## What this is
 FSE child theme of wolf-blank. Redesigns wolfthemes.com — the WolfThemes storefront.
-Author: Constantin Saguin (WolfThemes, Power Elite ThemeForest author, 14 years experience).
+Author: Constantin Saguin (WolfThemes, Power Elite ThemeForest author, 15 years experience).
 
 ## Knowledge base
 Main KB: `/mnt/c/Users/Constantin/wolfthemes-dev/wolf-claude-memory/`
@@ -69,7 +69,7 @@ wolf-blocks and marked with `<!-- WOLF-BLOCKS: ... -->` placeholder comments.
 1. Hero — full viewport (core/cover, no image), display heading, tagline, two CTAs ✅
 2. Themes grid — `wolf-store/theme-index` block, featured-first, in
    `.wolf-themes-section` constrained group ✅
-3. Stats band — `WOLF-BLOCKS: stats-counter block` (placeholder; $2M · 14 years · 36k)
+3. Stats band — `WOLF-BLOCKS: stats-counter block` (placeholder; $2M · 15 years · 36k)
 4. Testimonials — `WOLF-BLOCKS: testimonials block` (placeholder)
 5. About/brand story — asymmetric core columns, text left + pull quote right ✅
 6. Footer (parts/footer.html) — minimal 3 cols, core blocks ✅

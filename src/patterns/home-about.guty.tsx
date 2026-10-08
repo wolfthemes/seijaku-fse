@@ -18,7 +18,7 @@
 					The person behind the code
 				</Paragraph>
 				<Heading level={ 2 } className="wolf-about__title">
-					I'm Constantin. For 14 years, I've been the only person
+					I'm Constantin. For 15 years, I've been the only person
 					writing every line of WolfThemes.
 				</Heading>
 				<Paragraph className="wolf-about__text">
@@ -38,17 +38,21 @@
 					guarantee, and more of your money going to the person who
 					actually builds them.
 				</Paragraph>
-				<Image
-					width="160px"
-					sizeSlug="thumbnail"
-					src="../assets/images/signature.svg"
-					alt="Signature"
-					className="wolf-signature"
-					linkDestination="none"
-				/>
+				<Paragraph className="wolf-about__text">
+					Need something beyond a theme? I'm also available for
+					selected custom WordPress projects.
+				</Paragraph>
+				<Buttons>
+					<Button
+						className="is-style-text"
+						url="https://constantin.saguin.com/services?utm_source=wolfthemes&utm_medium=about"
+					>
+						Work with me →
+					</Button>
+				</Buttons>
 			</Column>
 			<Column width="40%" className="wolf-about__pullquote">
-				<Paragraph>{ `14 years.<br>36,000 customers.<br>4.5/5 out of 1600+ ratings.` }</Paragraph>
+				<Paragraph>{ `15 years.<br>36,000 customers.<br>4.5/5 out of 1600+ ratings.` }</Paragraph>
 				<Paragraph>{ `"The customer support is what sets it apart." — joergrappl, on Tune` }</Paragraph>
 			</Column>
 		</Columns>

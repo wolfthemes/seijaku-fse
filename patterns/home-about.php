@@ -19,7 +19,7 @@
 			<p class="wolf-about__eyebrow wolf-eyebrow">The person behind the code</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:heading {"level":2,"className":"wolf-about__title"} -->
-			<h2 class="wp-block-heading wolf-about__title">I'm Constantin. For 14 years, I've been the only person writing every line of WolfThemes.</h2>
+			<h2 class="wp-block-heading wolf-about__title">I'm Constantin. For 15 years, I've been the only person writing every line of WolfThemes.</h2>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"className":"wolf-about__text"} -->
 			<p class="wolf-about__text">No agency, no rotating dev team, no outsourced support tickets. Every theme here started as a real problem someone brought to me: a band needing a tour page, a label needing a catalogue that didn't feel like a spreadsheet.</p>
@@ -30,15 +30,22 @@
 			<!-- wp:paragraph {"className":"wolf-about__text"} -->
 			<p class="wolf-about__text">Know my themes from ThemeForest? These are the same themes, bought direct: better support, a 7-day money-back guarantee, and more of your money going to the person who actually builds them.</p>
 			<!-- /wp:paragraph -->
-			<!-- wp:image {"className":"wolf-signature","src":"\u003c?php echo esc_url( get_theme_file_uri() . '/assets/images/signature.svg' ); ?\u003e","alt":"Signature","sizeSlug":"thumbnail","linkDestination":"none","width":"160px"} -->
-			<figure class="wp-block-image size-thumbnail is-resized wolf-signature"><img src="<?php echo esc_url( get_theme_file_uri() . '/assets/images/signature.svg' ); ?>" alt="Signature" style="width:160px"/></figure>
-			<!-- /wp:image -->
+			<!-- wp:paragraph {"className":"wolf-about__text"} -->
+			<p class="wolf-about__text">Need something beyond a theme? I'm also available for selected custom WordPress projects.</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons">
+				<!-- wp:button {"className":"is-style-text"} -->
+				<div class="wp-block-button is-style-text"><a class="wp-block-button__link wp-element-button" href="https://constantin.saguin.com/services?utm_source=wolfthemes&amp;utm_medium=about">Work with me →</a></div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
 		</div>
 		<!-- /wp:column -->
 		<!-- wp:column {"className":"wolf-about__pullquote","width":"40%"} -->
 		<div class="wp-block-column wolf-about__pullquote" style="flex-basis:40%">
 			<!-- wp:paragraph -->
-			<p>14 years.<br>36,000 customers.<br>4.5/5 out of 1600+ ratings.</p>
+			<p>15 years.<br>36,000 customers.<br>4.5/5 out of 1600+ ratings.</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph -->
 			<p>"The customer support is what sets it apart." — joergrappl, on Tune</p>

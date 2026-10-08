@@ -10,7 +10,7 @@ Freelance developers and designers buying premium WordPress themes for client pr
 
 ## Product Purpose
 
-wolfthemes.com is the flagship storefront for WolfThemes — a Power Elite ThemeForest author with 14 years of work. It replaces the current Elementor-based site with a bespoke FSE child theme that matches the quality of the products being sold. Success = a visitor who looks at the homepage and immediately understands they're dealing with a craftsperson, not a template shop. The brushstroke logo is the primary brand texture and the north star for every design decision: if a choice doesn't coexist with it, that choice loses.
+wolfthemes.com is the flagship storefront for WolfThemes — a Power Elite ThemeForest author with 15 years of work. It replaces the current Elementor-based site with a bespoke FSE child theme that matches the quality of the products being sold. Success = a visitor who looks at the homepage and immediately understands they're dealing with a craftsperson, not a template shop. The brushstroke logo is the primary brand texture and the north star for every design decision: if a choice doesn't coexist with it, that choice loses.
 
 ## Brand Personality
 

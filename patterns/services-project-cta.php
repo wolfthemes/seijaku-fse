@@ -13,15 +13,18 @@
 <!-- wp:group {"tagName":"section","className":"is-dark has-texture","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained","contentSize":"820px"}} -->
 <section class="wp-block-group alignfull is-dark has-texture" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">
 	<!-- wp:heading {"level":2,"textAlign":"center"} -->
-	<h2 class="wp-block-heading has-text-align-center">Need to talk about your project?</h2>
+	<h2 class="wp-block-heading has-text-align-center">Need more than a setup?</h2>
 	<!-- /wp:heading -->
 	<!-- wp:paragraph {"align":"center","className":"wolf-tagline"} -->
-	<p class="has-text-align-center wolf-tagline">Share what you are building and what you need help with. You will get clear next steps before any custom work begins.</p>
+	<p class="has-text-align-center wolf-tagline">Share what you are building and what you need help with. You will get clear next steps before any custom work begins. For a complete custom website, see my project services.</p>
 	<!-- /wp:paragraph -->
 	<!-- wp:buttons {"className":"wolf-btn-lg","layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons wolf-btn-lg">
 		<!-- wp:button -->
 		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/contact">Contact us</a></div>
+		<!-- /wp:button -->
+		<!-- wp:button {"className":"is-style-text"} -->
+		<div class="wp-block-button is-style-text"><a class="wp-block-button__link wp-element-button" href="https://constantin.saguin.com/services?utm_source=wolfthemes&amp;utm_medium=services">Custom WordPress projects ↗</a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

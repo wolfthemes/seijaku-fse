@@ -102,7 +102,7 @@ components:
 
 **Creative North Star: "The Editor's Archive"**
 
-A private design archive where 14 years of work lives on the walls. Nothing is labeled. Quality announces itself. The space is spare — not because it's empty, but because every object that didn't earn its place was removed. The brushstroke wordmark is the signature piece. It has warmth and weight; the system around it must give it room.
+A private design archive where 15 years of work lives on the walls. Nothing is labeled. Quality announces itself. The space is spare — not because it's empty, but because every object that didn't earn its place was removed. The brushstroke wordmark is the signature piece. It has warmth and weight; the system around it must give it room.
 
 This system operates at the intersection of editorial restraint and artisan warmth. It isn't cold SaaS minimalism — that lane has no texture, no maker-energy. It isn't decorative either. The warmth comes from craft: the handwritten quality of the brushstroke mark, the gold used like a drop of wax on an envelope, the type set with the precision of a printer who knows what letter-spacing does to a headline at 4rem. Visitors who work with type, color, and layout for a living will feel the difference. That is the audience.
 
