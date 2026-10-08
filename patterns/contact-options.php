@@ -20,12 +20,15 @@
 			<h2 class="wp-block-heading has-lg-font-size">Custom Services</h2>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph -->
-			<p>For installation, setup, optimization, and custom website help.</p>
+			<p>For installation, setup, and optimization, or a complete custom website built around your project.</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} -->
 			<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--6)">
 				<!-- wp:button {"className":"is-style-text"} -->
 				<div class="wp-block-button is-style-text"><a class="wp-block-button__link wp-element-button" href="/services">View services</a></div>
+				<!-- /wp:button -->
+				<!-- wp:button {"className":"is-style-text"} -->
+				<div class="wp-block-button is-style-text"><a class="wp-block-button__link wp-element-button" href="https://constantin.saguin.com/services?utm_source=wolfthemes&amp;utm_medium=contact">Custom projects ↗</a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

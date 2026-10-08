@@ -19,12 +19,15 @@
 					Custom Services
 				</Heading>
 				<Paragraph>
-					For installation, setup, optimization, and custom website
-					help.
+					For installation, setup, and optimization, or a complete
+					custom website built around your project.
 				</Paragraph>
 				<Buttons mb={ 6 }>
 					<Button className="is-style-text" url="/services">
 						View services
+					</Button>
+					<Button className="is-style-text" url="https://constantin.saguin.com/services?utm_source=wolfthemes&utm_medium=contact">
+						Custom projects ↗
 					</Button>
 				</Buttons>
 			</Column>
